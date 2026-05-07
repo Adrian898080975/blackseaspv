@@ -204,6 +204,101 @@ section[id], div[id].anchor { scroll-margin-top: var(--nav-h); }
 /* ── RULE ── */
 .rule { width:100%; height:1px; background:var(--border); position:relative; z-index:1; }
 
+/* ── STATS STRIP ── */
+.stats-strip {
+  position:relative; z-index:1;
+  background:var(--bg2);
+  border-bottom:1px solid var(--border);
+  display:flex; align-items:stretch; overflow:hidden;
+}
+.stat-item {
+  flex:1; display:flex; flex-direction:column; justify-content:center;
+  padding:2.25rem 2.5rem; border-right:1px solid var(--border);
+  position:relative; transition:background .3s;
+}
+.stat-item:last-child { border-right:none; }
+.stat-item:hover { background:rgba(255,255,255,.018); }
+.stat-item::after {
+  content:''; position:absolute; bottom:0; left:0;
+  width:0; height:1px; background:rgba(232,237,242,.22);
+  transition:width .5s cubic-bezier(.16,1,.3,1);
+}
+.stat-item:hover::after { width:100%; }
+.stat-label { font-size:.58rem; font-weight:700; letter-spacing:.26em; text-transform:uppercase; color:var(--muted); margin-bottom:.55rem; }
+.stat-value { font-size:1rem; font-weight:600; color:var(--text); letter-spacing:-.01em; line-height:1.2; }
+
+/* ── PROCESS ── */
+.process {
+  padding:9rem 4rem; background:var(--bg);
+  border-top:1px solid var(--border);
+  position:relative; z-index:1; overflow:hidden;
+}
+.process-orb {
+  position:absolute; top:50%; right:-15%; transform:translateY(-50%);
+  width:55vw; height:55vw; border-radius:50%;
+  background:radial-gradient(ellipse at center,rgba(10,38,68,.55) 0%,rgba(6,22,42,.28) 38%,transparent 68%);
+  pointer-events:none; animation:orbBreath2 11s ease-in-out infinite;
+}
+.process-header {
+  display:flex; justify-content:space-between; align-items:flex-end;
+  margin-bottom:5rem; gap:2rem; position:relative; z-index:1;
+}
+.process-h2 { font-size:clamp(2.5rem,5vw,4.5rem); font-weight:700; line-height:1.02; letter-spacing:-.03em; max-width:480px; }
+.process-sub { font-size:.92rem; color:var(--sub); max-width:300px; line-height:1.72; text-align:right; }
+.process-steps {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--border);
+  position:relative; z-index:1;
+}
+.process-step {
+  padding:3rem 2rem; border-right:1px solid var(--border);
+  position:relative; transition:background .3s;
+}
+.process-step:last-child { border-right:none; }
+.process-step:hover { background:rgba(255,255,255,.015); }
+.process-step::before {
+  content:''; position:absolute; top:-1px; left:0;
+  width:0; height:2px; background:rgba(232,237,242,.35);
+  transition:width .5s cubic-bezier(.16,1,.3,1);
+}
+.process-step:hover::before { width:100%; }
+.step-num {
+  font-size:.58rem; font-weight:700; letter-spacing:.28em;
+  text-transform:uppercase; color:var(--muted); margin-bottom:2.5rem;
+  display:flex; align-items:center; gap:.75rem;
+}
+.step-num::after { content:''; display:block; flex:1; height:1px; background:var(--muted); opacity:.35; }
+.step-icon { width:30px; height:30px; margin-bottom:1.5rem; }
+.step-icon svg { width:100%; height:100%; fill:none; stroke:var(--muted); stroke-width:1.3; stroke-linecap:round; stroke-linejoin:round; transition:stroke .3s; }
+.process-step:hover .step-icon svg { stroke:var(--sub); }
+.step-title { font-size:1.15rem; font-weight:700; color:var(--text); margin-bottom:.85rem; letter-spacing:-.02em; line-height:1.15; }
+.step-desc { font-size:.84rem; color:var(--sub); line-height:1.78; }
+.step-tag {
+  display:inline-block; margin-top:1.5rem;
+  font-size:.58rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--muted); border:1px solid var(--border); padding:.28rem .6rem;
+}
+
+/* ── GEOGRAPHY ── */
+.geography {
+  padding:9rem 4rem; background:var(--bg2);
+  border-top:1px solid var(--border); border-bottom:1px solid var(--border);
+  position:relative; z-index:1;
+  display:grid; grid-template-columns:1fr 1fr; gap:7rem; align-items:center;
+}
+.geo-left h2 { font-size:clamp(2.5rem,5vw,4.5rem); font-weight:700; line-height:1.02; letter-spacing:-.035em; margin-bottom:1.75rem; }
+.geo-left h2 em { font-style:normal; color:rgba(232,237,242,.28); }
+.geo-left p { font-size:.95rem; color:var(--sub); line-height:1.82; max-width:420px; }
+.geo-right { display:flex; flex-direction:column; border-top:1px solid var(--border); }
+.geo-item {
+  display:flex; align-items:flex-start; gap:1.5rem;
+  padding:1.5rem 0; border-bottom:1px solid var(--border);
+  transition:padding .2s;
+}
+.geo-num { font-size:.58rem; font-weight:700; letter-spacing:.2em; color:var(--muted); min-width:24px; padding-top:.15rem; }
+.geo-title { font-size:.95rem; font-weight:600; color:var(--text); margin-bottom:.3rem; letter-spacing:-.01em; }
+.geo-desc  { font-size:.82rem; color:var(--sub); line-height:1.65; }
+
 /* ── SECTION TAG ── */
 .section-tag {
   font-size:.66rem; font-weight:700; letter-spacing:.28em;
@@ -384,6 +479,17 @@ footer { background:var(--bg); border-top:1px solid var(--border); padding:5rem 
   .services-sub { text-align:left; max-width:100%; }
   .cards { grid-template-columns:1fr; border-left:none; border-top:none; }
   .card { border-left:none; border-top:1px solid var(--border); }
+  .stats-strip { flex-direction:column; }
+  .stat-item { border-right:none; border-bottom:1px solid var(--border); padding:1.5rem; }
+  .stat-item:last-child { border-bottom:none; }
+  .process { padding:5rem 1.5rem; }
+  .process-header { flex-direction:column; align-items:flex-start; }
+  .process-sub { text-align:left; max-width:100%; }
+  .process-steps { grid-template-columns:1fr; }
+  .process-step { border-right:none; border-bottom:1px solid var(--border); padding:2.5rem 0; }
+  .process-step:last-child { border-bottom:none; }
+  .geography { grid-template-columns:1fr; padding:5rem 1.5rem; gap:3rem; }
+  .geo-left p { max-width:100%; }
   .about { grid-template-columns:1fr; padding:5rem 1.5rem; gap:3rem; }
   .about-p { max-width:100%; }
   .cta-section { padding:6rem 1.5rem; }
@@ -434,6 +540,30 @@ footer { background:var(--bg); border-top:1px solid var(--border); padding:5rem 
 </section>
 
 <div class="rule"></div>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stat-item r">
+    <span class="stat-label">Operational Scope</span>
+    <span class="stat-value">No Fixed Geography</span>
+  </div>
+  <div class="stat-item r d1">
+    <span class="stat-label">Compliance Standard</span>
+    <span class="stat-value">Regulatory-Grade</span>
+  </div>
+  <div class="stat-item r d2">
+    <span class="stat-label">Risk Appetite</span>
+    <span class="stat-value">High-Complexity Capable</span>
+  </div>
+  <div class="stat-item r d3">
+    <span class="stat-label">Client Profile</span>
+    <span class="stat-value">Sovereign &amp; Strategic Operators</span>
+  </div>
+  <div class="stat-item r d3">
+    <span class="stat-label">Framework</span>
+    <span class="stat-value">Compliance-Native</span>
+  </div>
+</div>
 
 <section class="services" id="services">
   <div class="services-header r">
@@ -496,6 +626,100 @@ footer { background:var(--bg); border-top:1px solid var(--border); padding:5rem 
       src="https://cdn.prod.website-files.com/6992d152640605a152914dae/69930bcee92c7ee08b331415_abstract-geometric-wavy-folds-background%20(2).jpg"
       alt="Abstract structural form" loading="lazy">
     <p class="about-caption">Black Sea SPV s.r.o. — Registered in Slovakia. Operating across jurisdictions.</p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="process-orb" aria-hidden="true"></div>
+  <div class="process-header r">
+    <div>
+      <div class="section-tag">Engagement Model</div>
+      <h2 class="process-h2">How We<br>Engage</h2>
+    </div>
+    <p class="process-sub">Every engagement begins with intelligence and ends with continuity. There is no shortcut between the two.</p>
+  </div>
+  <div class="process-steps">
+
+    <div class="process-step r">
+      <div class="step-num">01</div>
+      <div class="step-icon">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </div>
+      <h3 class="step-title">Intelligence</h3>
+      <p class="step-desc">We map the terrain before we move. Initial assessment of jurisdictional exposure, counterparty risk and regulatory landscape. No assumptions. No shortcuts.</p>
+      <span class="step-tag">Assessment Phase</span>
+    </div>
+
+    <div class="process-step r d1">
+      <div class="step-num">02</div>
+      <div class="step-icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+      </div>
+      <h3 class="step-title">Architecture</h3>
+      <p class="step-desc">Structural design calibrated to sovereign frameworks, compliance constraints and cross-border execution requirements. Built to hold under pressure. Built to last.</p>
+      <span class="step-tag">Design Phase</span>
+    </div>
+
+    <div class="process-step r d2">
+      <div class="step-num">03</div>
+      <div class="step-icon">
+        <svg viewBox="0 0 24 24"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/></svg>
+      </div>
+      <h3 class="step-title">Execution</h3>
+      <p class="step-desc">Deployment of capital structures, compliance protocols and operational frameworks. Precision-engineered for hostile environments. We execute where others hesitate.</p>
+      <span class="step-tag">Deployment Phase</span>
+    </div>
+
+    <div class="process-step r d3">
+      <div class="step-num">04</div>
+      <div class="step-icon">
+        <svg viewBox="0 0 24 24"><polyline points="23,6 13.5,15.5 8.5,10.5 1,18"/><polyline points="17,6 23,6 23,12"/></svg>
+      </div>
+      <h3 class="step-title">Continuity</h3>
+      <p class="step-desc">Sustained compliance oversight, regulatory monitoring and adaptive risk management. The engagement does not end at execution. Environments shift. We shift with them.</p>
+      <span class="step-tag">Ongoing Phase</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- GEOGRAPHY -->
+<section class="geography" id="geography">
+  <div class="geo-left r">
+    <div class="section-tag">Operational Reach</div>
+    <h2>We Deploy<br>Where Others<br><em>Don't.</em></h2>
+    <p>Black Sea does not operate from a fixed geography. We are structured to deploy capital, compliance and advisory capabilities into any jurisdiction where governance, risk and strategic necessity intersect. The complexity of the environment is not a barrier. It is our advantage.</p>
+  </div>
+  <div class="geo-right r d1">
+    <div class="geo-item">
+      <span class="geo-num">01</span>
+      <div class="geo-content">
+        <p class="geo-title">High-Risk Jurisdictions</p>
+        <p class="geo-desc">Markets with elevated AML, sanctions or regulatory exposure requiring specialist compliance architecture and counterparty due diligence.</p>
+      </div>
+    </div>
+    <div class="geo-item">
+      <span class="geo-num">02</span>
+      <div class="geo-content">
+        <p class="geo-title">Transitional &amp; Conflict-Adjacent Markets</p>
+        <p class="geo-desc">Environments undergoing governance transition, post-conflict reconstruction or sovereign restructuring where capital access is constrained and structural expertise is critical.</p>
+      </div>
+    </div>
+    <div class="geo-item">
+      <span class="geo-num">03</span>
+      <div class="geo-content">
+        <p class="geo-title">Defence-Adjacent Territories</p>
+        <p class="geo-desc">Jurisdictions where dual-use technology, critical infrastructure and security systems operate under heightened regulatory and sovereign scrutiny.</p>
+      </div>
+    </div>
+    <div class="geo-item">
+      <span class="geo-num">04</span>
+      <div class="geo-content">
+        <p class="geo-title">Cross-Border Corridors</p>
+        <p class="geo-desc">Multi-jurisdictional structures requiring simultaneous regulatory alignment, entity structuring and compliance execution across multiple sovereign frameworks.</p>
+      </div>
+    </div>
   </div>
 </section>
 
