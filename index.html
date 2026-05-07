@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Sea SPV</title>
+<meta name="description" content="A private strategic capital platform focused on complex jurisdictions, special situations and cross-border execution.">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #0E1C2A;
+  --navy-btn: #1E2E3D;
+  --text: #0E1C2A;
+  --sub: #5A6A78;
+  --border: rgba(0,0,0,0.1);
+  --footer-bg: #111B25;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Satoshi', sans-serif;
+  background: #fff;
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 3.5rem;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.nav-logo img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+/* Fallback text if logo doesn't load */
+.nav-logo-fallback {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: opacity 0.2s;
+}
+
+.nav-link:hover { opacity: 0.5; }
+
+.nav-btn {
+  display: inline-block;
+  border: 1.5px solid rgba(0,0,0,0.2);
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.45rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-btn:hover { background: var(--text); color: #fff; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 3.5rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-orb {
+  position: absolute;
+  top: 50%;
+  right: -6%;
+  transform: translateY(-52%);
+  width: 52vw;
+  height: 72vh;
+  background: radial-gradient(ellipse at 60% 40%, rgba(160,178,193,0.58) 0%, rgba(195,208,218,0.22) 45%, transparent 72%);
+  pointer-events: none;
+}
+
+.hero-content { position: relative; z-index: 1; max-width: 820px; }
+
+.hero-title {
+  font-size: clamp(3.6rem, 7vw, 6.8rem);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 1.4rem;
+  opacity: 0;
+  animation: up 0.9s 0.08s cubic-bezier(0.16,1,0.3,1) forwards;
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: var(--sub);
+  max-width: 420px;
+  line-height: 1.68;
+  margin-bottom: 2.4rem;
+  opacity: 0;
+  animation: up 0.9s 0.22s cubic-bezier(0.16,1,0.3,1) forwards;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: up 0.9s 0.36s cubic-bezier(0.16,1,0.3,1) forwards;
+}
+
+.btn-solid {
+  display: inline-block;
+  background: var(--navy-btn);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.9rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.btn-solid:hover { opacity: 0.8; transform: translateY(-1px); }
+
+.btn-ghost {
+  display: inline-block;
+  border: 1.5px solid rgba(0,0,0,0.17);
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.8rem 1.9rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.btn-ghost:hover { border-color: rgba(0,0,0,0.36); background: rgba(0,0,0,0.025); }
+
+/* ── SERVICES ── */
+.services { padding: 6rem 3.5rem; }
+
+.section-eyebrow {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--sub);
+  margin-bottom: 2.5rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.card {
+  padding: 2.2rem 2rem 2.4rem;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.22s;
+}
+
+.card:hover { background: rgba(0,0,0,0.016); }
+
+/* Icon wrapper */
+.icon {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: var(--navy);
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.card-title {
+  font-size: 0.975rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.card-desc {
+  font-size: 0.85rem;
+  color: var(--sub);
+  line-height: 1.68;
+}
+
+/* ── ABOUT ── */
+.about {
+  padding: 6rem 3.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.about-h2 {
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-bottom: 2.5rem;
+}
+
+.about-p {
+  font-size: 0.9rem;
+  color: var(--sub);
+  line-height: 1.8;
+  max-width: 380px;
+}
+
+.about-p + .about-p { margin-top: 0.8rem; }
+
+.about-right { display: flex; flex-direction: column; gap: 1.4rem; }
+
+.about-photo {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  background: #1a2535;
+}
+
+.about-caption {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+/* ── CTA ── */
+.cta-wrap { padding: 0.5rem 3.5rem 6rem; }
+
+.cta-box {
+  border: 1px solid rgba(0,0,0,0.09);
+  border-radius: 20px;
+  padding: 5.5rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+.cta-orb-tl {
+  position: absolute;
+  top: 0; left: 5%;
+  width: 35%; height: 60%;
+  background: radial-gradient(ellipse at top left, rgba(168,185,200,0.22) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.cta-orb-bl {
+  position: absolute;
+  bottom: -20%; left: 50%;
+  transform: translateX(-50%);
+  width: 70%; height: 80%;
+  background: radial-gradient(ellipse at bottom center, rgba(14,28,42,0.22) 0%, rgba(14,28,42,0.08) 45%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-box h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  position: relative; z-index: 1;
+}
+
+.cta-box p {
+  font-size: 0.925rem;
+  color: var(--sub);
+  max-width: 500px;
+  margin: 0 auto 2.4rem;
+  line-height: 1.68;
+  position: relative; z-index: 1;
+}
+
+.cta-box .btn-solid { position: relative; z-index: 1; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--footer-bg);
+  color: rgba(255,255,255,0.48);
+  padding: 4rem 3.5rem 2.5rem;
+}
+
+.ft {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.ft-brand .ft-logo {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.ft-brand .ft-logo img { height: 26px; width: auto; opacity: 0.9; }
+
+.ft-brand p { font-size: 0.82rem; max-width: 235px; line-height: 1.75; }
+
+.ft-brand a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: rgba(255,255,255,0.52);
+  font-size: 0.82rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.ft-brand a:hover { color: #fff; }
+
+.ft-col h5 {
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.28);
+  margin-bottom: 1rem;
+}
+
+.ft-col ul { list-style: none; }
+.ft-col li { margin-bottom: 0.52rem; }
+
+.ft-col a {
+  color: rgba(255,255,255,0.48);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.ft-col a:hover { color: #fff; }
+
+.ft-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.26);
+}
+
+.ft-bottom a { color: inherit; text-decoration: none; transition: color 0.2s; }
+.ft-bottom a:hover { color: rgba(255,255,255,0.6); }
+
+/* ── ANIMATIONS ── */
+@keyframes up {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.r {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+
+.r.on { opacity: 1; transform: none; }
+.d1 { transition-delay: 0.08s; }
+.d2 { transition-delay: 0.16s; }
+.d3 { transition-delay: 0.24s; }
+
+/* ── MOBILE ── */
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+
+.burger span { display: block; width: 22px; height: 1.5px; background: var(--text); }
+
+@media (max-width: 980px) {
+  nav { padding: 1rem 1.5rem; }
+  .burger { display: flex; }
+
+  .nav-right {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: rgba(255,255,255,0.97);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    gap: 1.2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-right.open { display: flex; }
+
+  .hero { padding: 7rem 1.5rem 4rem; min-height: 88vh; }
+  .hero-orb { right: -30%; width: 90vw; }
+
+  .services { padding: 4rem 1.5rem; }
+  .cards { grid-template-columns: 1fr; }
+
+  .about { grid-template-columns: 1fr; padding: 4rem 1.5rem; gap: 2.5rem; }
+  .about-p { max-width: 100%; }
+
+  .cta-wrap { padding: 0.5rem 1.5rem 4rem; }
+  .cta-box { padding: 3.5rem 1.75rem; }
+
+  footer { padding: 3rem 1.5rem 2rem; }
+  .ft { flex-wrap: wrap; }
+  .ft-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="/" class="nav-logo">
+    <img
+      src="https://cdn.prod.website-files.com/6992d152640605a152914dae/699307dbced8162250031299_Group%2047360.svg"
+      alt="Black Sea"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+    >
+    <span class="nav-logo-fallback" style="display:none;">Black Sea</span>
+  </a>
+
+  <button class="burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="nav-right" id="nav-right">
+    <a href="#services" class="nav-link">Our services</a>
+    <a href="#about" class="nav-link">About us</a>
+    <a href="contact.html" class="nav-btn">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-orb"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Capital for Complex<br>Environments.</h1>
+    <p class="hero-sub">A private strategic capital platform focused on complex jurisdictions, special situations and cross-border execution.</p>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn-solid">Request Introduction</a>
+      <a href="#services" class="btn-ghost">Learn more</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <p class="section-eyebrow r">Operational Focus</p>
+  <div class="cards">
+
+    <!-- Resilience -->
+    <div class="card r">
+      <div class="icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2.5L3.5 6.5v5c0 5 3.8 9.7 8.5 10.9C16.7 21.2 20.5 16.5 20.5 11.5v-5L12 2.5z"/>
+          <polyline points="8.5,12 11,14.5 15.5,9.5"/>
+        </svg>
+      </div>
+      <h3 class="card-title">Resilience</h3>
+      <p class="card-desc">Mission-critical infrastructure in regulated environments.</p>
+    </div>
+
+    <!-- Security Systems -->
+    <div class="card r d1">
+      <div class="icon">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="2.5"/>
+          <circle cx="12" cy="12" r="5.5"/>
+          <circle cx="12" cy="12" r="9"/>
+          <line x1="12" y1="3" x2="12" y2="1"/>
+          <line x1="12" y1="23" x2="12" y2="21"/>
+          <line x1="3" y1="12" x2="1" y2="12"/>
+          <line x1="23" y1="12" x2="21" y2="12"/>
+        </svg>
+      </div>
+      <h3 class="card-title">Security Systems</h3>
+      <p class="card-desc">Integrated platforms for surveillance, protection and operational readiness.</p>
+    </div>
+
+    <!-- Strategic Logistics -->
+    <div class="card r d2">
+      <div class="icon">
+        <svg viewBox="0 0 24 24">
+          <circle cx="5" cy="18" r="2"/>
+          <circle cx="19" cy="18" r="2"/>
+          <polyline points="1,3 5,3 8,15 17,15 20,7 6,7"/>
+          <line x1="8" y1="15" x2="7" y2="18"/>
+          <line x1="17" y1="15" x2="19" y2="18"/>
+        </svg>
+      </div>
+      <h3 class="card-title">Strategic Logistics</h3>
+      <p class="card-desc">Critical supply chain and mobility capabilities in complex environments.</p>
+    </div>
+
+    <!-- Dual-Use Technologies -->
+    <div class="card r">
+      <div class="icon">
+        <svg viewBox="0 0 24 24">
+          <polygon points="12,2 15.5,8.5 22,9.5 17,14.5 18.5,21 12,17.5 5.5,21 7,14.5 2,9.5 8.5,8.5"/>
+        </svg>
+      </div>
+      <h3 class="card-title">Dual-Use Technologies</h3>
+      <p class="card-desc">Technologies applicable across sovereign and defence applications.</p>
+    </div>
+
+    <!-- Special Situations -->
+    <div class="card r d1">
+      <div class="icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2v20M2 12h20"/>
+          <path d="M5 5l14 14M19 5L5 19"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </div>
+      <h3 class="card-title">Special Situations</h3>
+      <p class="card-desc">Structured capital solutions in transitional and high-complexity regions.</p>
+    </div>
+
+    <!-- Cross-Border Structuring -->
+    <div class="card r d2">
+      <div class="icon">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9.5"/>
+          <path d="M2.5 12h19"/>
+          <path d="M12 2.5c-2.8 2.8-4.4 5.9-4.4 9.5s1.6 6.7 4.4 9.5"/>
+          <path d="M12 2.5c2.8 2.8 4.4 5.9 4.4 9.5s-1.6 6.7-4.4 9.5"/>
+          <path d="M5.5 6.5 Q9 9 12 9 Q15 9 18.5 6.5"/>
+          <path d="M5.5 17.5 Q9 15 12 15 Q15 15 18.5 17.5"/>
+        </svg>
+      </div>
+      <h3 class="card-title">Cross-Border Structuring</h3>
+      <p class="card-desc">Multi-jurisdictional execution aligned with regulatory frameworks.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-left r">
+    <h2 class="about-h2">Structured for Sovereign Realities</h2>
+    <p class="about-p">Black Sea operates at the intersection of capital, infrastructure and strategic necessity. We structure and execute in environments where governance, security and jurisdictional clarity determine outcomes.</p>
+    <p class="about-p">Our focus remains disciplined: strategic regions, critical capabilities and long-term alignment with sovereign frameworks.</p>
+  </div>
+  <div class="about-right r d1">
+    <img
+      class="about-photo"
+      src="https://cdn.prod.website-files.com/6992d152640605a152914dae/69930bcee92c7ee08b331415_abstract-geometric-wavy-folds-background%20(2).jpg"
+      alt=""
+      loading="lazy"
+    >
+    <p class="about-caption">Execution where structure determines advantage.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-wrap">
+  <div class="cta-box r">
+    <div class="cta-orb-tl"></div>
+    <div class="cta-orb-bl"></div>
+    <h2>Built for Sovereign Complexity. Positioned for Strategic Outcomes.</h2>
+    <p>Black Sea deploys capital in sectors critical to national resilience and strategic infrastructure, operating within complex jurisdictions under disciplined governance.</p>
+    <a href="contact.html" class="btn-solid">Secure Access</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <div class="ft-brand">
+      <a href="/" class="ft-logo">
+        <img
+          src="https://cdn.prod.website-files.com/6992d152640605a152914dae/699307dbced8162250031299_Group%2047360.svg"
+          alt="Black Sea"
+          style="filter: brightness(0) invert(1);"
+          onerror="this.parentElement.innerHTML='<span style=\'font-size:.9rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#fff\'>Black Sea</span>'"
+        >
+      </a>
+      <p>Structured capital aligned with strategic interests and sovereign frameworks.</p>
+      <a href="contact.html">Strategic Contact &rarr;</a>
+    </div>
+    <div class="ft-col">
+      <h5>Navigate</h5>
+      <ul>
+        <li><a href="#services">Our services</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="legal/jurisdictional-disclosures.html">Jurisdictional Disclosures</a></li>
+        <li><a href="#">Cookie policy</a></li>
+        <li><a href="#">Data Privacy</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h5>Connect</h5>
+      <ul>
+        <li><a href="https://www.linkedin.com/company/a27-management-services/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://twitter.com/A27Services" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a href="https://telegram" target="_blank" rel="noopener">Telegram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <span>&copy; 2026, Black Sea SPV s.r.o.</span>
+    <a href="legal/jurisdictional-disclosures.html">Legal Notice</a>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav
+  const burger = document.getElementById('burger');
+  const navR   = document.getElementById('nav-right');
+  burger.addEventListener('click', () => navR.classList.toggle('open'));
+  navR.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navR.classList.remove('open')));
+
+  // Scroll reveal
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.r').forEach(el => obs.observe(el));
+
+  // Nav border on scroll
+  const navEl = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    navEl.style.borderBottomColor = scrollY > 30 ? 'rgba(0,0,0,0.07)' : 'transparent';
+  }, { passive: true });
+</script>
+</body>
+</html>
