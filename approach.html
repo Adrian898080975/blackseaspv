@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Approach — Black Sea</title>
+<meta name="description" content="How Black Sea works: operator-side, fixed price, partner counsel where matters require it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .principle {
+    padding: 64px 0;
+    border-top: 1px solid var(--line);
+  }
+  .principle:first-of-type { border-top: none; padding-top: 0; }
+  .principle-inner {
+    display: grid;
+    grid-template-columns: 0.6fr 1.6fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .principle-num {
+    font-family: var(--t-serif);
+    font-size: clamp(80px, 12vw, 140px);
+    line-height: 0.85;
+    color: var(--signal);
+    letter-spacing: -0.02em;
+  }
+  .principle-title {
+    font-family: var(--t-display);
+    font-weight: 700;
+    font-size: clamp(28px, 3vw, 38px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    margin-bottom: 24px;
+  }
+  .principle-title em {
+    font-family: var(--t-serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--text-sub);
+  }
+  .principle-body p {
+    font-family: var(--t-body);
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--text-sub);
+    margin-bottom: 18px;
+    max-width: 640px;
+  }
+  .principle-body p strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .engagement-block {
+    background: var(--bg-soft);
+    padding: 56px 48px;
+    margin-top: 32px;
+  }
+  .engagement-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 32px;
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+    align-items: start;
+  }
+  .engagement-row:first-child { border-top: none; padding-top: 0; }
+  .engagement-row:last-child { padding-bottom: 0; }
+  .engagement-label {
+    font-family: var(--t-mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-sub);
+    padding-top: 4px;
+  }
+  .engagement-value {
+    font-family: var(--t-body);
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--text);
+  }
+  .engagement-value strong {
+    font-family: var(--t-display);
+    font-weight: 700;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+
+  @media (max-width: 900px) {
+    .principle-inner { grid-template-columns: 1fr; gap: 16px; }
+    .engagement-block { padding: 32px 24px; }
+    .engagement-row { grid-template-columns: 1fr; gap: 8px; padding: 18px 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <svg viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="22" stroke="#0A1018" stroke-width="2"/>
+        <line x1="2" y1="24" x2="46" y2="24" stroke="#0A1018" stroke-width="2"/>
+        <rect x="20" y="20" width="8" height="8" fill="#0A1018"/>
+      </svg>
+      <span class="nav-wordmark">BLACK<span class="dot">·</span>SEA</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="nav-links">
+      <a href="practice.html" class="nav-link">Practice</a>
+      <a href="approach.html" class="nav-link active">Approach</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="contact.html" class="nav-cta">Talk to us</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="section-tag reveal"><span class="idx">§03</span>How we work</div>
+      <h1 class="hero-title reveal d1">Operator-side. <em>Not consultancy-side.</em></h1>
+      <p class="hero-sub reveal d2">
+        Three rules shape every engagement. They explain why clients pick us over a Big Four advisory or a traditional law firm — and why we say no to work outside our scope.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+
+      <div class="principle">
+        <div class="principle-inner">
+          <div class="principle-num reveal">01</div>
+          <div class="principle-body reveal d1">
+            <h2 class="principle-title">We&rsquo;ve sat <em>the seat.</em></h2>
+            <p>
+              Our team has <strong>built and run regulated structures</strong>, not just advised on them. We have received the regulator findings, drafted the response, sat the inspection, hired the compliance officer.
+            </p>
+            <p>
+              That experience changes the advice. You do not get a generic framework adapted to your situation. You get the answer to a question we already had to solve on our own balance sheet.
+            </p>
+            <p>
+              Consultancy-side advice tells you what should be done. Operator-side advice tells you what can be done, in what order, with what evidence the regulator will accept.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="principle">
+        <div class="principle-inner">
+          <div class="principle-num reveal">02</div>
+          <div class="principle-body reveal d1">
+            <h2 class="principle-title">Clear scope, <em>fixed price.</em></h2>
+            <p>
+              <strong>We do not bill by the hour.</strong> Hourly billing creates incentives we do not want — to slow down, to over-research, to lengthen.
+            </p>
+            <p>
+              Every engagement starts with a two-week diagnostic. At the end you receive a scoped proposal: deliverables, timeline, fixed fee. You decide whether to proceed. If you do, the price does not move.
+            </p>
+            <p>
+              For ongoing relationships we work on monthly retainer. Fixed fee, defined scope, clear escalation path for matters that exceed it.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="principle">
+        <div class="principle-inner">
+          <div class="principle-num reveal">03</div>
+          <div class="principle-body reveal d1">
+            <h2 class="principle-title">Licensed counsel <em>when needed.</em></h2>
+            <p>
+              We are an advisory practice, not a law firm. For matters that require a regulated legal opinion, signed counsel, or admission to a regulator&rsquo;s register, <strong>we retain partner counsel in the right jurisdiction.</strong>
+            </p>
+            <p>
+              You see the cost. You approve the engagement. The partner reports through us so you have one point of accountability, not three.
+            </p>
+            <p>
+              This is the line we do not blur. We are honest about what advisory can do and what it cannot, and we structure engagements so you are never paying us for something a licensed lawyer should be doing.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ENGAGEMENT DETAILS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-tag reveal"><span class="idx">§04</span>Engagement</div>
+      <h2 class="section-title reveal d1">What it looks like in <em>practice.</em></h2>
+
+      <div class="engagement-block reveal d2">
+        <div class="engagement-row">
+          <div class="engagement-label">Format</div>
+          <div class="engagement-value">
+            <strong>Project-based or monthly retainer.</strong>
+            Project work is the default for new clients. Retainer once we have completed at least one project and the working relationship is calibrated.
+          </div>
+        </div>
+        <div class="engagement-row">
+          <div class="engagement-label">Cycle</div>
+          <div class="engagement-value">
+            <strong>Two weeks for a diagnostic. Two to six months for a full mandate.</strong>
+            We do not start work without a written scope, and we do not extend a project without a written change request.
+          </div>
+        </div>
+        <div class="engagement-row">
+          <div class="engagement-label">Range</div>
+          <div class="engagement-value">
+            <strong>Diagnostics from €3K. Structuring mandates €15K to €75K. Retainers from €5K monthly.</strong>
+            Quoted as fixed price. We do not invoice for travel, materials, or filing fees without disclosing them up front.
+          </div>
+        </div>
+        <div class="engagement-row">
+          <div class="engagement-label">Communication</div>
+          <div class="engagement-value">
+            <strong>One sender, weekly check-in, written summaries.</strong>
+            You do not chase us. We send a written update every Friday with progress, blockers, and the next week&rsquo;s scope.
+          </div>
+        </div>
+        <div class="engagement-row">
+          <div class="engagement-label">Conflicts</div>
+          <div class="engagement-value">
+            <strong>We disclose every potential conflict in writing before engagement.</strong>
+            If we cannot take a mandate because of an existing relationship, we say so. We do not run dual mandates without explicit waiver from both parties.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band-inner">
+        <div>
+          <h2 class="cta-band-title reveal">Send us <em>one paragraph.</em></h2>
+          <p class="cta-band-sub reveal d1">
+            Tell us what you are trying to structure or solve. We respond within 48 hours with a yes, a no, or a question.
+          </p>
+        </div>
+        <div class="cta-band-action reveal d2">
+          <a href="contact.html" class="btn btn--signal">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-brand-row">
+          <svg viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="22" stroke-width="2"/>
+            <line x1="2" y1="24" x2="46" y2="24" stroke-width="2"/>
+            <rect x="20" y="20" width="8" height="8"/>
+          </svg>
+          <span class="footer-wordmark">BLACK<span class="dot">·</span>SEA</span>
+        </div>
+        <p class="footer-tagline">
+          Independent advisory at the intersection of regulation, jurisdiction and cross-border practice.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="approach.html">Approach</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Office</h5>
+        <ul>
+          <li><a href="contact.html">Bratislava</a></li>
+          <li><a href="contact.html">Malta</a></li>
+          <li><a href="contact.html">Prague</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="legal/jurisdictional-disclosures.html">Disclosures</a></li>
+          <li><a href="legal/privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026, Black Sea SPV s.r.o.</span>
+      <a href="legal/jurisdictional-disclosures.html">Legal Notice</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js-ready');
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('nav-links');
+  if (burger) burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  if (navLinks) navLinks.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 30);
+  }, { passive: true });
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
