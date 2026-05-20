@@ -693,6 +693,67 @@ footer {
 .footer-bottom a:hover { color: var(--steel); }
 
 /* ==========================================================
+   BRIEFINGS
+   ========================================================== */
+
+.briefing-card {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--signal);
+  padding: 28px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.briefing-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(10, 16, 24, 0.06);
+}
+.briefing-date {
+  font-family: var(--t-mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--signal);
+}
+.briefing-title {
+  font-family: var(--t-display);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  color: var(--text);
+}
+.briefing-excerpt {
+  font-family: var(--t-body);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-sub);
+  flex: 1;
+}
+.briefing-read {
+  font-family: var(--t-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text);
+  border-bottom: 1px solid var(--text);
+  padding-bottom: 2px;
+  align-self: flex-start;
+  margin-top: 4px;
+}
+.briefing-empty {
+  font-family: var(--t-body);
+  font-size: 15px;
+  color: var(--text-sub);
+  grid-column: 1 / -1;
+  padding: 32px 0;
+}
+
+/* ==========================================================
    REVEAL ANIMATION
    ========================================================== */
 
