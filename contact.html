@@ -5,7 +5,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSI+CiAgPHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiBmaWxsPSIjMEExMDE4Ii8+CiAgPGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMTgiIHN0cm9rZT0iI0RDRTNFOCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iNiIgeTE9IjI0IiB4Mj0iNDIiIHkyPSIyNCIgc3Ryb2tlPSIjRENFM0U4IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxyZWN0IHg9IjIwLjUiIHk9IjIwLjUiIHdpZHRoPSI3IiBoZWlnaHQ9IjciIGZpbGw9IiNEQ0UzRTgiLz4KPC9zdmc+">
   <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSI+CiAgPHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiBmaWxsPSIjMEExMDE4Ii8+CiAgPGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMTgiIHN0cm9rZT0iI0RDRTNFOCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iNiIgeTE9IjI0IiB4Mj0iNDIiIHkyPSIyNCIgc3Ryb2tlPSIjRENFM0U4IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxyZWN0IHg9IjIwLjUiIHk9IjIwLjUiIHdpZHRoPSI3IiBoZWlnaHQ9IjciIGZpbGw9IiNEQ0UzRTgiLz4KPC9zdmc+">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Black Sea</title>
+<title>Contact, Black Sea</title>
 <meta name="description" content="Get in touch with Black Sea. One paragraph by email is usually enough.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,14 +78,14 @@
           </div>
 
           <!--
-            IMPORTANT — set form action below to one of:
+            IMPORTANT, set form action below to one of:
             (a) Your existing Webflow / Wix / Netlify form action URL  (current site)
             (b) Formspree: replace with https://formspree.io/f/YOUR_ID after free signup at formspree.io
             (c) Leave action="" and the form falls back to mailto submission via JS handler
           -->
           <form class="form-wrap reveal d1" id="contact-form" action="https://formspree.io/f/mlgzlvad" method="POST">
             <!-- Formspree config -->
-            <input type="hidden" name="_subject" value="New enquiry — blackseaspv.com">
+            <input type="hidden" name="_subject" value="New enquiry, blackseaspv.com">
             <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
 
             <div class="form-row">
@@ -107,9 +107,9 @@
               <label class="form-label" for="topic">Topic</label>
               <select class="form-select" id="topic" name="topic" required>
                 <option value="">Select…</option>
-                <option value="defense">EU · Defense Capital — fund formation</option>
-                <option value="frontier">Frontier Markets — Nigeria / AIFC / Azerbaijan</option>
-                <option value="compliance">Regulatory Advisory — compliance / MiCA</option>
+                <option value="defense">EU · Defense Capital, fund formation</option>
+                <option value="frontier">Frontier Markets, Nigeria / AIFC / Azerbaijan</option>
+                <option value="compliance">Regulatory Advisory, compliance / MiCA</option>
                 <option value="other">Other</option>
               </select>
             </div>
@@ -161,9 +161,9 @@
       <div class="footer-col">
         <h5>Office</h5>
         <ul>
-          <li><a href="contact.html">Bratislava</a></li>
-          <li><a href="contact.html">Malta</a></li>
-          <li><a href="contact.html">Prague</a></li>
+          <li><a href="contact.html">New York</a></li>
+          <li><a href="contact.html">EU</a></li>
+          <li><a href="contact.html">Africa</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -175,7 +175,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026, Black Sea SPV s.r.o.</span>
+      <span>© 2026, Black Sea</span>
       <a href="legal/jurisdictional-disclosures.html">Legal Notice</a>
     </div>
   </div>
@@ -206,7 +206,7 @@
       e.preventDefault();
       const data = new FormData(form);
       const body = `Name: ${data.get('name')}\nEmail: ${data.get('email')}\nOrganisation: ${data.get('org') || '—'}\nTopic: ${data.get('topic')}\n\n${data.get('message')}`;
-      window.location.href = `mailto:adrian@blackseaspv.com?subject=Enquiry — ${encodeURIComponent(data.get('topic') || 'Black Sea')}&body=${encodeURIComponent(body)}`;
+      window.location.href = `mailto:operations@blackseaspv.com?subject=Enquiry, ${encodeURIComponent(data.get('topic') || 'Black Sea')}&body=${encodeURIComponent(body)}`;
     });
   } else if (form) {
     form.addEventListener('submit', async (e) => {
