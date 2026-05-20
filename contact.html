@@ -81,7 +81,11 @@
             (b) Formspree: replace with https://formspree.io/f/YOUR_ID after free signup at formspree.io
             (c) Leave action="" and the form falls back to mailto submission via JS handler
           -->
-          <form class="form-wrap reveal d1" id="contact-form" action="" method="POST">
+          <form class="form-wrap reveal d1" id="contact-form" action="https://formspree.io/f/mlgzlvad" method="POST">
+            <!-- Formspree config -->
+            <input type="hidden" name="_subject" value="New enquiry — blackseaspv.com">
+            <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+
             <div class="form-row">
               <label class="form-label" for="name">Name</label>
               <input class="form-input" type="text" id="name" name="name" required>
