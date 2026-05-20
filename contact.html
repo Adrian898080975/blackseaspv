@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Black Sea</title>
+<meta name="description" content="Get in touch with Black Sea. One paragraph by email is usually enough.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .contact-layout {
+    max-width: 720px;
+  }
+  .success-msg {
+    background: var(--signal);
+    color: var(--text);
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    display: none;
+    font-family: var(--t-mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+  .success-msg.show { display: block; }
+  @media (max-width: 900px) {
+    .contact-layout { grid-template-columns: 1fr; gap: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <svg viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="22" stroke="#0A1018" stroke-width="2"/>
+        <line x1="2" y1="24" x2="46" y2="24" stroke="#0A1018" stroke-width="2"/>
+        <rect x="20" y="20" width="8" height="8" fill="#0A1018"/>
+      </svg>
+      <span class="nav-wordmark">BLACK<span class="dot">·</span>SEA</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="nav-links">
+      <a href="practice.html" class="nav-link">Practice</a>
+      <a href="approach.html" class="nav-link">Approach</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+      <a href="contact.html" class="nav-cta">Talk to us</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="section-tag reveal"><span class="idx">§05</span>Contact</div>
+      <h1 class="hero-title reveal d1">Tell us what <em>you&rsquo;re solving.</em></h1>
+      <p class="hero-sub reveal d2">
+        One paragraph is usually enough to know whether we&rsquo;re the right fit. We respond within 48 hours with a yes, a no, or a clarifying question.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- FORM -->
+        <div>
+          <div class="section-tag reveal">Form</div>
+
+          <div class="success-msg" id="success-msg">
+            ✓ Message received. We&rsquo;ll come back to you within 48 hours.
+          </div>
+
+          <!--
+            IMPORTANT — set form action below to one of:
+            (a) Your existing Webflow / Wix / Netlify form action URL  (current site)
+            (b) Formspree: replace with https://formspree.io/f/YOUR_ID after free signup at formspree.io
+            (c) Leave action="" and the form falls back to mailto submission via JS handler
+          -->
+          <form class="form-wrap reveal d1" id="contact-form" action="" method="POST">
+            <div class="form-row">
+              <label class="form-label" for="name">Name</label>
+              <input class="form-input" type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="org">Organisation (optional)</label>
+              <input class="form-input" type="text" id="org" name="org">
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="topic">Topic</label>
+              <select class="form-select" id="topic" name="topic" required>
+                <option value="">Select…</option>
+                <option value="defense">EU · Defense Capital — fund formation</option>
+                <option value="frontier">Frontier Markets — Nigeria / AIFC / Azerbaijan</option>
+                <option value="compliance">Regulatory Advisory — compliance / MiCA</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="message">What are you trying to structure or solve?</label>
+              <textarea class="form-textarea" id="message" name="message" required
+                placeholder="One paragraph is enough. Specifics help us answer accurately."></textarea>
+              <div class="form-help">No NDA required at this stage. We treat all enquiries in confidence.</div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn--primary">Send message</button>
+              <span class="form-meta">Response within 48 hours</span>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-brand-row">
+          <svg viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="22" stroke-width="2"/>
+            <line x1="2" y1="24" x2="46" y2="24" stroke-width="2"/>
+            <rect x="20" y="20" width="8" height="8"/>
+          </svg>
+          <span class="footer-wordmark">BLACK<span class="dot">·</span>SEA</span>
+        </div>
+        <p class="footer-tagline">
+          Independent advisory at the intersection of regulation, jurisdiction and cross-border practice.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="approach.html">Approach</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Office</h5>
+        <ul>
+          <li><a href="contact.html">Bratislava</a></li>
+          <li><a href="contact.html">Malta</a></li>
+          <li><a href="contact.html">Prague</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="legal/jurisdictional-disclosures.html">Disclosures</a></li>
+          <li><a href="legal/privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026, Black Sea SPV s.r.o.</span>
+      <a href="legal/jurisdictional-disclosures.html">Legal Notice</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js-ready');
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('nav-links');
+  if (burger) burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  if (navLinks) navLinks.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 30);
+  }, { passive: true });
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // Form mailto fallback if action is empty
+  const form = document.getElementById('contact-form');
+  if (form && !form.action.includes('formspree') && !form.action.includes('netlify') && !form.action.match(/https?:\/\//)) {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const body = `Name: ${data.get('name')}\nEmail: ${data.get('email')}\nOrganisation: ${data.get('org') || '—'}\nTopic: ${data.get('topic')}\n\n${data.get('message')}`;
+      window.location.href = `mailto:adrian@blackseaspv.com?subject=Enquiry — ${encodeURIComponent(data.get('topic') || 'Black Sea')}&body=${encodeURIComponent(body)}`;
+    });
+  } else if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.reset();
+          document.getElementById('success-msg').classList.add('show');
+        } else {
+          alert('Something went wrong. Please email adrian@blackseaspv.com directly.');
+        }
+      } catch (err) {
+        alert('Could not send. Please email adrian@blackseaspv.com directly.');
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

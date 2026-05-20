@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice — Black Sea</title>
+<meta name="description" content="EU defense capital, frontier markets, regulatory advisory. Three areas where Black Sea operates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .practice-section {
+    padding: 96px 0;
+    border-top: 1px solid var(--line);
+  }
+  .practice-section:first-of-type { border-top: none; }
+  .practice-section-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+  }
+  .practice-section-meta {
+    position: sticky;
+    top: 96px;
+    align-self: start;
+  }
+  .practice-section-tag {
+    font-family: var(--t-mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .practice-section[data-color="defense"] .practice-section-tag { color: var(--signal); }
+  .practice-section[data-color="frontier"] .practice-section-tag { color: var(--alert); }
+  .practice-section[data-color="compliance"] .practice-section-tag { color: var(--steel-deep); }
+  .practice-section-title {
+    font-family: var(--t-display);
+    font-weight: 700;
+    font-size: clamp(28px, 3vw, 38px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    margin-bottom: 20px;
+  }
+  .practice-section-title em {
+    font-family: var(--t-serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--text-sub);
+  }
+  .practice-section-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  .pill {
+    font-family: var(--t-mono);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border: 1px solid var(--line);
+    color: var(--text-sub);
+  }
+  .practice-body-block h3 {
+    font-family: var(--t-display);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--text);
+    margin: 40px 0 12px;
+    letter-spacing: -0.005em;
+  }
+  .practice-body-block h3:first-child { margin-top: 0; }
+  .practice-body-block p {
+    font-family: var(--t-body);
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: var(--text-sub);
+    margin-bottom: 16px;
+  }
+  .practice-body-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  .practice-body-block ul li {
+    font-family: var(--t-body);
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--text);
+    padding-left: 22px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .practice-body-block ul li::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    color: var(--signal);
+    font-weight: 500;
+  }
+  @media (max-width: 900px) {
+    .practice-section-inner { grid-template-columns: 1fr; gap: 32px; }
+    .practice-section-meta { position: static; }
+    .practice-section { padding: 64px 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <svg viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="22" stroke="#0A1018" stroke-width="2"/>
+        <line x1="2" y1="24" x2="46" y2="24" stroke="#0A1018" stroke-width="2"/>
+        <rect x="20" y="20" width="8" height="8" fill="#0A1018"/>
+      </svg>
+      <span class="nav-wordmark">BLACK<span class="dot">·</span>SEA</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="nav-links">
+      <a href="practice.html" class="nav-link active">Practice</a>
+      <a href="approach.html" class="nav-link">Approach</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="contact.html" class="nav-cta">Talk to us</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="section-tag reveal"><span class="idx">§02</span>Practice areas</div>
+      <h1 class="hero-title reveal d1">Where we <em>work.</em></h1>
+      <p class="hero-sub reveal d2">
+        Three areas, defined by the structural and regulatory problems our clients bring us. We do not consult outside them.
+      </p>
+    </div>
+  </section>
+
+  <!-- DEFENSE -->
+  <section class="practice-section" id="defense" data-color="defense">
+    <div class="container">
+      <div class="practice-section-inner">
+        <div class="practice-section-meta reveal">
+          <div class="practice-section-tag">EU · Defense Capital</div>
+          <h2 class="practice-section-title">Fund formation for <em>emerging managers.</em></h2>
+          <div class="practice-section-tags">
+            <span class="pill">SICAV · AIF</span>
+            <span class="pill">MFSA · CSSF · AFM</span>
+            <span class="pill">Fractional CCO</span>
+            <span class="pill">LP readiness</span>
+          </div>
+        </div>
+        <div class="practice-body-block reveal d1">
+          <p>
+            Defense capital is moving. The EU Defense Roadmap, the proposed €1B Fund-of-Funds, and the Defense Equity Facility are creating space for a new generation of fund managers raising into defense-tech, dual-use and resilience-grade infrastructure. Most of them are first- or second-time GPs.
+          </p>
+          <p>
+            The capital exists. The structuring expertise is scarce. That gap is where we work.
+          </p>
+
+          <h3>What we do</h3>
+          <ul>
+            <li>Structure design — SICAV, AIF, parallel vehicles, feeder structures</li>
+            <li>Regulator engagement and submission support (MFSA, CSSF, AFM and equivalents)</li>
+            <li>Fractional CCO mandate during launch and first 18 months of operation</li>
+            <li>LP onboarding readiness — data room, AML / KYC framework, side-letter standardisation</li>
+            <li>Documentation review — PPM, side letters, subscription agreements</li>
+          </ul>
+
+          <h3>Who this is for</h3>
+          <p>
+            First-time managers raising €30M to €250M. Family offices considering an allocation programme rather than direct deals. Defense-tech founders raising bridge or Series A who need fund-grade compliance posture for institutional rounds.
+          </p>
+
+          <h3>Engagement</h3>
+          <p>
+            Project-based, typically 60 to 180 days for a complete fund formation. Diagnostic and scoping in two weeks. Fixed price. We retain partner counsel in the relevant jurisdiction for matters that require licensed legal opinion.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRONTIER -->
+  <section class="practice-section" id="frontier" data-color="frontier">
+    <div class="container">
+      <div class="practice-section-inner">
+        <div class="practice-section-meta reveal">
+          <div class="practice-section-tag">Frontier Markets</div>
+          <h2 class="practice-section-title">Cross-border <em>regulatory positioning.</em></h2>
+          <div class="practice-section-tags">
+            <span class="pill">Nigeria ARIP</span>
+            <span class="pill">AIFC AFSA</span>
+            <span class="pill">Azerbaijan</span>
+            <span class="pill">UBO screening</span>
+          </div>
+        </div>
+        <div class="practice-body-block reveal d1">
+          <p>
+            New crypto and fintech frameworks are coming live across markets where international advisory bench is thin. Nigeria&rsquo;s SEC ARIP under ISA 2025 is live with hard deadlines. AIFC&rsquo;s AFSA framework amendments take effect 1 January 2026 with a six-month transition. Azerbaijan is twelve months ahead of its own licensing wave.
+          </p>
+          <p>
+            Local counsel knows local rules. International counsel knows global rules. The hard work is the seam where the two have to fit together — and that is what we do.
+          </p>
+
+          <h3>What we do</h3>
+          <ul>
+            <li>ARIP gap analysis for crypto operators with Nigerian-customer exposure</li>
+            <li>AIFC AFSA transition advisory — Capital Markets, Digital Assets, Crowdfunding</li>
+            <li>Azerbaijan pre-licensing positioning for fintech and payment operators</li>
+            <li>Multi-jurisdiction structuring — entity placement, treaty mapping, banking access</li>
+            <li>UBO and sanctions screening using World-Check class tools</li>
+          </ul>
+
+          <h3>Who this is for</h3>
+          <p>
+            Crypto exchanges and VASPs with customer footprint in new framework jurisdictions. Fintech and payments operators positioning ahead of licensing waves. Family offices and funds with frontier-market exposure that needs an EU-side compliance read.
+          </p>
+
+          <h3>Engagement</h3>
+          <p>
+            Gap analysis from €3K, two weeks. Full advisory mandates €8K to €60K depending on jurisdiction and scope. Ongoing retainer from €5K monthly for clients in active licensing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGULATORY ADVISORY -->
+  <section class="practice-section" id="compliance" data-color="compliance">
+    <div class="container">
+      <div class="practice-section-inner">
+        <div class="practice-section-meta reveal">
+          <div class="practice-section-tag">Regulatory Advisory</div>
+          <h2 class="practice-section-title">Compliance architecture &amp; <em>assurance.</em></h2>
+          <div class="practice-section-tags">
+            <span class="pill">AML / KYC</span>
+            <span class="pill">MiCA</span>
+            <span class="pill">Due diligence</span>
+            <span class="pill">Regulator response</span>
+          </div>
+        </div>
+        <div class="practice-body-block reveal d1">
+          <p>
+            For operators who already hold licences — or are about to — and need EU-grade compliance infrastructure. The work that turns a regulatory permission into a functioning compliance practice.
+          </p>
+          <p>
+            Where law firms write the policy and most consultancies leave you with a deck, we build the operating framework that an examiner can actually walk through.
+          </p>
+
+          <h3>What we do</h3>
+          <ul>
+            <li>AML / KYC framework design — policy, procedure, controls, evidence</li>
+            <li>MiCA readiness audit and remediation roadmap</li>
+            <li>Counterparty and UBO due diligence on onboarding and ongoing review</li>
+            <li>Regulator response support — questions, findings, remediation plans</li>
+            <li>Compliance officer mentoring during first 6 to 18 months of operation</li>
+          </ul>
+
+          <h3>Who this is for</h3>
+          <p>
+            CASPs and EMIs transitioning under MiCA. Multi-jurisdiction VASPs needing one master framework with jurisdiction-specific overlays. Funds onboarding LPs in regulated channels. Operators receiving regulator findings who need experienced help responding.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band-inner">
+        <div>
+          <h2 class="cta-band-title reveal">Tell us what <em>you&rsquo;re solving.</em></h2>
+          <p class="cta-band-sub reveal d1">
+            One paragraph by email is usually enough to know if we&rsquo;re the right fit. We respond within 48 hours.
+          </p>
+        </div>
+        <div class="cta-band-action reveal d2">
+          <a href="contact.html" class="btn btn--signal">Request a call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-brand-row">
+          <svg viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="22" stroke-width="2"/>
+            <line x1="2" y1="24" x2="46" y2="24" stroke-width="2"/>
+            <rect x="20" y="20" width="8" height="8"/>
+          </svg>
+          <span class="footer-wordmark">BLACK<span class="dot">·</span>SEA</span>
+        </div>
+        <p class="footer-tagline">
+          Independent advisory at the intersection of regulation, jurisdiction and cross-border practice.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="approach.html">Approach</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Office</h5>
+        <ul>
+          <li><a href="contact.html">Bratislava</a></li>
+          <li><a href="contact.html">Malta</a></li>
+          <li><a href="contact.html">Prague</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="legal/jurisdictional-disclosures.html">Disclosures</a></li>
+          <li><a href="legal/privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026, Black Sea SPV s.r.o.</span>
+      <a href="legal/jurisdictional-disclosures.html">Legal Notice</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js-ready');
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('nav-links');
+  if (burger) burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  if (navLinks) navLinks.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 30);
+  }, { passive: true });
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
