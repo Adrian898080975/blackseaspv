@@ -3,146 +3,222 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jurisdictional Disclosures — Black Sea SPV</title>
-<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+<title>Jurisdictional Disclosures — Black Sea</title>
+<meta name="description" content="Jurisdictional disclosures and regulatory notices for Black Sea SPV s.r.o.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root { --bg:#06090D; --bg2:#0A0F15; --text:#E8EDF2; --sub:#6B7F8E; --muted:#3A4E5C; --border:rgba(255,255,255,0.07); --border-h:rgba(255,255,255,0.15); --nav-h:72px; }
-html { scroll-behavior:smooth; }
-body { font-family:'Satoshi',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
-nav { position:fixed; top:0; left:0; right:0; z-index:500; height:var(--nav-h); display:flex; align-items:center; justify-content:space-between; padding:0 4rem; background:rgba(6,9,13,.94); backdrop-filter:blur(22px); border-bottom:1px solid var(--border); }
-.nav-logo { display:flex; align-items:center; text-decoration:none; }
-.nav-logo img { height:30px; width:auto; filter:brightness(0) invert(1); opacity:.9; display:block; }
-.nav-logo-text { font-size:1.1rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--text); }
-.nav-right { display:flex; align-items:center; gap:2.5rem; }
-.nav-link { color:var(--sub); text-decoration:none; font-size:.82rem; font-weight:500; letter-spacing:.08em; text-transform:uppercase; transition:color .2s; }
-.nav-link:hover { color:var(--text); }
-.nav-cta { display:inline-block; border:1px solid var(--border-h); color:var(--text); text-decoration:none; padding:.48rem 1.35rem; font-size:.78rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; transition:background .2s,border-color .2s; }
-.nav-cta:hover { background:rgba(255,255,255,.07); }
-.legal-content { max-width:720px; margin:0 auto; padding:calc(var(--nav-h) + 5rem) 2rem 7rem; }
-.legal-content h1 { font-size:clamp(2.5rem,5vw,4rem); font-weight:700; letter-spacing:-.03em; line-height:1.05; margin-bottom:2.5rem; }
-.legal-content h2 { font-size:1.1rem; font-weight:700; color:var(--text); margin-top:2.5rem; margin-bottom:.5rem; border-top:1px solid var(--border); padding-top:2rem; }
-.legal-content h3 { font-size:.95rem; font-weight:600; color:var(--text); margin-top:1.5rem; margin-bottom:.35rem; }
-.legal-content p { font-size:.92rem; color:var(--sub); line-height:1.82; margin-bottom:.65rem; }
-.legal-content strong { color:var(--text); font-weight:600; }
-.legal-content a { color:var(--sub); }
-.updated { font-size:.82rem; color:var(--muted); margin-bottom:2rem; display:block; }
-footer { background:var(--bg); border-top:1px solid var(--border); padding:4rem 4rem 2.5rem; }
-.ft { display:flex; justify-content:space-between; gap:2rem; margin-bottom:3rem; flex-wrap:wrap; }
-.ft-brand .ft-logo { display:block; margin-bottom:.85rem; text-decoration:none; }
-.ft-brand .ft-logo img { height:26px; width:auto; filter:brightness(0) invert(1); opacity:.65; }
-.ft-brand .ft-logo-text { font-size:.9rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.65); }
-.ft-brand > p { font-size:.84rem; color:var(--sub); max-width:220px; line-height:1.75; }
-.ft-brand > a { display:inline-block; margin-top:1rem; font-size:.76rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--sub); text-decoration:none; }
-.ft-brand > a:hover { color:var(--text); }
-.ft-col h5 { font-size:.62rem; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); margin-bottom:1rem; }
-.ft-col ul { list-style:none; }
-.ft-col li { margin-bottom:.55rem; }
-.ft-col a { color:var(--sub); text-decoration:none; font-size:.875rem; transition:color .2s; }
-.ft-col a:hover { color:var(--text); }
-.ft-bottom { display:flex; justify-content:space-between; align-items:center; padding-top:1.75rem; border-top:1px solid var(--border); font-size:.76rem; color:var(--muted); }
-.ft-bottom a { color:inherit; text-decoration:none; }
-@media (max-width:700px) { nav { padding:0 1.5rem; } .legal-content { padding:calc(var(--nav-h) + 3rem) 1.5rem 5rem; } footer { padding:3rem 1.5rem 2rem; } .ft-bottom { flex-direction:column; gap:.5rem; } }
-
+  .legal-content {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .legal-content h2 {
+    font-family: var(--t-display);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--text);
+    margin: 40px 0 16px;
+    letter-spacing: -0.005em;
+  }
+  .legal-content h2:first-child { margin-top: 0; }
+  .legal-content p {
+    font-family: var(--t-body);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-sub);
+    margin-bottom: 16px;
+  }
+  .legal-content strong { color: var(--text); }
+  .legal-content ul {
+    margin: 16px 0;
+    padding-left: 24px;
+  }
+  .legal-content li {
+    font-family: var(--t-body);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-sub);
+    margin-bottom: 8px;
+  }
+  .meta-row {
+    font-family: var(--t-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--text-sub);
+    text-transform: uppercase;
+    padding: 12px 0;
+    border-top: 1px solid var(--line);
+    margin: 32px 0;
+  }
 </style>
 </head>
 <body>
-<nav>
-  <a href="../index.html" class="nav-logo">
-    <img src="https://cdn.prod.website-files.com/6992d152640605a152914dae/699307dbced8162250031299_Group%2047360.svg"
-      alt="Black Sea" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-    <span class="nav-logo-text" style="display:none;">Black Sea</span>
-  </a>
-  <div class="nav-right">
-    <a href="../index.html#services" class="nav-link">Services</a>
-    <a href="../index.html#about"    class="nav-link">About</a>
-    <a href="../index.html#contact"  class="nav-cta">Contact</a>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">
+      <svg viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="22" stroke="#0A1018" stroke-width="2"/>
+        <line x1="2" y1="24" x2="46" y2="24" stroke="#0A1018" stroke-width="2"/>
+        <rect x="20" y="20" width="8" height="8" fill="#0A1018"/>
+      </svg>
+      <span class="nav-wordmark">BLACK<span class="dot">·</span>SEA</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="nav-links">
+      <a href="../practice.html" class="nav-link">Practice</a>
+      <a href="../approach.html" class="nav-link">Approach</a>
+      <a href="../contact.html" class="nav-link">Contact</a>
+      <a href="../contact.html" class="nav-cta">Talk to us</a>
+    </div>
   </div>
 </nav>
-<div class="legal-content">
 
-<h1>Legal Notice</h1>
+<main>
 
-<h2>Privacy Notice</h2>
-<span class="updated">Last updated: 15.02.2026</span>
+  <section class="hero">
+    <div class="container">
+      <div class="section-tag"><span class="idx">§99</span>Legal</div>
+      <h1 class="hero-title">Jurisdictional <em>disclosures.</em></h1>
+    </div>
+  </section>
 
-<h3>1) Who we are</h3>
-<p><strong>Black Sea SPV s.r.o.</strong> ("we", "us") operates this website.<br>
-Contact: <a href="mailto:contact@blackseaspv.com">contact@blackseaspv.com</a></p>
+  <section class="section">
+    <div class="container">
+      <div class="legal-content">
 
-<h3>2) What we collect</h3>
-<p><strong>Contact data</strong> you submit (e.g. name, email, message).</p>
-<p><strong>Technical and usage data</strong> (e.g. IP address, device/browser type, pages visited, approximate location inferred from IP).</p>
+        <div class="meta-row">Last updated: 19 May 2026</div>
 
-<h3>3) Why we use it</h3>
-<p>We use your data to operate and secure the website, respond to inquiries, improve performance and user experience, and meet legal and compliance requirements.</p>
+        <h2>About this notice</h2>
+        <p>
+          This page sets out information about Black Sea SPV s.r.o. (&ldquo;Black Sea&rdquo;) and the regulatory perimeter of its services. It is published in line with general professional disclosure practice and does not constitute legal, tax, investment or other regulated advice.
+        </p>
 
-<h3>4) Legal basis</h3>
-<p>Where applicable under GDPR, we process data based on <strong>legitimate interests</strong> (website security, performance, communications), <strong>consent</strong> (for non-essential cookies), and <strong>legal obligations</strong> (where required).</p>
+        <h2>Entity and contact</h2>
+        <p>
+          Black Sea SPV s.r.o. is a company registered in the Slovak Republic with registered office in Bratislava. Correspondence and enquiries should be directed to <strong>adrian@blackseaspv.com</strong>.
+        </p>
 
-<h3>5) Sharing</h3>
-<p>We may share data with trusted service providers strictly for operating the website, or when required by law. We do not sell personal data.</p>
+        <h2>Nature of services</h2>
+        <p>
+          Black Sea provides <strong>advisory services</strong> in the following areas:
+        </p>
+        <ul>
+          <li>Fund formation support for fund managers raising into EU defense and dual-use opportunities</li>
+          <li>Cross-border regulatory positioning for crypto, fintech and digital-asset operators</li>
+          <li>Compliance architecture and assurance for regulated and licensable activities</li>
+        </ul>
+        <p>
+          These services are <strong>advisory in nature.</strong> Black Sea does not, on its own account, undertake any regulated activity that would require authorisation in the European Union, the United Kingdom, the United States or in any other jurisdiction. In particular:
+        </p>
+        <ul>
+          <li>Black Sea is <strong>not authorised</strong> as a credit institution, payment institution, electronic money institution, investment firm, fund manager, crypto-asset service provider, or any equivalent licensed entity.</li>
+          <li>Black Sea does not custody, hold, transmit or trade client funds or client crypto-assets.</li>
+          <li>Black Sea does not issue or distribute investment recommendations within the meaning of MAR or equivalent regimes.</li>
+        </ul>
 
-<h3>6) Retention</h3>
-<p>We keep personal data only as long as needed for the purposes above, or as required by law.</p>
+        <h2>Engagement of licensed counsel</h2>
+        <p>
+          Where a client matter requires regulated legal opinion, signed counsel, or admission to a regulator&rsquo;s register, Black Sea retains partner counsel licensed in the relevant jurisdiction. Engagement of such counsel is disclosed to the client in writing and any associated fees are quoted up front.
+        </p>
 
-<h3>7) Your rights</h3>
-<p>Depending on your jurisdiction, you may request access, correction, deletion, or objection to processing. Requests: <a href="mailto:contact@blackseaspv.com">contact@blackseaspv.com</a></p>
+        <h2>No investment advice</h2>
+        <p>
+          Nothing on this website, in any document prepared by Black Sea, or in any communication with Black Sea, constitutes an offer, solicitation, recommendation or invitation to buy, sell or hold any security, fund interest, crypto-asset or other financial instrument. Black Sea does not provide personal investment advice and clients are responsible for taking their own decisions, including where necessary by reference to licensed advisers in the relevant jurisdiction.
+        </p>
 
-<h3>8) Updates</h3>
-<p>We may update this notice from time to time. The current version will always be available on this page.</p>
+        <h2>Conflicts of interest</h2>
+        <p>
+          Black Sea operates a conflict register and discloses material conflicts to prospective and existing clients in writing prior to engagement. Where a conflict cannot be appropriately managed, Black Sea declines the engagement.
+        </p>
 
-<h2>Website Disclaimer</h2>
+        <h2>Anti-money laundering</h2>
+        <p>
+          Black Sea operates internal AML procedures appropriate to its advisory activity and may decline engagement, or terminate an existing engagement, where it cannot satisfy itself as to the source of funds, the identity of beneficial owners, or the lawful nature of the underlying business. Black Sea reports as required under Slovak law and cooperates with competent authorities in accordance with applicable disclosure obligations.
+        </p>
 
-<h3>1) Informational purpose</h3>
-<p>This website is provided for general informational purposes only and does not constitute an offer, solicitation, or recommendation of any kind.</p>
+        <h2>Sanctions</h2>
+        <p>
+          Black Sea does not act for sanctioned persons or entities, and screens prospective engagements against EU, UK, UN, and OFAC sanctions lists and equivalent international measures.
+        </p>
 
-<h3>2) No regulated financial services</h3>
-<p>Black Sea SPV s.r.o. does not provide regulated financial services, investment advice, asset management, or transaction execution.</p>
+        <h2>Limitation of liability</h2>
+        <p>
+          Engagements are governed by written agreement specifying scope, fees, jurisdiction and the limitation of liability applicable to each engagement. In the absence of a written agreement, no advisory relationship is created by use of this website or by initial enquiry communications.
+        </p>
 
-<h3>3) No reliance</h3>
-<p>Any reliance on the information on this website is at your own risk. We disclaim liability for actions taken based on website content.</p>
+        <h2>Changes</h2>
+        <p>
+          This notice may be amended from time to time. Material changes will be reflected in the &ldquo;Last updated&rdquo; date at the top of this page.
+        </p>
 
-<h3>4) Updates</h3>
-<p>Content may be changed at any time without notice. We do not guarantee completeness or accuracy.</p>
+      </div>
+    </div>
+  </section>
 
-</div>
+</main>
+
 <footer>
-  <div class="ft">
-    <div class="ft-brand">
-      <a href="../index.html" class="ft-logo">
-        <img src="https://cdn.prod.website-files.com/6992d152640605a152914dae/699307dbced8162250031299_Group%2047360.svg"
-          alt="Black Sea" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-        <span class="ft-logo-text" style="display:none;">Black Sea</span>
-      </a>
-      <p>Structured capital aligned with strategic interests and sovereign frameworks.</p>
-      <a href="../index.html#contact">Strategic Contact &rarr;</a>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-brand-row">
+          <svg viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="22" stroke-width="2"/>
+            <line x1="2" y1="24" x2="46" y2="24" stroke-width="2"/>
+            <rect x="20" y="20" width="8" height="8"/>
+          </svg>
+          <span class="footer-wordmark">BLACK<span class="dot">·</span>SEA</span>
+        </div>
+        <p class="footer-tagline">
+          Independent advisory at the intersection of regulation, jurisdiction and cross-border practice.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="../practice.html">Practice</a></li>
+          <li><a href="../approach.html">Approach</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Office</h5>
+        <ul>
+          <li><a href="../contact.html">Bratislava</a></li>
+          <li><a href="../contact.html">Malta</a></li>
+          <li><a href="../contact.html">Prague</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="jurisdictional-disclosures.html">Disclosures</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="ft-col">
-      <h5>Navigate</h5>
-      <ul>
-        <li><a href="../index.html#services">Services</a></li>
-        <li><a href="../index.html#about">About</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <span>© 2026, Black Sea SPV s.r.o.</span>
+      <a href="jurisdictional-disclosures.html">Legal Notice</a>
     </div>
-    <div class="ft-col">
-      <h5>Legal</h5>
-      <ul>
-        <li><a href="jurisdictional-disclosures.html">Jurisdictional Disclosures</a></li>
-        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-        <li><a href="data-privacy.html">Data Privacy</a></li>
-      </ul>
-    </div>
-    <div class="ft-col">
-      <h5>Connect</h5>
-      <ul><li><a href="https://telegram" target="_blank" rel="noopener">Telegram</a></li></ul>
-    </div>
-  </div>
-  <div class="ft-bottom">
-    <span>&copy; 2026 Black Sea SPV s.r.o.</span>
-    <a href="jurisdictional-disclosures.html">Legal Notice</a>
   </div>
 </footer>
+
+<script>
+  document.documentElement.classList.add('js-ready');
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('nav-links');
+  if (burger) burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  if (navLinks) navLinks.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => navLinks.classList.remove('open')));
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 30);
+  }, { passive: true });
+</script>
+
 </body>
 </html>
