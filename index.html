@@ -3,936 +3,231 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Primary SEO -->
-<title>Black Sea SPV — Compliance & Capital Advisory for Complex Environments</title>
-<meta name="description" content="Black Sea SPV is a private strategic advisory platform specialising in AML/KYC compliance, cross-border capital structuring and defence-adjacent operations across high-risk and complex jurisdictions.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://blackseaspv.com/">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Black Sea SPV — Compliance & Capital Advisory">
-<meta property="og:description" content="Strategic advisory at the intersection of capital, compliance and sovereign necessity. Operating where structure determines advantage.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://blackseaspv.com/">
-<meta property="og:site_name" content="Black Sea SPV">
-<meta property="og:locale" content="en_GB">
-
-<!-- Twitter / X -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Black Sea SPV — Compliance & Capital Advisory">
-<meta name="twitter:description" content="Strategic advisory at the intersection of capital, compliance and sovereign necessity.">
-<meta name="twitter:site" content="@A27Services">
-
-<!-- JSON-LD: Organization Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Black Sea SPV s.r.o.",
-  "alternateName": "Black Sea SPV",
-  "url": "https://blackseaspv.com",
-  "logo": "https://blackseaspv.com/assets/logo.svg",
-  "description": "Private strategic advisory platform specialising in AML/KYC compliance, cross-border capital structuring and defence-adjacent operations across high-risk and complex jurisdictions.",
-  "email": "contact@blackseaspv.com",
-  "areaServed": "Worldwide",
-  "serviceType": [
-    "AML Compliance Advisory",
-    "KYC Compliance",
-    "Sanctions Compliance",
-    "Cross-Border Capital Structuring",
-    "Defence-Adjacent Advisory",
-    "Fractional CCO Services",
-    "High-Risk Jurisdiction Structuring"
-  ],
-  "knowsAbout": [
-    "Anti-Money Laundering",
-    "Know Your Customer",
-    "Sanctions Compliance",
-    "Market Abuse Regulation",
-    "Cross-Border Structuring",
-    "Defence-Adjacent Capital",
-    "Special Situations"
-  ],
-  "sameAs": [
-    "https://www.linkedin.com/company/a27-management-services/"
-  ]
-}
-</script>
-
-<!-- Font preconnect for performance -->
-<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
-
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XREYTLQGSC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XREYTLQGSC', { anonymize_ip: true });
-</script>
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --bg:          #06090D;
-  --bg2:         #0A0F15;
-  --navy:        #0B1829;
-  --text:        #E8EDF2;
-  --sub:         #6B7F8E;
-  --muted:       #3A4E5C;
-  --border:      rgba(255,255,255,0.07);
-  --border-h:    rgba(255,255,255,0.15);
-  --accent-glow: rgba(20,90,145,0.16);
-  --nav-h:       72px;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'Satoshi', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  overflow-x: hidden;
-  cursor: none;
-}
-
-/* ── CURSOR ── */
-#cursor-dot, #cursor-ring {
-  position: fixed;
-  top: 0; left: 0;
-  pointer-events: none;
-  z-index: 9999;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-}
-#cursor-dot  { width: 5px; height: 5px; background: var(--text); transition: width .15s,height .15s,background .15s; }
-#cursor-ring { width: 34px; height: 34px; border: 1px solid rgba(232,237,242,.38); transition: width .22s,height .22s,border-color .22s; }
-body.cur-hover #cursor-dot  { width: 8px; height: 8px; }
-body.cur-hover #cursor-ring { width: 52px; height: 52px; border-color: rgba(232,237,242,.65); }
-body.cur-click #cursor-ring { transform: translate(-50%,-50%) scale(.85); }
-@media (hover:none) { body { cursor:auto; } #cursor-dot,#cursor-ring { display:none; } }
-
-/* ── NOISE ── */
-#noise {
-  position: fixed; inset: 0; z-index: 8000;
-  pointer-events: none; opacity: .022;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 250px 250px;
-}
-
-/* ── NAV ── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
-  height: var(--nav-h);
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 4rem;
-  background: rgba(6,9,13,.65);
-  backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
-  border-bottom: 1px solid transparent;
-  transition: border-color .4s, background .4s;
-}
-nav.scrolled { border-bottom-color: var(--border); background: rgba(6,9,13,.94); }
-
-.nav-logo { display:flex; align-items:center; text-decoration:none; cursor:none; }
-.nav-logo img { height:30px; width:auto; filter:brightness(0) invert(1); opacity:.9; display:block; }
-.nav-logo-text { font-size:1.1rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--text); }
-
-.nav-right { display:flex; align-items:center; gap:2.5rem; }
-
-.nav-link {
-  color:var(--sub); text-decoration:none;
-  font-size:.82rem; font-weight:500; letter-spacing:.08em; text-transform:uppercase;
-  transition:color .2s; cursor:none;
-}
-.nav-link:hover { color:var(--text); }
-
-.nav-cta {
-  display:inline-block; border:1px solid var(--border-h);
-  color:var(--text); text-decoration:none;
-  padding:.48rem 1.35rem; font-size:.78rem; font-weight:600;
-  letter-spacing:.1em; text-transform:uppercase;
-  transition:background .2s,border-color .2s; cursor:none;
-}
-.nav-cta:hover { background:rgba(255,255,255,.07); border-color:rgba(255,255,255,.3); }
-
-/* scroll offset for fixed nav */
-section[id], div[id].anchor { scroll-margin-top: var(--nav-h); }
-
-/* ── HERO ── */
-.hero {
-  position:relative; min-height:100vh;
-  display:flex; flex-direction:column; justify-content:flex-end;
-  padding: 0 4rem 7rem; overflow:hidden; z-index:1;
-}
-
-.hero-orb {
-  position:absolute; top:42%; left:52%;
-  transform:translate(-50%,-50%);
-  width:75vw; height:75vh; border-radius:50%;
-  background:radial-gradient(ellipse at center,
-    rgba(14,52,88,.78) 0%,rgba(9,28,52,.48) 28%,rgba(5,14,28,.2) 52%,transparent 72%);
-  pointer-events:none; filter:blur(3px);
-  animation:orbBreath 9s ease-in-out infinite;
-}
-
-.hero-orb-2 {
-  position:absolute; top:22%; right:-10%;
-  width:52vw; height:52vh; border-radius:50%;
-  background:radial-gradient(ellipse at center,
-    rgba(7,32,60,.35) 0%,rgba(4,18,38,.16) 40%,transparent 68%);
-  pointer-events:none; filter:blur(6px);
-  animation:orbBreath2 13s ease-in-out infinite;
-}
-
-@keyframes orbBreath {
-  0%,100% { transform:translate(-50%,-50%) scale(1);    opacity:.88; }
-  50%      { transform:translate(-50%,-50%) scale(1.07); opacity:1;   }
-}
-@keyframes orbBreath2 {
-  0%,100% { transform:scale(1);    opacity:.68; }
-  50%      { transform:scale(1.1); opacity:.88; }
-}
-
-.hero-grid {
-  position:absolute; inset:0; pointer-events:none;
-  background-image:
-    linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);
-  background-size:80px 80px;
-  mask-image:radial-gradient(ellipse 80% 80% at 60% 40%,black 10%,transparent 70%);
-  -webkit-mask-image:radial-gradient(ellipse 80% 80% at 60% 40%,black 10%,transparent 70%);
-}
-
-/* Hero content — visible by default, JS adds fade-in class */
-.hero-content { position:relative; z-index:2; max-width:920px; }
-
-.hero-label {
-  font-size:.7rem; font-weight:600; letter-spacing:.3em;
-  text-transform:uppercase; color:var(--sub); margin-bottom:1.5rem;
-}
-
-.hero-title {
-  font-size:clamp(3.8rem,8vw,8.5rem); font-weight:700;
-  line-height:.95; letter-spacing:-.04em;
-  color:var(--text); margin-bottom:2rem;
-}
-.hero-title span { color:rgba(232,237,242,.3); }
-
-.hero-sub {
-  font-size:1.05rem; color:var(--sub);
-  max-width:480px; line-height:1.72; margin-bottom:3rem;
-}
-
-.hero-btns { display:flex; gap:1rem; flex-wrap:wrap; }
-
-/* hero animate-in (added by JS on load) */
-.hero-label, .hero-title, .hero-sub, .hero-btns {
-  opacity:1; /* visible by default — no CSS animation dependency */
-}
-
-.hero-anim .hero-label { animation:fadeUp .9s .08s cubic-bezier(.16,1,.3,1) both; }
-.hero-anim .hero-title  { animation:fadeUp .9s .2s  cubic-bezier(.16,1,.3,1) both; }
-.hero-anim .hero-sub    { animation:fadeUp .9s .34s cubic-bezier(.16,1,.3,1) both; }
-.hero-anim .hero-btns   { animation:fadeUp .9s .48s cubic-bezier(.16,1,.3,1) both; }
-
-@keyframes fadeUp {
-  from { opacity:0; transform:translateY(22px); }
-  to   { opacity:1; transform:translateY(0); }
-}
-
-/* ── BUTTONS ── */
-.btn-primary {
-  display:inline-flex; align-items:center;
-  background:var(--text); color:var(--bg);
-  text-decoration:none; padding:.88rem 2.2rem;
-  font-size:.82rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
-  transition:opacity .2s,transform .15s; cursor:none;
-}
-.btn-primary:hover { opacity:.85; transform:translateY(-1px); }
-
-.btn-secondary {
-  display:inline-flex; align-items:center;
-  border:1px solid var(--border-h); color:var(--sub);
-  text-decoration:none; padding:.88rem 2.2rem;
-  font-size:.82rem; font-weight:500; letter-spacing:.08em; text-transform:uppercase;
-  transition:color .2s,border-color .2s; cursor:none;
-}
-.btn-secondary:hover { color:var(--text); border-color:rgba(255,255,255,.3); }
-
-/* ── RULE ── */
-.rule { width:100%; height:1px; background:var(--border); position:relative; z-index:1; }
-
-/* ── STATS STRIP ── */
-.stats-strip {
-  position:relative; z-index:1;
-  background:var(--bg2);
-  border-bottom:1px solid var(--border);
-  display:flex; align-items:stretch; overflow:hidden;
-}
-.stat-item {
-  flex:1; display:flex; flex-direction:column; justify-content:center;
-  padding:2.25rem 2.5rem; border-right:1px solid var(--border);
-  position:relative; transition:background .3s;
-}
-.stat-item:last-child { border-right:none; }
-.stat-item:hover { background:rgba(255,255,255,.018); }
-.stat-item::after {
-  content:''; position:absolute; bottom:0; left:0;
-  width:0; height:1px; background:rgba(232,237,242,.22);
-  transition:width .5s cubic-bezier(.16,1,.3,1);
-}
-.stat-item:hover::after { width:100%; }
-.stat-label { font-size:.58rem; font-weight:700; letter-spacing:.26em; text-transform:uppercase; color:var(--muted); margin-bottom:.55rem; }
-.stat-value { font-size:1rem; font-weight:600; color:var(--text); letter-spacing:-.01em; line-height:1.2; }
-
-/* ── PROCESS ── */
-.process {
-  padding:9rem 4rem; background:var(--bg);
-  border-top:1px solid var(--border);
-  position:relative; z-index:1; overflow:hidden;
-}
-.process-orb {
-  position:absolute; top:50%; right:-15%; transform:translateY(-50%);
-  width:55vw; height:55vw; border-radius:50%;
-  background:radial-gradient(ellipse at center,rgba(10,38,68,.55) 0%,rgba(6,22,42,.28) 38%,transparent 68%);
-  pointer-events:none; animation:orbBreath2 11s ease-in-out infinite;
-}
-.process-header {
-  display:flex; justify-content:space-between; align-items:flex-end;
-  margin-bottom:5rem; gap:2rem; position:relative; z-index:1;
-}
-.process-h2 { font-size:clamp(2.5rem,5vw,4.5rem); font-weight:700; line-height:1.02; letter-spacing:-.03em; max-width:480px; }
-.process-sub { font-size:.92rem; color:var(--sub); max-width:300px; line-height:1.72; text-align:right; }
-.process-steps {
-  display:grid; grid-template-columns:repeat(4,1fr);
-  border-top:1px solid var(--border);
-  position:relative; z-index:1;
-}
-.process-step {
-  padding:3rem 2rem; border-right:1px solid var(--border);
-  position:relative; transition:background .3s;
-}
-.process-step:last-child { border-right:none; }
-.process-step:hover { background:rgba(255,255,255,.015); }
-.process-step::before {
-  content:''; position:absolute; top:-1px; left:0;
-  width:0; height:2px; background:rgba(232,237,242,.35);
-  transition:width .5s cubic-bezier(.16,1,.3,1);
-}
-.process-step:hover::before { width:100%; }
-.step-num {
-  font-size:.58rem; font-weight:700; letter-spacing:.28em;
-  text-transform:uppercase; color:var(--muted); margin-bottom:2.5rem;
-  display:flex; align-items:center; gap:.75rem;
-}
-.step-num::after { content:''; display:block; flex:1; height:1px; background:var(--muted); opacity:.35; }
-.step-icon { width:30px; height:30px; margin-bottom:1.5rem; }
-.step-icon svg { width:100%; height:100%; fill:none; stroke:var(--muted); stroke-width:1.3; stroke-linecap:round; stroke-linejoin:round; transition:stroke .3s; }
-.process-step:hover .step-icon svg { stroke:var(--sub); }
-.step-title { font-size:1.15rem; font-weight:700; color:var(--text); margin-bottom:.85rem; letter-spacing:-.02em; line-height:1.15; }
-.step-desc { font-size:.84rem; color:var(--sub); line-height:1.78; }
-.step-tag {
-  display:inline-block; margin-top:1.5rem;
-  font-size:.58rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
-  color:var(--muted); border:1px solid var(--border); padding:.28rem .6rem;
-}
-
-/* ── GEOGRAPHY ── */
-.geography {
-  padding:9rem 4rem; background:var(--bg2);
-  border-top:1px solid var(--border); border-bottom:1px solid var(--border);
-  position:relative; z-index:1;
-  display:grid; grid-template-columns:1fr 1fr; gap:7rem; align-items:center;
-}
-.geo-left h2 { font-size:clamp(2.5rem,5vw,4.5rem); font-weight:700; line-height:1.02; letter-spacing:-.035em; margin-bottom:1.75rem; }
-.geo-left h2 em { font-style:normal; color:rgba(232,237,242,.28); }
-.geo-left p { font-size:.95rem; color:var(--sub); line-height:1.82; max-width:420px; }
-.geo-right { display:flex; flex-direction:column; border-top:1px solid var(--border); }
-.geo-item {
-  display:flex; align-items:flex-start; gap:1.5rem;
-  padding:1.5rem 0; border-bottom:1px solid var(--border);
-  transition:padding .2s;
-}
-.geo-num { font-size:.58rem; font-weight:700; letter-spacing:.2em; color:var(--muted); min-width:24px; padding-top:.15rem; }
-.geo-title { font-size:.95rem; font-weight:600; color:var(--text); margin-bottom:.3rem; letter-spacing:-.01em; }
-.geo-desc  { font-size:.82rem; color:var(--sub); line-height:1.65; }
-
-/* ── SECTION TAG ── */
-.section-tag {
-  font-size:.66rem; font-weight:700; letter-spacing:.28em;
-  text-transform:uppercase; color:var(--sub); margin-bottom:1.25rem;
-  display:flex; align-items:center; gap:.85rem;
-}
-.section-tag::before {
-  content:''; display:block; flex-shrink:0;
-  width:20px; height:1px; background:var(--muted);
-}
-.section-tag.center { justify-content:center; }
-.section-tag.center::before { display:none; }
-
-/* ── SCROLL REVEAL ── */
-.r {
-  opacity:0; transform:translateY(20px);
-  transition:opacity .85s cubic-bezier(.16,1,.3,1), transform .85s cubic-bezier(.16,1,.3,1);
-}
-.r.on  { opacity:1; transform:none; }
-.d1 { transition-delay:.08s; }
-.d2 { transition-delay:.17s; }
-.d3 { transition-delay:.26s; }
-
-/* ── SERVICES ── */
-.services { padding:8rem 4rem; background:var(--bg); position:relative; z-index:1; }
-
-.services-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:4rem; gap:2rem; }
-.services-h2 { font-size:clamp(2.5rem,5vw,4.5rem); font-weight:700; line-height:1.02; letter-spacing:-.03em; max-width:480px; }
-.services-sub { font-size:.92rem; color:var(--sub); max-width:300px; line-height:1.72; text-align:right; }
-
-.cards {
-  display:grid; grid-template-columns:repeat(3,1fr);
-  border-top:1px solid var(--border); border-left:1px solid var(--border);
-}
-.card {
-  padding:2.4rem 2rem; border-right:1px solid var(--border); border-bottom:1px solid var(--border);
-  position:relative; display:flex; flex-direction:column;
-  transition:background .3s; overflow:hidden;
-}
-.card::after {
-  content:''; position:absolute; inset:0; background:var(--accent-glow);
-  opacity:0; transition:opacity .35s; pointer-events:none;
-}
-.card:hover { background:rgba(255,255,255,.018); }
-.card:hover::after { opacity:1; }
-.card:hover .card-icon svg { stroke:rgba(232,237,242,.85); }
-
-.card-num { font-size:.62rem; font-weight:700; letter-spacing:.22em; color:var(--muted); margin-bottom:1.75rem; }
-.card-icon { width:38px; height:38px; margin-bottom:1.4rem; }
-.card-icon svg { width:100%; height:100%; fill:none; stroke:var(--sub); stroke-width:1.35; stroke-linecap:round; stroke-linejoin:round; transition:stroke .3s; }
-.card-title { font-size:1rem; font-weight:600; color:var(--text); margin-bottom:.6rem; letter-spacing:-.01em; }
-.card-desc  { font-size:.84rem; color:var(--sub); line-height:1.72; margin-top:auto; }
-
-/* ── ABOUT ── */
-.about {
-  padding:8rem 4rem; background:var(--bg2);
-  border-top:1px solid var(--border); border-bottom:1px solid var(--border);
-  display:grid; grid-template-columns:1fr 1fr; gap:7rem; align-items:center;
-  position:relative; z-index:1;
-}
-.about-h2 { font-size:clamp(2.5rem,4.5vw,4rem); font-weight:400; line-height:1.1; letter-spacing:-.025em; margin-bottom:2.5rem; }
-.about-p { font-size:.95rem; color:var(--sub); line-height:1.85; max-width:420px; }
-.about-p + .about-p { margin-top:1rem; }
-.about-tagline {
-  margin-top:2.5rem; font-size:.7rem; font-weight:700;
-  letter-spacing:.2em; text-transform:uppercase; color:var(--muted);
-  display:flex; align-items:center; gap:.75rem;
-}
-.about-tagline::before { content:''; display:block; width:18px; height:1px; background:var(--muted); }
-.about-right { display:flex; flex-direction:column; gap:1.5rem; }
-.about-photo { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; background:var(--navy); filter:brightness(.82) contrast(1.08); }
-.about-caption { font-size:.78rem; color:var(--muted); letter-spacing:.04em; }
-
-/* ── CTA ── */
-.cta-section {
-  padding:10rem 4rem; text-align:center;
-  position:relative; overflow:hidden; background:var(--bg); z-index:1;
-}
-.cta-orb {
-  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-  width:72vw; height:72vh; border-radius:50%;
-  background:radial-gradient(ellipse at center,rgba(11,42,76,.68) 0%,rgba(7,26,50,.35) 35%,transparent 68%);
-  animation:orbBreath 7s ease-in-out infinite; pointer-events:none;
-}
-.cta-section > *:not(.cta-orb) { position:relative; z-index:1; }
-.cta-section h2 { font-size:clamp(2.5rem,5.5vw,5.5rem); font-weight:700; line-height:1.0; letter-spacing:-.04em; max-width:900px; margin:0 auto 1.5rem; }
-.cta-section p  { font-size:1rem; color:var(--sub); max-width:500px; margin:0 auto 3rem; line-height:1.72; }
-
-/* ── CONTACT ── */
-.contact-section { padding:8rem 4rem; background:var(--bg2); border-top:1px solid var(--border); position:relative; z-index:1; }
-.contact-inner { max-width:640px; margin:0 auto; }
-.contact-inner h2 { font-size:clamp(2.5rem,4.5vw,4rem); font-weight:700; letter-spacing:-.03em; line-height:1.05; margin-bottom:.75rem; }
-.contact-inner > p { font-size:.92rem; color:var(--sub); margin-bottom:3rem; line-height:1.72; }
-
-.form-row  { display:grid; grid-template-columns:1fr 1fr; gap:.75rem; margin-bottom:.75rem; }
-.form-full { margin-bottom:.75rem; }
-
-.form-row input,
-.form-full input,
-.form-full textarea {
-  width:100%; padding:.88rem 1.15rem;
-  background:rgba(255,255,255,.035); border:1px solid var(--border);
-  color:var(--text); font-family:'Satoshi',sans-serif; font-size:.9rem;
-  outline:none; -webkit-appearance:none; border-radius:0;
-  transition:border-color .2s,background .2s; cursor:none;
-}
-.form-full textarea { resize:vertical; min-height:110px; }
-.form-row input::placeholder,
-.form-full input::placeholder,
-.form-full textarea::placeholder { color:var(--muted); font-size:.88rem; }
-.form-row input:focus,
-.form-full input:focus,
-.form-full textarea:focus { border-color:rgba(255,255,255,.22); background:rgba(255,255,255,.055); }
-
-.form-terms { font-size:.78rem; color:var(--muted); text-align:center; margin-bottom:1.25rem; }
-.form-terms a { color:var(--sub); }
-
-.form-submit {
-  width:100%; padding:1.05rem;
-  background:var(--text); color:var(--bg); border:none;
-  font-family:'Satoshi',sans-serif; font-size:.82rem; font-weight:700;
-  letter-spacing:.12em; text-transform:uppercase; cursor:none; transition:opacity .2s;
-}
-.form-submit:hover { opacity:.84; }
-.form-submit:disabled { opacity:.45; }
-
-.form-success { display:none; padding:3rem 0; text-align:center; }
-.form-success.show { display:block; }
-.form-success h3 { font-size:1.5rem; font-weight:600; margin-bottom:.75rem; }
-.form-success p  { font-size:.9rem; color:var(--sub); }
-
-/* ── FOOTER ── */
-footer { background:var(--bg); border-top:1px solid var(--border); padding:5rem 4rem 2.5rem; position:relative; z-index:1; }
-.ft { display:flex; justify-content:space-between; gap:2rem; margin-bottom:4rem; }
-.ft-brand .ft-logo { display:block; margin-bottom:1rem; text-decoration:none; cursor:none; }
-.ft-brand .ft-logo img { height:26px; width:auto; filter:brightness(0) invert(1); opacity:.65; }
-.ft-brand .ft-logo-text { font-size:.9rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.65); }
-.ft-brand > p { font-size:.84rem; color:var(--sub); max-width:220px; line-height:1.75; }
-.ft-brand > a { display:inline-block; margin-top:1.25rem; font-size:.76rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--sub); text-decoration:none; transition:color .2s; cursor:none; }
-.ft-brand > a:hover { color:var(--text); }
-.ft-col h5 { font-size:.62rem; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); margin-bottom:1.25rem; }
-.ft-col ul { list-style:none; }
-.ft-col li { margin-bottom:.65rem; }
-.ft-col a { color:var(--sub); text-decoration:none; font-size:.875rem; transition:color .2s; cursor:none; }
-.ft-col a:hover { color:var(--text); }
-.ft-bottom { display:flex; justify-content:space-between; align-items:center; padding-top:2rem; border-top:1px solid var(--border); font-size:.76rem; color:var(--muted); }
-.ft-bottom a { color:inherit; text-decoration:none; cursor:none; transition:color .2s; }
-.ft-bottom a:hover { color:var(--sub); }
-
-/* ── BURGER ── */
-.burger { display:none; background:none; border:none; cursor:none; flex-direction:column; gap:5px; padding:4px; }
-.burger span { display:block; width:22px; height:1px; background:var(--sub); transition:transform .3s,opacity .3s,background .2s; }
-.burger.open span:nth-child(1) { transform:translateY(6px) rotate(45deg); background:var(--text); }
-.burger.open span:nth-child(2) { opacity:0; }
-.burger.open span:nth-child(3) { transform:translateY(-6px) rotate(-45deg); background:var(--text); }
-
-/* ── RESPONSIVE ── */
-@media (max-width:1100px) {
-  nav,.hero,.services,.about,.cta-section,.contact-section,footer { padding-left:2.5rem; padding-right:2.5rem; }
-  .hero { padding-bottom:5.5rem; }
-}
-@media (max-width:860px) {
-  nav { padding:0 1.5rem; }
-  .burger { display:flex; }
-  .nav-right {
-    display:none; position:absolute; top:var(--nav-h); left:0; right:0;
-    background:rgba(6,9,13,.98); flex-direction:column; align-items:flex-start;
-    padding:1.75rem 1.5rem; gap:1.5rem; border-bottom:1px solid var(--border);
-    backdrop-filter:blur(20px);
-  }
-  .nav-right.open { display:flex; }
-  .hero { padding:0 1.5rem 5rem; min-height:95vh; }
-  .hero-title { font-size:clamp(3rem,11vw,4.5rem); }
-  .hero-orb { width:100vw; height:65vh; }
-  .hero-orb-2 { display:none; }
-  .services { padding:5rem 1.5rem; }
-  .services-header { flex-direction:column; align-items:flex-start; }
-  .services-sub { text-align:left; max-width:100%; }
-  .cards { grid-template-columns:1fr; border-left:none; border-top:none; }
-  .card { border-left:none; border-top:1px solid var(--border); }
-  .stats-strip { flex-direction:column; }
-  .stat-item { border-right:none; border-bottom:1px solid var(--border); padding:1.5rem; }
-  .stat-item:last-child { border-bottom:none; }
-  .process { padding:5rem 1.5rem; }
-  .process-header { flex-direction:column; align-items:flex-start; }
-  .process-sub { text-align:left; max-width:100%; }
-  .process-steps { grid-template-columns:1fr; }
-  .process-step { border-right:none; border-bottom:1px solid var(--border); padding:2.5rem 0; }
-  .process-step:last-child { border-bottom:none; }
-  .geography { grid-template-columns:1fr; padding:5rem 1.5rem; gap:3rem; }
-  .geo-left p { max-width:100%; }
-  .about { grid-template-columns:1fr; padding:5rem 1.5rem; gap:3rem; }
-  .about-p { max-width:100%; }
-  .cta-section { padding:6rem 1.5rem; }
-  .contact-section { padding:5rem 1.5rem; }
-  .form-row { grid-template-columns:1fr; }
-  footer { padding:4rem 1.5rem 2rem; }
-  .ft { flex-wrap:wrap; gap:2.5rem; }
-  .ft-bottom { flex-direction:column; gap:.6rem; text-align:center; }
-}
-</style>
+<title>Black Sea — Independent Advisory</title>
+<meta name="description" content="Black Sea advises fund managers, family offices and digital-asset operators where regulation, jurisdiction and cross-border practice intersect.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div id="cursor-ring" aria-hidden="true"></div>
-<div id="cursor-dot"  aria-hidden="true"></div>
-<div id="noise"       aria-hidden="true"></div>
-
-<nav id="nav">
-  <a href="/" class="nav-logo">
-    <img src="https://cdn.prod.website-files.com/6992d152640605a152914dae/699307dbced8162250031299_Group%2047360.svg"
-      alt="Black Sea" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-    <span class="nav-logo-text" style="display:none;">Black Sea</span>
-  </a>
-  <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <div class="nav-right" id="nav-right">
-    <a href="#services" class="nav-link">Services</a>
-    <a href="#about"    class="nav-link">About</a>
-    <a href="#contact"  class="nav-link">Contact</a>
-    <a href="#contact"  class="nav-cta">Request Access</a>
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <svg viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="22" stroke="#0A1018" stroke-width="2"/>
+        <line x1="2" y1="24" x2="46" y2="24" stroke="#0A1018" stroke-width="2"/>
+        <rect x="20" y="20" width="8" height="8" fill="#0A1018"/>
+      </svg>
+      <span class="nav-wordmark">BLACK<span class="dot">·</span>SEA</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="nav-links">
+      <a href="practice.html" class="nav-link">Practice</a>
+      <a href="approach.html" class="nav-link">Approach</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="contact.html" class="nav-cta">Talk to us</a>
+    </div>
   </div>
 </nav>
 
-<section class="hero" id="home">
-  <div class="hero-orb"  aria-hidden="true"></div>
-  <div class="hero-orb-2" aria-hidden="true"></div>
-  <div class="hero-grid"  aria-hidden="true"></div>
-  <div class="hero-content" id="hero-content">
-    <p class="hero-label">Ops &amp; Compliance Advisory</p>
-    <h1 class="hero-title">Capital for<br>Complex<br><span>Environments.</span></h1>
-    <p class="hero-sub">A private strategic platform operating at the intersection of capital, compliance and sovereign necessity. Built for those who operate where structure determines outcome.</p>
-    <div class="hero-btns">
-      <a href="#contact"  class="btn-primary">Request Introduction</a>
-      <a href="#services" class="btn-secondary">Our Services</a>
-    </div>
-  </div>
-</section>
+<main>
 
-<div class="rule"></div>
-
-<!-- STATS STRIP -->
-<div class="stats-strip">
-  <div class="stat-item r">
-    <span class="stat-label">Operational Scope</span>
-    <span class="stat-value">No Fixed Geography</span>
-  </div>
-  <div class="stat-item r d1">
-    <span class="stat-label">Compliance Standard</span>
-    <span class="stat-value">Regulatory-Grade</span>
-  </div>
-  <div class="stat-item r d2">
-    <span class="stat-label">Risk Appetite</span>
-    <span class="stat-value">High-Complexity Capable</span>
-  </div>
-  <div class="stat-item r d3">
-    <span class="stat-label">Client Profile</span>
-    <span class="stat-value">Sovereign &amp; Strategic Operators</span>
-  </div>
-  <div class="stat-item r d3">
-    <span class="stat-label">Framework</span>
-    <span class="stat-value">Compliance-Native</span>
-  </div>
-</div>
-
-<section class="services" id="services">
-  <div class="services-header r">
-    <div>
-      <div class="section-tag">Operational Focus</div>
-      <h2 class="services-h2">Where We<br>Operate</h2>
-    </div>
-    <p class="services-sub">Disciplined execution across sectors that define strategic advantage in complex jurisdictions.</p>
-  </div>
-  <div class="cards">
-    <div class="card r">
-      <span class="card-num">01</span>
-      <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2.5L3.5 6.5v5c0 5 3.8 9.7 8.5 10.9C16.7 21.2 20.5 16.5 20.5 11.5v-5L12 2.5z"/><polyline points="8.5,12 11,14.5 15.5,9.5"/></svg></div>
-      <h3 class="card-title">Resilience</h3>
-      <p class="card-desc">Mission-critical infrastructure in regulated environments.</p>
-    </div>
-    <div class="card r d1">
-      <span class="card-num">02</span>
-      <div class="card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="9"/><line x1="12" y1="3" x2="12" y2="1"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div>
-      <h3 class="card-title">Security Systems</h3>
-      <p class="card-desc">Integrated platforms for surveillance, protection and operational readiness.</p>
-    </div>
-    <div class="card r d2">
-      <span class="card-num">03</span>
-      <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-      <h3 class="card-title">Strategic Logistics</h3>
-      <p class="card-desc">Critical supply chain and mobility capabilities in complex environments.</p>
-    </div>
-    <div class="card r">
-      <span class="card-num">04</span>
-      <div class="card-icon"><svg viewBox="0 0 24 24"><polygon points="12,2 15.5,8.5 22,9.5 17,14.5 18.5,21 12,17.5 5.5,21 7,14.5 2,9.5 8.5,8.5"/></svg></div>
-      <h3 class="card-title">Dual-Use Technologies</h3>
-      <p class="card-desc">Technologies applicable across sovereign and defence applications.</p>
-    </div>
-    <div class="card r d1">
-      <span class="card-num">05</span>
-      <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M5.5 5.5l13 13M18.5 5.5l-13 13"/></svg></div>
-      <h3 class="card-title">Special Situations</h3>
-      <p class="card-desc">Structured capital solutions in transitional and high-complexity regions.</p>
-    </div>
-    <div class="card r d2">
-      <span class="card-num">06</span>
-      <div class="card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c-2.8 2.8-4.4 5.9-4.4 9.5s1.6 6.7 4.4 9.5M12 2.5c2.8 2.8 4.4 5.9 4.4 9.5s-1.6 6.7-4.4 9.5"/></svg></div>
-      <h3 class="card-title">Cross-Border Structuring</h3>
-      <p class="card-desc">Multi-jurisdictional execution aligned with regulatory frameworks.</p>
-    </div>
-  </div>
-</section>
-
-<section class="about" id="about">
-  <div class="about-left r">
-    <div class="section-tag">About</div>
-    <h2 class="about-h2">Structured for Sovereign Realities</h2>
-    <p class="about-p">Black Sea operates at the intersection of capital, infrastructure and strategic necessity. We structure and execute in environments where governance, security and jurisdictional clarity determine outcomes.</p>
-    <p class="about-p">Our focus remains disciplined: strategic regions, critical capabilities and long-term alignment with sovereign frameworks.</p>
-    <p class="about-tagline">Execution where structure determines advantage</p>
-  </div>
-  <div class="about-right r d2">
-    <img class="about-photo"
-      src="https://cdn.prod.website-files.com/6992d152640605a152914dae/69930bcee92c7ee08b331415_abstract-geometric-wavy-folds-background%20(2).jpg"
-      alt="Abstract structural form" loading="lazy">
-    <p class="about-caption">Black Sea SPV s.r.o. — Registered in Slovakia. Operating across jurisdictions.</p>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="process" id="process">
-  <div class="process-orb" aria-hidden="true"></div>
-  <div class="process-header r">
-    <div>
-      <div class="section-tag">Engagement Model</div>
-      <h2 class="process-h2">How We<br>Engage</h2>
-    </div>
-    <p class="process-sub">Every engagement begins with intelligence and ends with continuity. There is no shortcut between the two.</p>
-  </div>
-  <div class="process-steps">
-
-    <div class="process-step r">
-      <div class="step-num">01</div>
-      <div class="step-icon">
-        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-      </div>
-      <h3 class="step-title">Intelligence</h3>
-      <p class="step-desc">We map the terrain before we move. Initial assessment of jurisdictional exposure, counterparty risk and regulatory landscape. No assumptions. No shortcuts.</p>
-      <span class="step-tag">Assessment Phase</span>
-    </div>
-
-    <div class="process-step r d1">
-      <div class="step-num">02</div>
-      <div class="step-icon">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-      </div>
-      <h3 class="step-title">Architecture</h3>
-      <p class="step-desc">Structural design calibrated to sovereign frameworks, compliance constraints and cross-border execution requirements. Built to hold under pressure. Built to last.</p>
-      <span class="step-tag">Design Phase</span>
-    </div>
-
-    <div class="process-step r d2">
-      <div class="step-num">03</div>
-      <div class="step-icon">
-        <svg viewBox="0 0 24 24"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/></svg>
-      </div>
-      <h3 class="step-title">Execution</h3>
-      <p class="step-desc">Deployment of capital structures, compliance protocols and operational frameworks. Precision-engineered for hostile environments. We execute where others hesitate.</p>
-      <span class="step-tag">Deployment Phase</span>
-    </div>
-
-    <div class="process-step r d3">
-      <div class="step-num">04</div>
-      <div class="step-icon">
-        <svg viewBox="0 0 24 24"><polyline points="23,6 13.5,15.5 8.5,10.5 1,18"/><polyline points="17,6 23,6 23,12"/></svg>
-      </div>
-      <h3 class="step-title">Continuity</h3>
-      <p class="step-desc">Sustained compliance oversight, regulatory monitoring and adaptive risk management. The engagement does not end at execution. Environments shift. We shift with them.</p>
-      <span class="step-tag">Ongoing Phase</span>
-    </div>
-
-  </div>
-</section>
-
-<!-- GEOGRAPHY -->
-<section class="geography" id="geography">
-  <div class="geo-left r">
-    <div class="section-tag">Operational Reach</div>
-    <h2>We Deploy<br>Where Others<br><em>Don't.</em></h2>
-    <p>Black Sea does not operate from a fixed geography. We are structured to deploy capital, compliance and advisory capabilities into any jurisdiction where governance, risk and strategic necessity intersect. The complexity of the environment is not a barrier. It is our advantage.</p>
-  </div>
-  <div class="geo-right r d1">
-    <div class="geo-item">
-      <span class="geo-num">01</span>
-      <div class="geo-content">
-        <p class="geo-title">High-Risk Jurisdictions</p>
-        <p class="geo-desc">Markets with elevated AML, sanctions or regulatory exposure requiring specialist compliance architecture and counterparty due diligence.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="section-tag reveal"><span class="idx">§01</span>Independent advisory</div>
+      <h1 class="hero-title reveal d1">Capital meets <em>complexity.</em></h1>
+      <p class="hero-sub reveal d2">
+        Black Sea advises fund managers, family offices and digital-asset operators on the parts of a structure where regulation, jurisdiction and cross-border practice intersect. We work where most consultancies stop and most law firms slow down.
+      </p>
+      <div class="hero-actions reveal d3">
+        <a href="practice.html" class="btn btn--primary">What we do</a>
+        <a href="contact.html" class="btn btn--ghost">Talk to us</a>
       </div>
     </div>
-    <div class="geo-item">
-      <span class="geo-num">02</span>
-      <div class="geo-content">
-        <p class="geo-title">Transitional &amp; Conflict-Adjacent Markets</p>
-        <p class="geo-desc">Environments undergoing governance transition, post-conflict reconstruction or sovereign restructuring where capital access is constrained and structural expertise is critical.</p>
-      </div>
-    </div>
-    <div class="geo-item">
-      <span class="geo-num">03</span>
-      <div class="geo-content">
-        <p class="geo-title">Defence-Adjacent Territories</p>
-        <p class="geo-desc">Jurisdictions where dual-use technology, critical infrastructure and security systems operate under heightened regulatory and sovereign scrutiny.</p>
-      </div>
-    </div>
-    <div class="geo-item">
-      <span class="geo-num">04</span>
-      <div class="geo-content">
-        <p class="geo-title">Cross-Border Corridors</p>
-        <p class="geo-desc">Multi-jurisdictional structures requiring simultaneous regulatory alignment, entity structuring and compliance execution across multiple sovereign frameworks.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="cta-section" id="cta">
-  <div class="cta-orb" aria-hidden="true"></div>
-  <div class="section-tag center r">Strategic Access</div>
-  <h2 class="r">Built for Sovereign Complexity.<br>Positioned for Strategic Outcomes.</h2>
-  <p class="r">Black Sea deploys capital and compliance expertise in sectors critical to national resilience and strategic infrastructure, operating within complex jurisdictions under disciplined governance.</p>
-  <a href="#contact" class="btn-primary r">Secure Access</a>
-</section>
+  <!-- PRACTICE -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-tag reveal"><span class="idx">§02</span>Practice areas</div>
+      <h2 class="section-title reveal d1">Three things, <em>done properly.</em></h2>
+      <p class="section-lead reveal d2">
+        We do not consult on everything. Black Sea operates in three areas, each defined by a regulatory or structural problem that benefits from operator-side experience.
+      </p>
 
-<section class="contact-section" id="contact">
-  <div class="contact-inner r">
-    <div class="section-tag">Strategic Contact</div>
-    <h2>Request Introduction</h2>
-    <p>We respond to qualified enquiries only. All communications are treated with strict confidentiality.</p>
-    <form id="contact-form" action="https://formspree.io/f/mlgzlvad" method="POST" novalidate>
-      <div class="form-row">
-        <input type="text"  name="name"    placeholder="Full name *"             required autocomplete="name">
-        <input type="tel"   name="phone"   placeholder="Phone number *"          required autocomplete="tel">
+      <div class="practice-grid">
+        <div class="practice-card practice-card--defense reveal d1">
+          <div class="practice-tag">EU · Defense Capital</div>
+          <h3 class="practice-title">Fund formation for emerging managers</h3>
+          <p class="practice-body">
+            Structuring vehicles for first- and second-time fund managers raising into European defense and dual-use opportunities. End-to-end from regulator engagement through closing.
+          </p>
+          <ul class="practice-list">
+            <li>SICAV · AIF design</li>
+            <li>Regulator submission support</li>
+            <li>Fractional CCO mandate</li>
+            <li>LP onboarding readiness</li>
+          </ul>
+          <a href="practice.html#defense" class="practice-cta">Read more →</a>
+        </div>
+
+        <div class="practice-card practice-card--frontier reveal d2">
+          <div class="practice-tag">Frontier Markets</div>
+          <h3 class="practice-title">Cross-border regulatory positioning</h3>
+          <p class="practice-body">
+            Compliance and licensing advisory for crypto and fintech operators navigating new frameworks. Nigeria ARIP, AIFC AFSA amendments, Azerbaijan pre-licensing positioning.
+          </p>
+          <ul class="practice-list">
+            <li>ARIP gap analysis</li>
+            <li>AFSA transition advisory</li>
+            <li>Multi-jurisdiction structuring</li>
+            <li>UBO &amp; sanctions screening</li>
+          </ul>
+          <a href="practice.html#frontier" class="practice-cta">Read more →</a>
+        </div>
+
+        <div class="practice-card practice-card--compliance reveal d3">
+          <div class="practice-tag">Regulatory Advisory</div>
+          <h3 class="practice-title">Compliance architecture &amp; assurance</h3>
+          <p class="practice-body">
+            For operators who already hold licences and need EU-grade compliance infrastructure. AML / KYC framework design, MiCA readiness, due diligence on counterparties and onboarding.
+          </p>
+          <ul class="practice-list">
+            <li>AML / KYC framework design</li>
+            <li>MiCA readiness audit</li>
+            <li>Counterparty &amp; UBO due diligence</li>
+            <li>Regulator response support</li>
+          </ul>
+          <a href="practice.html#compliance" class="practice-cta">Read more →</a>
+        </div>
       </div>
-      <div class="form-full">
-        <input type="email" name="email"   placeholder="Email address *"         required autocomplete="email">
-      </div>
-      <div class="form-row">
-        <input type="text"  name="country" placeholder="Country of residence *"  required>
-        <input type="text"  name="linkedin" placeholder="LinkedIn profile (optional)">
-      </div>
-      <p class="form-terms">By submitting you agree to our <a href="legal/jurisdictional-disclosures.html">Terms &amp; Conditions</a></p>
-      <button type="submit" class="form-submit" id="form-btn">Submit Request</button>
-    </form>
-    <div class="form-success" id="form-success">
-      <h3>Request Received</h3>
-      <p>We will review your enquiry and respond through secure channels.</p>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- APPROACH -->
+  <section class="section">
+    <div class="container">
+      <div class="section-tag reveal"><span class="idx">§03</span>How we work</div>
+      <h2 class="section-title reveal d1">Operator-side. <em>Not consultancy-side.</em></h2>
+      <p class="section-lead reveal d2">
+        Three rules that shape every engagement. The reason clients pick us over a Big Four advisory or a traditional law firm.
+      </p>
+
+      <div class="approach-grid">
+        <div class="approach-item reveal d1">
+          <div class="approach-num">01</div>
+          <h3 class="approach-title">We&rsquo;ve sat the seat</h3>
+          <p class="approach-body">
+            Our team has built and run regulated structures. The advice you get is what we would have wanted when we were on the other side of the table.
+          </p>
+        </div>
+        <div class="approach-item reveal d2">
+          <div class="approach-num">02</div>
+          <h3 class="approach-title">Clear scope, fixed price</h3>
+          <p class="approach-body">
+            Diagnostic in two weeks. Full mandates scoped on the front end. Hourly billing creates the wrong incentives &mdash; we don&rsquo;t use it.
+          </p>
+        </div>
+        <div class="approach-item reveal d3">
+          <div class="approach-num">03</div>
+          <h3 class="approach-title">Licensed counsel when needed</h3>
+          <p class="approach-body">
+            For matters that require regulated legal opinion, we retain partner counsel in the right jurisdiction. We do not pretend to be the law firm.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band-inner">
+        <div>
+          <h2 class="cta-band-title reveal">A short conversation <em>tells you</em><br>whether we&rsquo;re the right fit.</h2>
+          <p class="cta-band-sub reveal d1">
+            Most engagements start with a 30-minute call. We review what you&rsquo;re trying to structure or solve, tell you honestly whether we can help, and what it would look like if we did.
+          </p>
+        </div>
+        <div class="cta-band-action reveal d2">
+          <a href="contact.html" class="btn btn--signal">Request a call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
 <footer>
-  <div class="ft">
-    <div class="ft-brand">
-      <a href="/" class="ft-logo">
-        <img src="https://cdn.prod.website-files.com/6992d152640605a152914dae/699307dbced8162250031299_Group%2047360.svg"
-          alt="Black Sea" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-        <span class="ft-logo-text" style="display:none;">Black Sea</span>
-      </a>
-      <p>Structured capital aligned with strategic interests and sovereign frameworks.</p>
-      <a href="#contact">Strategic Contact &rarr;</a>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-brand-row">
+          <svg viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="22" stroke-width="2"/>
+            <line x1="2" y1="24" x2="46" y2="24" stroke-width="2"/>
+            <rect x="20" y="20" width="8" height="8"/>
+          </svg>
+          <span class="footer-wordmark">BLACK<span class="dot">·</span>SEA</span>
+        </div>
+        <p class="footer-tagline">
+          Independent advisory at the intersection of regulation, jurisdiction and cross-border practice.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="approach.html">Approach</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Office</h5>
+        <ul>
+          <li><a href="contact.html">Bratislava</a></li>
+          <li><a href="contact.html">Malta</a></li>
+          <li><a href="contact.html">Prague</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="legal/jurisdictional-disclosures.html">Disclosures</a></li>
+          <li><a href="legal/privacy.html">Privacy</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="ft-col">
-      <h5>Navigate</h5>
-      <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <span>© 2026, Black Sea SPV s.r.o.</span>
+      <a href="legal/jurisdictional-disclosures.html">Legal Notice</a>
     </div>
-    <div class="ft-col">
-      <h5>Legal</h5>
-      <ul>
-        <li><a href="legal/jurisdictional-disclosures.html">Jurisdictional Disclosures</a></li>
-        <li><a href="legal/cookie-policy.html">Cookie Policy</a></li>
-        <li><a href="legal/data-privacy.html">Data Privacy</a></li>
-      </ul>
-    </div>
-    <div class="ft-col">
-      <h5>Connect</h5>
-      <ul><li><a href="https://telegram" target="_blank" rel="noopener noreferrer">Telegram</a></li></ul>
-    </div>
-  </div>
-  <div class="ft-bottom">
-    <span>&copy; 2026 Black Sea SPV s.r.o.</span>
-    <a href="legal/jurisdictional-disclosures.html">Legal Notice</a>
   </div>
 </footer>
 
 <script>
-/* ── CURSOR ── */
-const dot  = document.getElementById('cursor-dot');
-const ring = document.getElementById('cursor-ring');
-let mx=-100,my=-100,rx=-100,ry=-100;
-document.addEventListener('mousemove', e => {
-  mx=e.clientX; my=e.clientY;
-  dot.style.left=mx+'px'; dot.style.top=my+'px';
-});
-(function loop(){ rx+=(mx-rx)*.13; ry+=(my-ry)*.13; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(loop); })();
-document.querySelectorAll('a,button,input,textarea').forEach(el=>{
-  el.addEventListener('mouseenter',()=>document.body.classList.add('cur-hover'));
-  el.addEventListener('mouseleave',()=>document.body.classList.remove('cur-hover'));
-});
-document.addEventListener('mousedown',()=>document.body.classList.add('cur-click'));
-document.addEventListener('mouseup',  ()=>document.body.classList.remove('cur-click'));
+  document.documentElement.classList.add('js-ready');
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('nav-links');
+  if (burger) burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  if (navLinks) navLinks.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-/* ── HERO ANIMATE-IN — JS triggered, content always visible as fallback ── */
-window.addEventListener('DOMContentLoaded', () => {
-  // Small delay ensures browser has painted first — then add animation class
-  setTimeout(() => {
-    document.getElementById('hero-content').classList.add('hero-anim');
-  }, 50);
-});
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 30);
+  }, { passive: true });
 
-/* ── NAV ── */
-const burger = document.getElementById('burger');
-const navR   = document.getElementById('nav-right');
-const navEl  = document.getElementById('nav');
-
-burger.addEventListener('click', () => {
-  const open = navR.classList.toggle('open');
-  burger.classList.toggle('open', open);
-  burger.setAttribute('aria-expanded', String(open));
-});
-navR.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  navR.classList.remove('open');
-  burger.classList.remove('open');
-  burger.setAttribute('aria-expanded','false');
-}));
-window.addEventListener('scroll', () => {
-  navEl.classList.toggle('scrolled', window.scrollY > 40);
-}, { passive: true });
-
-/* ── SCROLL REVEAL ── */
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); } });
-}, { threshold: 0.06 });
-document.querySelectorAll('.r').forEach(el => obs.observe(el));
-
-/* ── FORM AJAX ── */
-const form    = document.getElementById('contact-form');
-const formBtn = document.getElementById('form-btn');
-const success = document.getElementById('form-success');
-
-form.addEventListener('submit', async e => {
-  e.preventDefault();
-  if(!form.checkValidity()){ form.reportValidity(); return; }
-  formBtn.disabled = true;
-  formBtn.textContent = 'Sending…';
-  try {
-    const res = await fetch(form.action, {
-      method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}
-    });
-    if(res.ok){
-      form.style.display='none';
-      success.classList.add('show');
-    } else {
-      formBtn.disabled=false; formBtn.textContent='Submit Request';
-      alert('Something went wrong. Please try again.');
-    }
-  } catch {
-    formBtn.disabled=false; formBtn.textContent='Submit Request';
-    alert('Network error. Please check your connection.');
-  }
-});
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
+
 </body>
 </html>
