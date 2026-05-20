@@ -145,6 +145,22 @@
     </div>
   </section>
 
+  <!-- BRIEFINGS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-tag reveal"><span class="idx">§04</span>From the briefings</div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:16px;margin-bottom:40px">
+        <h2 class="section-title reveal d1" style="margin-bottom:0">Writing on what <em>we see.</em></h2>
+        <a href="https://blackseabriefings.substack.com" target="_blank" rel="noopener"
+           class="reveal d2"
+           style="font-family:var(--t-mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-sub);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;white-space:nowrap">
+          All briefings →
+        </a>
+      </div>
+      <div id="briefings-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px"></div>
+    </div>
+  </section>
+
   <!-- CTA BAND -->
   <section class="cta-band">
     <div class="container">
@@ -214,8 +230,58 @@
 
 <script>
   document.documentElement.classList.add('js-ready');
-  const burger = document.getElementById('burger');
-  const navLinks = document.getElementById('nav-links');
+
+  // ── Briefings — dynamic Substack RSS ──
+  (async function loadBriefings() {
+    const grid = document.getElementById('briefings-grid');
+    if (!grid) return;
+
+    const FEED = 'https://blackseabriefings.substack.com/feed';
+    const API  = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(FEED)}&count=3`;
+
+    try {
+      const res  = await fetch(API);
+      const data = await res.json();
+
+      if (!data.items || data.items.length === 0) throw new Error('empty');
+
+      grid.innerHTML = data.items.slice(0, 3).map(item => {
+        const date = new Date(item.pubDate).toLocaleDateString('en-GB', {
+          day: 'numeric', month: 'long', year: 'numeric'
+        });
+        // Strip HTML tags from description for excerpt
+        const tmp = document.createElement('div');
+        tmp.innerHTML = item.description || '';
+        const excerpt = (tmp.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 160);
+
+        return `<a class="briefing-card reveal" href="${item.link}" target="_blank" rel="noopener">
+          <div class="briefing-date">${date}</div>
+          <div class="briefing-title">${item.title}</div>
+          <div class="briefing-excerpt">${excerpt}${excerpt.length >= 160 ? '…' : ''}</div>
+          <div class="briefing-read">Read →</div>
+        </a>`;
+      }).join('');
+
+      // Trigger reveal on loaded cards
+      grid.querySelectorAll('.reveal').forEach(el => {
+        requestAnimationFrame(() => el.classList.add('on'));
+      });
+
+    } catch (e) {
+      // Graceful fallback — hardcoded first article
+      grid.innerHTML = `
+        <a class="briefing-card reveal on"
+           href="https://blackseabriefings.substack.com/p/why-european-family-offices-are-reconsidering"
+           target="_blank" rel="noopener">
+          <div class="briefing-date">20 May 2026</div>
+          <div class="briefing-title">Why European Family Offices Are Reconsidering Defense Allocation in 2026</div>
+          <div class="briefing-excerpt">On the structural shift that most allocators are approaching wrong — and the three questions they should be asking fund managers but are not.</div>
+          <div class="briefing-read">Read →</div>
+        </a>`;
+    }
+  })();
+
+  const burger = document.getElementById('burger');  const navLinks = document.getElementById('nav-links');
   if (burger) burger.addEventListener('click', () => navLinks.classList.toggle('open'));
   if (navLinks) navLinks.querySelectorAll('a').forEach(a =>
     a.addEventListener('click', () => navLinks.classList.remove('open')));
