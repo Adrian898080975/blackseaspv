@@ -236,48 +236,77 @@
     const grid = document.getElementById('briefings-grid');
     if (!grid) return;
 
+    // All published articles, hardcoded as reliable fallback
+    const HARDCODED = [
+      {
+        date: '21 May 2026',
+        title: 'AIFMD II is live. Most emerging fund managers are already late.',
+        excerpt: 'AIFMD II transposition went live in April 2026. The compliance gap for managers who did not complete the transition is now an active regulatory risk. Practical steps to become investable now.',
+        link: 'https://blackseabriefings.substack.com/p/aifmd-ii-is-live-most-emerging-fund'
+      },
+      {
+        date: '20 May 2026',
+        title: 'The AIFC Changed Its Rules in January. Most Firms Have Not Caught Up.',
+        excerpt: 'Kazakhstan amended its entire digital asset framework on 1 January 2026. Six months into that transition, the gap between what the new rules require and what most affected operators have done is significant.',
+        link: 'https://blackseabriefings.substack.com/p/the-aifc-changed-its-rules-in-january'
+      },
+      {
+        date: '20 May 2026',
+        title: 'Why European Family Offices Are Reconsidering Defense Allocation in 2026',
+        excerpt: 'On the structural shift that most allocators are approaching wrong, and the three questions they should be asking fund managers but are not.',
+        link: 'https://blackseabriefings.substack.com/p/why-european-family-offices-are-reconsidering'
+      },
+    ];
+
+    const renderCard = (item) => `
+      <a class="briefing-card reveal on" href="${item.link}" target="_blank" rel="noopener">
+        <div class="briefing-date">${item.date}</div>
+        <div class="briefing-title">${item.title}</div>
+        <div class="briefing-excerpt">${item.excerpt}</div>
+        <div class="briefing-read">Read →</div>
+      </a>`;
+
     const FEED = 'https://blackseabriefings.substack.com/feed';
-    const API  = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(FEED)}&count=3`;
 
-    try {
-      const res  = await fetch(API);
-      const data = await res.json();
+    // Try two RSS-to-JSON proxies
+    const PROXIES = [
+      `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(FEED)}&count=6`,
+      `https://feedmix.novaclic.com/atom2json.php?src=${encodeURIComponent(FEED)}`,
+    ];
 
-      if (!data.items || data.items.length === 0) throw new Error('empty');
+    let loaded = false;
+    for (const proxy of PROXIES) {
+      if (loaded) break;
+      try {
+        const res = await fetch(proxy, { signal: AbortSignal.timeout(5000) });
+        const data = await res.json();
+        const items = data.items || data.entries || [];
+        if (!items.length) continue;
 
-      grid.innerHTML = data.items.slice(0, 3).map(item => {
-        const date = new Date(item.pubDate).toLocaleDateString('en-GB', {
-          day: 'numeric', month: 'long', year: 'numeric'
-        });
-        // Strip HTML tags from description for excerpt
-        const tmp = document.createElement('div');
-        tmp.innerHTML = item.description || '';
-        const excerpt = (tmp.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 160);
+        grid.innerHTML = items.slice(0, 3).map(item => {
+          const rawDate = item.pubDate || item.published || item.date || '';
+          const date = rawDate
+            ? new Date(rawDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+            : '';
+          const tmp = document.createElement('div');
+          tmp.innerHTML = item.description || item.summary || item.content || '';
+          const excerpt = (tmp.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 160);
+          const link = item.link || item.url || '#';
+          const title = item.title || '';
 
-        return `<a class="briefing-card reveal" href="${item.link}" target="_blank" rel="noopener">
-          <div class="briefing-date">${date}</div>
-          <div class="briefing-title">${item.title}</div>
-          <div class="briefing-excerpt">${excerpt}${excerpt.length >= 160 ? '…' : ''}</div>
-          <div class="briefing-read">Read →</div>
-        </a>`;
-      }).join('');
+          return renderCard({ date, title, excerpt: excerpt + (excerpt.length >= 160 ? '...' : ''), link });
+        }).join('');
 
-      // Trigger reveal on loaded cards
-      grid.querySelectorAll('.reveal').forEach(el => {
-        requestAnimationFrame(() => el.classList.add('on'));
-      });
+        grid.querySelectorAll('.reveal').forEach(el => requestAnimationFrame(() => el.classList.add('on')));
+        loaded = true;
+      } catch (e) {
+        // try next proxy
+      }
+    }
 
-    } catch (e) {
-      // Graceful fallback, hardcoded first article
-      grid.innerHTML = `
-        <a class="briefing-card reveal on"
-           href="https://blackseabriefings.substack.com/p/why-european-family-offices-are-reconsidering"
-           target="_blank" rel="noopener">
-          <div class="briefing-date">20 May 2026</div>
-          <div class="briefing-title">Why European Family Offices Are Reconsidering Defense Allocation in 2026</div>
-          <div class="briefing-excerpt">On the structural shift that most allocators are approaching wrong, and the three questions they should be asking fund managers but are not.</div>
-          <div class="briefing-read">Read →</div>
-        </a>`;
+    // Fallback: show hardcoded articles
+    if (!loaded) {
+      grid.innerHTML = HARDCODED.map(renderCard).join('');
     }
   })();
 
