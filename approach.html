@@ -2,124 +2,30 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSI+CiAgPHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiBmaWxsPSIjMEExMDE4Ii8+CiAgPGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMTgiIHN0cm9rZT0iI0RDRTNFOCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iNiIgeTE9IjI0IiB4Mj0iNDIiIHkyPSIyNCIgc3Ryb2tlPSIjRENFM0U4IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxyZWN0IHg9IjIwLjUiIHk9IjIwLjUiIHdpZHRoPSI3IiBoZWlnaHQ9IjciIGZpbGw9IiNEQ0UzRTgiLz4KPC9zdmc+">
-  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSI+CiAgPHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiBmaWxsPSIjMEExMDE4Ii8+CiAgPGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMTgiIHN0cm9rZT0iI0RDRTNFOCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iNiIgeTE9IjI0IiB4Mj0iNDIiIHkyPSIyNCIgc3Ryb2tlPSIjRENFM0U4IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxyZWN0IHg9IjIwLjUiIHk9IjIwLjUiIHdpZHRoPSI3IiBoZWlnaHQ9IjciIGZpbGw9IiNEQ0UzRTgiLz4KPC9zdmc+">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Approach, Black Sea</title>
-<meta name="description" content="How Black Sea works: operator-side, fixed price, partner counsel where matters require it.">
+<title>Approach — Black Sea</title>
+<meta name="description" content="How Black Sea works: operator-side advisory, fixed-price scoping, licensed counsel when needed, and why disqualification is part of the process.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSI+CiAgPHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiBmaWxsPSIjMEExMDE4Ii8+CiAgPGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMTgiIHN0cm9rZT0iI0RDRTNFOCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iNiIgeTE9IjI0IiB4Mj0iNDIiIHkyPSIyNCIgc3Ryb2tlPSIjRENFM0U4IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxyZWN0IHg9IjIwLjUiIHk9IjIwLjUiIHdpZHRoPSI3IiBoZWlnaHQ9IjciIGZpbGw9IiNEQ0UzRTgiLz4KPC9zdmc+">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<style>
-  .principle {
-    padding: 64px 0;
-    border-top: 1px solid var(--line);
-  }
-  .principle:first-of-type { border-top: none; padding-top: 0; }
-  .principle-inner {
-    display: grid;
-    grid-template-columns: 0.6fr 1.6fr;
-    gap: 64px;
-    align-items: start;
-  }
-  .principle-num {
-    font-family: var(--t-serif);
-    font-size: clamp(80px, 12vw, 140px);
-    line-height: 0.85;
-    color: var(--signal);
-    letter-spacing: -0.02em;
-  }
-  .principle-title {
-    font-family: var(--t-display);
-    font-weight: 700;
-    font-size: clamp(28px, 3vw, 38px);
-    line-height: 1.05;
-    letter-spacing: -0.01em;
-    color: var(--text);
-    margin-bottom: 24px;
-  }
-  .principle-title em {
-    font-family: var(--t-serif);
-    font-style: italic;
-    font-weight: 400;
-    color: var(--text-sub);
-  }
-  .principle-body p {
-    font-family: var(--t-body);
-    font-size: 16px;
-    line-height: 1.65;
-    color: var(--text-sub);
-    margin-bottom: 18px;
-    max-width: 640px;
-  }
-  .principle-body p strong {
-    color: var(--text);
-    font-weight: 600;
-  }
-
-  .engagement-block {
-    background: var(--bg-soft);
-    padding: 56px 48px;
-    margin-top: 32px;
-  }
-  .engagement-row {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 32px;
-    padding: 24px 0;
-    border-top: 1px solid var(--line);
-    align-items: start;
-  }
-  .engagement-row:first-child { border-top: none; padding-top: 0; }
-  .engagement-row:last-child { padding-bottom: 0; }
-  .engagement-label {
-    font-family: var(--t-mono);
-    font-size: 11px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--text-sub);
-    padding-top: 4px;
-  }
-  .engagement-value {
-    font-family: var(--t-body);
-    font-size: 16px;
-    line-height: 1.55;
-    color: var(--text);
-  }
-  .engagement-value strong {
-    font-family: var(--t-display);
-    font-weight: 700;
-    font-size: 18px;
-    display: block;
-    margin-bottom: 6px;
-    color: var(--text);
-  }
-
-  @media (max-width: 900px) {
-    .principle-inner { grid-template-columns: 1fr; gap: 16px; }
-    .engagement-block { padding: 32px 24px; }
-    .engagement-row { grid-template-columns: 1fr; gap: 8px; padding: 18px 0; }
-  }
-</style>
 </head>
 <body>
 
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
-      <svg viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="22" stroke="#0A1018" stroke-width="2"/>
-        <line x1="2" y1="24" x2="46" y2="24" stroke="#0A1018" stroke-width="2"/>
-        <rect x="20" y="20" width="8" height="8" fill="#0A1018"/>
-      </svg>
+      <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#0A1018" stroke-width="2"/><line x1="2" y1="24" x2="46" y2="24" stroke="#0A1018" stroke-width="2"/><rect x="20" y="20" width="8" height="8" fill="#0A1018"/></svg>
       <span class="nav-wordmark">BLACK<span class="dot">·</span>SEA</span>
     </a>
-    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
     <div class="nav-links" id="nav-links">
-      <a href="practice.html" class="nav-link">Practice</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="markets.html" class="nav-link">Markets</a>
+      <a href="cases.html" class="nav-link">Cases</a>
       <a href="approach.html" class="nav-link active">Approach</a>
-      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="https://blackseabriefings.substack.com" target="_blank" class="nav-link">Briefings</a>
       <a href="contact.html" class="nav-cta">Talk to us</a>
     </div>
   </div>
@@ -127,110 +33,119 @@
 
 <main>
 
-  <section class="hero">
+  <section class="page-hero">
     <div class="container">
-      <div class="section-tag reveal"><span class="idx">§03</span>How we work</div>
-      <h1 class="hero-title reveal d1">Operator-side. <em>Not consultancy-side.</em></h1>
-      <p class="hero-sub reveal d2">
-        Three rules shape every engagement. They explain why clients pick us over a Big Four advisory or a traditional law firm, and why we say no to work outside our scope.
+      <div class="page-hero-tag reveal"><span class="dot-signal"></span>How we work</div>
+      <h1 class="page-hero-title reveal d1">Operator-side.<br><em>Not consultancy-side.</em></h1>
+      <p class="page-hero-lead reveal d2">
+        The distinction matters. We have built and run regulated structures from the inside. The advice reflects what we would have wanted when we were on the other side of the table — not what looks good in a slide deck.
       </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-tag reveal"><span class="idx">§01</span>Four principles</div>
+      <h2 class="section-title reveal d1">The rules that shape<br><em>every engagement.</em></h2>
+
+      <table class="approach-table reveal d2">
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>
+              <div class="approach-td-title">We've sat the seat</div>
+              <div>Our principals have built regulated fund structures, operated compliance functions, and run digital asset businesses across multiple jurisdictions. The advice reflects what it is actually like to be on the other side of a regulator or an LP — not what a textbook describes.</div>
+            </td>
+            <td>
+              <div class="approach-td-title">What this means in practice</div>
+              <div>We tell you what will work in practice, not just what is technically compliant. In frontier markets, those are often different answers. We have learned that distinction by experience. The first question on every engagement is not "what does the rule say" but "what does the regulator actually expect to see."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>
+              <div class="approach-td-title">Clear scope, fixed price</div>
+              <div>Every engagement is scoped before work starts. You know what you are getting, what it costs, and when it will be delivered. We do not use hourly billing. The diagnostic is fixed price. Full mandates are scoped on the front end with defined deliverables and milestones.</div>
+            </td>
+            <td>
+              <div class="approach-td-title">Why not hourly</div>
+              <div>Hourly billing creates the wrong incentives. It rewards complexity and punishes efficiency. When a firm is paid by the hour, a problem that could be solved in one call becomes a four-email thread. Fixed-price scoping means our incentives and yours are aligned — we both want the work done cleanly and on time.</div>
+            </td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>
+              <div class="approach-td-title">Licensed counsel when needed</div>
+              <div>For matters that require a regulated legal opinion — fund formation documents, regulatory submissions, LP agreements, formal legal assessments — we retain partner counsel in the right jurisdiction. The firewall between advisory and regulated legal work is explicit and maintained.</div>
+            </td>
+            <td>
+              <div class="approach-td-title">The firewall matters</div>
+              <div>We do not pretend to be the law firm. Advisory and regulated legal opinion are different things with different liability profiles. Keeping the distinction clean protects the client and protects us. We know when to bring in licensed counsel and who to call in each jurisdiction we operate in.</div>
+            </td>
+          </tr>
+          <tr>
+            <td>04</td>
+            <td>
+              <div class="approach-td-title">Disqualification is part of the process</div>
+              <div>The first call is a qualification exercise for both sides. If we cannot genuinely help, we say so and explain why. If a prospective client presents counterparty risk we cannot accept — sanctions exposure, beneficial ownership we cannot verify, jurisdictional risk beyond our tolerance — we decline.</div>
+            </td>
+            <td>
+              <div class="approach-td-title">Why this makes us better</div>
+              <div>Firms that say yes to everyone cannot afford to be honest. Because we say no when we should, the clients who do engage know the yes is real. In environments where UBO screening and sanctions risk matter, a firm's willingness to disqualify is itself a signal of quality. It also means our track record reflects mandates we chose to take.</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="container">
+      <div class="section-tag reveal"><span class="idx">§02</span>How a typical engagement runs</div>
+      <h2 class="section-title reveal d1">From first call to<br><em>delivered mandate.</em></h2>
+      <p class="section-lead reveal d2">Most engagements follow this sequence. The diagnostic is not optional — it is how both sides establish that the engagement makes sense before committing to a full mandate.</p>
 
-      <div class="principle">
-        <div class="principle-inner">
-          <div class="principle-num reveal">01</div>
-          <div class="principle-body reveal d1">
-            <h2 class="principle-title">We&rsquo;ve sat <em>the seat.</em></h2>
-            <p>
-              Our team has <strong>built and run regulated structures</strong>, not just advised on them. We have received the regulator findings, drafted the response, sat the inspection, hired the compliance officer.
-            </p>
-            <p>
-              That experience changes the advice. You do not get a generic framework adapted to your situation. You get the answer to a question we already had to solve on our own balance sheet.
-            </p>
-            <p>
-              Consultancy-side advice tells you what should be done. Operator-side advice tells you what can be done, in what order, with what evidence the regulator will accept.
-            </p>
-          </div>
+      <div class="approach-grid reveal d2">
+        <div class="approach-item">
+          <div class="approach-num">01</div>
+          <h3 class="approach-title">30-minute call</h3>
+          <p class="approach-body">You describe what you are trying to structure or solve. We ask the questions that tell us whether we have seen this problem before and whether we are the right people to solve it. This is a genuine qualification call — not a pitch.</p>
+        </div>
+        <div class="approach-item">
+          <div class="approach-num">02</div>
+          <h3 class="approach-title">Diagnostic</h3>
+          <p class="approach-body">Two weeks, fixed price. We assess your current position against the applicable regulatory framework, identify the gaps, and give you a prioritised action list with an honest view of what remediation would require. No commitment beyond this stage.</p>
+        </div>
+        <div class="approach-item">
+          <div class="approach-num">03</div>
+          <h3 class="approach-title">Scoped mandate</h3>
+          <p class="approach-body">If the diagnostic identifies work we can help with, we scope a full engagement on the front end — defined deliverables, fixed price, clear timeline. You know exactly what you are getting before work starts.</p>
         </div>
       </div>
-
-      <div class="principle">
-        <div class="principle-inner">
-          <div class="principle-num reveal">02</div>
-          <div class="principle-body reveal d1">
-            <h2 class="principle-title">Clear scope, <em>fixed price.</em></h2>
-            <p>
-              <strong>We do not bill by the hour.</strong> Hourly billing creates incentives we do not want, to slow down, to over-research, to lengthen.
-            </p>
-            <p>
-              Every engagement starts with a two-week diagnostic. At the end you receive a scoped proposal: deliverables, timeline, fixed fee. You decide whether to proceed. If you do, the price does not move.
-            </p>
-            <p>
-              For ongoing relationships we work on monthly retainer. Fixed fee, defined scope, clear escalation path for matters that exceed it.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="principle">
-        <div class="principle-inner">
-          <div class="principle-num reveal">03</div>
-          <div class="principle-body reveal d1">
-            <h2 class="principle-title">Licensed counsel <em>when needed.</em></h2>
-            <p>
-              We are an advisory practice, not a law firm. For matters that require a regulated legal opinion, signed counsel, or admission to a regulator&rsquo;s register, <strong>we retain partner counsel in the right jurisdiction.</strong>
-            </p>
-            <p>
-              You see the cost. You approve the engagement. The partner reports through us so you have one point of accountability, not three.
-            </p>
-            <p>
-              This is the line we do not blur. We are honest about what advisory can do and what it cannot, and we structure engagements so you are never paying us for something a licensed lawyer should be doing.
-            </p>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <!-- ENGAGEMENT DETAILS -->
   <section class="section">
     <div class="container">
-      <div class="section-tag reveal"><span class="idx">§04</span>Engagement</div>
-      <h2 class="section-title reveal d1">What it looks like in <em>practice.</em></h2>
+      <div class="section-tag reveal"><span class="idx">§03</span>What we do not do</div>
+      <h2 class="section-title reveal d1">The things we say<br><em>no to.</em></h2>
+      <p class="section-lead reveal d2">Knowing what a firm will not do tells you as much about how it operates as knowing what it will. These are the things we consistently decline.</p>
 
-      <div class="engagement-block reveal d2">
-        <div class="engagement-row">
-          <div class="engagement-label">Format</div>
-          <div class="engagement-value">
-            <strong>Project-based or monthly retainer.</strong>
-            Project work is the default for new clients. Retainer once we have completed at least one project and the working relationship is calibrated.
-          </div>
+      <div class="approach-grid reveal d2">
+        <div class="approach-item">
+          <div class="approach-num" style="color:var(--alert)">✕</div>
+          <h3 class="approach-title">Engagements without a defined scope</h3>
+          <p class="approach-body">Open-ended retainers without defined deliverables create the conditions for scope creep, misaligned expectations, and work that does not produce results. Every engagement has a defined scope before work begins.</p>
         </div>
-        <div class="engagement-row">
-          <div class="engagement-label">Cycle</div>
-          <div class="engagement-value">
-            <strong>Two weeks for a diagnostic. Two to six months for a full mandate.</strong>
-            We do not start work without a written scope, and we do not extend a project without a written change request.
-          </div>
+        <div class="approach-item">
+          <div class="approach-num" style="color:var(--alert)">✕</div>
+          <h3 class="approach-title">Regulated legal opinion without counsel</h3>
+          <p class="approach-body">We do not provide regulated legal opinions, sign off on legal documents, or represent ourselves as lawyers. When matters require regulated legal opinion, we retain partner counsel and the opinion comes from them.</p>
         </div>
-        <div class="engagement-row">
-          <div class="engagement-label">Communication</div>
-          <div class="engagement-value">
-            <strong>One sender, weekly check-in, written summaries.</strong>
-            You do not chase us. We send a written update every Friday with progress, blockers, and the next week&rsquo;s scope.
-          </div>
-        </div>
-        <div class="engagement-row">
-          <div class="engagement-label">Conflicts</div>
-          <div class="engagement-value">
-            <strong>We disclose every potential conflict in writing before engagement.</strong>
-            If we cannot take a mandate because of an existing relationship, we say so. We do not run dual mandates without explicit waiver from both parties.
-          </div>
+        <div class="approach-item">
+          <div class="approach-num" style="color:var(--alert)">✕</div>
+          <h3 class="approach-title">Clients we cannot verify</h3>
+          <p class="approach-body">We run UBO and sanctions screening on all prospective clients before engagement. In frontier markets, this is not optional — our reputation in those jurisdictions depends on the quality of the clients we are associated with.</p>
         </div>
       </div>
     </div>
@@ -240,14 +155,10 @@
     <div class="container">
       <div class="cta-band-inner">
         <div>
-          <h2 class="cta-band-title reveal">Send us <em>one paragraph.</em></h2>
-          <p class="cta-band-sub reveal d1">
-            Tell us what you are trying to structure or solve. We respond within 48 hours with a yes, a no, or a question.
-          </p>
+          <h2 class="cta-band-title reveal">Ready to see whether<br><em>this is the right fit?</em></h2>
+          <p class="cta-band-sub reveal d1">The 30-minute call is how we find out. We will tell you honestly what we think, whether we can help, and what it would look like if we did.</p>
         </div>
-        <div class="cta-band-action reveal d2">
-          <a href="contact.html" class="btn btn--signal">Get in touch</a>
-        </div>
+        <div class="cta-band-action reveal d2"><a href="contact.html" class="btn btn--signal">Request a call</a></div>
       </div>
     </div>
   </section>
@@ -259,66 +170,44 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="footer-brand-row">
-          <svg viewBox="0 0 48 48" fill="none">
-            <circle cx="24" cy="24" r="22" stroke-width="2"/>
-            <line x1="2" y1="24" x2="46" y2="24" stroke-width="2"/>
-            <rect x="20" y="20" width="8" height="8"/>
-          </svg>
+          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke-width="2"/><line x1="2" y1="24" x2="46" y2="24" stroke-width="2"/><rect x="20" y="20" width="8" height="8"/></svg>
           <span class="footer-wordmark">BLACK<span class="dot">·</span>SEA</span>
         </div>
-        <p class="footer-tagline">
-          Independent advisory at the intersection of regulation, jurisdiction and cross-border practice.
-        </p>
+        <p class="footer-tagline">Independent advisory at the intersection of regulation, jurisdiction and cross-border practice.</p>
       </div>
-      <div class="footer-col">
-        <h5>Navigate</h5>
-        <ul>
-          <li><a href="practice.html">Practice</a></li>
-          <li><a href="approach.html">Approach</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Office</h5>
-        <ul>
-          <li><a href="contact.html">New York</a></li>
-          <li><a href="contact.html">EU</a></li>
-          <li><a href="contact.html">Africa</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Legal</h5>
-        <ul>
-          <li><a href="legal/jurisdictional-disclosures.html">Disclosures</a></li>
-          <li><a href="legal/privacy.html">Privacy</a></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h5>Practice</h5><ul>
+        <li><a href="products.html#defense">EU Defense Capital</a></li>
+        <li><a href="products.html#frontier">Frontier Markets</a></li>
+        <li><a href="products.html#regulatory">Regulatory Advisory</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Markets</h5><ul>
+        <li><a href="markets.html#aifc">AIFC Kazakhstan</a></li>
+        <li><a href="markets.html#nigeria">Nigeria</a></li>
+        <li><a href="markets.html#uae">UAE</a></li>
+        <li><a href="markets.html">All markets</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Connect</h5><ul>
+        <li><a href="contact.html">Talk to us</a></li>
+        <li><a href="cases.html">Cases</a></li>
+        <li><a href="https://blackseabriefings.substack.com" target="_blank">Briefings</a></li>
+      </ul></div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026, Black Sea</span>
-      <a href="legal/jurisdictional-disclosures.html">Legal Notice</a>
+      <span>© 2026 Black Sea. All rights reserved.</span>
+      <span><a href="legal/privacy.html">Privacy</a></span>
     </div>
   </div>
 </footer>
 
 <script>
-  document.documentElement.classList.add('js-ready');
-  const burger = document.getElementById('burger');
-  const navLinks = document.getElementById('nav-links');
-  if (burger) burger.addEventListener('click', () => navLinks.classList.toggle('open'));
-  if (navLinks) navLinks.querySelectorAll('a').forEach(a =>
-    a.addEventListener('click', () => navLinks.classList.remove('open')));
-
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 30);
-  }, { passive: true });
-
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+document.documentElement.classList.add('js-ready');
+const revEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+}, { threshold: 0.08 });
+setTimeout(() => revEls.forEach(el => io.observe(el)), 50);
+document.getElementById('burger').addEventListener('click', () => document.getElementById('nav-links').classList.toggle('open'));
+window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10), { passive: true });
 </script>
-
 </body>
 </html>
