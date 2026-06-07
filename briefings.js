@@ -5,7 +5,7 @@
   if (!grid) return;
 
   var FEED = 'https://blackseabriefings.substack.com/feed';
-  var ENDPOINT = 'https://api.rss2json.com/v1/api.json?count=3&rss_url=' + encodeURIComponent(FEED);
+  var ENDPOINT = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(FEED);
 
   function strip(html) {
     var d = document.createElement('div');
