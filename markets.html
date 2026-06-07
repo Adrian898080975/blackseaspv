@@ -3,13 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Markets — Black Sea</title>
-<meta name="description" content="Black Sea operates across 13 frontier and Gulf markets: UAE, AIFC Kazakhstan, Nigeria, Bahrain, Turkey, South Africa, Georgia, Uzbekistan, Kyrgyzstan, Jordan, Pakistan, Kenya, and Ghana.">
+<title>Operations map — Black Sea</title>
+<meta name="description" content="Nineteen active markets across the Gulf, Africa, Central Asia, Turkey and Pakistan. Select a market to open its dossier: regulators, trigger, and the regime for every industry in scope.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSI+CiAgPHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiBmaWxsPSIjMEExMDE4Ii8+CiAgPGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMTgiIHN0cm9rZT0iI0RDRTNFOCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iNiIgeTE9IjI0IiB4Mj0iNDIiIHkyPSIyNCIgc3Ryb2tlPSIjRENFM0U4IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxyZWN0IHg9IjIwLjUiIHk9IjIwLjUiIHdpZHRoPSI3IiBoZWlnaHQ9IjciIGZpbGw9IiNEQ0UzRTgiLz4KPC9zdmc+">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<!-- Cloudflare Web Analytics (cookieless) -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "302388cdb807420591a613f27c543bb9"}'></script>
+<script defer src="vendor/d3.min.js"></script>
+<script defer src="vendor/topojson-client.min.js"></script>
+<script defer src="markets-map.js"></script>
+<style>
+  .ops{background:linear-gradient(180deg,#0A1726 0%,#070C14 100%);color:var(--frost);padding:46px 0 58px;position:relative;overflow:hidden}
+  .ops::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(124,149,171,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(124,149,171,.05) 1px,transparent 1px);background-size:44px 44px;pointer-events:none}
+  .ops .container{position:relative;z-index:1}
+  .ops-head{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-bottom:1px solid rgba(124,149,171,.25);padding-bottom:14px;margin-bottom:20px;font-family:var(--t-mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--steel)}
+  .ops-head .lhs{color:var(--frost)} .ops-head .lhs b{color:var(--signal)}
+  .ops-head .rhs{display:flex;align-items:center;gap:10px}
+  .live-dot{width:8px;height:8px;border-radius:50%;background:var(--signal);animation:livePulse 1.8s infinite}
+  @keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(24,194,107,.6)}70%{box-shadow:0 0 0 7px rgba(24,194,107,0)}100%{box-shadow:0 0 0 0 rgba(24,194,107,0)}}
+
+  .ops-console{display:grid;grid-template-columns:1.18fr 1fr;gap:22px;align-items:stretch}
+  @media(max-width:980px){.ops-console{grid-template-columns:1fr}}
+
+  .ops-mapwrap{border:1px solid rgba(124,149,171,.22);background:#070E18;position:relative;overflow:hidden;display:flex;flex-direction:column}
+  .ops-mapwrap::after{content:'';position:absolute;top:0;bottom:0;width:150px;background:linear-gradient(90deg,transparent,rgba(24,194,107,.05),transparent);transform:translateX(-200px);animation:mapsweep 8s linear infinite;pointer-events:none;z-index:2}
+  @keyframes mapsweep{to{transform:translateX(1200px)}}
+  .ops-map{display:block;width:100%;height:auto;flex:1}
+  .country{fill:rgba(124,149,171,.06);stroke:rgba(124,149,171,.20);stroke-width:.5;vector-effect:non-scaling-stroke}
+  .country-active{fill:rgba(24,194,107,.13);stroke:rgba(24,194,107,.45);stroke-width:.8}
+  .leader{stroke:rgba(124,149,171,.55);stroke-width:1}
+  .anchor-dot{opacity:.75} .a-active{fill:var(--signal)} .a-building{fill:var(--amber)}
+  .node.labelled .node-label{opacity:.85}
+  .node{cursor:pointer}
+  .node-hit{fill:transparent}
+  .node-dot{transition:fill .15s}
+  .node.active-market .node-dot{fill:var(--signal);filter:drop-shadow(0 0 7px rgba(24,194,107,.95))}
+  .node.building-market .node-dot{fill:var(--amber);filter:drop-shadow(0 0 7px rgba(232,168,43,.9))}
+  .node-ring{fill:none;stroke-width:1.5;opacity:0}
+  .node.active-market .node-ring{stroke:var(--signal)} .node.building-market .node-ring{stroke:var(--amber)}
+  .node:hover .node-ring,.node.sel .node-ring{opacity:.9;animation:ring 1.7s infinite}
+  @keyframes ring{0%{r:10px;opacity:.9}100%{r:38px;opacity:0}}
+  .node.sel .node-dot{r:10px}
+  .node-label{font-family:var(--t-mono);font-size:13px;font-weight:500;fill:var(--frost);stroke:rgba(7,12,20,.92);stroke-width:3px;paint-order:stroke;opacity:0;pointer-events:none;letter-spacing:.05em}
+  .node:hover .node-label,.node.sel .node-label{opacity:1}
+  .node:focus{outline:none} .node:focus .node-ring{opacity:.9}
+  .ops-legend{display:flex;gap:20px;align-items:center;padding:10px 14px;border-top:1px solid rgba(124,149,171,.18);font-family:var(--t-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel)}
+  .ops-legend span{display:flex;align-items:center;gap:7px}
+  .lg{width:8px;height:8px;border-radius:50%}.lg-active{background:var(--signal)}.lg-building{background:var(--amber)}
+
+  .ops-dossier{border:1px solid rgba(124,149,171,.22);background:rgba(10,23,38,.55);display:flex;flex-direction:column}
+  .dossier-head{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap;padding:22px 24px;border-bottom:1px solid rgba(124,149,171,.2)}
+  .dossier-eyebrow{font-family:var(--t-mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--signal)}
+  .dossier-name{font-family:var(--t-display);font-weight:800;font-size:30px;letter-spacing:-0.02em;color:var(--frost);margin-top:6px;line-height:1}
+  .dossier-status{font-family:var(--t-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:5px 11px;border:1px solid;white-space:nowrap}
+  .status-active{color:var(--signal);border-color:var(--signal)} .status-building{color:var(--amber);border-color:var(--amber)}
+  .dossier-body{padding:20px 24px 24px;display:flex;flex-direction:column;gap:16px}
+  .dblock .k{font-family:var(--t-mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--steel);display:block;margin-bottom:5px}
+  .dblock .v{font-size:13px;color:var(--frost);line-height:1.5}
+  .matrix-title{font-family:var(--t-mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin-top:2px}
+  .matrix{display:flex;flex-direction:column;gap:1px;background:rgba(124,149,171,.16);border:1px solid rgba(124,149,171,.16)}
+  .mrow{display:grid;grid-template-columns:140px 1fr auto;gap:12px;background:rgba(8,16,26,.75);padding:11px 13px;align-items:center}
+  .mind{font-family:var(--t-display);font-weight:700;font-size:12px;color:var(--frost);line-height:1.2}
+  .mreg{font-size:11px;color:var(--steel);line-height:1.45}
+  .mstat{font-family:var(--t-mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border:1px solid;white-space:nowrap}
+  .s-live{color:var(--signal);border-color:rgba(24,194,107,.5)} .s-deadline{color:var(--amber);border-color:rgba(232,168,43,.5)}
+  .s-enforce{color:#E0795F;border-color:rgba(184,61,44,.55)} .s-emerging{color:var(--steel);border-color:rgba(124,149,171,.4)}
+  .s-base{color:var(--steel-deep);border-color:rgba(124,149,171,.28)}
+  @media(max-width:560px){.mrow{grid-template-columns:1fr auto}.mreg{grid-column:1/-1}}
+  .dossier-cta{font-family:var(--t-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--signal);text-decoration:none;border-bottom:1px solid var(--signal);padding-bottom:3px;align-self:flex-start;margin-top:2px}
+
+  .ops-nav{margin-top:26px;display:flex;flex-direction:column;gap:16px}
+  .nav-intro{font-family:var(--t-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--steel);margin-bottom:2px}
+  .nav-group{display:grid;grid-template-columns:160px 1fr;gap:16px;align-items:start;padding-top:14px;border-top:1px solid rgba(124,149,171,.16)}
+  @media(max-width:680px){.nav-group{grid-template-columns:1fr;gap:8px}}
+  .nav-group-label{font-family:var(--t-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--signal);padding-top:8px}
+  .nav-group-row{display:flex;flex-wrap:wrap;gap:8px}
+  .mchip{font-family:var(--t-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--steel);border:1px solid rgba(124,149,171,.25);padding:8px 13px;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:7px;background:none}
+  .mchip:hover{color:var(--frost);border-color:var(--steel)}
+  .mchip.sel{color:var(--ink);background:var(--signal);border-color:var(--signal)}
+  .mchip .cdot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+</style>
 </head>
 <body>
 
@@ -21,396 +97,54 @@
     </a>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
     <div class="nav-links" id="nav-links">
-      <a href="products.html" class="nav-link">Products</a>
+      <a href="products.html" class="nav-link">Services</a>
       <a href="markets.html" class="nav-link active">Markets</a>
       <a href="cases.html" class="nav-link">Cases</a>
-      <a href="approach.html" class="nav-link">Approach</a>
-      <a href="https://blackseabriefings.substack.com" target="_blank" class="nav-link">Briefings</a>
-      <a href="contact.html" class="nav-cta">Talk to us</a>
+      <a href="https://blackseabriefings.substack.com" target="_blank" rel="noopener" class="nav-link">Insights</a>
+      <a href="approach.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-cta">Book a call</a>
     </div>
   </div>
 </nav>
 
 <main>
 
-  <section class="page-hero">
+  <section class="page-hero" style="padding:108px 0 56px">
     <div class="container">
-      <div class="page-hero-tag reveal"><span class="dot-signal"></span>Markets</div>
-      <h1 class="page-hero-title reveal d1">Environments others won't<br><em>touch with a shovel.</em></h1>
+      <div class="page-hero-tag reveal"><span class="dot-signal"></span>Operations map</div>
+      <h1 class="page-hero-title reveal d1">Where we work, <em>live.</em></h1>
       <p class="page-hero-lead reveal d2">
-        We operate in jurisdictions where the regulatory framework is forming in real time, the counterparty risk is real, and the margin for error is small. Thirteen markets across the Gulf, Central Asia, Africa, and beyond.
+        Nineteen active markets. Select one on the map or in the list to open its dossier: the regulators, the trigger, and the regime for every industry in scope.
       </p>
     </div>
   </section>
 
-  <section class="section">
+  <section class="ops">
     <div class="container">
-      <div class="market-tabs reveal" id="market-tabs">
-        <div class="market-tab active active-market" data-market="aifc">AIFC KZ</div>
-        <div class="market-tab active-market" data-market="uae">UAE</div>
-        <div class="market-tab active-market" data-market="nigeria">Nigeria</div>
-        <div class="market-tab active-market" data-market="bahrain">Bahrain</div>
-        <div class="market-tab active-market" data-market="turkey">Turkey</div>
-        <div class="market-tab active-market" data-market="southafrica">South Africa</div>
-        <div class="market-tab active-market" data-market="georgia">Georgia</div>
-        <div class="market-tab building-market" data-market="uzbekistan">Uzbekistan</div>
-        <div class="market-tab building-market" data-market="kyrgyzstan">Kyrgyzstan</div>
-        <div class="market-tab building-market" data-market="jordan">Jordan</div>
-        <div class="market-tab building-market" data-market="pakistan">Pakistan</div>
-        <div class="market-tab building-market" data-market="kenya">Kenya</div>
-        <div class="market-tab building-market" data-market="ghana">Ghana</div>
+      <div class="ops-head">
+        <div class="lhs">BLACK SEA <b>//</b> GLOBAL OPERATIONS</div>
+        <div class="rhs"><span class="live-dot"></span> 19 markets tracked · live</div>
       </div>
-      <div class="market-panel-wrap reveal d1">
 
-        <!-- AIFC -->
-        <div class="market-pane active" id="market-aifc">
-          <div class="market-pane-header">
-            <div>
-              <div class="market-pane-name">AIFC Kazakhstan</div>
-              <div class="market-pane-subtitle">AFSA · Capital Markets · Digital Assets · AML/CFT</div>
-              <div class="market-pane-body">
-                The Astana International Financial Centre is the fastest-developing common law financial hub in Central Asia, operating under AFSA regulation. The January 2026 amendments to the Capital Markets Rules, Digital Assets Rules, and Crowdfunding Rules created a compliance gap across virtually every AIFC-authorised firm. The six-month transition window closed July 2026. Black Sea has been conducting gap assessments since the amendments came into force. The AFSA supervisory posture has become materially more active over the past 18 months. The first routine supervisory visit after the transition deadline will reveal the gap between what firms documented and what they actually implemented.
-              </div>
-            </div>
-            <div class="market-status-badge active">Active</div>
-          </div>
-          <div class="market-stats">
-            <div class="market-stat"><div class="market-stat-value">4,000+</div><div class="market-stat-label">Registered entities</div></div>
-            <div class="market-stat"><div class="market-stat-value">Jan 2026</div><div class="market-stat-label">Amendment date</div></div>
-            <div class="market-stat"><div class="market-stat-value">Jul 2026</div><div class="market-stat-label">Transition closed</div></div>
-            <div class="market-stat"><div class="market-stat-value">Apr 2026</div><div class="market-stat-label">AFSA-VARA MoU</div></div>
-          </div>
-          <div class="market-capabilities">
-            <span class="market-cap">AFSA gap assessment</span>
-            <span class="market-cap">Digital Assets Rules compliance</span>
-            <span class="market-cap">Capital Markets Rules advisory</span>
-            <span class="market-cap">AML/CFT framework design</span>
-            <span class="market-cap">Approved person assessment</span>
-            <span class="market-cap">Monthly reporting infrastructure</span>
-            <span class="market-cap">DASP licensing support</span>
+      <div class="ops-nav" id="market-nav">
+        <div class="nav-intro">All markets, by region · select one to open its dossier</div>
+      </div>
+
+      <div class="ops-console">
+        <div class="ops-mapwrap">
+          <svg class="ops-map" viewBox="0 0 1000 900" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Operations map of our markets">
+            <g id="ops-countries"></g>
+            <g id="ops-leaders"></g>
+            <g id="ops-nodes"></g>
+          </svg>
+          <div class="ops-legend">
+            <span><span class="lg lg-active"></span> Active</span>
+            <span><span class="lg lg-building"></span> Building</span>
+            <span style="margin-left:auto">Click a market to open its dossier</span>
           </div>
         </div>
 
-        <!-- NIGERIA -->
-        <div class="market-pane" id="market-nigeria">
-          <div class="market-pane-header">
-            <div>
-              <div class="market-pane-name">Nigeria</div>
-              <div class="market-pane-subtitle">SEC ARIP · CBN AML · ISA 2025 · Digital Assets</div>
-              <div class="market-pane-body">
-                Nigeria's Investment and Securities Act 2025 overhauled the entire digital asset regulatory framework. The SEC's Regulatory Incubation Programme (ARIP) created the first formal pathway for digital asset operators to obtain regulated status. Simultaneously, the CBN's Circular BSD/DIR/PUB/LAB/019/002 imposed a June 2026 deadline for automated AML implementation across all regulated institutions. Black Sea has active relationships with ARIP-approved operators and has been advising on CBN AML implementation roadmaps. Nigeria is one of the most active digital asset markets in the world, and one of the most underserved by qualified compliance advisory.
-              </div>
-            </div>
-            <div class="market-status-badge active">Active</div>
-          </div>
-          <div class="market-stats">
-            <div class="market-stat"><div class="market-stat-value">200M+</div><div class="market-stat-label">Population</div></div>
-            <div class="market-stat"><div class="market-stat-value">ISA 2025</div><div class="market-stat-label">New framework</div></div>
-            <div class="market-stat"><div class="market-stat-value">Jun 2026</div><div class="market-stat-label">CBN AML deadline</div></div>
-            <div class="market-stat"><div class="market-stat-value">ARIP</div><div class="market-stat-label">Incubation programme</div></div>
-          </div>
-          <div class="market-capabilities">
-            <span class="market-cap">ARIP gap analysis and submission</span>
-            <span class="market-cap">CBN AML roadmap design</span>
-            <span class="market-cap">ISA 2025 compliance advisory</span>
-            <span class="market-cap">VASP registration support</span>
-            <span class="market-cap">SEC correspondence management</span>
-            <span class="market-cap">Automated monitoring architecture</span>
-          </div>
-        </div>
-
-        <!-- UAE -->
-        <div class="market-pane" id="market-uae">
-          <div class="market-pane-header">
-            <div>
-              <div class="market-pane-name">UAE</div>
-              <div class="market-pane-subtitle">ADGM FSRA · VARA · DIFC DFSA · CPF Compliance</div>
-              <div class="market-pane-body">
-                The UAE is unique globally in having three separate, mature digital asset regulatory frameworks operating simultaneously — ADGM, VARA, and DIFC — each with distinct licensing requirements, AML/CFT obligations, and supervisory approaches. The UAE Federal Decree-Law No. 10/2025 added Combatting Proliferation Financing obligations across all categories. VARA Rulebook 2.0 in June 2025 added over 350 pages of requirements. The FSRA updated its virtual asset guidance in March 2026. For operators with presence in more than one zone, building a compliance architecture that satisfies all three simultaneously without contradiction is a meaningful challenge. Black Sea advises on that architecture.
-              </div>
-            </div>
-            <div class="market-status-badge active">Active</div>
-          </div>
-          <div class="market-stats">
-            <div class="market-stat"><div class="market-stat-value">3</div><div class="market-stat-label">Regulatory zones</div></div>
-            <div class="market-stat"><div class="market-stat-value">Jun 2025</div><div class="market-stat-label">VARA 2.0 live</div></div>
-            <div class="market-stat"><div class="market-stat-value">Oct 2025</div><div class="market-stat-label">CPF decree</div></div>
-            <div class="market-stat"><div class="market-stat-value">Mar 2026</div><div class="market-stat-label">FSRA update</div></div>
-          </div>
-          <div class="market-capabilities">
-            <span class="market-cap">ADGM FSRA licensing advisory</span>
-            <span class="market-cap">VARA compliance framework</span>
-            <span class="market-cap">DIFC DFSA advisory</span>
-            <span class="market-cap">CPF obligations (Decree 10/2025)</span>
-            <span class="market-cap">MLRO function design</span>
-            <span class="market-cap">Cross-zone compliance architecture</span>
-            <span class="market-cap">IPA to FSP compliance build</span>
-          </div>
-        </div>
-
-        <!-- GEORGIA -->
-        <div class="market-pane" id="market-georgia">
-          <div class="market-pane-header">
-            <div>
-              <div class="market-pane-name">Georgia</div>
-              <div class="market-pane-subtitle">NBG VASP · Open Finance · World Bank P173975</div>
-              <div class="market-pane-body">
-                The National Bank of Georgia's VASP registration enforcement since October 2025, combined with an active Open Finance regulatory initiative and a World Bank-backed digital finance programme (P173975), has created a compliance environment where most operators are navigating without structured external support. Black Sea is building direct regulatory relationships in Tbilisi and has submitted advisory proposals for the NBG's Open Finance initiative. Georgia is one of the most active digital asset markets in the South Caucasus, with Bybit having secured both PSP and VASP licences in Q4 2025.
-              </div>
-            </div>
-            <div class="market-status-badge active">Active</div>
-          </div>
-          <div class="market-stats">
-            <div class="market-stat"><div class="market-stat-value">Oct 2025</div><div class="market-stat-label">VASP enforcement</div></div>
-            <div class="market-stat"><div class="market-stat-value">P173975</div><div class="market-stat-label">WB active project</div></div>
-            <div class="market-stat"><div class="market-stat-value">2027</div><div class="market-stat-label">Open Finance roadmap</div></div>
-          </div>
-          <div class="market-capabilities">
-            <span class="market-cap">NBG VASP compliance advisory</span>
-            <span class="market-cap">Open Finance regulatory framework</span>
-            <span class="market-cap">AML/CFT architecture</span>
-            <span class="market-cap">Digital asset licensing support</span>
-            <span class="market-cap">World Bank programme advisory</span>
-          </div>
-        </div>
-
-        <!-- UZBEKISTAN -->
-        <div class="market-pane" id="market-uzbekistan">
-          <div class="market-pane-header">
-            <div>
-              <div class="market-pane-name">Uzbekistan</div>
-              <div class="market-pane-subtitle">NAPP · Stablecoin Regulation · Digital Finance</div>
-              <div class="market-pane-body">
-                Uzbekistan legalised stablecoins in April 2026 and is building a comprehensive digital asset regulatory framework under the National Agency for Perspective Projects (NAPP). The World Bank's Financial Sector Reform Project (P168180) is active with multiple consultancy mandates through October 2026. Uzbekistan is one of the fastest-growing crypto markets in Central Asia, with a population of 36 million and a young demographic driving adoption. Black Sea is building presence in Tashkent ahead of the first formal wave of digital asset licensing requirements.
-              </div>
-            </div>
-            <div class="market-status-badge building">Building</div>
-          </div>
-          <div class="market-stats">
-            <div class="market-stat"><div class="market-stat-value">Apr 2026</div><div class="market-stat-label">Stablecoins legalised</div></div>
-            <div class="market-stat"><div class="market-stat-value">NAPP</div><div class="market-stat-label">Digital asset regulator</div></div>
-            <div class="market-stat"><div class="market-stat-value">36M</div><div class="market-stat-label">Population</div></div>
-          </div>
-          <div class="market-capabilities">
-            <span class="market-cap">NAPP regulatory advisory</span>
-            <span class="market-cap">Digital asset compliance framework</span>
-            <span class="market-cap">Stablecoin structure advisory</span>
-            <span class="market-cap">AML/CFT framework design</span>
-          </div>
-        </div>
-
-        <!-- KYRGYZSTAN -->
-        <div class="market-pane" id="market-kyrgyzstan">
-          <div class="market-pane-header">
-            <div>
-              <div class="market-pane-name">Kyrgyzstan</div>
-              <div class="market-pane-subtitle">FSA · Virtual Assets Law 2026 · AML/CFT</div>
-              <div class="market-pane-body">
-                Kyrgyzstan enacted a new Virtual Assets law in January 2026, creating a formal licensing framework for the first time. The IMF flagged significant AML/CFT gaps in April 2026, noting $11.4 billion in crypto turnover in just seven months of 2025. Nine VASP operators are now licensed under the new framework. External compliance advisory support is essentially absent — this is one of the few markets where Black Sea has genuine first-mover advantage. The regulatory infrastructure is being built in real time, and the operators that engage advisory support now will shape the framework that emerges.
-              </div>
-            </div>
-            <div class="market-status-badge building">Building</div>
-          </div>
-          <div class="market-stats">
-            <div class="market-stat"><div class="market-stat-value">Jan 2026</div><div class="market-stat-label">VA law enacted</div></div>
-            <div class="market-stat"><div class="market-stat-value">$11.4B</div><div class="market-stat-label">Crypto volume (7mo)</div></div>
-            <div class="market-stat"><div class="market-stat-value">9</div><div class="market-stat-label">Licensed VASPs</div></div>
-          </div>
-          <div class="market-capabilities">
-            <span class="market-cap">FSA licensing advisory</span>
-            <span class="market-cap">AML/CFT framework design</span>
-            <span class="market-cap">VASP compliance architecture</span>
-            <span class="market-cap">IMF TA coordination</span>
-          </div>
-        </div>
-
-        <!-- BAHRAIN -->
-        <div class="market-pane" id="market-bahrain">
-          <div class="market-pane-header">
-            <div>
-              <div class="market-pane-name">Bahrain</div>
-              <div class="market-pane-subtitle">CBB Crypto-Asset Module · Travel Rule · Cat 1–4</div>
-              <div class="market-pane-body">
-                Bahrain runs one of the Gulf's most mature crypto regimes through the Central Bank of Bahrain's Crypto-Asset Module (Rulebook Volume 6), with licence categories 1 to 4 from advice through to operating an exchange, and the FATF Travel Rule in force on every transfer regardless of value. The licensee base is established and growing, from broker-dealers and OTC desks to newly licensed entrants. Every licence carries ongoing AML/CFT, MLRO, and independent-audit obligations, and that operational layer is what Black Sea builds and runs for CBB licensees and applicants.
-              </div>
-            </div>
-            <div class="market-status-badge active">Active</div>
-          </div>
-          <div class="market-stats">
-            <div class="market-stat"><div class="market-stat-value">CBB</div><div class="market-stat-label">Regulator</div></div>
-            <div class="market-stat"><div class="market-stat-value">Cat 1–4</div><div class="market-stat-label">Licence tiers</div></div>
-            <div class="market-stat"><div class="market-stat-value">Travel Rule</div><div class="market-stat-label">Every transfer</div></div>
-          </div>
-          <div class="market-capabilities">
-            <span class="market-cap">CBB CRA licensing support</span>
-            <span class="market-cap">AML/CFT framework design</span>
-            <span class="market-cap">MLRO function</span>
-            <span class="market-cap">Travel Rule implementation</span>
-            <span class="market-cap">Independent AML audit readiness</span>
-            <span class="market-cap">Sanctions screening</span>
-          </div>
-        </div>
-
-        <!-- TURKEY -->
-        <div class="market-pane" id="market-turkey">
-          <div class="market-pane-header">
-            <div>
-              <div class="market-pane-name">Turkey</div>
-              <div class="market-pane-subtitle">CMB / SPK · MASAK · CASP licensing</div>
-              <div class="market-pane-body">
-                Turkey's Capital Markets Board (CMB / SPK) brought crypto-asset service providers into a formal licensing regime, with a 30 June 2026 authorisation deadline concentrating the entire market at once. MASAK sets the AML and CFT obligations. The part regulators scrutinise hardest is rarely the corporate file; it is whether the AML and CFT framework and transaction monitoring are written and actually running. Black Sea builds that operational layer for platforms racing the gate, working alongside Turkish counsel on the licensing file.
-              </div>
-            </div>
-            <div class="market-status-badge active">Active</div>
-          </div>
-          <div class="market-stats">
-            <div class="market-stat"><div class="market-stat-value">30 Jun 2026</div><div class="market-stat-label">CASP deadline</div></div>
-            <div class="market-stat"><div class="market-stat-value">CMB / SPK</div><div class="market-stat-label">Regulator</div></div>
-            <div class="market-stat"><div class="market-stat-value">MASAK</div><div class="market-stat-label">AML authority</div></div>
-          </div>
-          <div class="market-capabilities">
-            <span class="market-cap">CASP licensing support</span>
-            <span class="market-cap">AML/CFT framework design</span>
-            <span class="market-cap">MASAK-aligned monitoring</span>
-            <span class="market-cap">Travel Rule implementation</span>
-            <span class="market-cap">Sanctions screening</span>
-            <span class="market-cap">MLRO function</span>
-          </div>
-        </div>
-
-        <!-- SOUTH AFRICA -->
-        <div class="market-pane" id="market-southafrica">
-          <div class="market-pane-header">
-            <div>
-              <div class="market-pane-name">South Africa</div>
-              <div class="market-pane-subtitle">FSCA CASP · FIC Act · Travel Rule</div>
-              <div class="market-pane-body">
-                South Africa declared crypto assets a financial product and now licenses Crypto-Asset Service Providers through the FSCA, with AML and CFT obligations under the Financial Intelligence Centre Act and the FIC's Directive bringing the Travel Rule into force. Licensed and applicant CASPs must operate a full AML programme, an MLRO function, and FIC-aligned reporting. Black Sea builds and runs that layer for FSCA CASPs, from the licence application through to examiner-ready operations.
-              </div>
-            </div>
-            <div class="market-status-badge active">Active</div>
-          </div>
-          <div class="market-stats">
-            <div class="market-stat"><div class="market-stat-value">FSCA</div><div class="market-stat-label">Regulator</div></div>
-            <div class="market-stat"><div class="market-stat-value">FIC Act</div><div class="market-stat-label">AML regime</div></div>
-            <div class="market-stat"><div class="market-stat-value">Travel Rule</div><div class="market-stat-label">In force</div></div>
-          </div>
-          <div class="market-capabilities">
-            <span class="market-cap">FSCA CASP licensing support</span>
-            <span class="market-cap">FICA AML/CFT framework</span>
-            <span class="market-cap">KYC and CDD architecture</span>
-            <span class="market-cap">Travel Rule implementation</span>
-            <span class="market-cap">MLRO function</span>
-            <span class="market-cap">Sanctions screening</span>
-          </div>
-        </div>
-
-        <!-- JORDAN -->
-        <div class="market-pane" id="market-jordan">
-          <div class="market-pane-header">
-            <div>
-              <div class="market-pane-name">Jordan</div>
-              <div class="market-pane-subtitle">CBJ · Virtual Assets Law No. 14/2025 · AMLU</div>
-              <div class="market-pane-body">
-                Jordan enacted Virtual Assets Law No. 14 of 2025, its first licensing and supervision framework for virtual-asset and payment firms, supervised through the Central Bank of Jordan with suspicious-activity reporting to the AMLU. Applicants must stand up a full AML and CFT framework, KYC and CDD, sanctions and Travel Rule readiness, and examiner-ready documentation before a licence file will clear. Black Sea builds that operational layer, working alongside Jordanian counsel who own the legal and licensing side.
-              </div>
-            </div>
-            <div class="market-status-badge building">Building</div>
-          </div>
-          <div class="market-stats">
-            <div class="market-stat"><div class="market-stat-value">Law 14/2025</div><div class="market-stat-label">New framework</div></div>
-            <div class="market-stat"><div class="market-stat-value">CBJ</div><div class="market-stat-label">Regulator</div></div>
-            <div class="market-stat"><div class="market-stat-value">AMLU</div><div class="market-stat-label">Financial intelligence unit</div></div>
-          </div>
-          <div class="market-capabilities">
-            <span class="market-cap">AML/CFT framework design</span>
-            <span class="market-cap">KYC and CDD architecture</span>
-            <span class="market-cap">Travel Rule implementation</span>
-            <span class="market-cap">AMLU reporting workflow</span>
-            <span class="market-cap">Examiner-ready documentation</span>
-            <span class="market-cap">Outsourced MLRO</span>
-          </div>
-        </div>
-
-        <!-- PAKISTAN -->
-        <div class="market-pane" id="market-pakistan">
-          <div class="market-pane-header">
-            <div>
-              <div class="market-pane-name">Pakistan</div>
-              <div class="market-pane-subtitle">PVARA · Regulatory sandbox · FATF alignment</div>
-              <div class="market-pane-body">
-                Pakistan established the Pakistan Virtual Assets Regulatory Authority (PVARA) with a regulatory sandbox and the first no-objection certificates issued to major exchanges, moving the market from grey to regulated. New entrants face AML and CFT, KYC, and reporting obligations measured against FATF expectations, in a market with very little qualified compliance supply. Black Sea builds the operational compliance layer for virtual-asset operators entering the PVARA framework, alongside local counsel.
-              </div>
-            </div>
-            <div class="market-status-badge building">Building</div>
-          </div>
-          <div class="market-stats">
-            <div class="market-stat"><div class="market-stat-value">PVARA</div><div class="market-stat-label">New authority</div></div>
-            <div class="market-stat"><div class="market-stat-value">Sandbox</div><div class="market-stat-label">Live</div></div>
-            <div class="market-stat"><div class="market-stat-value">FATF</div><div class="market-stat-label">Aligned</div></div>
-          </div>
-          <div class="market-capabilities">
-            <span class="market-cap">PVARA licensing support</span>
-            <span class="market-cap">AML/CFT framework design</span>
-            <span class="market-cap">KYC and CDD architecture</span>
-            <span class="market-cap">Travel Rule implementation</span>
-            <span class="market-cap">MLRO function</span>
-          </div>
-        </div>
-
-        <!-- KENYA -->
-        <div class="market-pane" id="market-kenya">
-          <div class="market-pane-header">
-            <div>
-              <div class="market-pane-name">Kenya</div>
-              <div class="market-pane-subtitle">VASP Act 2025 · CBK · CMA</div>
-              <div class="market-pane-body">
-                Kenya's Virtual Asset Service Providers Act 2025 created the country's first VASP licensing and supervision framework, split between the Central Bank of Kenya for wallets, payments, and stablecoins, and the Capital Markets Authority for exchanges, brokers, and advisors. With the draft regulations out of consultation, applicants will need a full AML and CFT framework, KYC and CDD, Travel Rule readiness, and an MLRO to satisfy both regulators. Black Sea builds that layer, alongside Kenyan counsel.
-              </div>
-            </div>
-            <div class="market-status-badge building">Building</div>
-          </div>
-          <div class="market-stats">
-            <div class="market-stat"><div class="market-stat-value">VASP Act 2025</div><div class="market-stat-label">New framework</div></div>
-            <div class="market-stat"><div class="market-stat-value">CBK · CMA</div><div class="market-stat-label">Dual regulators</div></div>
-            <div class="market-stat"><div class="market-stat-value">2026</div><div class="market-stat-label">Regulations</div></div>
-          </div>
-          <div class="market-capabilities">
-            <span class="market-cap">VASP licensing support</span>
-            <span class="market-cap">AML/CFT framework design</span>
-            <span class="market-cap">KYC and CDD architecture</span>
-            <span class="market-cap">Travel Rule implementation</span>
-            <span class="market-cap">Dual-regulator advisory</span>
-            <span class="market-cap">MLRO function</span>
-          </div>
-        </div>
-
-        <!-- GHANA -->
-        <div class="market-pane" id="market-ghana">
-          <div class="market-pane-header">
-            <div>
-              <div class="market-pane-name">Ghana</div>
-              <div class="market-pane-subtitle">Bank of Ghana · VASP framework · AML/CFT</div>
-              <div class="market-pane-body">
-                Ghana moved to regulate virtual-asset service providers under a new VASP framework, with the Bank of Ghana and the Securities and Exchange Commission building licensing and AML and CFT supervision. Operators preparing for licensing need an AML programme, KYC and CDD, sanctions and Travel Rule readiness, and examiner-ready documentation. Black Sea builds that operational layer for Ghanaian VASPs, alongside local counsel who own the licensing file.
-              </div>
-            </div>
-            <div class="market-status-badge building">Building</div>
-          </div>
-          <div class="market-stats">
-            <div class="market-stat"><div class="market-stat-value">Bank of Ghana</div><div class="market-stat-label">Regulator</div></div>
-            <div class="market-stat"><div class="market-stat-value">VASP Act</div><div class="market-stat-label">New framework</div></div>
-            <div class="market-stat"><div class="market-stat-value">AML/CFT</div><div class="market-stat-label">In scope</div></div>
-          </div>
-          <div class="market-capabilities">
-            <span class="market-cap">VASP licensing support</span>
-            <span class="market-cap">AML/CFT framework design</span>
-            <span class="market-cap">KYC and CDD architecture</span>
-            <span class="market-cap">Travel Rule implementation</span>
-            <span class="market-cap">MLRO function</span>
-          </div>
-        </div>
-
+        <div class="ops-dossier" id="dossier"><!-- rendered by markets-map.js --></div>
       </div>
     </div>
   </section>
@@ -419,10 +153,10 @@
     <div class="container">
       <div class="cta-band-inner">
         <div>
-          <h2 class="cta-band-title reveal">Operating in one of these markets?<br><em>Start with a conversation.</em></h2>
-          <p class="cta-band-sub reveal d1">Tell us where you operate and what you're trying to solve. We'll tell you honestly whether we can help and what it would look like.</p>
+          <h2 class="cta-band-title reveal">Operating in one of these markets?<br><em>We know the regime cold.</em></h2>
+          <p class="cta-band-sub reveal d1">Tell us your market and your sector. We respond within 48 hours with a costed plan for the programme an examiner there will actually test.</p>
         </div>
-        <div class="cta-band-action reveal d2"><a href="contact.html" class="btn btn--signal">Request a call</a></div>
+        <div class="cta-band-action reveal d2"><a href="contact.html" class="btn btn--signal">Book a call</a></div>
       </div>
     </div>
   </section>
@@ -437,29 +171,34 @@
           <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke-width="2"/><line x1="2" y1="24" x2="46" y2="24" stroke-width="2"/><rect x="20" y="20" width="8" height="8"/></svg>
           <span class="footer-wordmark">BLACK<span class="dot">·</span>SEA</span>
         </div>
-        <p class="footer-tagline">Independent advisory at the intersection of regulation, jurisdiction and cross-border practice.</p>
+        <p class="footer-tagline">We build, remediate and run the AML/CFT and sanctions programme behind a licence. The licence is the easy part.</p>
+        <div style="display:flex;flex-direction:column;gap:4px;margin-top:8px">
+          <span style="font-family:var(--t-mono);font-size:10px;letter-spacing:0.1em;color:var(--steel-deep)">Gulf · Africa · Central Asia · Turkey · Pakistan</span>
+          <a href="mailto:operations@blackseaspv.com" style="font-family:var(--t-mono);font-size:10px;letter-spacing:0.08em;color:var(--steel-deep);text-decoration:none">operations@blackseaspv.com</a>
+        </div>
       </div>
-      <div class="footer-col"><h5>Practice</h5><ul>
-        <li><a href="products.html#defense">EU Defense Capital</a></li>
-        <li><a href="products.html#frontier">Frontier Markets</a></li>
-        <li><a href="products.html#regulatory">Regulatory Advisory</a></li>
+      <div class="footer-col"><h5>Services</h5><ul>
+        <li><a href="products.html#build">Licensing &amp; new-regime build</a></li>
+        <li><a href="products.html#remediate">Remediation</a></li>
+        <li><a href="products.html#run">Outsourced MLRO, FIU &amp; audit</a></li>
+        <li><a href="products.html#defend">Sanctions &amp; export-control</a></li>
       </ul></div>
       <div class="footer-col"><h5>Markets</h5><ul>
-        <li><a href="markets.html#aifc">AIFC Kazakhstan</a></li>
-        <li><a href="markets.html#nigeria">Nigeria</a></li>
         <li><a href="markets.html#uae">UAE</a></li>
-        <li><a href="markets.html#georgia">Georgia</a></li>
-        <li><a href="markets.html#uzbekistan">Uzbekistan</a></li>
+        <li><a href="markets.html#turkey">Turkey</a></li>
+        <li><a href="markets.html#pakistan">Pakistan</a></li>
+        <li><a href="markets.html#kenya">Kenya</a></li>
       </ul></div>
       <div class="footer-col"><h5>Connect</h5><ul>
-        <li><a href="https://blackseabriefings.substack.com" target="_blank">Briefings</a></li>
-        <li><a href="cases.html">Cases</a></li>
-        <li><a href="contact.html">Talk to us</a></li>
+        <li><a href="https://blackseabriefings.substack.com" target="_blank" rel="noopener">Briefings</a></li>
+        <li><a href="cases.html">Case studies</a></li>
+        <li><a href="approach.html">Approach</a></li>
+        <li><a href="contact.html">Book a call</a></li>
       </ul></div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 Black Sea. All rights reserved.</span>
-      <span><a href="legal/privacy.html">Privacy</a></span>
+      <span><a href="legal/privacy.html">Privacy</a> · <a href="legal/terms.html">Terms</a></span>
     </div>
   </div>
 </footer>
@@ -467,30 +206,10 @@
 <script>
 document.documentElement.classList.add('js-ready');
 const revEls = document.querySelectorAll('.reveal');
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
-}, { threshold: 0.08 });
+const io = new IntersectionObserver(entries => { entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } }); }, { threshold: 0.08 });
 setTimeout(() => revEls.forEach(el => io.observe(el)), 50);
 document.getElementById('burger').addEventListener('click', () => document.getElementById('nav-links').classList.toggle('open'));
 window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10), { passive: true });
-
-// Market tabs
-document.querySelectorAll('.market-tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    const m = tab.dataset.market;
-    document.querySelectorAll('.market-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.market-pane').forEach(p => p.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById('market-' + m)?.classList.add('active');
-  });
-});
-
-// Handle hash
-if(window.location.hash) {
-  const m = window.location.hash.slice(1);
-  const tab = document.querySelector(`[data-market="${m}"]`);
-  if(tab) setTimeout(() => { tab.click(); document.getElementById('market-tabs')?.scrollIntoView({ behavior:'smooth', block:'start' }); }, 300);
-}
 </script>
 </body>
 </html>

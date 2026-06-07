@@ -3,21 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Black Sea — Independent Advisory</title>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XREYTLQGSC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XREYTLQGSC');
-</script>
-<meta name="description" content="Black Sea advises fund managers, family offices and digital-asset operators where regulation, jurisdiction and cross-border practice intersect.">
+<title>Black Sea — The Licence Is the Easy Part</title>
+<!-- Cloudflare Web Analytics (cookieless) -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "302388cdb807420591a613f27c543bb9"}'></script>
+<meta name="description" content="Black Sea builds, remediates and runs the AML/CFT and sanctions programme behind a licence, for regulated operators across the Gulf, Africa, Central Asia, Turkey and Pakistan. The licence is the easy part.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSI+CiAgPHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiBmaWxsPSIjMEExMDE4Ii8+CiAgPGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMTgiIHN0cm9rZT0iI0RDRTNFOCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iNiIgeTE9IjI0IiB4Mj0iNDIiIHkyPSIyNCIgc3Ryb2tlPSIjRENFM0U4IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxyZWN0IHg9IjIwLjUiIHk9IjIwLjUiIHdpZHRoPSI3IiBoZWlnaHQ9IjciIGZpbGw9IiNEQ0UzRTgiLz4KPC9zdmc+">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* homepage-only additions (brand-consistent) */
+  .trust-strip{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;font-family:var(--t-mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-sub)}
+  .trust-strip span{display:flex;align-items:center;gap:8px}
+  .trust-strip span::before{content:'';width:5px;height:5px;background:var(--signal);flex-shrink:0}
+  .regime-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px}
+  @media(max-width:900px){.regime-grid{grid-template-columns:repeat(2,1fr)}}
+  .regime-cell{background:var(--bg);padding:22px 20px}
+  .regime-mkt{font-family:var(--t-mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--signal);margin-bottom:10px}
+  .regime-trigger{font-family:var(--t-display);font-weight:700;font-size:15px;line-height:1.2;color:var(--text);margin-bottom:8px;letter-spacing:-0.005em}
+  .regime-when{font-family:var(--t-mono);font-size:10px;letter-spacing:0.1em;color:var(--text-sub);text-transform:uppercase}
+  .ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:48px}
+  @media(max-width:768px){.ind-grid{grid-template-columns:1fr}}
+  .ind-cell{background:var(--bg);padding:26px 24px;transition:background 0.15s}
+  .ind-cell:hover{background:var(--bg-soft)}
+  .ind-cell.flag{border-top:3px solid var(--signal)}
+  .ind-tag{font-family:var(--t-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-sub);margin-bottom:10px}
+  .ind-cell.flag .ind-tag{color:var(--signal)}
+  .ind-name{font-family:var(--t-display);font-weight:700;font-size:17px;color:var(--text);line-height:1.2;letter-spacing:-0.005em;margin-bottom:8px}
+  .ind-desc{font-size:13px;color:var(--text-sub);line-height:1.55}
+  .fit-solo{border:1px solid var(--line);background:var(--bg);padding:34px 36px 28px}
+  .fit-solo .fit-list--2col{columns:2;column-gap:48px}
+  .fit-solo .fit-list--2col li{break-inside:avoid;margin-bottom:14px}
+  @media(max-width:768px){.fit-solo .fit-list--2col{columns:1}}
+  .fit-note{font-size:13px;line-height:1.7;color:var(--text-sub);max-width:860px;margin:22px auto 0;text-align:center}
+</style>
 </head>
 <body>
 
@@ -33,12 +53,12 @@
     </a>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
     <div class="nav-links" id="nav-links">
-      <a href="products.html" class="nav-link">Products</a>
+      <a href="products.html" class="nav-link">Services</a>
       <a href="markets.html" class="nav-link">Markets</a>
       <a href="cases.html" class="nav-link">Cases</a>
-      <a href="approach.html" class="nav-link">Approach</a>
-      <a href="https://blackseabriefings.substack.com" target="_blank" class="nav-link">Briefings</a>
-      <a href="contact.html" class="nav-cta">Talk to us</a>
+      <a href="https://blackseabriefings.substack.com" target="_blank" rel="noopener" class="nav-link">Insights</a>
+      <a href="approach.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-cta">Book a call</a>
     </div>
   </div>
 </nav>
@@ -48,14 +68,17 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <div class="section-tag reveal"><span class="idx">§01</span>Independent advisory</div>
-      <h1 class="hero-title reveal d1">The structures regulators<br>won't <em>explain for you.</em></h1>
+      <div class="section-tag reveal"><span class="idx">§01</span>Independent financial-crime compliance</div>
+      <h1 class="hero-title reveal d1">The licence is the easy part.<br><em>We build what sits behind it.</em></h1>
       <p class="hero-sub reveal d2">
-        Black Sea advises fund managers, family offices and digital-asset operators on the parts of a structure where regulation, jurisdiction and cross-border practice intersect. We work where most consultancies stop and most law firms slow down.
+        Black Sea builds, remediates and runs the AML/CFT and sanctions programme behind a licence, for regulated operators across the Gulf, Africa, Central Asia, Turkey and Pakistan. Lawyers file. We build the compliance.
       </p>
       <div class="hero-actions reveal d3">
-        <a href="products.html" class="btn btn--primary">What we do</a>
-        <a href="contact.html" class="btn btn--ghost">Request a call →</a>
+        <a href="contact.html" class="btn btn--primary">Book a call</a>
+        <a href="approach.html" class="btn btn--ghost">How we work →</a>
+      </div>
+      <div class="trust-strip reveal d3">
+        <span>Independent</span><span>Senior-only</span><span>Conflict-free</span><span>Fixed scope</span><span>Under NDA</span>
       </div>
     </div>
   </section>
@@ -64,107 +87,142 @@
   <section class="section--tight section--alt">
     <div class="container">
       <div class="stats-row reveal">
-        <div class="stat-cell">
-          <div class="stat-value">13</div>
-          <div class="stat-label">Jurisdictions we operate in</div>
+        <div class="stat-cell"><div class="stat-value">19</div><div class="stat-label">Active markets</div></div>
+        <div class="stat-cell"><div class="stat-value">48h</div><div class="stat-label">From call to costed plan</div></div>
+        <div class="stat-cell"><div class="stat-value">Zero</div><div class="stat-label">Hourly billing. Ever.</div></div>
+        <div class="stat-cell"><div class="stat-value">One</div><div class="stat-label">Conversation to know if we fit</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY NOW / URGENCY -->
+  <section class="section">
+    <div class="container">
+      <div class="section-tag reveal"><span class="idx">§02</span>Why now</div>
+      <h2 class="section-title reveal d1">Compliance is no longer a risk to weigh.<br><em>It is an exposure to remove.</em></h2>
+      <p class="section-lead reveal d2">
+        Across our markets, regulators are setting hard deadlines and naming firms. The quiet window is now, before the queue, before the examiner is already watching.
+      </p>
+      <div class="regime-grid reveal d2">
+        <div class="regime-cell"><div class="regime-mkt">Turkey</div><div class="regime-trigger">CASP authorisation</div><div class="regime-when">Deadline ~30 Jun 2026</div></div>
+        <div class="regime-cell"><div class="regime-mkt">Pakistan</div><div class="regime-trigger">PVARA regime</div><div class="regime-when">Sandbox open</div></div>
+        <div class="regime-cell"><div class="regime-mkt">Kenya</div><div class="regime-trigger">VASP Act</div><div class="regime-when">Deadline 4 Nov 2026</div></div>
+        <div class="regime-cell"><div class="regime-mkt">Kuwait</div><div class="regime-trigger">FATF grey-list</div><div class="regime-when">Listed Feb 2026</div></div>
+        <div class="regime-cell"><div class="regime-mkt">UAE</div><div class="regime-trigger">Enforcement wave</div><div class="regime-when">Ongoing</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE DOORS -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-tag reveal"><span class="idx">§03</span>Where you are</div>
+      <h2 class="section-title reveal d1">Three ways in. <em>One next step.</em></h2>
+      <div class="practice-grid">
+        <div class="practice-card practice-card--defense reveal d1">
+          <div class="practice-tag">Get licensed</div>
+          <h3 class="practice-title">"I need a licence."</h3>
+          <p class="practice-body">You are racing a VASP, CASP, PVARA or DPMS deadline. We build the programme an examiner actually tests, and have it ready before you file.</p>
+          <ul class="practice-list">
+            <li>New-regime programme build</li>
+            <li>Application-ready evidence</li>
+            <li>Named MLRO in place</li>
+          </ul>
+          <a href="contact.html" class="practice-cta">Book a call →</a>
         </div>
-        <div class="stat-cell">
-          <div class="stat-value">2wk</div>
-          <div class="stat-label">From first call to written gap report</div>
+        <div class="practice-card practice-card--frontier reveal d2">
+          <div class="practice-tag">Get clean</div>
+          <h3 class="practice-title">"I've been flagged."</h3>
+          <p class="practice-body">An enforcement action, a supervisory finding, a grey-list wave. We turn it into a clean re-inspection, independent and conflict-free, on a fixed scope.</p>
+          <ul class="practice-list">
+            <li>Post-enforcement remediation</li>
+            <li>Independent reviewer / audit</li>
+            <li>Regulator-ready evidence</li>
+          </ul>
+          <a href="contact.html" class="practice-cta">Book a call →</a>
         </div>
-        <div class="stat-cell">
-          <div class="stat-value">Zero</div>
-          <div class="stat-label">Hourly billing. Ever.</div>
-        </div>
-        <div class="stat-cell">
-          <div class="stat-value">One</div>
-          <div class="stat-label">Conversation to know if we fit</div>
+        <div class="practice-card practice-card--compliance reveal d3">
+          <div class="practice-tag">Stay covered</div>
+          <h3 class="practice-title">"I need ongoing cover."</h3>
+          <p class="practice-body">A named, fit-and-proper MLRO, a managed financial-intelligence function, and an annual independent audit, run for you on a retainer.</p>
+          <ul class="practice-list">
+            <li>Fractional named MLRO</li>
+            <li>Managed FIU / monitoring ops</li>
+            <li>Independent annual audit</li>
+          </ul>
+          <a href="contact.html" class="practice-cta">Book a call →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHO FOR / NOT FOR -->
+  <!-- WHO FOR -->
   <section class="section">
     <div class="container">
-      <div class="section-tag reveal"><span class="idx">§02</span>Is this for you?</div>
+      <div class="section-tag reveal"><span class="idx">§04</span>Is this for you?</div>
       <h2 class="section-title reveal d1">We work with specific<br><em>types of problems.</em></h2>
-      <div class="fit-grid reveal d1">
-        <div class="fit-col fit-col--yes">
-          <div class="fit-header">
-            <span class="fit-marker fit-marker--yes">Yes</span>
-            <span class="fit-label">This is for you if</span>
-          </div>
-          <ul class="fit-list">
-            <li>You are raising a fund into defense or dual-use and need end-to-end compliance from regulator to LP closing.</li>
-            <li>You hold an AIFC, ARIP, VARA, or ADGM licence and are not certain your compliance infrastructure would survive a routine supervisory visit.</li>
-            <li>You are a digital asset operator trying to navigate a jurisdiction — AFSA, NBG, SEC Nigeria — where the rules are new and the advisors are scarce.</li>
-            <li>You need a fractional CCO on a retained basis because a full-time hire is not yet justified.</li>
-            <li>You have a specific structural problem — multi-jurisdiction AML, UBO complexity, counterparty due diligence — and want it solved with a defined scope and fixed price.</li>
-            <li>You are a fund administrator, law firm, or placement agent whose client needs compliance support outside your core mandate.</li>
-          </ul>
+      <div class="fit-solo fit-col--yes reveal d1">
+        <div class="fit-header">
+          <span class="fit-marker fit-marker--yes">Yes</span>
+          <span class="fit-label">This is for you if</span>
         </div>
-        <div class="fit-col fit-col--no">
-          <div class="fit-header">
-            <span class="fit-marker fit-marker--no">No</span>
-            <span class="fit-label">This is not for you if</span>
-          </div>
-          <ul class="fit-list">
-            <li>You want general business advisory, strategy consulting, or market research without a specific regulatory or structural problem.</li>
-            <li>You need a regulated legal opinion signed by a licensed lawyer. We work with partner counsel for that; we are not the law firm.</li>
-            <li>You are looking for the cheapest route through a compliance requirement. We scope properly, which means we price properly.</li>
-            <li>You cannot provide verifiable beneficial ownership information. We run UBO and sanctions screening on all prospective clients before engagement.</li>
-            <li>You want an advisor who will tell you what you want to hear. The first call is a qualification exercise — we say no when we should.</li>
-          </ul>
-        </div>
+        <ul class="fit-list fit-list--2col">
+          <li>You are racing a new-regime deadline (VASP, CASP, PVARA, DPMS) and need the programme an examiner will actually test.</li>
+          <li>You have been named in an enforcement action or caught in a grey-list wave and need independent, conflict-free remediation, fast.</li>
+          <li>You hold a licence (VARA, ADGM, AFSA, SEC, CBB) and are not certain your AML programme would survive a supervisory visit.</li>
+          <li>You need a named, fit-and-proper MLRO on a fractional, retained basis.</li>
+          <li>You have a defined problem, multi-jurisdiction AML, UBO complexity, the Travel Rule, sanctions or export-control, and want it solved at fixed scope.</li>
+          <li>You are a law firm or fund administrator whose client needs the compliance built behind the licence.</li>
+        </ul>
       </div>
-      <div style="text-align:center;margin-top:40px" class="reveal">
+      <p class="fit-note reveal d2">For matters that need a signed legal opinion we work alongside partner counsel, we are not the law firm. We scope properly rather than race to the cheapest tick-box, we screen UBO and sanctions before we engage, and we say no when we should.</p>
+      <div style="text-align:center;margin-top:30px" class="reveal d2">
         <a href="contact.html" class="btn btn--primary">Not sure? The call will tell us both. →</a>
       </div>
     </div>
   </section>
 
-  <!-- DIAGNOSTIC BLOCK -->
+  <!-- DIAGNOSTIC -->
   <section class="section section--alt">
     <div class="container">
-      <div class="section-tag reveal"><span class="idx">§03</span>The entry point</div>
-      <h2 class="section-title reveal d1">Diagnostic in two weeks.<br><em>Everything starts here.</em></h2>
+      <div class="section-tag reveal"><span class="idx">§05</span>The entry point</div>
+      <h2 class="section-title reveal d1">Diagnostic first.<br><em>Everything starts here.</em></h2>
       <div class="diagnostic-full reveal d1">
         <div class="diagnostic-full-grid">
           <div class="diagnostic-full-col">
             <div class="diagnostic-block-title">What you bring</div>
             <ul class="diagnostic-list">
-              <li>A 30-minute call describing what you are trying to structure or solve</li>
-              <li>Basic information about your entity, jurisdiction, and current compliance status</li>
-              <li>Existing regulatory correspondence or licences, if any</li>
+              <li>A 30-minute call describing what you are trying to license, fix or run</li>
+              <li>Basic information on your entity, jurisdiction and current status</li>
+              <li>Any existing regulatory correspondence or licences</li>
               <li>No preparation required beyond that</li>
             </ul>
           </div>
           <div class="diagnostic-full-col">
             <div class="diagnostic-block-title">What you receive</div>
             <ul class="diagnostic-list">
-              <li>A written gap report identifying compliance gaps against the applicable framework</li>
+              <li>A written gap report against the applicable framework</li>
               <li>A prioritised remediation list with clear next actions</li>
-              <li>A timeline and scope for what a full engagement would involve</li>
+              <li>A scope and timeline for what a full engagement involves</li>
               <li>An honest assessment of whether one is needed</li>
             </ul>
           </div>
           <div class="diagnostic-full-col">
             <div class="diagnostic-block-title">Who it is for</div>
             <ul class="diagnostic-list">
-              <li>AIFC-authorised firms facing the post-amendment supervisory cycle</li>
-              <li>Digital asset operators before or after licensing in ARIP, VARA, ADGM, NBG</li>
-              <li>Fund managers before a first LP closing or regulatory submission</li>
-              <li>Any operator who suspects a gap but does not know where to start</li>
+              <li>Operators racing a new-regime licensing deadline</li>
+              <li>Firms named in an enforcement action or grey-list wave</li>
+              <li>Licence-holders before a supervisory visit or audit</li>
+              <li>Any operator who suspects a gap but cannot place it</li>
             </ul>
           </div>
         </div>
         <div class="diagnostic-full-footer">
           <div class="diagnostic-full-meta">
             <div class="diagnostic-meta-item"><strong>2 weeks</strong><span>Delivery</span></div>
-            <div class="diagnostic-meta-item"><strong>Fixed price</strong><span>No surprises</span></div>
+            <div class="diagnostic-meta-item"><strong>Fixed scope</strong><span>No surprises</span></div>
             <div class="diagnostic-meta-item"><strong>Written report</strong><span>Yours to keep</span></div>
-            <div class="diagnostic-meta-item"><strong>No obligation</strong><span>Beyond the diagnostic</span></div>
+            <div class="diagnostic-meta-item"><strong>48 hours</strong><span>To a costed plan</span></div>
           </div>
           <a href="contact.html" class="btn btn--signal">Start with a diagnostic</a>
         </div>
@@ -172,55 +230,157 @@
     </div>
   </section>
 
-  <!-- CASE SNIPPETS -->
+  <!-- SERVICE LINES -->
   <section class="section">
     <div class="container">
-      <div class="section-tag reveal"><span class="idx">§04</span>Representative mandates</div>
-      <h2 class="section-title reveal d1">Three types of problems<br><em>we solve.</em></h2>
+      <div class="section-tag reveal"><span class="idx">§06</span>What we do</div>
+      <h2 class="section-title reveal d1">Build it. Run it. <em>Defend it.</em></h2>
+      <p class="section-lead reveal d2">
+        One core engine, the programme an examiner actually tests, delivered across the work that matters: the build, the ongoing operation, and the higher-risk sanctions lane.
+      </p>
+      <div class="practice-grid">
+        <div class="practice-card practice-card--defense reveal d1">
+          <div class="practice-tag">Build &amp; remediate</div>
+          <h3 class="practice-title">The AML/CFT programme</h3>
+          <p class="practice-body">The programme behind a licence, for a new-regime application or a post-enforcement fix.</p>
+          <ul class="practice-list">
+            <li>Business risk assessment</li>
+            <li>CDD, EDD &amp; screening</li>
+            <li>Transaction monitoring &amp; Travel Rule</li>
+            <li>FIU &amp; goAML reporting</li>
+          </ul>
+        </div>
+        <div class="practice-card practice-card--compliance reveal d2">
+          <div class="practice-tag">Run</div>
+          <h3 class="practice-title">Outsourced MLRO, FIU &amp; audit</h3>
+          <p class="practice-body">The function operated for you, named and fit-and-proper, on a retainer.</p>
+          <ul class="practice-list">
+            <li>Fractional named MLRO</li>
+            <li>Managed FIU / 1LoD operations</li>
+            <li>Independent annual audit</li>
+            <li>Model validation &amp; QA</li>
+          </ul>
+        </div>
+        <div class="practice-card practice-card--frontier reveal d3">
+          <div class="practice-tag">Defend</div>
+          <h3 class="practice-title">Sanctions &amp; export-control</h3>
+          <p class="practice-body">Integrity diligence for the higher-risk lanes, including defense and dual-use.</p>
+          <ul class="practice-list">
+            <li>Sanctions-exposure screening</li>
+            <li>End-user &amp; intermediary diligence</li>
+            <li>Anti-bribery &amp; corruption controls</li>
+            <li>Defense &amp; dual-use review</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-tag reveal"><span class="idx">§07</span>Who we serve</div>
+      <h2 class="section-title reveal d1">Every obliged sector, <em>one engine.</em></h2>
+      <p class="section-lead reveal d2">
+        The regulator and the risk flavour change. The programme underneath does not. We build it across nine verticals.
+      </p>
+      <div class="ind-grid reveal d2">
+        <div class="ind-cell flag"><div class="ind-tag">Flagship</div><div class="ind-name">VASP / Crypto</div><div class="ind-desc">Exchanges, custody, brokers, token &amp; stablecoin issuers. Plus the launch stack.</div></div>
+        <div class="ind-cell"><div class="ind-tag">Vertical</div><div class="ind-name">Payments &amp; MSB</div><div class="ind-desc">PSPs, money-transfer operators, exchange houses, e-money.</div></div>
+        <div class="ind-cell"><div class="ind-tag">Vertical</div><div class="ind-name">Funds, Fund Admin &amp; CSP</div><div class="ind-desc">Fund administrators, corporate &amp; trust service providers, asset managers.</div></div>
+        <div class="ind-cell"><div class="ind-tag">Vertical</div><div class="ind-name">Banks &amp; FIs</div><div class="ind-desc">Commercial and Islamic banks, investment firms, capital-markets brokers.</div></div>
+        <div class="ind-cell"><div class="ind-tag">Vertical</div><div class="ind-name">Gold &amp; DPMS</div><div class="ind-desc">Refiners, bullion dealers, jewellers. AML plus responsible sourcing.</div></div>
+        <div class="ind-cell"><div class="ind-tag">Vertical</div><div class="ind-name">Gaming</div><div class="ind-desc">Casinos, betting and online gaming. Reputational screen always on.</div></div>
+        <div class="ind-cell"><div class="ind-tag">Vertical</div><div class="ind-name">Real Estate &amp; DNFBP</div><div class="ind-desc">Agents, developers, high-value brokers under source-of-funds pressure.</div></div>
+        <div class="ind-cell"><div class="ind-tag">Vertical</div><div class="ind-name">Defense &amp; Dual-Use</div><div class="ind-desc">Primes, traders, intermediaries. Sanctions and export-control led.</div></div>
+        <div class="ind-cell"><div class="ind-tag">Vertical</div><div class="ind-name">Art &amp; High-Value</div><div class="ind-desc">Dealers and galleries, art-market participant programmes.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARKETS TEASER -->
+  <section class="section">
+    <div class="container">
+      <div class="section-tag reveal"><span class="idx">§08</span>Where we work</div>
+      <h2 class="section-title reveal d1">Environments others won't<br><em>touch with a shovel.</em></h2>
+      <p class="section-lead reveal d2">
+        Nineteen active markets across the Gulf, Africa, Central Asia, Turkey and Pakistan, where the framework is forming in real time and the deadline is real.
+      </p>
+      <div class="teaser-grid">
+        <a href="markets.html#uae" class="teaser-card markets reveal d1">
+          <div class="teaser-tag">Active · UAE</div>
+          <div class="teaser-title">Three frameworks, one compliance architecture</div>
+          <div class="teaser-body">ADGM FSRA, VARA and DIFC, under a live federal enforcement wave. Gold, payments, real estate and crypto all in scope.</div>
+          <div class="teaser-link">View market →</div>
+        </a>
+        <a href="markets.html#turkey" class="teaser-card markets reveal d2">
+          <div class="teaser-tag">Active · Turkey</div>
+          <div class="teaser-title">The CASP authorisation deadline is closing</div>
+          <div class="teaser-body">Law No. 7518 put crypto under the CMB and MASAK. Existing platforms must complete authorisation by around 30 June 2026.</div>
+          <div class="teaser-link">View market →</div>
+        </a>
+        <a href="markets.html#pakistan" class="teaser-card markets reveal d3">
+          <div class="teaser-tag">Active · Pakistan</div>
+          <div class="teaser-title">PVARA is live and the sandbox is open</div>
+          <div class="teaser-body">The Virtual Assets Act created PVARA and the FMU reporting line. First movers set the reference the regulator carries forward.</div>
+          <div class="teaser-link">View market →</div>
+        </a>
+      </div>
+      <div style="margin-top:24px;text-align:center" class="reveal">
+        <a href="markets.html" class="btn btn--ghost">All 19 markets →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE SNIPPETS -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-tag reveal"><span class="idx">§09</span>Representative mandates</div>
+      <h2 class="section-title reveal d1">Three problems, <em>solved properly.</em></h2>
       <div class="snippets-grid reveal d1">
         <div class="snippet-card">
-          <div class="snippet-type">Emerging manager</div>
+          <div class="snippet-type">New-regime applicant</div>
           <div class="snippet-problem">
             <div class="snippet-label">Problem</div>
-            <div class="snippet-text">First-time fund manager with AIFC authorisation needed to raise a closed-end fund targeting dual-use technology. January 2026 AFSA amendments had invalidated key elements of existing compliance documentation. Regulator submission window approaching.</div>
+            <div class="snippet-text">A first-time manager with AIFC authorisation needed to raise into dual-use technology. January 2026 AFSA amendments had invalidated key compliance documentation. The submission window was approaching.</div>
           </div>
           <div class="snippet-scope">
             <div class="snippet-label">Scope</div>
-            <div class="snippet-text">Updated approved person assessments. AML/CFT framework redesigned for amended Digital Assets Rules. New regulatory submission drafted and filed.</div>
+            <div class="snippet-text">Approved-person assessments updated. AML/CFT framework redesigned for the amended Digital Assets Rules. New regulatory submission drafted and filed.</div>
           </div>
           <div class="snippet-outcome">
             <div class="snippet-label">Outcome</div>
-            <div class="snippet-text">Submission complete in 6 weeks. Fractional CCO retained at €600/month for ongoing supervision.</div>
+            <div class="snippet-text">Submission complete in six weeks. Fractional MLRO retained for ongoing supervision.</div>
           </div>
         </div>
         <div class="snippet-card">
           <div class="snippet-type">Crypto operator</div>
           <div class="snippet-problem">
             <div class="snippet-label">Problem</div>
-            <div class="snippet-text">Nigerian digital asset custodian under SEC ARIP with 7 days to CBN June 2026 deadline. No AML implementation roadmap existed. Previous advisor had focused on ARIP and missed the CBN obligation entirely.</div>
+            <div class="snippet-text">A Nigerian digital-asset custodian under SEC ARIP had days to a CBN deadline. No AML implementation roadmap existed. The prior advisor had focused on the licence and missed the central-bank obligation.</div>
           </div>
           <div class="snippet-scope">
             <div class="snippet-label">Scope</div>
-            <div class="snippet-text">CBN-compliant AML roadmap covering all 12 functional areas. Automated monitoring architecture specified. Submission package prepared.</div>
+            <div class="snippet-text">A CBN-compliant AML roadmap across all functional areas. Automated monitoring architecture specified. Submission package prepared.</div>
           </div>
           <div class="snippet-outcome">
             <div class="snippet-label">Outcome</div>
-            <div class="snippet-text">Delivered in 7 days. Submitted to CBN Compliance Department ahead of deadline.</div>
+            <div class="snippet-text">Delivered in seven days. Submitted to the central bank ahead of the deadline.</div>
           </div>
         </div>
         <div class="snippet-card">
           <div class="snippet-type">Licensed operator</div>
           <div class="snippet-problem">
             <div class="snippet-label">Problem</div>
-            <div class="snippet-text">Crypto fund manager with ADGM and VARA entities needed a unified AML/CFT framework satisfying both regulators without contradiction. UAE Federal CPF Decree added a third layer of obligation.</div>
+            <div class="snippet-text">A crypto operator with ADGM and VARA entities needed one AML/CFT framework satisfying both regulators without contradiction. A federal CPF decree added a third layer of obligation.</div>
           </div>
           <div class="snippet-scope">
             <div class="snippet-label">Scope</div>
-            <div class="snippet-text">Unified AML/CFT architecture across both entities. CPF obligations integrated. MLRO function documented and certified.</div>
+            <div class="snippet-text">A unified AML/CFT architecture across both entities. CPF obligations integrated. The MLRO function documented and certified.</div>
           </div>
           <div class="snippet-outcome">
             <div class="snippet-label">Outcome</div>
-            <div class="snippet-text">8-week delivery. Quarterly review retainer ongoing.</div>
+            <div class="snippet-text">Eight-week delivery. Quarterly review retainer ongoing.</div>
           </div>
         </div>
       </div>
@@ -230,141 +390,37 @@
     </div>
   </section>
 
-  <!-- PRACTICE OVERVIEW -->
-  <section class="section section--alt">
-    <div class="container">
-      <div class="section-tag reveal"><span class="idx">§05</span>Practice areas</div>
-      <h2 class="section-title reveal d1">Three things, <em>done properly.</em></h2>
-      <p class="section-lead reveal d2">
-        We do not consult on everything. Black Sea operates in three areas, each defined by a regulatory or structural problem that benefits from operator-side experience. Every engagement starts with a fixed-price diagnostic.
-      </p>
-      <div class="practice-grid">
-        <div class="practice-card practice-card--defense reveal d1">
-          <div class="practice-tag">EU · Defense Capital</div>
-          <h3 class="practice-title">Fund formation for emerging managers</h3>
-          <p class="practice-body">
-            Structuring vehicles for first- and second-time fund managers raising into European defense and dual-use opportunities. End-to-end from regulator engagement through closing.
-          </p>
-          <ul class="practice-list">
-            <li>SICAV and AIF design</li>
-            <li>Regulator submission support</li>
-            <li>Fractional CCO mandate</li>
-            <li>LP onboarding readiness</li>
-          </ul>
-          <a href="products.html#defense" class="practice-cta">Full details →</a>
-        </div>
-        <div class="practice-card practice-card--frontier reveal d2">
-          <div class="practice-tag">Frontier Markets</div>
-          <h3 class="practice-title">Cross-border regulatory positioning</h3>
-          <p class="practice-body">
-            Licensing and compliance advisory for crypto and fintech operators navigating frameworks most advisors avoid. AIFC, Nigeria ARIP, UAE VARA, Georgia NBG.
-          </p>
-          <ul class="practice-list">
-            <li>ARIP and AFSA gap analysis</li>
-            <li>VARA and ADGM licensing</li>
-            <li>Multi-jurisdiction AML/CFT</li>
-            <li>UBO and sanctions screening</li>
-          </ul>
-          <a href="products.html#frontier" class="practice-cta">Full details →</a>
-        </div>
-        <div class="practice-card practice-card--compliance reveal d3">
-          <div class="practice-tag">Regulatory Advisory</div>
-          <h3 class="practice-title">Compliance architecture and assurance</h3>
-          <p class="practice-body">
-            For operators who already hold licences and need EU-grade compliance infrastructure. AML/KYC framework design, MiCA readiness, counterparty due diligence.
-          </p>
-          <ul class="practice-list">
-            <li>AML/KYC framework design</li>
-            <li>MiCA and DORA readiness</li>
-            <li>Counterparty due diligence</li>
-            <li>Ongoing retainer from €600/mo</li>
-          </ul>
-          <a href="products.html#regulatory" class="practice-cta">Full details →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MARKETS TEASER -->
+  <!-- APPROACH -->
   <section class="section">
     <div class="container">
-      <div class="section-tag reveal"><span class="idx">§06</span>Where we work</div>
-      <h2 class="section-title reveal d1">Environments others won't<br><em>touch with a shovel.</em></h2>
-      <p class="section-lead reveal d2">
-        We operate in jurisdictions where the regulatory framework is forming in real time. Thirteen markets across the Gulf, Central Asia, Africa, and beyond.
-      </p>
-      <div class="teaser-grid">
-        <a href="markets.html#aifc" class="teaser-card markets reveal d1">
-          <div class="teaser-tag">Active · AIFC Kazakhstan</div>
-          <div class="teaser-title">The fastest-developing common law hub in Central Asia</div>
-          <div class="teaser-body">AFSA January 2026 amendments. Transition window closed July 2026. Gap assessments ongoing across authorised firms.</div>
-          <div class="teaser-link">View market →</div>
-        </a>
-        <a href="markets.html#nigeria" class="teaser-card markets reveal d2">
-          <div class="teaser-tag">Active · Nigeria</div>
-          <div class="teaser-title">ISA 2025 and CBN AML deadline create dual compliance pressure</div>
-          <div class="teaser-body">Active relationships with ARIP-approved operators. CBN June 2026 deadline advisory in progress.</div>
-          <div class="teaser-link">View market →</div>
-        </a>
-        <a href="markets.html#uae" class="teaser-card markets reveal d3">
-          <div class="teaser-tag">Active · UAE</div>
-          <div class="teaser-title">Three regulatory frameworks, one compliance architecture</div>
-          <div class="teaser-body">ADGM FSRA, VARA, and DIFC. Federal CPF Decree October 2025. VARA Rulebook 2.0 June 2025.</div>
-          <div class="teaser-link">View market →</div>
-        </a>
-      </div>
-      <div style="margin-top:24px;text-align:center" class="reveal">
-        <a href="markets.html" class="btn btn--ghost">All 13 markets →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- MID-PAGE CTA -->
-  <section class="section--tight" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-    <div class="container">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;padding:8px 0">
-        <p class="reveal" style="font-family:var(--t-display);font-size:20px;font-weight:700;color:var(--text);max-width:560px;line-height:1.3">
-          Not sure which practice applies to your situation? <em>That is what the 30-minute call is for.</em>
-        </p>
-        <a href="contact.html" class="btn btn--primary reveal">Request a call →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- APPROACH TEASER -->
-  <section class="section section--alt">
-    <div class="container">
-      <div class="section-tag reveal"><span class="idx">§07</span>How we work</div>
+      <div class="section-tag reveal"><span class="idx">§10</span>How we work</div>
       <h2 class="section-title reveal d1">Operator-side.<br><em>Not consultancy-side.</em></h2>
       <div class="approach-grid">
         <div class="approach-item reveal d1">
           <div class="approach-num">01</div>
           <h3 class="approach-title">We've sat the seat</h3>
-          <p class="approach-body">Our team has built and run regulated structures. The advice is what we would have wanted when we were on the other side of the table.</p>
+          <p class="approach-body">Our people have built and run regulated structures. The advice is what we would have wanted when we were on the other side of the table.</p>
         </div>
         <div class="approach-item reveal d2">
           <div class="approach-num">02</div>
-          <h3 class="approach-title">Clear scope, fixed price</h3>
-          <p class="approach-body">Diagnostic in two weeks. Full mandates scoped on the front end. Hourly billing creates the wrong incentives — we don't use it.</p>
+          <h3 class="approach-title">Clear scope, no hourly billing</h3>
+          <p class="approach-body">A diagnostic in two weeks, full mandates scoped up front. Hourly billing creates the wrong incentives, so we do not use it.</p>
         </div>
         <div class="approach-item reveal d3">
           <div class="approach-num">03</div>
-          <h3 class="approach-title">Licensed counsel when needed</h3>
-          <p class="approach-body">For matters requiring regulated legal opinion, we retain partner counsel in the right jurisdiction. We do not pretend to be the law firm.</p>
+          <h3 class="approach-title">Lawyers file, we build</h3>
+          <p class="approach-body">For matters that need a regulated legal opinion we work alongside partner counsel. We are the compliance specialist, not the law firm.</p>
         </div>
-      </div>
-      <div style="margin-top:48px" class="reveal">
-        <a href="approach.html" class="btn btn--ghost">Full approach →</a>
       </div>
     </div>
   </section>
 
   <!-- BRIEFINGS -->
-  <section class="section">
+  <section class="section section--alt">
     <div class="container">
-      <div class="section-tag reveal"><span class="idx">§08</span>From the briefings</div>
+      <div class="section-tag reveal"><span class="idx">§11</span>From the briefings</div>
       <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:16px;margin-bottom:40px">
-        <h2 class="section-title reveal d1" style="margin-bottom:0">Writing on what <em>we see.</em></h2>
+        <h2 class="section-title reveal d1" style="margin-bottom:0">The licence is the easy part. <em>We write the rest.</em></h2>
         <a href="https://blackseabriefings.substack.com" target="_blank" rel="noopener"
            class="reveal d2"
            style="font-family:var(--t-mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-sub);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px">
@@ -380,13 +436,13 @@
     <div class="container">
       <div class="cta-band-inner">
         <div>
-          <h2 class="cta-band-title reveal">A short conversation <em>tells you</em><br>whether we're the right fit.</h2>
+          <h2 class="cta-band-title reveal">Tell us where you are.<br><em>We'll send a costed plan in 48 hours.</em></h2>
           <p class="cta-band-sub reveal d1">
-            Most engagements start with a 30-minute call. We review what you're trying to structure or solve, tell you honestly whether we can help, and what it would look like if we did.
+            Most engagements start with a 30-minute call. We review what you are trying to license, fix or run, tell you honestly whether we can help, and what it would look like if we did.
           </p>
         </div>
         <div class="cta-band-action reveal d2">
-          <a href="contact.html" class="btn btn--signal">Request a call</a>
+          <a href="contact.html" class="btn btn--signal">Book a call</a>
         </div>
       </div>
     </div>
@@ -402,38 +458,38 @@
           <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke-width="2"/><line x1="2" y1="24" x2="46" y2="24" stroke-width="2"/><rect x="20" y="20" width="8" height="8"/></svg>
           <span class="footer-wordmark">BLACK<span class="dot">·</span>SEA</span>
         </div>
-        <p class="footer-tagline">Independent advisory at the intersection of regulation, jurisdiction and cross-border practice.</p>
+        <p class="footer-tagline">We build, remediate and run the AML/CFT and sanctions programme behind a licence. The licence is the easy part.</p>
         <div style="display:flex;flex-direction:column;gap:4px;margin-top:8px">
-          <span style="font-family:var(--t-mono);font-size:10px;letter-spacing:0.1em;color:var(--steel-deep)">New York · European Union · Africa</span>
+          <span style="font-family:var(--t-mono);font-size:10px;letter-spacing:0.1em;color:var(--steel-deep)">Gulf · Africa · Central Asia · Turkey · Pakistan</span>
           <a href="mailto:operations@blackseaspv.com" style="font-family:var(--t-mono);font-size:10px;letter-spacing:0.08em;color:var(--steel-deep);text-decoration:none">operations@blackseaspv.com</a>
         </div>
       </div>
       <div class="footer-col">
-        <h5>Practice</h5>
+        <h5>Services</h5>
         <ul>
-          <li><a href="products.html#defense">EU Defense Capital</a></li>
-          <li><a href="products.html#frontier">Frontier Markets</a></li>
-          <li><a href="products.html#regulatory">Regulatory Advisory</a></li>
-          <li><a href="products.html#diagnostic">Gap Assessment</a></li>
+          <li><a href="products.html">Licensing &amp; new-regime build</a></li>
+          <li><a href="products.html">Remediation</a></li>
+          <li><a href="products.html">Outsourced MLRO, FIU &amp; audit</a></li>
+          <li><a href="products.html">Sanctions &amp; export-control</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Markets</h5>
         <ul>
-          <li><a href="markets.html#aifc">AIFC Kazakhstan</a></li>
-          <li><a href="markets.html#nigeria">Nigeria</a></li>
           <li><a href="markets.html#uae">UAE</a></li>
-          <li><a href="markets.html#georgia">Georgia</a></li>
-          <li><a href="markets.html">All markets →</a></li>
+          <li><a href="markets.html#turkey">Turkey</a></li>
+          <li><a href="markets.html#pakistan">Pakistan</a></li>
+          <li><a href="markets.html#kenya">Kenya</a></li>
+          <li><a href="markets.html">All 19 markets →</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Connect</h5>
         <ul>
-          <li><a href="https://blackseabriefings.substack.com" target="_blank">Briefings</a></li>
-          <li><a href="cases.html">Case Studies</a></li>
+          <li><a href="https://blackseabriefings.substack.com" target="_blank" rel="noopener">Briefings</a></li>
+          <li><a href="cases.html">Case studies</a></li>
           <li><a href="approach.html">Approach</a></li>
-          <li><a href="contact.html">Talk to us</a></li>
+          <li><a href="contact.html">Book a call</a></li>
           <li><a href="legal/privacy.html">Privacy</a></li>
         </ul>
       </div>
@@ -460,20 +516,8 @@ window.addEventListener('scroll', () => {
   document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10);
 }, { passive: true });
 
-const articles = [
-  { title: "The AFSA Transition Deadline Is 3 Weeks Away. Here Is What Most AIFC Firms Have Not Done.", date: "27 May 2026", excerpt: "On 1 January 2026, AFSA amended three core rule sets. The transition window closes in approximately three weeks. Four gaps we consistently see across authorised firms.", url: "https://blackseabriefings.substack.com" },
-  { title: "AIFMD II is live. Most emerging fund managers are already late.", date: "21 May 2026", excerpt: "The amendments have been in force since January. The compliance window most managers assumed they had is shorter than they think.", url: "https://blackseabriefings.substack.com" },
-  { title: "Why European Family Offices Are Reconsidering Defense Allocation.", date: "15 May 2026", excerpt: "The structural shift in European defense spending is creating a new category of institutional LP. What that means for emerging fund managers.", url: "https://blackseabriefings.substack.com" },
-];
-const g = document.getElementById('briefings-grid');
-if(g) articles.forEach(a => {
-  g.innerHTML += `<a href="${a.url}" target="_blank" class="briefing-card">
-    <div class="briefing-date">${a.date}</div>
-    <div class="briefing-title">${a.title}</div>
-    <div class="briefing-excerpt">${a.excerpt}</div>
-    <div class="briefing-read">Read briefing</div>
-  </a>`;
-});
+// Latest briefings are pulled live from the Substack feed — see briefings.js
 </script>
+<script src="briefings.js" defer></script>
 </body>
 </html>
