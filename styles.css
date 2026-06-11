@@ -769,6 +769,21 @@ footer {
 .js-ready .reveal.d2 { transition-delay: 0.16s; }
 .js-ready .reveal.d3 { transition-delay: 0.24s; }
 
+/* LCP fix: above-the-fold hero content paints immediately, never gated behind the JS reveal.
+   The hero headline is the Largest Contentful Paint element, so it must never start at opacity:0. */
+.js-ready .section-tag.reveal,
+.js-ready .hero-title.reveal,
+.js-ready .hero-sub.reveal,
+.js-ready .hero-actions.reveal,
+.js-ready .trust-strip.reveal,
+.js-ready .page-hero-tag.reveal,
+.js-ready .page-hero-title.reveal,
+.js-ready .page-hero-lead.reveal {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
 /* ==========================================================
    RESPONSIVE
    ========================================================== */
