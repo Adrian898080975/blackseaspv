@@ -250,3 +250,6 @@ textarea.bs-input { resize: vertical; line-height: 1.5; }
   background-position: 0 0, 0 12px, 12px -12px, -12px 0;
   background-color: var(--bs-check-a);
 }
+
+/* RU headlines: Archivo has no Cyrillic, use a Cyrillic display webfont */
+html[lang="ru"] { --bs-font-display: "Montserrat", "Arial Black", system-ui, sans-serif; }
