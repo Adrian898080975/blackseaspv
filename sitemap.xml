@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://blackseaspv.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://blackseaspv.com/contact.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://blackseaspv.com/coverage.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://blackseaspv.com/engagement.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://blackseaspv.com/firm.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://blackseaspv.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://blackseaspv.com/insights.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://blackseaspv.com/legal.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://blackseaspv.com/market-azerbaijan.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -42,14 +42,51 @@
   <url><loc>https://blackseaspv.com/method.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://blackseaspv.com/partners.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://blackseaspv.com/radar.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://blackseaspv.com/sector-art-high-value.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://blackseaspv.com/sector-banks-fis.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://blackseaspv.com/sector-defense-dual-use.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://blackseaspv.com/sector-funds-csp.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/sector-art-high-value.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/sector-banks-fis.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/sector-defense-dual-use.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/sector-funds-csp.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://blackseaspv.com/sector-gaming.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://blackseaspv.com/sector-gold-dpms.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://blackseaspv.com/sector-payments-msb.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://blackseaspv.com/sector-real-estate-dnfbp.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://blackseaspv.com/sector-vasp-crypto.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/sector-gold-dpms.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/sector-payments-msb.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/sector-real-estate-dnfbp.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/sector-vasp-crypto.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://blackseaspv.com/what-we-do.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://blackseaspv.com/ru/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://blackseaspv.com/ru/contact.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/ru/coverage.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://blackseaspv.com/ru/engagement.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/ru/firm.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/ru/insights.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-azerbaijan.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-bahrain.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-egypt.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-georgia.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-ghana.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-jordan.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-kazakhstan.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-kenya.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-kuwait.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-kyrgyzstan.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-nigeria.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-oman.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-pakistan.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-qatar.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-saudi-arabia.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-south-africa.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-turkey.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-uae.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/ru/market-uzbekistan.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/ru/method.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/ru/partners.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/ru/sector-art-high-value.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/ru/sector-banks-fis.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/ru/sector-defense-dual-use.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/ru/sector-funds-csp.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/ru/sector-gaming.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blackseaspv.com/ru/sector-gold-dpms.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/ru/sector-payments-msb.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/ru/sector-real-estate-dnfbp.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/ru/sector-vasp-crypto.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blackseaspv.com/ru/what-we-do.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 </urlset>
