@@ -1,0 +1,252 @@
+/* ==========================================================================
+   BLACK SEA · Level 1 Brand System
+   Single source of truth: tokens + core primitives. No raw hex outside this file.
+   Near-monochrome. One muted accent (#2F8F6E) for tiny signals only.
+   Radius 0. Hairlines, never shadows. Strict grid, big margins, left aligned.
+   Light is default; dark via [data-theme="dark"] or system preference.
+   Fonts (Archivo / Inter / JetBrains Mono) are linked per-HTML.
+   ========================================================================== */
+
+/* ---- LIGHT (default) ------------------------------------------------------ */
+:root {
+  /* neutral ramp */
+  --bs-bg:         #F6F5F2;
+  --bs-surface:    #FFFFFF;
+  --bs-surface-2:  #EFEEE9;
+  --bs-hairline:   rgba(10,12,15,.10);
+  --bs-hairline-2: rgba(10,12,15,.20);
+  --bs-text-hi:    #0A0C0F;
+  --bs-text:       #16191D;
+  --bs-text-sub:   #52606B;
+  --bs-text-lo:    #8A949C;
+
+  /* single muted accent, tiny signals only */
+  --bs-accent:     #2F8F6E;
+  --bs-accent-dim: rgba(47,143,110,.14);
+
+  /* functional status only (muted); never brand decoration */
+  --bs-warn:       #B98900;
+  --bs-danger:     #A23A2C;
+
+  /* high-contrast solid (primary button etc.), mono not accent */
+  --bs-solid-bg:   var(--bs-text-hi);
+  --bs-solid-fg:   var(--bs-bg);
+
+  /* transparency-checker (functional, export tools only) */
+  --bs-check-a:    #EEEDE8;
+  --bs-check-b:    #E4E3DD;
+
+  /* type families */
+  --bs-font-display: "Archivo", "Arial Black", system-ui, sans-serif;
+  --bs-font-text:    "Inter", -apple-system, system-ui, sans-serif;
+  --bs-font-mono:    "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  /* spacing (4 / 8 base) */
+  --bs-s0: 0;   --bs-s1: 4px;  --bs-s2: 8px;  --bs-s3: 12px; --bs-s4: 16px;
+  --bs-s5: 24px; --bs-s6: 32px; --bs-s7: 48px; --bs-s8: 64px; --bs-s9: 96px;
+  --bs-s10: 128px; --bs-s11: 160px; --bs-s12: 192px;
+
+  /* radius (none) + elevation (none) */
+  --bs-radius: 0px;
+
+  /* motion */
+  --bs-motion-fast: 120ms;
+  --bs-motion:      180ms;
+  --bs-motion-slow: 420ms;
+  --bs-ease:        cubic-bezier(.2,.6,.2,1);
+
+  /* focus */
+  --bs-focus: var(--bs-accent);
+
+  color-scheme: light;
+}
+
+/* ---- DARK (system default when no explicit theme) ------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bs-bg:         #0A0C0F;
+    --bs-surface:    #111418;
+    --bs-surface-2:  #171B20;
+    --bs-hairline:   rgba(255,255,255,.08);
+    --bs-hairline-2: rgba(255,255,255,.16);
+    --bs-text-hi:    #E8ECEF;
+    --bs-text:       #D6DCE1;
+    --bs-text-sub:   #A9B4BD;
+    --bs-text-lo:    #6B7680;
+    --bs-accent:     #2F8F6E;
+    --bs-accent-dim: rgba(47,143,110,.18);
+    --bs-solid-bg:   var(--bs-text-hi);
+    --bs-solid-fg:   var(--bs-bg);
+    --bs-check-a:    #14181D;
+    --bs-check-b:    #191E24;
+    color-scheme: dark;
+  }
+}
+
+/* ---- DARK (explicit override, e.g. style-guide toggle) -------------------- */
+[data-theme="dark"] {
+  --bs-bg:         #0A0C0F;
+  --bs-surface:    #111418;
+  --bs-surface-2:  #171B20;
+  --bs-hairline:   rgba(255,255,255,.08);
+  --bs-hairline-2: rgba(255,255,255,.16);
+  --bs-text-hi:    #E8ECEF;
+  --bs-text:       #D6DCE1;
+  --bs-text-sub:   #A9B4BD;
+  --bs-text-lo:    #6B7680;
+  --bs-accent:     #2F8F6E;
+  --bs-accent-dim: rgba(47,143,110,.18);
+  --bs-solid-bg:   var(--bs-text-hi);
+  --bs-solid-fg:   var(--bs-bg);
+  --bs-check-a:    #14181D;
+  --bs-check-b:    #191E24;
+  color-scheme: dark;
+}
+
+/* ---- LIGHT (explicit override, for nested stark panels) ------------------ */
+[data-theme="light"] {
+  --bs-bg:#F6F5F2; --bs-surface:#FFFFFF; --bs-surface-2:#EFEEE9;
+  --bs-hairline:rgba(10,12,15,.10); --bs-hairline-2:rgba(10,12,15,.20);
+  --bs-text-hi:#0A0C0F; --bs-text:#16191D; --bs-text-sub:#52606B; --bs-text-lo:#8A949C;
+  --bs-accent:#2F8F6E; --bs-accent-dim:rgba(47,143,110,.14);
+  --bs-solid-bg:var(--bs-text-hi); --bs-solid-fg:var(--bs-bg);
+  --bs-check-a:#EEEDE8; --bs-check-b:#E4E3DD;
+  color-scheme: light;
+}
+
+/* ==========================================================================
+   RESET + BASE
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+body {
+  margin: 0;
+  background: var(--bs-bg);
+  color: var(--bs-text);
+  font-family: var(--bs-font-text);
+  font-size: 15px;
+  line-height: 1.6;
+}
+a { color: var(--bs-accent); text-decoration: none; }
+a:hover { color: var(--bs-text-hi); }
+::selection { background: var(--bs-accent-dim); }
+
+/* ==========================================================================
+   TYPE SCALE
+   ========================================================================== */
+.bs-display {
+  font-family: var(--bs-font-display); font-weight: 800;
+  font-size: clamp(30px, 4.4vw, 46px); line-height: 1.02;
+  letter-spacing: -0.03em; color: var(--bs-text-hi); margin: 0;
+}
+.bs-h1 { font-family: var(--bs-font-display); font-weight: 800; font-size: 28px; line-height: 1.08; letter-spacing: -0.025em; color: var(--bs-text-hi); margin: 0; }
+.bs-h2 { font-family: var(--bs-font-display); font-weight: 700; font-size: 20px; line-height: 1.15; letter-spacing: -0.02em; color: var(--bs-text-hi); margin: 0; }
+.bs-h3 { font-family: var(--bs-font-display); font-weight: 700; font-size: 15px; line-height: 1.25; letter-spacing: -0.01em; color: var(--bs-text-hi); margin: 0; }
+.bs-body   { font-family: var(--bs-font-text); font-weight: 400; font-size: 15px; line-height: 1.6; color: var(--bs-text); }
+.bs-body-s { font-family: var(--bs-font-text); font-weight: 400; font-size: 13px; line-height: 1.55; color: var(--bs-text-sub); }
+.bs-num    { font-family: var(--bs-font-display); font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; color: var(--bs-text-hi); }
+
+/* mono labels ------------------------------------------------------------- */
+.bs-label   { font-family: var(--bs-font-mono); font-weight: 500; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--bs-text-sub); }
+.bs-label-s { font-family: var(--bs-font-mono); font-weight: 500; font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bs-text-lo); }
+.bs-label--index { color: var(--bs-text-lo); }
+.bs-label--index b { color: var(--bs-text-hi); font-weight: 500; }
+
+/* ==========================================================================
+   PRIMITIVES
+   ========================================================================== */
+
+/* wordmark: BLACK·SEA, dimmed interpunct */
+.bs-wordmark {
+  font-family: var(--bs-font-display); font-weight: 900;
+  text-transform: uppercase; letter-spacing: 0.02em;
+  color: var(--bs-text-hi); line-height: 1; white-space: nowrap;
+  display: inline-block;
+}
+.bs-wordmark i { font-style: normal; color: var(--bs-text-lo); font-weight: 700; }
+
+/* horizon mark, sizing wrapper for the inline SVG */
+.bs-mark { display: inline-block; line-height: 0; color: var(--bs-text-hi); }
+.bs-mark svg { display: block; width: 100%; height: 100%; }
+.bs-mark .bs-mark-stroke { stroke: currentColor; fill: none; }
+.bs-mark .bs-mark-square { fill: var(--bs-accent); }
+.bs-mark--mono .bs-mark-square { fill: currentColor; }
+
+/* lockup: mark + wordmark, horizontal */
+.bs-lockup { display: inline-flex; align-items: center; gap: var(--bs-s3); }
+.bs-lockup--stacked { flex-direction: column; gap: var(--bs-s3); }
+
+/* divider */
+.bs-divider { border: 0; border-top: 1px solid var(--bs-hairline); margin: 0; height: 0; }
+.bs-divider--strong { border-top-color: var(--bs-hairline-2); }
+
+/* plate: hairline-bounded surface, no shadow, radius 0 */
+.bs-plate {
+  background: var(--bs-surface);
+  border: 1px solid var(--bs-hairline);
+  border-radius: var(--bs-radius);
+  padding: var(--bs-s5);
+}
+.bs-plate--2 { background: var(--bs-surface-2); }
+.bs-plate--flush { padding: 0; }
+
+/* key-value line */
+.bs-kv { display: flex; align-items: baseline; justify-content: space-between; gap: var(--bs-s4); padding: var(--bs-s3) 0; border-bottom: 1px solid var(--bs-hairline); }
+.bs-kv:last-child { border-bottom: 0; }
+.bs-kv dt { font-family: var(--bs-font-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--bs-text-lo); margin: 0; }
+.bs-kv dd { font-family: var(--bs-font-text); font-size: 13.5px; color: var(--bs-text-hi); margin: 0; text-align: right; }
+
+/* buttons */
+.bs-btn {
+  font-family: var(--bs-font-mono); font-weight: 500; font-size: 11px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 12px 20px; border-radius: var(--bs-radius);
+  border: 1px solid transparent; cursor: pointer;
+  transition: background var(--bs-motion) var(--bs-ease), color var(--bs-motion) var(--bs-ease), border-color var(--bs-motion) var(--bs-ease);
+  display: inline-flex; align-items: center; gap: var(--bs-s2);
+}
+.bs-btn:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--bs-bg), 0 0 0 3px var(--bs-focus); }
+.bs-btn--primary { background: var(--bs-solid-bg); color: var(--bs-solid-fg); }
+.bs-btn--primary:hover { background: var(--bs-accent); color: #FFFFFF; }
+.bs-btn--ghost { background: transparent; color: var(--bs-text-sub); border-color: var(--bs-hairline-2); }
+.bs-btn--ghost:hover { color: var(--bs-text-hi); border-color: var(--bs-text-hi); }
+.bs-btn--mono { background: var(--bs-surface-2); color: var(--bs-text-sub); border-color: var(--bs-hairline); }
+.bs-btn--mono:hover { color: var(--bs-text-hi); border-color: var(--bs-accent); }
+.bs-btn--mono.is-on { background: var(--bs-solid-bg); color: var(--bs-solid-fg); border-color: var(--bs-solid-bg); }
+.bs-btn:disabled { opacity: .45; cursor: not-allowed; }
+
+/* status dot */
+.bs-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--bs-text-lo); vertical-align: middle; }
+.bs-dot.is-live   { background: var(--bs-accent); animation: bs-pulse 2s var(--bs-ease) infinite; }
+.bs-dot.is-warn   { background: var(--bs-warn); }
+.bs-dot.is-danger { background: var(--bs-danger); }
+.bs-dot.is-idle   { background: var(--bs-text-lo); }
+@keyframes bs-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--bs-accent-dim); }
+  50%      { box-shadow: 0 0 0 4px transparent; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bs-dot.is-live { animation: none; }
+}
+
+/* focusable text inputs used across generators */
+.bs-input {
+  font-family: var(--bs-font-text); font-size: 13px; color: var(--bs-text-hi);
+  background: var(--bs-surface); border: 1px solid var(--bs-hairline-2);
+  border-radius: var(--bs-radius); padding: 9px 11px; width: 100%; outline: none;
+  transition: border-color var(--bs-motion) var(--bs-ease);
+}
+.bs-input:focus { border-color: var(--bs-accent); }
+textarea.bs-input { resize: vertical; line-height: 1.5; }
+
+/* transparency checker plate (export previews only) */
+.bs-checker {
+  background-image:
+    linear-gradient(45deg, var(--bs-check-b) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--bs-check-b) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--bs-check-b) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--bs-check-b) 75%);
+  background-size: 24px 24px;
+  background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+  background-color: var(--bs-check-a);
+}

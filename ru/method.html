@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta name="robots" content="noindex,follow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Как мы работаем | Комплаенс Black Sea</title>
+<meta name="description" content="Диагностика, смета в течение 48 часов, затем построение, ремедиация, сопровождение или защита. Четыре модели, фиксированный объём, без почасовой оплаты.">
+<link rel="canonical" href="https://blackseaspv.com/ru/method.html">
+<link rel="alternate" hreflang="en" href="https://blackseaspv.com/method.html">
+<link rel="alternate" hreflang="ru" href="https://blackseaspv.com/ru/method.html">
+<link rel="alternate" hreflang="x-default" href="https://blackseaspv.com/method.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="../brand.css" rel="stylesheet">
+<link href="../site.css" rel="stylesheet">
+<style>
+  .doctrine { border-top: 1px solid var(--bs-hairline-2); border-bottom: 1px solid var(--bs-hairline-2); padding: var(--bs-s8) 0; }
+  .doctrine p { font-family: var(--bs-font-text); font-size: clamp(15px, 1.5vw, 18px); line-height: 1.65; color: var(--bs-text-sub); max-width: 74ch; margin: 0 0 var(--bs-s5); }
+  .doctrine p:last-child { margin-bottom: 0; }
+  .doctrine .callout { font-family: var(--bs-font-display); font-weight: 600; font-size: clamp(20px, 2.4vw, 28px); letter-spacing: -.025em; line-height: 1.25; color: var(--bs-text-hi); max-width: 26ch; margin-top: var(--bs-s7); border-left: 2px solid var(--bs-accent); padding-left: var(--bs-s6); }
+  .models { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--bs-hairline); border: 1px solid var(--bs-hairline); }
+  .model { background: var(--bs-surface); padding: var(--bs-s7); display: flex; flex-direction: column; }
+  .model .ml { font-family: var(--bs-font-mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--bs-accent); }
+  .model .nm { font-family: var(--bs-font-display); font-weight: 800; font-size: 20px; letter-spacing: -.02em; color: var(--bs-text-hi); margin-top: var(--bs-s4); }
+  .model .bd { font-family: var(--bs-font-text); font-size: 13.5px; line-height: 1.6; color: var(--bs-text-sub); margin-top: var(--bs-s4); }
+  .model .bw { font-family: var(--bs-font-mono); font-size: 11px; letter-spacing: .02em; color: var(--bs-text-lo); margin-top: auto; padding-top: var(--bs-s5); }
+  .model .bw b { color: var(--bs-text-hi); font-weight: 500; }
+  @media (max-width: 720px){ .models { grid-template-columns: 1fr; } }
+  .contrast { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--bs-hairline); border: 1px solid var(--bs-hairline); }
+  .contrast .c { background: var(--bs-surface); padding: var(--bs-s7); }
+  .contrast .c.bench { background: var(--bs-surface-2); }
+  .contrast .ch { font-family: var(--bs-font-mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; margin-bottom: var(--bs-s5); }
+  .contrast .c.pyr .ch { color: var(--bs-text-lo); }
+  .contrast .c.bench .ch { color: var(--bs-accent); }
+  .contrast ul { list-style: none; margin: 0; padding: 0; }
+  .contrast li { font-family: var(--bs-font-text); font-size: 13.5px; line-height: 1.5; color: var(--bs-text-sub); padding: var(--bs-s3) 0; border-bottom: 1px solid var(--bs-hairline); display: flex; gap: var(--bs-s3); }
+  .contrast li:last-child { border-bottom: 0; }
+  .contrast .c.bench li { color: var(--bs-text); }
+  .contrast li .mk { color: var(--bs-text-lo); font-family: var(--bs-font-mono); font-size: 11px; }
+  .contrast .c.bench li .mk { color: var(--bs-accent); }
+  @media (max-width: 640px){ .contrast { grid-template-columns: 1fr; } }
+  .assure { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--bs-hairline); border: 1px solid var(--bs-hairline); }
+  .assure .t { background: var(--bs-bg); padding: var(--bs-s6) var(--bs-s5); }
+  .assure .t .k { font-family: var(--bs-font-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--bs-accent); }
+  .assure .t .v { font-family: var(--bs-font-text); font-size: 12.5px; line-height: 1.55; color: var(--bs-text-sub); margin-top: var(--bs-s3); }
+  @media (max-width: 900px){ .assure { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px){ .assure { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Black Sea",
+  "url": "https://blackseaspv.com/method/",
+  "email": "operations@blackseaspv.com",
+  "serviceType": "Консалтинг по ПОД/ФТ и санкционному комплаенсу",
+  "inLanguage": "ru",
+  "areaServed": [
+    {"@type": "Country", "name": "Azerbaijan"},
+    {"@type": "Country", "name": "Bahrain"},
+    {"@type": "Country", "name": "Egypt"},
+    {"@type": "Country", "name": "Georgia"},
+    {"@type": "Country", "name": "Ghana"},
+    {"@type": "Country", "name": "Jordan"},
+    {"@type": "Country", "name": "Kazakhstan"},
+    {"@type": "Country", "name": "Kenya"},
+    {"@type": "Country", "name": "Kuwait"},
+    {"@type": "Country", "name": "Kyrgyzstan"},
+    {"@type": "Country", "name": "Nigeria"},
+    {"@type": "Country", "name": "Oman"},
+    {"@type": "Country", "name": "Pakistan"},
+    {"@type": "Country", "name": "Qatar"},
+    {"@type": "Country", "name": "Saudi Arabia"},
+    {"@type": "Country", "name": "South Africa"},
+    {"@type": "Country", "name": "Turkey"},
+    {"@type": "Country", "name": "United Arab Emirates"},
+    {"@type": "Country", "name": "Uzbekistan"}
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Направления услуг и модели сотрудничества",
+    "itemListElement": [
+      {"@type": "OfferCatalog", "name": "Направления услуг", "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Лицензирование и построение программы под новый режим"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Ремедиация"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Внешнее и переходное ответственное лицо (MLRO) и управляемая функция финансовой разведки"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Независимый аудит ПОД/ФТ"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Санкционная проверка, экспортный контроль и проверка добросовестности"}}
+      ]},
+      {"@type": "OfferCatalog", "name": "Модели сотрудничества", "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Усиление"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Управляемая команда"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Проект"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Управляемая первая линия (1LoD) / BPO-операции"}}
+      ]}
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Как мы работаем",
+  "description": "Комплаенс-стержень из четырёх этапов: диагностика, смета в течение 48 часов, построение или ремедиация, сопровождение или защита.",
+  "inLanguage": "ru",
+  "provider": {"@type": "Organization", "name": "Black Sea"},
+  "step": [
+    {"@type": "HowToStep", "position": 1, "name": "Диагностика", "text": "Мы читаем программу так, как она работает на деле, и возвращаем ясное прочтение: что держится, что не проходит, к чему проверяющий потянется первым, в меморандуме о выявленных проблемах, ранжированном по регуляторному риску."},
+    {"@type": "HowToStep", "position": 2, "name": "Смета в течение 48 часов", "text": "В течение 48 часов после диагностики вы получаете план с фиксированным объёмом и фиксированной стоимостью, с заявленной последовательностью и датами завершения. Без почасовой оплаты."},
+    {"@type": "HowToStep", "position": 3, "name": "Построение или ремедиация", "text": "Мы конструируем всю базу для нового режима или первой лицензии либо ремедиируем названные пробелы для оператора под установленным нарушением и поставляем рабочую программу, задокументированную и подтверждённую доказательствами для надзора."},
+    {"@type": "HowToStep", "position": 4, "name": "Сопровождение или защита", "text": "Мы сопровождаем программу как внешнее ответственное лицо (MLRO), управляемую функцию финансовой разведки или управляемые операции первой линии и защищаем её раздел за разделом при проверке."}
+  ]
+}
+</script>
+</head>
+<body data-page="method" data-path="/method/">
+<div id="bs-nav"></div>
+
+<header class="hero cine" data-name="METHOD" style="--cine-img:url('img/frame-data.jpg')">
+  <div class="hero-grid-bg"></div>
+  <div class="wrap">
+    <div class="hero-eyebrow"><span class="dot"></span><span class="txt">00 / Method &#183; Operational</span></div>
+    <h1 class="hero-h1">Как мы работаем.</h1>
+    <h1 class="hero-h1 d-dim" style="margin-top:.04em">Диагностика, смета, построение, сопровождение.</h1>
+    <p class="hero-sub">Каждый проект идёт по одному и тому же стержню. Мы диагностируем программу в её текущем состоянии, возвращаем смету в течение 48 часов, затем строим или ремедиируем то, чего не хватает, и сопровождаем её либо защищаем при проверке. Никакого бесконечного обследования. Никакого открытого счётчика. Вы знаете объём, последовательность и стоимость до начала работы.</p>
+    <div class="stance-strip" style="margin-top:var(--bs-s7)">
+      <span class="s">Diagnose</span><span class="s">Cost in 48h</span><span class="s">Build or remediate</span><span class="s">Run or defend</span>
+    </div>
+    <div class="hero-actions">
+      <a class="bs-btn bs-btn--primary" href="contact.html">Запросить диагностику &rarr;</a>
+      <a class="bs-btn bs-btn--ghost" href="engagement.html">Смотреть модели сотрудничества &rarr;</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><i></i> Scroll</div>
+  <div class="hero-coords">CONFIDENTIAL</div>
+</header>
+
+<main>
+<!-- 01 doctrine -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">01</span><span class="t">Doctrine</span><span class="line"></span></div>
+    <div class="spread">
+      <div class="spread-index" aria-hidden="true">01</div>
+      <div class="spread-body">
+        <h2 class="display d-big" style="max-width:15ch">Лицензия — это момент. <span class="d-dim">Программа — это каждый момент после.</span></h2>
+        <p class="lede">Лицензия доказывает, что вас одобрили один раз. Программа — это то, что проверяющий тестирует каждый последующий раз. Большинство операторов покупают первое и полагают, что второе прилагается само собой. Это не так.</p>
+        <p class="bs-body">Мы строим программу, которую проверяющий действительно тестирует. Не папку с политиками, которая хорошо читается и рассыпается при первом контакте. Контроли, работающие на живых транзакциях, досье по клиентам, которые надзорный орган может открыть наугад, оценку рисков, отражающую то, как бизнес реально движет деньги, и доказательный след, отвечающий на построчную проверку без спешки.</p>
+        <p class="bs-body">Юристы подают документы. Мы строим комплаенс. Лицензия — простая часть. Мы строим то, что стоит за ней.</p>
+        <blockquote class="stakes-pull">Если это не выдерживает проверки, это не контроль. Это документ.</blockquote>
+      </div>
+      <aside class="spread-aside">
+        <div class="fig">
+          <img src="../img/frame-data.jpg" alt="">
+          <span class="ct a"></span><span class="ct b"></span><span class="ct c"></span><span class="ct d"></span>
+          <div class="readout" style="left:12px; bottom:12px;">FIG.01 / UNDER EXAMINATION</div>
+        </div>
+        <div class="cap"><span>Программа под проверкой</span><span>REV 1.0</span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 02 the spine -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">02</span><span class="t">The spine</span><span class="line"></span></div>
+    <div class="section-head"><p class="lede" style="margin-top:0">Четыре этапа, по порядку. Вы можете войти на любом из них и остановиться на любом. Большинство операторов проходят весь стержень один раз, а затем оставляют нас на последнем этапе.</p></div>
+    <div class="method-steps">
+      <div class="method-step">
+        <div class="big">01</div>
+        <div><div class="nm">Диагностика</div>
+          <div class="ds">Мы читаем программу так, как она работает на деле, а не так, как её описывает руководство. Политики против практики. Оценку рисков против реальной клиентской и транзакционной базы. Скрининг, мониторинг и обработку кейсов против того, чего требует надзорная база в вашем рынке. Там, где на кону правоприменение или установленное нарушение, мы восстанавливаем, что произошло, и локализуем пробел, который увидел регулятор. Вы получаете ясное прочтение: что держится, что не проходит, к чему проверяющий потянется первым. Никакой стены из жаргона. Старший взгляд на реальную экспозицию.</div>
+          <div class="bs-label-s" style="margin-top:var(--bs-s3)">Результат: меморандум о выявленных проблемах, ранжированный по регуляторному риску, с прямо названными пробелами.</div>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="big">02</div>
+        <div><div class="nm">Смета в течение 48 часов</div>
+          <div class="ds">В течение 48 часов после диагностики вы получаете смету. Фиксированный объём. Фиксированная стоимость. Последовательность работ, что даёт каждый этап, кто его выполняет и когда он завершается. Без почасовой оплаты, без счётчика, без фазы обследования, которая тихо расширяется. Если план меняется, потому что меняются факты, мы говорим об этом до любой работы и пересчитываем его в письменном виде. Вас никогда не выставят на сюрприз в счёте.</div>
+          <div class="bs-label-s" style="margin-top:var(--bs-s3)">Результат: план с фиксированным объёмом и фиксированной стоимостью, с заявленной последовательностью и датами завершения.</div>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="big">03</div>
+        <div><div class="nm">Построение или ремедиация</div>
+          <div class="ds">Мы строим программу или мы её ремонтируем. Для нового режима или первой лицензии мы конструируем всю базу: оценку рисков, политики и контроли, логику скрининга и мониторинга, управление и линии отчётности, функцию MLRO (ответственного лица) и доказательную архитектуру под ней. Для оператора под установленным нарушением или после правоприменения мы ремедиируем названные пробелы, перестраиваем контроли, которые не сработали, и формируем запись, показывающую регулятору, что проблема закрыта. В любом случае результат — это программа, которая работает на живом бизнесе и держится, когда её тестируют. Построена для проверки, а не для подшивки.</div>
+          <div class="bs-label-s" style="margin-top:var(--bs-s3)">Результат: рабочая программа, задокументированная и подтверждённая доказательствами, готовая к надзору.</div>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="big">04</div>
+        <div><div class="nm">Сопровождение или защита</div>
+          <div class="ds">Программа хороша ровно настолько, насколько дисциплинирована её эксплуатация. Мы сопровождаем её: как внешнее или переходное ответственное лицо (MLRO), как управляемую функцию финансовой разведки или как управляемые операции первой линии. И мы защищаем её: мы проходим с вами всю проверку, отвечаем регулятору раздел за разделом и держим ту линию, которую программа была построена держать. Когда приходит проверяющий, ничего не импровизируется. Контроли работают, досье в порядке, доказательства там, где им положено быть.</div>
+          <div class="bs-label-s" style="margin-top:var(--bs-s3)">Результат: действующая программа, удерживаемая под надзором и защищаемая при проверке.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 engagement models -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">03</span><span class="t">Engagement models</span><span class="line"></span></div>
+    <div class="section-head"><p class="lede" style="margin-top:0">Один стержень, четыре способа его купить. Модель следует за потребностью, а не наоборот. Мы скажем вам, какая подходит, в том числе когда это самая небольшая из них.</p></div>
+    <div class="models">
+      <div class="model"><span class="ml">Model 01 :: Augment</span><span class="nm">Усиление</span><span class="bd">Старшая ёмкость рядом с вашей существующей командой. Вы сохраняете владение и контроль. Мы добавляем ту экспертную глубину, которой вам не хватает: ответ на конкретный регуляторный вопрос, спроектированный контроль, перестроенную оценку рисков, подготовку к проверке. Ограничено определённым куском работы, оценено под него и закрыто, когда он сделан.</span><span class="bw">Лучше всего, когда: <b>у вас есть команда и пробел, а не дыра.</b></span></div>
+      <div class="model"><span class="ml">Model 02 :: Managed team</span><span class="nm">Управляемая команда</span><span class="bd">Мы ведём выделенную старшую команду по вашей программе в рамках постоянного мандата. Один подотчётный руководитель, определённый круг задач, согласованная отчётность в ваш совет или комитет. Вы получаете постоянную комплаенс-способность, не выстраивая и не неся штат самостоятельно. Объём фиксирован и пересматривается с заданной периодичностью, никогда не выставляется по часам.</span><span class="bw">Лучше всего, когда: <b>вам нужна непрерывность и старшая ответственность, а не разовый проект.</b></span></div>
+      <div class="model"><span class="ml">Model 03 :: Project</span><span class="nm">Проект</span><span class="bd">Определённый результат, поставленный от начала до конца. Построение программы под новый режим. Ремедиация после правоприменения. Независимый аудит ПОД/ФТ. Проверка санкционной и репутационной добросовестности (due diligence). Фиксированный объём, фиксированная стоимость, заявленные старт и финиш. Мы поставляем результат, передаём доказательства и отходим в сторону.</span><span class="bw">Лучше всего, когда: <b>у потребности есть чёткий контур и чёткая финишная черта.</b></span></div>
+      <div class="model"><span class="ml">Model 04 :: Managed 1LoD // BPO</span><span class="nm">Управляемая первая линия (1LoD) / BPO-операции</span><span class="bd">Мы ведём первую линию за вас как управляемую операцию. Онбординг и надлежащая проверка клиента (CDD), скрининг и обработка алертов, отработка результатов мониторинга транзакций, ведение кейсов, эскалация и отчётность в функцию MLRO. Ваш контролируемый процесс, исполняемый нашими людьми, по вашей политике и вашему риск-аппетиту, с полным аудиторским следом. Вы сохраняете лицензию и подотчётность. Мы несём операционную нагрузку.</span><span class="bw">Лучше всего, когда: <b>объём реален, а построение внутренней операции замедлит вас или потопит.</b></span></div>
+    </div>
+    <div class="cm-hint">Детали моделей и как начать каждую из них живут на странице моделей сотрудничества. <a href="engagement.html" style="color:var(--bs-accent)">Сравнить модели &rarr;</a></div>
+  </div>
+</section>
+
+<!-- 04 why senior-only -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">04</span><span class="t">Senior-only</span><span class="line"></span></div>
+    <div class="section-head">
+      <h2 class="display d-big">Никакой пирамиды рычага. <span class="d-dim">Никакого счётчика младших.</span></h2>
+      <p class="lede">Модель Big-4 работает на рычаге. Партнёр продаёт работу, затем пирамида младших сотрудников её выполняет и учится на вашей программе, в ваше время. Вы платите по старшим ставкам за результат учебного уровня и партнёра, который появляется на старте и на защите выводов. Мы так не комплектуем команду. Тот, кто диагностирует вашу программу, — это тот, кто её строит, и тот, кто сидит напротив проверяющего. Только старшие, каждое место. Меньше людей, все они практики, обладатели квалификаций CAMS и ICA, которые строили и защищали реальные программы.</p>
+    </div>
+    <div class="contrast">
+      <div class="c pyr">
+        <div class="ch">The pyramid</div>
+        <ul>
+          <li><span class="mk">01</span>Продано партнёром, исполнено младшими</li>
+          <li><span class="mk">02</span>Вы финансируете кривую обучения</li>
+          <li><span class="mk">03</span>Передачи теряют нить</li>
+          <li><span class="mk">04</span>Оценено по часам, поэтому часы растут</li>
+        </ul>
+      </div>
+      <div class="c bench">
+        <div class="ch">The bench</div>
+        <ul>
+          <li><span class="mk">01</span>Диагностировано, построено и защищено одними и теми же старшими</li>
+          <li><span class="mk">02</span>Вы финансируете результат, а не обучение</li>
+          <li><span class="mk">03</span>Одна подотчётная линия, от старта до проверки</li>
+          <li><span class="mk">04</span>Оценено по фиксированному объёму, поэтому стимул — завершить</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cm-hint">Проверяющий не тестирует ваш комплект документов против первой попытки младшего. Мы тоже.</div>
+  </div>
+</section>
+
+<!-- 05 risk reversal -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">05</span><span class="t">How we de-risk it</span><span class="line"></span></div>
+    <div class="section-head"><p class="lede" style="margin-top:0">Мы не продаём никакого софта и не берём комиссий. Мы проверяющий, а не продавец. Эта независимость и есть продукт, и вот условия, на которых она работает.</p></div>
+    <div class="assure">
+      <div class="t"><div class="k">Independent</div><div class="v">У нас нет лицензии, которую мы бы вам продавали, нет платформы для размещения, нет вендора, которому мы бы отдавали предпочтение. Наш единственный интерес — программа, которая проходит проверку. Только на стороне оператора.</div></div>
+      <div class="t"><div class="k">Conflict-free</div><div class="v">Никаких комиссий, никаких реферальных выплат, никаких откатов от какого-либо провайдера. Мы рекомендуем то, что нужно надзорной базе, а не то, что платит нам.</div></div>
+      <div class="t"><div class="k">Fixed scope</div><div class="v">Вы знаете, что входит и что не входит, до начала работы. Объём меняется только при изменении фактов и только письменно, до любой новой работы.</div></div>
+      <div class="t"><div class="k">No hourly billing</div><div class="v">Фиксированная стоимость против фиксированного объёма. Никакого счётчика, никаких сюрпризов в табеле, никакого стимула растягивать проект.</div></div>
+      <div class="t"><div class="k">NDA-first</div><div class="v">Мы подписываем соглашение до того, как вы раскрываете информацию. Ничто о вашей экспозиции, вашей переписке с регулятором или вашем бизнесе не двигается, пока конфиденциальность не оформлена.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 proof -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">06</span><span class="t">On the record</span><span class="line"></span></div>
+    <div class="proof-fresh">
+      <div class="proof-cell"><span class="k">Скамья практиков</span><span class="h">CAMS / ICA</span><span class="p">Квалифицированные, только старшие, на каждом месте проекта.</span><a class="go" href="firm.html">О фирме &rarr;</a></div>
+      <div class="proof-cell"><span class="k">Локальные партнёры</span><span class="h">Фирма AIFC, лицензированная AFSA</span><span class="p">Лицензированные локальные юридические фирмы и комплаенс-партнёры на наших рынках.</span><a class="go" href="partners.html">Партнёры &rarr;</a></div>
+      <div class="proof-cell"><span class="k">Публикуемая аналитика</span><span class="h">Действующая серия</span><span class="p">Независимое упоминание в казахстанской деловой прессе.</span><a class="go" href="insights.html">Аналитика &rarr;</a></div>
+      <div class="proof-cell"><span class="k">Покрытие</span><span class="h">19 / 9</span><span class="p">Фронтир и Залив. Свежие, проверяемые доказательства, а не выдуманные клиентские кейсы.</span><a class="go" href="coverage.html">Покрытие &rarr;</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 close -->
+<section class="band" style="--band-img:url('img/practice.jpg'); min-height:62vh">
+  <div class="band-photo" data-parallax="7"></div>
+  <div class="band-scrim" style="background:linear-gradient(0deg, rgba(10,12,15,.95) 4%, rgba(10,12,15,.4) 52%, rgba(10,12,15,.7) 100%)"></div>
+  <div class="ov"><span class="ct a"></span><span class="ct b"></span><span class="ct c"></span><span class="ct d"></span>
+    <div class="readout" style="left:clamp(24px,6vw,64px); bottom:22px;">REQUEST A DIAGNOSTIC &#183; 48H</div>
+  </div>
+  <div class="band-in">
+    <div class="wrap" style="text-align:center">
+      <h2 class="display d-big" style="max-width:24ch; margin:0 auto">Начните с диагностики. <span class="d-dim">Смета у вас будет в течение 48 часов.</span></h2>
+      <div style="font-family:var(--bs-font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--bs-text-lo);margin-top:var(--bs-s5)">Никакого звонка о продаже под видом обследования &#183; Старшее прочтение &#183; Сначала NDA</div>
+      <div style="display:flex;gap:var(--bs-s3);flex-wrap:wrap;justify-content:center;margin-top:var(--bs-s6)">
+        <a class="bs-btn bs-btn--primary" href="contact.html">Запросить диагностику &rarr;</a>
+        <a class="bs-btn bs-btn--ghost" href="engagement.html">Сравнить модели сотрудничества &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div id="bs-footer"></div>
+<script src="../coverage.js"></script>
+<script src="../site.js"></script>
+</body>
+</html>

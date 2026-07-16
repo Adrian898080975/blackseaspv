@@ -1,208 +1,220 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSI+CiAgPHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiBmaWxsPSIjMEExMDE4Ii8+CiAgPGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMTgiIHN0cm9rZT0iI0RDRTNFOCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iNiIgeTE9IjI0IiB4Mj0iNDIiIHkyPSIyNCIgc3Ryb2tlPSIjRENFM0U4IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxyZWN0IHg9IjIwLjUiIHk9IjIwLjUiIHdpZHRoPSI3IiBoZWlnaHQ9IjciIGZpbGw9IiNEQ0UzRTgiLz4KPC9zdmc+">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book a call — Black Sea</title>
-<meta name="description" content="Tell us what you are trying to license, fix or run. We respond within 48 hours with a costed plan, a yes, a no, or a clarifying question.">
-<link rel="preload" as="font" type="font/woff2" href="fonts/archivo-800-n-latin.woff2" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="fonts/inter-400-n-latin.woff2" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="fonts/instrumentserif-400-i-latin.woff2" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="fonts/jetbrainsmono-400-n-latin.woff2" crossorigin>
-<link rel="stylesheet" href="fonts.css">
-<link rel="stylesheet" href="styles.css">
-<!-- Cloudflare Web Analytics (cookieless) -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "302388cdb807420591a613f27c543bb9"}'></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Black Sea | Book a Compliance Call</title>
+<meta name="description" content="Tell us the operator, the market and the situation. We return a fixed-scope, costed plan within 48 hours. Senior only. Under NDA.">
+<link rel="canonical" href="https://blackseaspv.com/contact.html">
+<link rel="alternate" hreflang="en" href="https://blackseaspv.com/contact.html">
+<link rel="alternate" hreflang="ru" href="https://blackseaspv.com/ru/contact.html">
+<link rel="alternate" hreflang="x-default" href="https://blackseaspv.com/contact.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Black Sea",
+  "url": "https://blackseaspv.com/contact/",
+  "about": {
+    "@type": "Organization",
+    "name": "Black Sea",
+    "url": "https://blackseaspv.com/",
+    "email": "mailto:operations@blackseaspv.com",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "operations@blackseaspv.com",
+      "availableLanguage": "en"
+    }
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://blackseaspv.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://blackseaspv.com/contact/" }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="brand.css" rel="stylesheet">
+<link href="site.css" rel="stylesheet">
 <style>
-  .contact-layout { max-width: 760px; }
-  .success-msg { background: var(--signal); color: var(--text); padding: 16px 20px; margin-bottom: 24px; display: none; font-family: var(--t-mono); font-size: 12px; letter-spacing: 0.1em; }
-  .success-msg.show { display: block; }
-  .book-band{border:1px solid var(--line);background:var(--bg-soft);padding:28px 30px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;margin-bottom:44px}
-  .book-band .bt{font-family:var(--t-display);font-weight:700;font-size:20px;color:var(--text);margin-bottom:6px;letter-spacing:-0.01em}
-  .book-band .bs{font-size:14px;color:var(--text-sub);line-height:1.5;max-width:440px}
-  .or-rule{display:flex;align-items:center;gap:16px;margin:0 0 28px;font-family:var(--t-mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-sub)}
-  .or-rule::before,.or-rule::after{content:'';height:1px;background:var(--line);flex:1}
+  .next-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--bs-hairline); border: 1px solid var(--bs-hairline); }
+  .next-strip .s { background: var(--bs-surface); padding: var(--bs-s6) var(--bs-s6); }
+  .next-strip .s .n { font-family: var(--bs-font-mono); font-size: 11px; letter-spacing: .1em; color: var(--bs-accent); }
+  .next-strip .s .h { font-family: var(--bs-font-display); font-weight: 700; font-size: 14px; letter-spacing: -.01em; color: var(--bs-text-hi); margin-top: var(--bs-s3); text-transform: uppercase; }
+  .next-strip .s .p { font-family: var(--bs-font-text); font-size: 12.5px; line-height: 1.5; color: var(--bs-text-sub); margin-top: var(--bs-s2); }
+  @media (max-width: 760px){ .next-strip { grid-template-columns: 1fr; } }
+  .who-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--bs-hairline); border: 1px solid var(--bs-hairline); }
+  .who-cols .col { background: var(--bs-surface); padding: var(--bs-s7); }
+  .who-cols .ch { font-family: var(--bs-font-mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--bs-accent); margin-bottom: var(--bs-s5); }
+  .who-cols ul { list-style: none; margin: 0; padding: 0; }
+  .who-cols li { font-family: var(--bs-font-text); font-size: 13.5px; line-height: 1.5; color: var(--bs-text-sub); padding: var(--bs-s3) 0; border-bottom: 1px solid var(--bs-hairline); display: flex; gap: var(--bs-s3); }
+  .who-cols li:last-child { border-bottom: 0; }
+  .who-cols li .mk { color: var(--bs-accent); font-family: var(--bs-font-mono); font-size: 11px; }
+  @media (max-width: 640px){ .who-cols { grid-template-columns: 1fr; } }
+  .booking-panel .cal { display: block; border: 1px solid var(--bs-hairline-2); padding: var(--bs-s6); margin-top: var(--bs-s5); text-decoration: none; transition: border-color var(--bs-motion) var(--bs-ease); }
+  .booking-panel .cal:hover { border-color: var(--bs-accent); }
+  .booking-panel .cal .u { font-family: var(--bs-font-mono); font-size: 12px; letter-spacing: .04em; color: var(--bs-accent); }
 </style>
 </head>
-<body>
+<body data-page="contact" data-path="/contact/">
+<div id="bs-nav"></div>
 
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-brand">
-      <svg viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="22" stroke="#0A1018" stroke-width="2"/>
-        <line x1="2" y1="24" x2="46" y2="24" stroke="#0A1018" stroke-width="2"/>
-        <rect x="20" y="20" width="8" height="8" fill="#0A1018"/>
-      </svg>
-      <span class="nav-wordmark">BLACK<span class="dot">·</span>SEA</span>
-    </a>
-    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
-    <div class="nav-links" id="nav-links">
-      <a href="products.html" class="nav-link">Services</a>
-      <a href="markets.html" class="nav-link">Markets</a>
-      <a href="cases.html" class="nav-link">Cases</a>
-      <a href="https://blackseabriefings.substack.com" target="_blank" rel="noopener" class="nav-link">Insights</a>
-      <a href="approach.html" class="nav-link">About</a>
-      <a href="contact.html" class="nav-cta">Book a call</a>
+<header class="hero hero--compact cine" data-name="CONTACT" style="--cine-img:url('img/outro.jpg')">
+  <div class="hero-grid-bg"></div>
+  <div class="wrap">
+    <div class="hero-eyebrow"><span class="dot"></span><span class="txt">01 / From call to costed plan, 48h</span></div>
+    <h1 class="hero-h1">Tell us the situation. <span class="soft">We return a costed plan within 48 hours.</span></h1>
+    <p class="hero-sub">A senior practitioner reads it, not a form-router, and returns a fixed scope and fee, or a straight no.</p>
+    <div class="trust-strip">
+      <span class="item">Response 48h</span>
+      <span class="item">Senior only</span>
+      <span class="item">Under NDA</span>
+      <span class="item">No hourly billing</span>
     </div>
   </div>
-</nav>
+  <div class="scroll-cue"><i></i> Scroll</div>
+  <div class="hero-coords">OPERATIONAL</div>
+</header>
 
 <main>
-
-  <section class="hero">
-    <div class="container">
-      <div class="section-tag reveal"><span class="idx">§01</span>Book a call</div>
-      <h1 class="hero-title reveal d1">Tell us where <em>you are.</em></h1>
-      <p class="hero-sub reveal d2">
-        Whether you are racing a licence deadline, working through a finding, or need a named MLRO on a retainer, one short conversation tells us both whether we fit. We respond within 48 hours with a costed plan, a yes, a no, or a clarifying question.
-      </p>
-    </div>
-  </section>
-
-  <section class="section section--alt">
-    <div class="container">
-      <div class="contact-layout">
-
-        <div class="book-band reveal">
-          <div>
-            <div class="bt">Book the 30-minute call directly</div>
-            <div class="bs">Pick a slot that suits you. We will review what you are trying to license, fix or run, and tell you honestly whether we can help.</div>
+<!-- 02 intake + booking side by side -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">02</span><span class="t">Two ways in</span><span class="line"></span></div>
+    <div class="contact-split">
+      <div data-form-wrap>
+        <div class="bs-label" style="margin-bottom:var(--bs-s5)">Brief us</div>
+        <form class="intake-form ajax-form" action="https://formspree.io/f/mwvgvezp" method="POST">
+          <div class="field">
+            <label>What you are doing</label>
+            <div class="seg-field">
+              <button type="button" data-val="build" class="on">Build</button>
+              <button type="button" data-val="fix">Fix</button>
+              <button type="button" data-val="run">Run</button>
+            </div>
+            <input type="hidden" name="intent" data-seg value="build">
           </div>
-          <a href="https://cal.com/black-sea/30min" target="_blank" rel="noopener" class="btn btn--signal">Open the calendar</a>
-        </div>
-
-        <div class="or-rule">Or send a message</div>
-
-        <div class="success-msg" id="success-msg">
-          ✓ Message received. We will come back to you within 48 hours.
-        </div>
-
-        <form class="form-wrap reveal d1" id="contact-form" action="https://formspree.io/f/mlgzlvad" method="POST">
-          <input type="hidden" name="_subject" value="New enquiry, blackseaspv.com">
-          <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
-
-          <div class="form-row">
-            <label class="form-label" for="name">Name</label>
-            <input class="form-input" type="text" id="name" name="name" required>
-          </div>
-
-          <div class="form-row">
-            <label class="form-label" for="email">Email</label>
-            <input class="form-input" type="email" id="email" name="email" required>
-          </div>
-
-          <div class="form-row">
-            <label class="form-label" for="org">Organisation and market (optional)</label>
-            <input class="form-input" type="text" id="org" name="org" placeholder="e.g. crypto exchange, UAE / VARA">
-          </div>
-
-          <div class="form-row">
-            <label class="form-label" for="topic">What do you need?</label>
-            <select class="form-select" id="topic" name="topic" required>
-              <option value="">Select…</option>
-              <option value="licensing">Licensing &amp; new-regime build</option>
-              <option value="remediation">Remediation, post-enforcement</option>
-              <option value="mlro">Outsourced MLRO, FIU &amp; audit</option>
-              <option value="sanctions">Sanctions &amp; export-control</option>
-              <option value="partner">Partnership, law firm / fund admin</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-
-          <div class="form-row">
-            <label class="form-label" for="message">What are you trying to license, fix or run?</label>
-            <textarea class="form-textarea" id="message" name="message" required
-              placeholder="One paragraph is enough. The licence, the deadline, the finding, or the function you need covered. Specifics help us answer accurately."></textarea>
-            <div class="form-help">We treat every enquiry in confidence. We screen UBO and sanctions before any engagement.</div>
-          </div>
-
-          <div class="form-actions">
-            <button type="submit" class="btn btn--primary">Send message</button>
-            <span class="form-meta">Response within 48 hours</span>
-          </div>
+          <div class="field"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
+          <div class="field"><label>Operator and market</label><input type="text" name="firm_and_market" placeholder="Operator name, and the market it operates in" required></div>
+          <div class="field"><label>Sector (optional)</label><select name="sector" id="cSector"></select></div>
+          <div class="field"><label>Market (optional)</label><select name="market" id="cMarket"></select></div>
+          <div class="field"><label>Situation</label><textarea name="situation" placeholder="Licensing build, remediation, MLRO cover, independent audit, sanctions or due diligence. What is happening and when it bites." required></textarea></div>
+          <div class="field"><label>Reply to (optional)</label><input type="email" name="_replyto" placeholder="Work email"></div>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+          <input type="hidden" name="_subject" value="Black Sea intake">
+          <button type="submit" class="bs-btn bs-btn--primary" style="justify-content:center">Send brief &rarr;</button>
+          <div class="bs-label-s">Encrypted in transit &nbsp;·&nbsp; read by a practitioner &nbsp;·&nbsp; not added to any list</div>
         </form>
-
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="footer-brand-row">
-          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke-width="2"/><line x1="2" y1="24" x2="46" y2="24" stroke-width="2"/><rect x="20" y="20" width="8" height="8"/></svg>
-          <span class="footer-wordmark">BLACK<span class="dot">·</span>SEA</span>
-        </div>
-        <p class="footer-tagline">We build, remediate and run the AML/CFT and sanctions programme behind a licence. The licence is the easy part.</p>
-        <div style="display:flex;flex-direction:column;gap:4px;margin-top:8px">
-          <span style="font-family:var(--t-mono);font-size:10px;letter-spacing:0.1em;color:var(--steel-deep)">Gulf · Africa · Central Asia · Turkey · Pakistan</span>
-          <a href="mailto:operations@blackseaspv.com" style="font-family:var(--t-mono);font-size:10px;letter-spacing:0.08em;color:var(--steel-deep);text-decoration:none">operations@blackseaspv.com</a>
+        <div class="form-thanks">
+          <div class="rk">Received</div>
+          <div class="rh">A senior practitioner has it.</div>
+          <div class="rp">Back within 48 hours: a fixed scope, a fixed fee, or a direct no. Nothing goes on a list.</div>
         </div>
       </div>
-      <div class="footer-col"><h5>Services</h5><ul>
-        <li><a href="products.html">Licensing &amp; new-regime build</a></li>
-        <li><a href="products.html">Remediation</a></li>
-        <li><a href="products.html">Outsourced MLRO, FIU &amp; audit</a></li>
-        <li><a href="products.html">Sanctions &amp; export-control</a></li>
-      </ul></div>
-      <div class="footer-col"><h5>Markets</h5><ul>
-        <li><a href="markets.html#uae">UAE</a></li>
-        <li><a href="markets.html#turkey">Turkey</a></li>
-        <li><a href="markets.html#pakistan">Pakistan</a></li>
-        <li><a href="markets.html">All 19 markets →</a></li>
-      </ul></div>
-      <div class="footer-col"><h5>Connect</h5><ul>
-        <li><a href="https://blackseabriefings.substack.com" target="_blank" rel="noopener">Briefings</a></li>
-        <li><a href="cases.html">Case studies</a></li>
-        <li><a href="approach.html">Approach</a></li>
-        <li><a href="legal/privacy.html">Privacy</a></li>
-      </ul></div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Black Sea. All rights reserved.</span>
-      <span><a href="legal/privacy.html">Privacy</a> · <a href="legal/terms.html">Terms</a></span>
+      <div class="booking">
+        <div class="bs-label" style="margin-bottom:var(--bs-s5)">Talk first</div>
+        <div class="k">Book a call</div>
+        <div class="bh">30 minutes, no charge, no pitch deck.</div>
+        <div class="bp">Bring the problem. You leave knowing whether there is real work, and what shape it takes.</div>
+        <div class="booking-panel">
+          <a class="cal" href="https://cal.com/black-sea/30min" target="_blank" rel="noopener">
+            <span class="bs-label-s">Book 30 minutes</span>
+            <div class="u" style="margin-top:6px">cal.com/black-sea/30min &rarr;</div>
+          </a>
+        </div>
+        <div style="margin-top:var(--bs-s7)">
+          <div class="k">Write to us</div>
+          <div class="bp" style="margin-bottom:var(--bs-s3)">Full context or attachments, straight to a senior practitioner.</div>
+          <div class="contact-line"><a href="mailto:operations@blackseaspv.com">operations@blackseaspv.com</a></div>
+        </div>
+      </div>
     </div>
   </div>
-</footer>
+</section>
 
+<!-- 04 what happens next -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">03</span><span class="t">The 48 hours</span><span class="line"></span></div>
+    <div class="next-strip">
+      <div class="s"><span class="n">01</span><div class="h">You brief us</div><div class="p">Name, operator, market, situation. Two minutes.</div></div>
+      <div class="s"><span class="n">02</span><div class="h">We read and scope</div><div class="p">A senior practitioner checks the market and framework, and defines the work. Not a template.</div></div>
+      <div class="s"><span class="n">03</span><div class="h">You get a costed plan</div><div class="p">Within 48 hours: a fixed scope and fee, or a straight no. No hourly billing, ever.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 NDA + 06 who should write -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">04</span><span class="t">Under NDA</span><span class="line"></span></div>
+    <div class="stance-note" style="border-left-width:2px">
+      <div class="bs-h2" style="margin-bottom:var(--bs-s4)">What you tell us stays with us.</div>
+      Most of what reaches us is sensitive: enforcement in progress, a finding not yet public, a licence under review. We sign your NDA before any detail changes hands. We are the reviewer, not the seller.
+    </div>
+    <div class="stance-strip" style="margin-top:var(--bs-s5)">
+      <span class="s">Confidential by default</span><span class="s">NDA before detail</span><span class="s">No data resale</span><span class="s">Conflict-free</span>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">05</span><span class="t">Fit</span><span class="line"></span></div>
+    <div class="section-head"><p class="lede" style="margin-top:0">Operator-side only, senior only. Not sure? Write anyway. If it is not us, we point you to who is.</p></div>
+    <div class="who-cols">
+      <div class="col"><div class="ch">Write if you are</div><ul>
+        <li><span class="mk">/</span>Building the programme behind a new licence.</li>
+        <li><span class="mk">/</span>Post-enforcement, and need remediation that holds.</li>
+        <li><span class="mk">/</span>Short an MLRO, or need a managed financial-intelligence function.</li>
+        <li><span class="mk">/</span>Due an independent AML audit, or your board wants one.</li>
+        <li><span class="mk">/</span>Facing sanctions, export-control or Travel Rule exposure.</li>
+      </ul></div>
+      <div class="col"><div class="ch">We are not</div><ul>
+        <li><span class="mk">/</span>Lawyers. We do not file the licence. We build what sits behind it.</li>
+        <li><span class="mk">/</span>A software vendor. We sell no tools and take no commissions.</li>
+        <li><span class="mk">/</span>A name to rent. Real senior work, or we say no.</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap">
+    <div class="cta-band">
+      <div class="inner">
+        <div>
+          <h2 class="ct-h">The licence is the easy part. Start the part that sits behind it.</h2>
+          <div class="ct-sub">Coverage 19 markets / 9 sectors. Frontier &amp; Gulf. Operational.</div>
+        </div>
+        <div class="ct-actions">
+          <a class="bs-btn bs-btn--primary" href="#top" onclick="document.querySelector('.intake-form [name=name]').focus();return false;">Send your brief &rarr;</a>
+          <a class="bs-btn bs-btn--ghost" href="https://cal.com/black-sea/30min" target="_blank" rel="noopener">Book 30 minutes &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div id="bs-footer"></div>
+<script src="coverage.js"></script>
 <script>
-  document.documentElement.classList.add('js-ready');
-  const burger = document.getElementById('burger');
-  const navLinks = document.getElementById('nav-links');
-  if (burger) burger.addEventListener('click', () => navLinks.classList.toggle('open'));
-  if (navLinks) navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 30); }, { passive: true });
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-  // Formspree submit with inline success
-  const form = document.getElementById('contact-form');
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      try {
-        const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
-        if (res.ok) {
-          form.reset();
-          document.getElementById('success-msg').classList.add('show');
-          window.scrollTo({ top: form.offsetTop - 120, behavior: 'smooth' });
-        } else {
-          alert('Something went wrong. Please email operations@blackseaspv.com directly.');
-        }
-      } catch (err) {
-        alert('Could not send. Please email operations@blackseaspv.com directly.');
-      }
-    });
-  }
+(function(){
+  var m = BS.markets.map(function(x){ return '<option value="'+x.slug+'">'+x.name+'</option>'; }).join("");
+  var s = BS.sectors.map(function(x){ return '<option value="'+x.slug+'">'+x.name+'</option>'; }).join("");
+  document.getElementById("cMarket").innerHTML = '<option value="">Select market</option>' + m;
+  document.getElementById("cSector").innerHTML = '<option value="">Select sector</option>' + s;
+})();
 </script>
-
+<script src="site.js"></script>
 </body>
 </html>

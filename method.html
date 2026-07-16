@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How we work | Black Sea</title>
+<meta name="description" content="Diagnostic, a costed plan within 48 hours, then build, remediate, run or defend. Four engagement models, fixed scope, no hourly billing.">
+<link rel="canonical" href="https://blackseaspv.com/method.html">
+<link rel="alternate" hreflang="en" href="https://blackseaspv.com/method.html">
+<link rel="alternate" hreflang="ru" href="https://blackseaspv.com/ru/method.html">
+<link rel="alternate" hreflang="x-default" href="https://blackseaspv.com/method.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="brand.css" rel="stylesheet">
+<link href="site.css" rel="stylesheet">
+<style>
+  .doctrine { border-top: 1px solid var(--bs-hairline-2); border-bottom: 1px solid var(--bs-hairline-2); padding: var(--bs-s8) 0; }
+  .doctrine p { font-family: var(--bs-font-text); font-size: clamp(15px, 1.5vw, 18px); line-height: 1.65; color: var(--bs-text-sub); max-width: 74ch; margin: 0 0 var(--bs-s5); }
+  .doctrine p:last-child { margin-bottom: 0; }
+  .doctrine .callout { font-family: var(--bs-font-display); font-weight: 600; font-size: clamp(20px, 2.4vw, 28px); letter-spacing: -.025em; line-height: 1.25; color: var(--bs-text-hi); max-width: 26ch; margin-top: var(--bs-s7); border-left: 2px solid var(--bs-accent); padding-left: var(--bs-s6); }
+  .models { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--bs-hairline); border: 1px solid var(--bs-hairline); }
+  .model { background: var(--bs-surface); padding: var(--bs-s7); display: flex; flex-direction: column; }
+  .model .ml { font-family: var(--bs-font-mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--bs-accent); }
+  .model .nm { font-family: var(--bs-font-display); font-weight: 800; font-size: 20px; letter-spacing: -.02em; color: var(--bs-text-hi); margin-top: var(--bs-s4); }
+  .model .bd { font-family: var(--bs-font-text); font-size: 13.5px; line-height: 1.6; color: var(--bs-text-sub); margin-top: var(--bs-s4); }
+  .model .bw { font-family: var(--bs-font-mono); font-size: 11px; letter-spacing: .02em; color: var(--bs-text-lo); margin-top: auto; padding-top: var(--bs-s5); }
+  .model .bw b { color: var(--bs-text-hi); font-weight: 500; }
+  @media (max-width: 720px){ .models { grid-template-columns: 1fr; } }
+  .contrast { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--bs-hairline); border: 1px solid var(--bs-hairline); }
+  .contrast .c { background: var(--bs-surface); padding: var(--bs-s7); }
+  .contrast .c.bench { background: var(--bs-surface-2); }
+  .contrast .ch { font-family: var(--bs-font-mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; margin-bottom: var(--bs-s5); }
+  .contrast .c.pyr .ch { color: var(--bs-text-lo); }
+  .contrast .c.bench .ch { color: var(--bs-accent); }
+  .contrast ul { list-style: none; margin: 0; padding: 0; }
+  .contrast li { font-family: var(--bs-font-text); font-size: 13.5px; line-height: 1.5; color: var(--bs-text-sub); padding: var(--bs-s3) 0; border-bottom: 1px solid var(--bs-hairline); display: flex; gap: var(--bs-s3); }
+  .contrast li:last-child { border-bottom: 0; }
+  .contrast .c.bench li { color: var(--bs-text); }
+  .contrast li .mk { color: var(--bs-text-lo); font-family: var(--bs-font-mono); font-size: 11px; }
+  .contrast .c.bench li .mk { color: var(--bs-accent); }
+  @media (max-width: 640px){ .contrast { grid-template-columns: 1fr; } }
+  .assure { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--bs-hairline); border: 1px solid var(--bs-hairline); }
+  .assure .t { background: var(--bs-bg); padding: var(--bs-s6) var(--bs-s5); }
+  .assure .t .k { font-family: var(--bs-font-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--bs-accent); }
+  .assure .t .v { font-family: var(--bs-font-text); font-size: 12.5px; line-height: 1.55; color: var(--bs-text-sub); margin-top: var(--bs-s3); }
+  @media (max-width: 900px){ .assure { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px){ .assure { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Black Sea",
+  "url": "https://blackseaspv.com/method/",
+  "email": "operations@blackseaspv.com",
+  "serviceType": "AML/CFT and sanctions compliance advisory",
+  "areaServed": [
+    {"@type": "Country", "name": "Azerbaijan"},
+    {"@type": "Country", "name": "Bahrain"},
+    {"@type": "Country", "name": "Egypt"},
+    {"@type": "Country", "name": "Georgia"},
+    {"@type": "Country", "name": "Ghana"},
+    {"@type": "Country", "name": "Jordan"},
+    {"@type": "Country", "name": "Kazakhstan"},
+    {"@type": "Country", "name": "Kenya"},
+    {"@type": "Country", "name": "Kuwait"},
+    {"@type": "Country", "name": "Kyrgyzstan"},
+    {"@type": "Country", "name": "Nigeria"},
+    {"@type": "Country", "name": "Oman"},
+    {"@type": "Country", "name": "Pakistan"},
+    {"@type": "Country", "name": "Qatar"},
+    {"@type": "Country", "name": "Saudi Arabia"},
+    {"@type": "Country", "name": "South Africa"},
+    {"@type": "Country", "name": "Turkey"},
+    {"@type": "Country", "name": "United Arab Emirates"},
+    {"@type": "Country", "name": "Uzbekistan"}
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Service lines and engagement models",
+    "itemListElement": [
+      {"@type": "OfferCatalog", "name": "Service lines", "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Licensing and new-regime programme build"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Remediation"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Outsourced and bridge MLRO plus managed FIU"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Independent AML audit"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sanctions, export-control and integrity due diligence"}}
+      ]},
+      {"@type": "OfferCatalog", "name": "Engagement models", "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Augmentation"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Managed team"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Project"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Managed 1LoD / BPO operations"}}
+      ]}
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How we work",
+  "description": "The four-stage compliance engagement spine: diagnose, cost within 48 hours, build or remediate, run or defend.",
+  "provider": {"@type": "Organization", "name": "Black Sea"},
+  "step": [
+    {"@type": "HowToStep", "position": 1, "name": "Diagnose", "text": "We read the programme as it actually operates and return a clear reading: what holds, what fails, what an examiner will reach for first, in a findings memo ranked by regulatory risk."},
+    {"@type": "HowToStep", "position": 2, "name": "Cost in 48 hours", "text": "Within 48 hours of the diagnostic, you receive a fixed-scope, fixed-fee plan with a stated sequence and completion dates. No hourly billing."},
+    {"@type": "HowToStep", "position": 3, "name": "Build or remediate", "text": "We construct the full framework for a new regime or first licence, or remediate named gaps for an operator under a finding, and deliver a working programme documented and evidenced for supervision."},
+    {"@type": "HowToStep", "position": 4, "name": "Run or defend", "text": "We run the programme as an outsourced MLRO, managed financial-intelligence function or managed first-line operations, and defend it section by section under examination."}
+  ]
+}
+</script>
+</head>
+<body data-page="method" data-path="/method/">
+<div id="bs-nav"></div>
+
+<header class="hero cine" data-name="METHOD" style="--cine-img:url('img/frame-data.jpg')">
+  <div class="hero-grid-bg"></div>
+  <div class="wrap">
+    <div class="hero-eyebrow"><span class="dot"></span><span class="txt">00 / Method &#183; Operational</span></div>
+    <h1 class="hero-h1">How we work.</h1>
+    <h1 class="hero-h1 d-dim" style="margin-top:.04em">Diagnose, cost, build, run.</h1>
+    <p class="hero-sub">One spine for every engagement. Scope, sequence and price are fixed before work begins.</p>
+    <div class="stance-strip" style="margin-top:var(--bs-s7)">
+      <span class="s">Diagnose</span><span class="s">Cost in 48h</span><span class="s">Build or remediate</span><span class="s">Run or defend</span>
+    </div>
+    <div class="hero-actions">
+      <a class="bs-btn bs-btn--primary" href="contact.html">Request a diagnostic &rarr;</a>
+      <a class="bs-btn bs-btn--ghost" href="engagement.html">See engagement models &rarr;</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><i></i> Scroll</div>
+  <div class="hero-coords">CONFIDENTIAL</div>
+</header>
+
+<main>
+<!-- 01 doctrine -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">01</span><span class="t">Doctrine</span><span class="line"></span></div>
+    <div class="spread">
+      <div class="spread-index" aria-hidden="true">01</div>
+      <div class="spread-body">
+        <h2 class="display d-big" style="max-width:15ch">A licence is a moment. <span class="d-dim">A programme is every moment after.</span></h2>
+        <p class="lede">Most buy the licence and assume the programme follows. It does not.</p>
+        <p class="bs-body">We build the programme an examiner tests, not a binder that fails on contact.</p>
+        <p class="bs-body">Lawyers file. We build the compliance. The licence is the easy part.</p>
+        <blockquote class="stakes-pull">If it cannot survive an examination, it is not a control. It is a document.</blockquote>
+      </div>
+      <aside class="spread-aside">
+        <div class="fig">
+          <img src="img/frame-data.jpg" alt="">
+          <span class="ct a"></span><span class="ct b"></span><span class="ct c"></span><span class="ct d"></span>
+          <div class="readout" style="left:12px; bottom:12px;">FIG.01 / UNDER EXAMINATION</div>
+        </div>
+        <div class="cap"><span>Programme, tested</span><span>REV 1.0</span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 02 the spine -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">02</span><span class="t">The spine</span><span class="line"></span></div>
+    <div class="section-head"><p class="lede" style="margin-top:0">Four stages, in order. Enter at any one, stop at any one.</p></div>
+    <div class="method-steps">
+      <div class="method-step">
+        <div class="big">01</div>
+        <div><div class="nm">Diagnose</div>
+          <div class="ds">We read the programme as it runs: what holds, what fails, what an examiner reaches first.</div>
+          <div class="bs-label-s" style="margin-top:var(--bs-s3)">Output: a findings memo ranked by regulatory risk.</div>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="big">02</div>
+        <div><div class="nm">Cost in 48 hours</div>
+          <div class="ds">Within 48 hours, priced against fixed scope. No hourly billing.</div>
+          <div class="bs-label-s" style="margin-top:var(--bs-s3)">Output: a fixed-scope, fixed-fee plan with sequence and dates.</div>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="big">03</div>
+        <div><div class="nm">Build or remediate</div>
+          <div class="ds">We build the full framework for a new regime, or remediate named gaps under a finding.</div>
+          <div class="bs-label-s" style="margin-top:var(--bs-s3)">Output: a working programme, documented and evidenced, ready for supervision.</div>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="big">04</div>
+        <div><div class="nm">Run or defend</div>
+          <div class="ds">We run it as outsourced MLRO, managed intelligence function or managed first line. Nothing is improvised under examination.</div>
+          <div class="bs-label-s" style="margin-top:var(--bs-s3)">Output: an operating programme, held under supervision and defended under examination.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 engagement models -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">03</span><span class="t">Engagement models</span><span class="line"></span></div>
+    <div class="section-head"><p class="lede" style="margin-top:0">One spine, four ways to buy it. We tell you which fits.</p></div>
+    <div class="models">
+      <div class="model"><span class="ml">Model 01 :: Augment</span><span class="nm">Augmentation</span><span class="bd">Senior capacity beside your team. You keep ownership; we add the missing depth.</span><span class="bw">Best when: <b>you have a team and a gap, not a hole.</b></span></div>
+      <div class="model"><span class="ml">Model 02 :: Managed team</span><span class="nm">Managed team</span><span class="bd">A dedicated senior team on an ongoing mandate, reporting into your board. Standing capability without the headcount.</span><span class="bw">Best when: <b>you need continuity and senior ownership, not a one-off.</b></span></div>
+      <div class="model"><span class="ml">Model 03 :: Project</span><span class="nm">Project</span><span class="bd">A defined outcome end to end: new-regime build, remediation, independent AML audit or sanctions review. Fixed scope, evidence handed over.</span><span class="bw">Best when: <b>the need has a clear edge and a clear finish line.</b></span></div>
+      <div class="model"><span class="ml">Model 04 :: Managed 1LoD // BPO</span><span class="nm">Managed 1LoD / BPO operations</span><span class="bd">We run the first line: onboarding, CDD, screening, monitoring, case management, escalation. You keep the licence and the accountability.</span><span class="bw">Best when: <b>the volume is real and building in-house would slow you down.</b></span></div>
+    </div>
+    <div class="cm-hint">Model detail and how to start each live on the engagement page. <a href="engagement.html" style="color:var(--bs-accent)">Compare models &rarr;</a></div>
+  </div>
+</section>
+
+<!-- 04 why senior-only -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">04</span><span class="t">Senior-only</span><span class="line"></span></div>
+    <div class="section-head">
+      <h2 class="display d-big">No leverage pyramid. <span class="d-dim">No junior meter.</span></h2>
+      <p class="lede">The Big-4 model runs on leverage, billed by the hour. We do not: the same seniors diagnose, build and defend.</p>
+    </div>
+    <div class="contrast">
+      <div class="c pyr">
+        <div class="ch">The pyramid</div>
+        <ul>
+          <li><span class="mk">01</span>Sold by a partner, delivered by juniors</li>
+          <li><span class="mk">02</span>You fund the learning curve</li>
+          <li><span class="mk">03</span>Handoffs lose the thread</li>
+          <li><span class="mk">04</span>Priced by the hour, so the hours grow</li>
+        </ul>
+      </div>
+      <div class="c bench">
+        <div class="ch">The bench</div>
+        <ul>
+          <li><span class="mk">01</span>Diagnosed, built and defended by the same seniors</li>
+          <li><span class="mk">02</span>You fund the outcome, not the training</li>
+          <li><span class="mk">03</span>One accountable line, start to examination</li>
+          <li><span class="mk">04</span>Priced by fixed scope, so the incentive is to finish</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cm-hint">The examiner does not test your document set against a junior's first attempt. Neither do we.</div>
+  </div>
+</section>
+
+<!-- 05 risk reversal -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">05</span><span class="t">How we de-risk it</span><span class="line"></span></div>
+    <div class="section-head"><p class="lede" style="margin-top:0">We sell no software and take no commissions. That independence is the product.</p></div>
+    <div class="assure">
+      <div class="t"><div class="k">Independent</div><div class="v">No licence to sell, no platform to place, no vendor to favour. Operator-side only.</div></div>
+      <div class="t"><div class="k">Conflict-free</div><div class="v">No commissions, no referral fees, no kickbacks.</div></div>
+      <div class="t"><div class="k">Fixed scope</div><div class="v">In and out, fixed before work starts. Changes only in writing.</div></div>
+      <div class="t"><div class="k">No hourly billing</div><div class="v">Fixed fee against fixed scope. No meter, no incentive to stretch.</div></div>
+      <div class="t"><div class="k">NDA-first</div><div class="v">We sign before you disclose. Nothing moves first.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 proof -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">06</span><span class="t">On the record</span><span class="line"></span></div>
+    <div class="proof-fresh">
+      <div class="proof-cell"><span class="k">Practitioner bench</span><span class="h">CAMS / ICA</span><span class="p">Credentialed and senior-only, on every seat of the engagement.</span><a class="go" href="firm.html">The firm &rarr;</a></div>
+      <div class="proof-cell"><span class="k">Local partners</span><span class="h">Local legal standing</span><span class="p">Licensed local law-firm and compliance partners in our markets.</span><a class="go" href="partners.html">Partners &rarr;</a></div>
+      <div class="proof-cell"><span class="k">Published intelligence</span><span class="h">A running series</span><span class="p">Independent pickup in the Kazakh business press.</span><a class="go" href="insights.html">Insights &rarr;</a></div>
+      <div class="proof-cell"><span class="k">Coverage</span><span class="h">19 / 9</span><span class="p">Frontier and Gulf. Fresh, checkable proof, not invented client cases.</span><a class="go" href="coverage.html">Coverage &rarr;</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 close -->
+<section class="band" style="--band-img:url('img/practice.jpg'); min-height:62vh">
+  <div class="band-photo" data-parallax="7"></div>
+  <div class="band-scrim" style="background:linear-gradient(0deg, rgba(10,12,15,.95) 4%, rgba(10,12,15,.4) 52%, rgba(10,12,15,.7) 100%)"></div>
+  <div class="ov"><span class="ct a"></span><span class="ct b"></span><span class="ct c"></span><span class="ct d"></span>
+    <div class="readout" style="left:clamp(24px,6vw,64px); bottom:22px;">REQUEST A DIAGNOSTIC &#183; 48H</div>
+  </div>
+  <div class="band-in">
+    <div class="wrap" style="text-align:center">
+      <h2 class="display d-big" style="max-width:24ch; margin:0 auto">Start with a diagnostic. <span class="d-dim">A costed plan within 48 hours.</span></h2>
+      <div style="font-family:var(--bs-font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--bs-text-lo);margin-top:var(--bs-s5)">No sales call dressed as discovery &#183; A senior read &#183; NDA first</div>
+      <div style="display:flex;gap:var(--bs-s3);flex-wrap:wrap;justify-content:center;margin-top:var(--bs-s6)">
+        <a class="bs-btn bs-btn--primary" href="contact.html">Request a diagnostic &rarr;</a>
+        <a class="bs-btn bs-btn--ghost" href="engagement.html">Compare models &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div id="bs-footer"></div>
+<script src="coverage.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

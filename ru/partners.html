@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta name="robots" content="noindex,follow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Партнёрам | Black Sea</title>
+<meta name="description" content="Два партнёрских трека для юрфирм, фонд-администраторов, CSP и TCSP. Вы подаёте, мы строим. White-label комплаенса за лицензией. Без конфликта каналов.">
+<link rel="canonical" href="https://blackseaspv.com/ru/partners.html">
+<link rel="alternate" hreflang="en" href="https://blackseaspv.com/partners.html">
+<link rel="alternate" hreflang="ru" href="https://blackseaspv.com/ru/partners.html">
+<link rel="alternate" hreflang="x-default" href="https://blackseaspv.com/partners.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="../brand.css" rel="stylesheet">
+<link href="../site.css" rel="stylesheet">
+<style>
+  .track-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--bs-hairline); border: 1px solid var(--bs-hairline); }
+  .track { background: var(--bs-surface); padding: var(--bs-s8) var(--bs-s7); display: flex; flex-direction: column; transition: background var(--bs-motion) var(--bs-ease); text-decoration: none; }
+  .track:hover { background: var(--bs-surface-2); }
+  .track .ix { font-family: var(--bs-font-mono); font-size: 11px; letter-spacing: .12em; color: var(--bs-accent); }
+  .track .lb { font-family: var(--bs-font-display); font-weight: 800; font-size: 24px; letter-spacing: -.025em; color: var(--bs-text-hi); margin-top: var(--bs-s4); }
+  .track .ol { font-family: var(--bs-font-text); font-size: 14px; line-height: 1.6; color: var(--bs-text-sub); margin-top: var(--bs-s4); }
+  .track .go { margin-top: auto; padding-top: var(--bs-s6); font-family: var(--bs-font-mono); font-size: 10.5px; letter-spacing: .1em; color: var(--bs-text-hi); }
+  .track:hover .go { color: var(--bs-accent); }
+  @media (max-width: 720px){ .track-cards { grid-template-columns: 1fr; } }
+  .track-detail { border: 1px solid var(--bs-hairline); scroll-margin-top: 90px; }
+  .track-detail .hd { padding: var(--bs-s7); border-bottom: 1px solid var(--bs-hairline); background: var(--bs-surface); }
+  .track-detail .hd .nm { font-family: var(--bs-font-display); font-weight: 800; font-size: 24px; letter-spacing: -.025em; color: var(--bs-text-hi); }
+  .track-detail .hd .sf { font-family: var(--bs-font-text); font-size: 14px; line-height: 1.6; color: var(--bs-text-sub); margin-top: var(--bs-s4); max-width: 78ch; }
+  .track-detail .body { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--bs-hairline); }
+  .track-detail .body .c { background: var(--bs-surface); padding: var(--bs-s6) var(--bs-s7); }
+  .track-detail .body .c .k { font-family: var(--bs-font-mono); font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--bs-accent); margin-bottom: var(--bs-s4); }
+  .track-detail ol, .track-detail ul { margin: 0; padding-left: 18px; }
+  .track-detail li { font-family: var(--bs-font-text); font-size: 13px; line-height: 1.6; color: var(--bs-text-sub); margin-bottom: 6px; }
+  .track-detail .noconf { padding: var(--bs-s6) var(--bs-s7); border-top: 1px solid var(--bs-hairline); background: var(--bs-surface-2); font-family: var(--bs-font-text); font-size: 13px; line-height: 1.6; color: var(--bs-text); }
+  .track-detail .noconf b { color: var(--bs-text-hi); }
+  @media (max-width: 640px){ .track-detail .body { grid-template-columns: 1fr; } }
+  .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--bs-hairline); border: 1px solid var(--bs-hairline); }
+  .pillar { background: var(--bs-surface); padding: var(--bs-s7) var(--bs-s6); }
+  .pillar .k { font-family: var(--bs-font-mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--bs-accent); }
+  .pillar .v { font-family: var(--bs-font-text); font-size: 13.5px; line-height: 1.6; color: var(--bs-text-sub); margin-top: var(--bs-s4); }
+  @media (max-width: 820px){ .pillars { grid-template-columns: 1fr; } }
+  .partner-proof { border: 1px solid var(--bs-hairline); background: var(--bs-surface); padding: var(--bs-s8) var(--bs-s7); }
+  .partner-lockup { display: flex; align-items: center; gap: var(--bs-s6); padding-bottom: var(--bs-s6); border-bottom: 1px solid var(--bs-hairline); margin-bottom: var(--bs-s6); }
+  .partner-lockup .bs-mark { width: 32px; height: 32px; }
+  .partner-lockup .div { width: 1px; height: 34px; background: var(--bs-hairline-2); }
+  .partner-lockup .lcg { font-family: var(--bs-font-display); font-weight: 700; font-size: 15px; letter-spacing: -.01em; color: var(--bs-text-hi); }
+  .partner-lockup .lcg span { display: block; font-family: var(--bs-font-mono); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--bs-text-lo); margin-top: 3px; }
+  .verified { font-family: var(--bs-font-mono); font-size: 10px; letter-spacing: .08em; color: var(--bs-text-lo); line-height: 1.9; background: var(--bs-surface-2); border: 1px solid var(--bs-hairline); padding: var(--bs-s5); margin-top: var(--bs-s6); }
+  .verified b { color: var(--bs-accent); font-weight: 500; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Партнёрам",
+  "url": "https://blackseaspv.com/ru/partners/",
+  "inLanguage": "ru",
+  "isPartOf": { "@type": "WebSite", "name": "Black Sea", "url": "https://blackseaspv.com/" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://blackseaspv.com/ru/" },
+      { "@type": "ListItem", "position": 2, "name": "Партнёрам", "item": "https://blackseaspv.com/ru/partners/" }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Black Sea",
+  "url": "https://blackseaspv.com/",
+  "inLanguage": "ru",
+  "description": "Black Sea строит и ведёт программу ПОД/ФТ и санкционного комплаенса за лицензией партнёра через два партнёрских трека: реферальный трек без конфликта каналов для юрфирм и советников и трек white-label поставки для фонд-администраторов, корпоративных сервис-провайдеров и трастовых и корпоративных сервис-провайдеров. Только со стороны оператора, фиксированный объём и фиксированная стоимость.",
+  "knowsAbout": [
+    "Программы ПОД/ФТ комплаенса",
+    "Санкционный скрининг",
+    "Аутсорсинг и временный MLRO",
+    "Функция финансовой разведки",
+    "Независимый аудит ПОД/ФТ",
+    "FATF Travel Rule"
+  ]
+}
+</script>
+</head>
+<body data-page="partners" data-path="/partners/">
+<div id="bs-nav"></div>
+
+<header class="hero hero--compact cine" data-name="PARTNERS" style="--cine-img:url('img/frame-corridor.jpg')">
+  <div class="hero-grid-bg"></div>
+  <div class="wrap">
+    <div class="hero-eyebrow"><span class="dot"></span><span class="txt">01 / Партнёрам &nbsp;·&nbsp; Без конфликта по замыслу</span></div>
+    <h1 class="hero-h1">Вы подаёте. <span class="soft">Мы строим.</span></h1>
+    <p class="hero-sub">Мы: тот комплаенс-слой, к которому подключаются другие фирмы. Юристы, фонд-администраторы, корпоративные и трастовые сервис-провайдеры приводят клиента и лицензию. Black Sea строит и ведёт программу ПОД/ФТ и санкционного комплаенса, которая должна стоять за ними. Мы не продаём софт. Мы не берём комиссий. Мы не конкурируем за вашего клиента, ваш мандат или ваш гонорар. Именно это делает реферал чистым, а white-label безопасным.</p>
+    <div class="hero-actions">
+      <a class="bs-btn bs-btn--primary" href="contact.html">Стать партнёром &rarr;</a>
+      <a class="bs-btn bs-btn--ghost" href="method.html">Посмотреть метод &rarr;</a>
+    </div>
+    <div class="trust-strip">
+      <span class="item">Только со стороны оператора</span>
+      <span class="item">Без конфликта каналов</span>
+      <span class="item">Два трека</span>
+      <span class="item">Фиксированный объём</span>
+    </div>
+  </div>
+  <div class="scroll-cue"><i></i> Прокрутить</div>
+  <div class="hero-coords">ТОЛЬКО СО СТОРОНЫ ОПЕРАТОРА</div>
+</header>
+
+<main>
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">02</span><span class="t">Почему партнёру нужны мы</span><span class="line"></span></div>
+    <div class="section-head"><h2 class="display d-big">Лицензия: лёгкая часть. То, что стоит за ней, часть трудная, и это не то, для чего создана ваша фирма.</h2></div>
+    <div class="stance-list">
+      <div class="stance-item"><span class="mk">/</span><span class="tx"><b>Юристы подают. Кто-то всё равно должен построить программу.</b> Заявка на лицензию: работа с документами. Работающая программа ПОД/ФТ и санкционного комплаенса: операционная способность: политики, оценка рисков, скрининг, мониторинг транзакций, ответственное лицо (MLRO), которое реально можно согласовать, и функция финансовой разведки, работающая каждый день. Подача заявки не производит ничего из этого.</span></div>
+      <div class="stance-item"><span class="mk">/</span><span class="tx"><b>Ваш клиент проходит заявку, а потом застревает.</b> Регулятор даёт согласие в принципе, а затем просит показать программу в действии. Именно здесь сделки умирают. И именно здесь начинаем мы.</span></div>
+      <div class="stance-item"><span class="mk">/</span><span class="tx"><b>Вы не хотите нести риск исполнения.</b> Строить комплаенс-программу внутри своей фирмы значит нанимать под неё людей, контролировать её и отвечать за результат, когда регулятор находит пробел. Партнёр, который строит её для вас в фиксированном объёме, снимает этот риск с вашего стола.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">03</span><span class="t">Два способа работать с нами</span><span class="line"></span></div>
+    <div class="section-head"><p class="lede" style="margin-top:0">Выберите полосу, которая подходит вашей фирме. Правила взаимодействия в обеих одинаковы: мы остаёмся со стороны оператора, мы никогда не забегаем вперёд вашего клиента, и каждый проект: фиксированный объём и фиксированная стоимость.</p></div>
+    <div class="track-cards">
+      <a class="track" href="#track-refer"><span class="ix">Track 01</span><span class="lb">Refer</span><span class="ol">Юрфирмы и советники. Вы подаёте, мы строим. Вы сохраняете юридическую работу и отношения. Вы передаёте нам построение комплаенса. Чистый реферал без конфликта в обе стороны.</span><span class="go">Трек Один: подробнее &rarr;</span></a>
+      <a class="track" href="#track-resell"><span class="ix">Track 02</span><span class="lb">Resell</span><span class="ol">Фонд-администраторы, CSP, TCSP. White-label под вашим брендом. Мы строим и ведём программу. Вы поставляете её клиенту под собственным именем. Вашему клиенту не нужно знать, что за этим стоит специалист.</span><span class="go">Трек Два: подробнее &rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">04</span><span class="t">Track 01 // Refer</span><span class="line"></span></div>
+    <div class="track-detail" id="track-refer">
+      <div class="hd"><div class="nm">Юристы подают. Комплаенс строим мы.</div><div class="sf">Для юрфирм, лицензионных консультантов и советников, которые выигрывают мандат на авторизацию клиента, а затем нуждаются в том, кто построит программу, которую регулятор хочет увидеть в работе.</div></div>
+      <div class="body">
+        <div class="c"><div class="k">Как это работает</div><ol>
+          <li>Вы сохраняете юридическую работу: заявку, корпоративную структуру, взаимодействие с регулятором, местное право. Это остаётся полностью за вами.</li>
+          <li>Вы передаёте нам построение комплаенса или привлекаете нас как названного специалиста за вашей спиной. В любом случае мы оцениваем объём и возвращаем смету в течение 48 часов.</li>
+          <li>Мы строим программу: политики, общеорганизационную оценку рисков, дизайн скрининга и мониторинга, назначение MLRO или временное покрытие роли, и функцию финансовой разведки. Фиксированный объём, фиксированная стоимость, без почасовой оплаты.</li>
+          <li>Мы передаём её вам или остаёмся и ведём её. Ваш клиент соблюдает требования и работает. Вы сохраняете отношения и признание заслуги.</li>
+          <li>Рефералы идут в обе стороны. Когда нашим клиентам нужен юрист, чтобы подать, структурировать или проконсультировать по местному праву, мы направляем их к вам.</li>
+        </ol></div>
+        <div class="c"><div class="k">Что вы получаете</div><ul>
+          <li>Команду построения только из старших специалистов, которая делает часть, которую ваша фирма не делает, не конкурируя ни за что из того, что делает ваша фирма.</li>
+          <li>Предложение с фиксированным объёмом и фиксированной стоимостью, которое ваш клиент может утвердить без пустого чека.</li>
+          <li>Двусторонний поток рефералов: работа возвращается к вам, а не перехватывается.</li>
+          <li>Специалиста, которого вы можете назвать регулятору или оставить за кулисами: как вам удобнее.</li>
+          <li>Одну точку контакта, старшего уровня, на всё время проекта.</li>
+        </ul></div>
+      </div>
+      <div class="noconf"><b>Без конфликта по замыслу.</b> Мы не подаём. Мы не даём юридических консультаций. Мы не держим отношения с клиентом. В построении комплаенса нет ничего, что мы могли бы превратить в юридическую работу, которую нам не разрешено вести, поэтому нет причин уводить вашего клиента. Полоса чиста по замыслу.</div>
+    </div>
+    <div style="margin-top:var(--bs-s5)"><a class="bs-btn bs-btn--mono" href="contact.html">Передать построение &rarr;</a></div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">05</span><span class="t">Track 02 // Resell</span><span class="line"></span></div>
+    <div class="track-detail" id="track-resell">
+      <div class="hd"><div class="nm">Перепродавайте наш комплаенс под своим брендом.</div><div class="sf">Для фонд-администраторов, корпоративных сервис-провайдеров и трастовых и корпоративных сервис-провайдеров, которые уже поставляют услугу регулируемым клиентам и хотят добавить убедительную способность в ПОД/ФТ и санкционном комплаенсе, не выстраивая её самостоятельно.</div></div>
+      <div class="body">
+        <div class="c"><div class="k">Как работает white-label</div><ol>
+          <li>Вы подписываете клиента, на своей бумаге, под своим брендом. Коммерческие отношения полностью ваши.</li>
+          <li>Мы строим и ведём программу ПОД/ФТ и санкционного комплаенса за вашей спиной: оценка рисков, политики, скрининг, мониторинг, MLRO или временное покрытие роли, независимый аудит, функция финансовой разведки, Travel Rule (правило перевода) там, где оно применимо.</li>
+          <li>Вы поставляете её клиенту как собственную услугу. Мы работаем под вашим брендом, вашими шаблонами, вашим каналом. Мы не появляемся, пока вы этого не захотите.</li>
+          <li>Фиксированный объём, фиксированная стоимость за проект. Никаких комиссий, никакого разделения выручки по вашему клиенту. Вы устанавливаете свою цену для клиента. Наша цена для вас: смета за построение, ничего сверх того.</li>
+          <li>Вы масштабируете комплаенс-линию без найма, обучения или контроля комплаенс-команды и без риска исполнения, когда регулятор проводит проверку.</li>
+        </ol></div>
+        <div class="c"><div class="k">Что вы получаете</div><ul>
+          <li>White-label программу ПОД/ФТ и санкционного комплаенса, на которую вы можете поставить своё имя, по всем 19 рынкам и 9 секторам, которые мы охватываем.</li>
+          <li>Переливную и специализированную ёмкость: передайте нам проекты, которые не можете укомплектовать, оставьте те, которые можете.</li>
+          <li>Фиксированное ценообразование для вас, чтобы вы защищали собственную маржу и собственную цену для клиента.</li>
+          <li>Исполнение только силами старших специалистов. Работа, которую видит ваш клиент, практикующего уровня (CAMS, ICA), а не поток силами джуниоров.</li>
+          <li>Партнёра, который остаётся невидимым. Мы никогда не связываемся с вашим клиентом, никогда не брендируем работу, никогда не продаём в обход вас.</li>
+        </ul></div>
+      </div>
+      <div class="noconf"><b>Без конфликта по замыслу.</b> Мы не продаём софт, не берём комиссий и не держим собственных отношений с клиентом в вашем канале. У нас нет продукта, который можно было бы допродать вашему клиенту, и нет стимула действовать в обход вас. Клиент и цена ваши. Построение наше. Здесь нет линии, которую мог бы пересечь конфликт.</div>
+    </div>
+    <div style="margin-top:var(--bs-s5)"><a class="bs-btn bs-btn--mono" href="contact.html">Настроить white-label &rarr;</a></div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">06</span><span class="t">Доказательство // подписанное партнёрство</span><span class="line"></span></div>
+    <div class="partner-proof">
+      <div class="partner-lockup">
+        <span class="bs-mark"><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="bs-mark-stroke" cx="50" cy="50" r="38" stroke-width="2.4"/><line class="bs-mark-stroke" x1="12" y1="50" x2="88" y2="50" stroke-width="2.4"/><rect class="bs-mark-square" x="43" y="43" width="14" height="14"/></svg></span>
+        <span class="div"></span>
+        <span class="lcg">Локальные лицензированные партнёры<span>Юридический и комплаенс-профиль</span></span>
+      </div>
+      <h2 class="bs-h2">Подписанные партнёрства с локальными партнёрами.</h2>
+      <p class="lede" style="margin-top:var(--bs-s4)">У Black Sea есть подписанные соглашения о сотрудничестве и партнёрстве с лицензированными локальными юридическими и комплаенс-партнёрами на наших рынках. Партнёрство работает ровно в тех режимах, что описаны на этой странице: white-label поставка, где партнёр выступает лицом, а Black Sea строит, двусторонний реферал и специализированная переливная ёмкость. В каждом режиме партнёр сохраняет свою лицензию, свою юридическую и консультативную роль и своего клиента. Black Sea строит и ведёт операционную программу ПОД/ФТ за ней.</p>
+      <div class="verified">Партнёры: лицензированные локальные юридические и комплаенс-фирмы &nbsp;/&nbsp; Роль: правовая опора на месте &nbsp;/&nbsp; Black Sea строит операционную программу за лицензией партнёра</div>
+      <p class="bs-body-s" style="margin-top:var(--bs-s5)">Это и есть модель. Так мы партнёримся. Партнёр держит лицензию. Мы не лицензированы и не претендуем на это. Мы строим то, что стоит за лицензией. Партнёрство: не единственное живое доказательство. Мы публикуем текущую, датированную серию брифингов, и наш анализ независимо подхватывала казахстанская деловая пресса. Свежее, проверяемое доказательство, без выдуманных партнёрских кейсов.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">07</span><span class="t">Гарантия отсутствия конфликта</span><span class="line"></span></div>
+    <div class="section-head"><p class="lede" style="margin-top:0">Партнёр должен доверять, что мы не станем конкурентом, оказавшись внутри аккаунта. Три структурных факта делают это невозможным, а не просто обещанным.</p></div>
+    <div class="pillars">
+      <div class="pillar"><div class="k">Только со стороны оператора</div><div class="v">Мы всегда строим только программу за чужой лицензией. Мы не подаём, не держим лицензию, не продаём продукт. Нет смежного бизнеса, в который мы могли бы превратить вашего клиента.</div></div>
+      <div class="pillar"><div class="k">Без софта, без комиссий</div><div class="v">Мы ничего не продаём вашему клиенту и не зарабатываем ни от кого, кроме вас или клиента, по фиксированной стоимости. У нас нет вендорского стимула, нет отката, нет продукта, который надо протолкнуть в обход вас.</div></div>
+      <div class="pillar"><div class="k">Проверяющий, а не продавец</div><div class="v">Независимость и есть услуга. В тот момент, когда мы стали бы конкурировать за клиента, исчезла бы независимость, которая делает наш аудит и работу MLRO убедительными. Защита вашей полосы и есть способ защитить нашу собственную ценность.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">08</span><span class="t">Пять линий, ваши для перепродажи или реферала</span><span class="line"></span></div>
+    <div class="practice-grid">
+      <a class="practice-cell" href="what-we-do.html#licensing"><span class="idx">01</span><span class="nm">Лицензирование и построение под новый режим</span><span class="ds">Развернуть полную программу за новой или ожидаемой лицензией.</span><span class="go">Подробнее &rarr;</span></a>
+      <a class="practice-cell" href="what-we-do.html#remediation"><span class="idx">02</span><span class="nm">Ремедиация</span><span class="ds">Исправить программу после меры принуждения или замечания регулятора.</span><span class="go">Подробнее &rarr;</span></a>
+      <a class="practice-cell" href="what-we-do.html#mlro-fiu"><span class="idx">03</span><span class="nm">Аутсорсинг и временный MLRO + финразведка</span><span class="ds">Предоставить согласуемого MLRO и управляемую функцию финансовой разведки.</span><span class="go">Подробнее &rarr;</span></a>
+      <a class="practice-cell" href="what-we-do.html#audit"><span class="idx">04</span><span class="nm">Независимый аудит ПОД/ФТ</span><span class="ds">Протестировать программу как действительно независимый проверяющий.</span><span class="go">Подробнее &rarr;</span></a>
+      <a class="practice-cell" href="what-we-do.html#sanctions-dd"><span class="idx">05</span><span class="nm">Санкции, экспортный контроль и проверка деловой репутации</span><span class="ds">Скрининг, проверки добросовестности и FATF Travel Rule (правило перевода).</span><span class="go">Подробнее &rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="band" style="--band-img:url('img/band.jpg'); min-height:60vh">
+  <div class="band-photo" data-parallax="7"></div>
+  <div class="band-scrim" style="background:linear-gradient(0deg, rgba(10,12,15,.95) 4%, rgba(10,12,15,.4) 52%, rgba(10,12,15,.7) 100%)"></div>
+  <div class="ov"><span class="ct a"></span><span class="ct b"></span><span class="ct c"></span><span class="ct d"></span></div>
+  <div class="band-in">
+    <div class="wrap" style="text-align:center">
+      <h2 class="display d-big" style="max-width:24ch; margin:0 auto">Лицензия: лёгкая часть. Принесите нам то, что стоит за ней.</h2>
+      <div style="font-family:var(--bs-font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--bs-text-lo);margin-top:var(--bs-s5)">Назовите свой трек и живой пример. Смета в течение 48 часов. Без обязательств.</div>
+      <div style="display:flex;gap:var(--bs-s3);flex-wrap:wrap;justify-content:center;margin-top:var(--bs-s6)"><a class="bs-btn bs-btn--primary" href="contact.html">Стать партнёром &rarr;</a>
+          <a class="bs-btn bs-btn--ghost" href="https://cal.com/black-sea/30min" target="_blank" rel="noopener">Записаться на партнёрский звонок &rarr;</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div id="bs-footer"></div>
+<script src="../coverage.js"></script>
+<script src="../site.js"></script>
+</body>
+</html>

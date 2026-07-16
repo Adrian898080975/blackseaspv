@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta name="robots" content="noindex,follow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ПОД/ФТ для VASP и криптофирм | Black Sea</title>
+<meta name="description" content="Программа ПОД/ФТ, санкционного комплаенса и Travel Rule на стороне оператора: построение, ремедиация, MLRO и аудит для VASP и криптофирм на фронтирных рынках и в Персидском заливе.">
+<link rel="canonical" href="https://blackseaspv.com/ru/sector-vasp-crypto.html">
+<link rel="alternate" hreflang="en" href="https://blackseaspv.com/sector-vasp-crypto.html">
+<link rel="alternate" hreflang="ru" href="https://blackseaspv.com/ru/sector-vasp-crypto.html">
+<link rel="alternate" hreflang="x-default" href="https://blackseaspv.com/sector-vasp-crypto.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="../brand.css" rel="stylesheet">
+<link href="../site.css" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Black Sea",
+  "inLanguage": "ru",
+  "description": "Комплаенс ПОД/ФТ, санкций и FATF Travel Rule на стороне оператора для провайдеров услуг в сфере виртуальных активов и криптофирм на фронтирных рынках и в Персидском заливе.",
+  "serviceType": ["Построение программы ПОД/ФТ для VASP", "ремедиация по финансовым преступлениям для крипто", "аутсорсинговый MLRO для VASP", "независимый аудит ПОД/ФТ", "проверка по санкциям и Travel Rule"],
+  "email": "operations@blackseaspv.com",
+  "url": "https://blackseaspv.com/sectors/vasp-crypto/",
+  "sameAs": ["https://blackseabriefings.substack.com"],
+  "areaServed": ["Azerbaijan", "Bahrain", "Egypt", "Georgia", "Ghana", "Jordan", "Kazakhstan", "Kenya", "Kuwait", "Kyrgyzstan", "Nigeria", "Oman", "Pakistan", "Qatar", "Saudi Arabia", "South Africa", "Turkey", "United Arab Emirates", "Uzbekistan"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ru",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Помогаете ли вы VASP получить криптолицензию?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Мы строим программу ПОД/ФТ и санкционного комплаенса, которую лицензия предполагает: оценка рисков, рамка CDD и EDD, дизайн скрининга и мониторинга, решение по Travel Rule и управление. Юристы подают заявку. Мы строим стоящий за ней комплаенс."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какие рынки вы охватываете для крипто?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Все девятнадцать фронтирных рынков и рынков Персидского залива, которые мы обслуживаем, откалиброванные под поименованного регулятора в каждом: от VARA в ОАЭ и AFSA в Казахстане до CMB в Турции и PVARA в Пакистане. Некоторые рынки, например Кувейт, запрещают эту деятельность полностью, и мы говорим об этом до того, как вы потратите средства."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Обеспечиваете ли вы соблюдение Travel Rule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да, от начала до конца: данные об отправителе и получателе собраны, верифицированы и переданы, VASP-контрагент идентифицирован, а случаи разрыва sunrise отработаны задокументированной политикой, а не проигнорированы."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Продаёте ли вы программное обеспечение для скрининга или мониторинга?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет. Мы не продаём программное обеспечение и не берём вознаграждений от поставщиков инструментов, поэтому ничто из того, что мы зарабатываем, не зависит от вывода. Мы проверяющий, а не продавец."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  .load-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--bs-hairline); border: 1px solid var(--bs-hairline); }
+  .load-cell { background: var(--bs-surface); padding: var(--bs-s6) var(--bs-s5); }
+  .load-cell .c { font-family: var(--bs-font-mono); font-size: 11px; letter-spacing: .12em; color: var(--bs-accent); }
+  .load-cell .t { font-family: var(--bs-font-display); font-weight: 700; font-size: 15px; letter-spacing: -.015em; color: var(--bs-text-hi); margin-top: var(--bs-s3); }
+  .load-cell .d { font-family: var(--bs-font-text); font-size: 12.5px; line-height: 1.5; color: var(--bs-text-sub); margin-top: var(--bs-s2); }
+  @media (max-width: 900px){ .load-grid { grid-template-columns: 1fr; } }
+  .checklist { border: 1px solid var(--bs-hairline); }
+  .check-row { display: grid; grid-template-columns: 68px 1fr; gap: 0; border-bottom: 1px solid var(--bs-hairline); }
+  .check-row:last-child { border-bottom: 0; }
+  .check-row .tag { font-family: var(--bs-font-mono); font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--bs-accent); padding: var(--bs-s5); border-right: 1px solid var(--bs-hairline); background: var(--bs-surface-2); }
+  .check-row .tx { padding: var(--bs-s5); font-family: var(--bs-font-text); font-size: 13.5px; line-height: 1.55; color: var(--bs-text); }
+  .svc-map { display: flex; flex-direction: column; border: 1px solid var(--bs-hairline); }
+  .svc-map .row { display: grid; grid-template-columns: 70px 1fr; gap: 0; border-bottom: 1px solid var(--bs-hairline); }
+  .svc-map .row:last-child { border-bottom: 0; }
+  .svc-map .ix { font-family: var(--bs-font-mono); font-size: 12px; letter-spacing: .08em; color: var(--bs-accent); padding: var(--bs-s6) var(--bs-s5); border-right: 1px solid var(--bs-hairline); background: var(--bs-surface); }
+  .svc-map .bd { padding: var(--bs-s6) var(--bs-s6); }
+  .svc-map .bd .nm { font-family: var(--bs-font-display); font-weight: 700; font-size: 16px; letter-spacing: -.015em; color: var(--bs-text-hi); }
+  .svc-map .bd .em { font-family: var(--bs-font-text); font-size: 13px; color: var(--bs-accent); margin: 4px 0 var(--bs-s2); font-weight: 500; }
+  .svc-map .bd .p { font-family: var(--bs-font-text); font-size: 13.5px; line-height: 1.6; color: var(--bs-text-sub); }
+  .anchors, .status-note, .combo-links { border: 1px solid var(--bs-hairline); }
+  .anchor-row { display: grid; grid-template-columns: 140px 1fr; border-bottom: 1px solid var(--bs-hairline); }
+  .anchor-row:last-child { border-bottom: 0; }
+  .anchor-row .c { font-family: var(--bs-font-mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--bs-text-hi); padding: var(--bs-s5); border-right: 1px solid var(--bs-hairline); background: var(--bs-surface-2); }
+  .anchor-row .v { padding: var(--bs-s5); font-family: var(--bs-font-text); font-size: 13.5px; line-height: 1.55; color: var(--bs-text-sub); }
+  .status-note .n { display: grid; grid-template-columns: 150px 1fr; border-bottom: 1px solid var(--bs-hairline); }
+  .status-note .n:last-child { border-bottom: 0; }
+  .status-note .n .k { font-family: var(--bs-font-mono); font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; padding: var(--bs-s5); border-right: 1px solid var(--bs-hairline); }
+  .status-note .n .k.prohibit { color: var(--bs-danger); }
+  .status-note .n .k.dedicated { color: var(--bs-accent); }
+  .status-note .n .k.perimeter { color: var(--bs-warn); }
+  .status-note .n .k.verify { color: var(--bs-text-lo); }
+  .status-note .n .v { padding: var(--bs-s5); font-family: var(--bs-font-text); font-size: 13.5px; line-height: 1.55; color: var(--bs-text); }
+  .combo-cells { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--bs-hairline); border: 1px solid var(--bs-hairline); }
+  .combo-cells a { background: var(--bs-surface); padding: var(--bs-s5); text-decoration: none; transition: background var(--bs-motion) var(--bs-ease); }
+  .combo-cells a:hover { background: var(--bs-surface-2); }
+  .combo-cells a .cc { font-family: var(--bs-font-mono); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--bs-text-lo); }
+  .combo-cells a .cn { font-family: var(--bs-font-display); font-weight: 700; font-size: 14px; letter-spacing: -.01em; color: var(--bs-text-hi); margin-top: 3px; }
+  .combo-cells a:hover .cn { color: var(--bs-accent); }
+  @media (max-width: 820px){ .combo-cells { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 640px){ .anchor-row, .status-note .n, .svc-map .row, .check-row { grid-template-columns: 1fr; } .anchor-row .c, .status-note .n .k, .svc-map .ix, .check-row .tag { border-right: 0; border-bottom: 1px solid var(--bs-hairline); } }
+  .sector-hero-photo { position: absolute; inset: 0; background: url("img/frame-data.jpg") center/cover no-repeat; opacity: .16; filter: grayscale(.4); -webkit-mask-image: radial-gradient(ellipse 80% 70% at 75% 20%, #000 20%, transparent 78%); mask-image: radial-gradient(ellipse 80% 70% at 75% 20%, #000 20%, transparent 78%); }
+</style>
+</head>
+<body data-page="sector" data-path="/sectors/vasp-crypto/">
+<div id="bs-nav"></div>
+
+<header class="hero hero--sector cine" data-name="SECTOR" style="--cine-img:url('img/frame-data.jpg')">
+  <div class="hero-grid-bg"></div>
+  <div class="wrap">
+    <div class="hero-eyebrow"><span class="dot"></span><span class="txt">Сектор 01 / 09 &nbsp;·&nbsp; VASP · Crypto</span></div>
+    <h1 class="hero-h1">Лицензия VASP — это простая часть. <span class="soft">Мы строим то, что стоит за ней.</span></h1>
+    <p class="hero-sub">Провайдеры услуг в сфере виртуальных активов несут одну из самых тяжёлых нагрузок по противодействию финансовым преступлениям во всём регулируемом финансовом секторе, и несут её в режиме реального времени. Black Sea строит, проводит ремедиацию и управляет программой ПОД/ФТ, санкционного комплаенса и Travel Rule, наличие которой лицензия VASP уже подразумевает. Мы проверяющий, а не продавец. Мы не берём комиссий с бирж и не получаем вознаграждений от поставщиков инструментов.</p>
+    <div class="hero-actions">
+      <a class="bs-btn bs-btn--primary" href="contact.html">Получить план со стоимостью &rarr;</a>
+      <a class="bs-btn bs-btn--ghost" href="radar.html">Я в периметре? &rarr;</a>
+    </div>
+    <div class="trust-strip">
+      <span class="item">Сектор VASP / Crypto</span>
+      <span class="item">Охват 19 рынков</span>
+      <span class="item">На стороне оператора</span>
+      <span class="item">Travel Rule от начала до конца</span>
+    </div>
+  </div>
+  <div class="scroll-cue"><i></i> Прокрутить</div>
+  <div class="hero-coords">OPERATIONAL</div>
+</header>
+
+<main>
+<!-- 01b instrument strip: programme-terms marquee + live counts -->
+<div class="marquee" aria-hidden="true"><div class="marquee-track">
+  <span class="mq">CDD / EDD</span><span class="mq">Travel Rule</span><span class="mq">Скрининг кошельков</span><span class="mq">Мониторинг транзакций</span><span class="mq">SAR / STR</span><span class="mq">Источник средств</span><span class="mq">Бенефициарное владение</span><span class="mq">Санкции</span><span class="mq">FATF</span>
+</div></div>
+<section class="section reveal" style="padding-top:clamp(40px,6vh,88px);padding-bottom:0">
+  <div class="wrap">
+    <div class="stat-row">
+      <div class="stat-cell"><div class="num" data-count="6">6</div><div class="lb">Отдельных факторов нагрузки</div></div>
+      <div class="stat-cell"><div class="num" data-count="19">19</div><div class="lb">Обслуживаемых рынков</div></div>
+      <div class="stat-cell"><div class="num" data-count="5">5</div><div class="lb">Направлений услуг</div></div>
+      <div class="stat-cell"><div class="num" data-count="100" data-suffix="%">100%</div><div class="lb">На стороне оператора</div></div>
+    </div>
+  </div>
+</section>
+<!-- 02 operating reality -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">02</span><span class="t">Операционная реальность</span><span class="line"></span></div>
+    <div class="spread">
+      <div class="spread-index">02</div>
+      <div class="spread-body">
+      <p class="lede" style="margin-top:0">Провайдер услуг в сфере виртуальных активов обменивает, переводит, хранит или администрирует криптоактивы, и нередко делает несколько этих вещей одновременно. Обмен, брокеридж, кастоди, стейкинг, ввод и вывод в фиат и обратно, эмиссия и расчёты по стейблкоинам, OTC-дески: каждая из этих операций является отдельным регулируемым видом деятельности, и каждая порождает собственную экспозицию по ПОД/ФТ и санкциям.</p>
+      <p class="bs-body">Нагрузка отличается от банковской по трём причинам, и каждая из них поднимает планку. Расчёт происходит почти мгновенно и необратимо, поэтому контроль, срабатывающий уже после того, как транзакция ушла, не стоит ничего. Контрагентом часто выступает адрес кошелька, а не поименованный институт, поэтому личность и происхождение средств приходится реконструировать по данным блокчейна, а не считывать из записи о корреспонденте. И стоимость перемещается через границы, не считаясь с периметром какого-либо одного регулятора, поэтому VASP в одной юрисдикции регулярно затрагивает поверхность риска десятка других.</p>
+      <p class="bs-body">На этом фоне VASP несёт весь груз рамочных требований: надлежащая проверка клиента (CDD) и установление бенефициарного владения при онбординге, санкционный скрининг по кошельку и по лицу, мониторинг транзакций, откалиброванный под типологии, которые меняются ежемесячно, направление сообщений о подозрительных операциях в местное подразделение финансовой разведки, а также FATF Travel Rule (правило перевода), которое обязывает фирму собирать, верифицировать и передавать данные об отправителе и получателе вместе с переводом. Поверх всего этого ложатся блокчейн-аналитика, отслеживание источника средств и экспозиция к миксерам, мостам и высокорисковым сетям. Это живая программа, а не разовая отчётность.</p>
+      </div>
+      <aside class="spread-aside">
+        <div class="fig">
+          <img src="../img/practice.jpg" alt="">
+          <span class="readout" style="left:12px;bottom:12px;">FIG.02 / LIVE LOAD</span>
+          <span class="ct a"></span><span class="ct b"></span><span class="ct c"></span><span class="ct d"></span>
+        </div>
+        <span class="cap"><span>Программа VASP</span><span>R/01-06</span></span>
+      </aside>
+    </div>
+    <div class="load-grid">
+      <div class="load-cell"><span class="c">R/01</span><div class="t">Личность из блокчейна</div><div class="d">Происхождение реконструируется по адресам, а не по записям о корреспондентах.</div></div>
+      <div class="load-cell"><span class="c">R/02</span><div class="t">Необратимый расчёт</div><div class="d">Контроли должны отработать до того, как стоимость уйдёт, а не после.</div></div>
+      <div class="load-cell"><span class="c">R/03</span><div class="t">Санкции на уровне кошелька</div><div class="d">Скрининг адреса и лица по спискам, которые постоянно меняются.</div></div>
+      <div class="load-cell"><span class="c">R/04</span><div class="t">Travel Rule</div><div class="d">Данные об отправителе и получателе собраны, верифицированы и переданы.</div></div>
+      <div class="load-cell"><span class="c">R/05</span><div class="t">Дрейф типологий</div><div class="d">Правила мониторинга деградируют, если их не перенастраивать.</div></div>
+      <div class="load-cell"><span class="c">R/06</span><div class="t">Трансграничность по умолчанию</div><div class="d">Одна лицензия, поверхности риска множества регуляторов.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 the examination -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">03</span><span class="t">Проверка</span><span class="line"></span></div>
+    <div class="section-head">
+      <h2 class="display d-big">Что проверяет экзаменатор</h2>
+      <p class="lede">Когда регулятор или внешний аудитор читает программу VASP, он читает не политику. Он проверяет, работает ли эта политика на практике. Для данного сектора вопросы конкретны.</p>
+      <p class="bs-body">Действительно ли надлежащая проверка клиента устанавливает бенефициарное владение и срабатывает ли усиленная проверка (EDD) там, где этого требует модель риска. Применяется ли санкционный скрининг к адресам кошельков наравне с именами, проводится ли он по актуальным спискам и может ли фирма документально подтвердить результат скрининга в момент перевода. Откалиброван ли мониторинг транзакций под типологии виртуальных активов, или это универсальный набор правил, приделанный к криптопортфелю. Может ли фирма продемонстрировать соблюдение Travel Rule от начала до конца: данные собраны, VASP-контрагент идентифицирован, информация передана, а случаи разрыва sunrise отработаны задокументированной политикой, а не проигнорированы. Эскалируются ли подозрительные операции, принимаются ли по ним решения и направляются ли они в местное подразделение финансовой разведки (FIU) в обоснованные сроки. И за всем этим: есть ли управленческий след — назначенное ответственное лицо (MLRO), совет директоров, который видит риск, и режим тестирования, который действительно проводился.</p>
+      <p class="bs-body">Проверяющий тестирует доказательства, а не намерения. Программа, которая не может показать результат скрининга, отработанное до конца оповещение мониторинга или вовремя поданное сообщение, — это провальная программа, что бы ни было написано в её регламенте.</p>
+    </div>
+    <div class="checklist">
+      <div class="check-row"><div class="tag">Test</div><div class="tx">CDD и бенефициарное владение установлены, EDD срабатывает по риску.</div></div>
+      <div class="check-row"><div class="tag">Test</div><div class="tx">Санкционный скрининг на уровне кошелька и имени, по актуальным спискам, с подтверждением в момент перевода.</div></div>
+      <div class="check-row"><div class="tag">Test</div><div class="tx">Мониторинг настроен под типологии виртуальных активов, а не под универсальные правила.</div></div>
+      <div class="check-row"><div class="tag">Test</div><div class="tx">Travel Rule от начала до конца, разрывы sunrise отработаны политикой.</div></div>
+      <div class="check-row"><div class="tag">Test</div><div class="tx">Эскалация, решение и подача SAR/STR в обоснованные сроки.</div></div>
+      <div class="check-row"><div class="tag">Test</div><div class="tx">Управление: назначенное ответственное лицо (MLRO), надзор совета директоров, режим тестирования, который проводился.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 the work -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">04</span><span class="t">Работа</span><span class="line"></span></div>
+    <div class="section-head"><p class="lede" style="margin-top:0">Пять направлений услуг, равнозначных по весу. Для VASP каждое из них соответствует конкретной части программы, стоящей за лицензией.</p></div>
+    <div class="svc-map">
+      <div class="row"><div class="ix">S/01</div><div class="bd"><div class="nm">Лицензирование и построение программы для нового режима</div><div class="em">Мы строим комплаенс, который лицензия предполагает.</div><div class="p">Для VASP, подающего заявку в новый режим, мы выстраиваем программу ПОД/ФТ и санкционного комплаенса, которую регулятор ожидает увидеть работающей с первого дня: оценка рисков, рамка CDD и EDD, дизайн скрининга и мониторинга, решение по Travel Rule и управление. Юристы подают заявку. Мы строим то, что она удостоверяет.</div></div></div>
+      <div class="row"><div class="ix">S/02</div><div class="bd"><div class="nm">Ремедиация</div><div class="em">Программа после выявленного нарушения.</div><div class="p">Когда VASP находится в состоянии ремедиации после меры принуждения, неблагоприятного аудита или замечания регулятора, мы перестраиваем неисправные контроли, разбираем накопившийся бэклог и создаём доказательства того, что ремедиация реальна и способна выдержать повторную проверку.</div></div></div>
+      <div class="row"><div class="ix">S/03</div><div class="bd"><div class="nm">Аутсорсинговый и переходный MLRO с управляемой функцией FIU</div><div class="em">Программа как живая функция.</div><div class="p">Мы выполняем роль MLRO — на постоянном аутсорсинге или как переходное решение на время вашего найма — и управляем стоящей за ней функцией финансовой разведки: сортировка оповещений, расследование, отслеживание источника средств и направление сообщений о подозрительных операциях в местное FIU. Назначенное подотчётное ответственное лицо, а не политика на полке.</div></div></div>
+      <div class="row"><div class="ix">S/04</div><div class="bd"><div class="nm">Независимый аудит ПОД/ФТ</div><div class="em">Проверяющий, а не продавец.</div><div class="p">Мы проводим независимый аудит, которого требует рамка VASP, тестируя программу на соответствие местному своду правил и стандартам FATF, и излагаем неудобный вывод прямо. Поскольку мы не продаём программное обеспечение и не берём комиссий, ничто из того, что мы зарабатываем, не зависит от ответа.</div></div></div>
+      <div class="row"><div class="ix">S/05</div><div class="bd"><div class="nm">Санкции, экспортный контроль и проверка на добросовестность, включая Travel Rule</div><div class="em">Скрининг, который выдерживает.</div><div class="p">Мы строим и тестируем санкционный скрининг на уровне кошелька и контрагента, проверку на добросовестность контрагентов и бенефициарных владельцев, а также полное соблюдение FATF Travel Rule по всей цепочке данных об отправителе и получателе.</div></div></div>
+    </div>
+    <div style="margin-top:var(--bs-s6)"><a class="bs-btn bs-btn--ghost" href="method.html">Посмотрите, как мы работаем &rarr;</a></div>
+  </div>
+</section>
+
+<!-- 05 coverage -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">05</span><span class="t">Охват</span><span class="line"></span></div>
+    <div class="section-head">
+      <h2 class="display d-big">На всех 19 рынках</h2>
+      <p class="lede">Мы обслуживаем VASP и криптооператоров на всех девятнадцати фронтирных рынках и в Персидском заливе, равномерно. Ни один рынок не является для нас флагманским, и ни один не находится вне досягаемости. Регулятор, периметр и зрелость режима меняются от одной юрисдикции к другой, и программа, которую мы строим, откалибрована под тот орган, который её действительно будет проверять. Несколько конкретных ориентиров, взятых из проверенной карты регуляторов:</p>
+    </div>
+    <div class="anchors">
+      <div class="anchor-row"><div class="c">ОАЭ</div><div class="v">VARA (Virtual Assets Regulatory Authority, Управление по регулированию виртуальных активов), с ADGM FSRA и DIFC DFSA в финансовых свободных зонах и CMA на федеральном уровне.</div></div>
+      <div class="anchor-row"><div class="c">Казахстан</div><div class="v">AFSA (Astana Financial Services Authority, Комитет МФЦА по регулированию финансовых услуг) внутри МФЦА (AIFC), с AFM (Агентство по финансовому мониторингу) как национальным органом финансового мониторинга.</div></div>
+      <div class="anchor-row"><div class="c">Турция</div><div class="v">CMB / SPK (Capital Markets Board of Türkiye, Совет по рынкам капитала Турции), с MASAK как органом по финансовым преступлениям.</div></div>
+      <div class="anchor-row"><div class="c">Нигерия</div><div class="v">SEC (Securities and Exchange Commission, Комиссия по ценным бумагам и биржам), наряду с CBN (Центральный банк Нигерии).</div></div>
+      <div class="anchor-row"><div class="c">ЮАР</div><div class="v">FSCA (Financial Sector Conduct Authority, Управление по надзору за поведением финансового сектора), с FIC как центром финансовой разведки.</div></div>
+      <div class="anchor-row"><div class="c">Бахрейн</div><div class="v">CBB (Central Bank of Bahrain, Центральный банк Бахрейна).</div></div>
+      <div class="anchor-row"><div class="c">Грузия</div><div class="v">NBG (National Bank of Georgia, Национальный банк Грузии).</div></div>
+      <div class="anchor-row"><div class="c">Пакистан</div><div class="v">PVARA (Pakistan Virtual Assets Regulatory Authority, Управление Пакистана по регулированию виртуальных активов).</div></div>
+    </div>
+    <div class="section-head" style="margin-top:var(--bs-s7)">
+      <p class="lede">Каждый из этих режимов проверяет одну и ту же лежащую в основе программу: проверка клиента, скрининг, мониторинг, отчётность, Travel Rule и управление. Меняется лишь то, кто её проверяет и по какому стандарту. Мы строим под того регулятора, который стоит перед вами. Полная матрица, рынок за рынком:</p>
+    </div>
+    <div class="fit-grid fit-grid--markets">
+      <a class="fit-cell" href="market-azerbaijan.html"><span class="nm">Азербайджан</span><span class="rg">CBAR</span></a>
+      <a class="fit-cell" href="market-bahrain.html"><span class="nm">Бахрейн</span><span class="rg">CBB</span></a>
+      <a class="fit-cell" href="market-egypt.html"><span class="nm">Египет</span><span class="rg">CBE / FRA</span></a>
+      <a class="fit-cell" href="market-georgia.html"><span class="nm">Грузия</span><span class="rg">NBG</span></a>
+      <a class="fit-cell" href="market-ghana.html"><span class="nm">Гана</span><span class="rg">BoG / SEC</span></a>
+      <a class="fit-cell" href="market-jordan.html"><span class="nm">Иордания</span><span class="rg">JSC / CBJ</span></a>
+      <a class="fit-cell" href="market-kazakhstan.html"><span class="nm">Казахстан</span><span class="rg">AFSA / AFM</span></a>
+      <a class="fit-cell" href="market-kenya.html"><span class="nm">Кения</span><span class="rg">CBK / CMA</span></a>
+      <a class="fit-cell" href="market-kuwait.html"><span class="nm">Кувейт</span><span class="rg">ЗАПРЕЩЕНО</span></a>
+      <a class="fit-cell" href="market-kyrgyzstan.html"><span class="nm">Кыргызстан</span><span class="rg">FINNADZOR</span></a>
+      <a class="fit-cell" href="market-nigeria.html"><span class="nm">Нигерия</span><span class="rg">SEC / CBN</span></a>
+      <a class="fit-cell" href="market-oman.html"><span class="nm">Оман</span><span class="rg">FSA / CBO</span></a>
+      <a class="fit-cell" href="market-pakistan.html"><span class="nm">Пакистан</span><span class="rg">PVARA</span></a>
+      <a class="fit-cell" href="market-qatar.html"><span class="nm">Катар</span><span class="rg">QCB / QFCRA</span></a>
+      <a class="fit-cell" href="market-saudi-arabia.html"><span class="nm">Саудовская Аравия</span><span class="rg">SAMA / CMA</span></a>
+      <a class="fit-cell" href="market-south-africa.html"><span class="nm">ЮАР</span><span class="rg">FSCA / FIC</span></a>
+      <a class="fit-cell" href="market-turkey.html"><span class="nm">Турция</span><span class="rg">CMB / MASAK</span></a>
+      <a class="fit-cell" href="market-uae.html"><span class="nm">ОАЭ</span><span class="rg">VARA / FSRA / DFSA</span></a>
+      <a class="fit-cell" href="market-uzbekistan.html"><span class="nm">Узбекистан</span><span class="rg">NAPP</span></a>
+    </div>
+    <div class="cm-hint">Равномерный охват. 19 рынков. Одна программа, откалиброванная под каждого регулятора.</div>
+  </div>
+</section>
+
+<!-- 06 the honest line -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">06</span><span class="t">Честная линия</span><span class="line"></span></div>
+    <div class="section-head">
+      <h2 class="display d-big">Где деятельность ограничена или запрещена</h2>
+      <p class="lede">Мы не делаем вид, что открыт каждый рынок. В некоторых из девятнадцати деятельность с виртуальными активами ограничена или полностью запрещена, и мы скажем вам об этом до того, как вы потратите хоть одну денежную единицу.</p>
+      <p class="bs-body">Кувейт сохраняет абсолютный запрет на деятельность с виртуальными активами. Выделенного регулятора VASP там нет, и лицензии не выдаются: запрет обеспечивается совместно Центральным банком Кувейта, Управлением по рынкам капитала, Регуляторным подразделением по страхованию и Министерством торговли и промышленности. VASP там не может быть лицензирован, и никакая построенная нами программа этого не изменит.</p>
+      <p class="bs-body">В остальных случаях позиция не сводится к чистому «да» или «нет». Несколько рынков имеют выделенные, специально созданные режимы для VASP: например, ОАЭ через VARA, Казахстан через МФЦА (AIFC) и AFSA, Турция через CMB и Пакистан через PVARA. Другие регулируют виртуальные активы через существующий периметр рынка ценных бумаг или центрального банка, а не через специализированный орган, что меняет то, что фирма может делать и как квалифицируется деятельность. В каждом случае мы обосновываем позицию действующей рамкой и поименованным регулятором, и там, где конкретное правило или периметр определяют ваш случай, мы проверяем это у поименованного регулятора для конкретного рынка и вида деятельности, прежде чем консультировать.</p>
+    </div>
+    <div class="status-note">
+      <div class="n"><div class="k prohibit">Prohibited</div><div class="v">Кувейт: абсолютный запрет, лицензии не выдаются.</div></div>
+      <div class="n"><div class="k dedicated">Dedicated regime</div><div class="v">ОАЭ (VARA), Казахстан (AFSA / AIFC), Турция (CMB / SPK), Пакистан (PVARA) и другие.</div></div>
+      <div class="n"><div class="k perimeter">Perimeter-based</div><div class="v">Несколько рынков регулируют виртуальные активы через существующую рамку рынка ценных бумаг или центрального банка.</div></div>
+      <div class="n"><div class="k verify">We verify first</div><div class="v">Лицензионная позиция сверяется с поименованным регулятором, прежде чем мы определяем объём работ.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 market x sector -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">07</span><span class="t">Рынок x сектор</span><span class="line"></span></div>
+    <div class="section-head"><p class="lede" style="margin-top:0">Страница сектора говорит вам, что мы строим. Страницы рынков говорят, кто это проверяет. Несколько комбинаций для VASP:</p></div>
+    <div class="combo-cells">
+      <a href="market-uae-vasp-crypto.html"><span class="cc">VASP в</span><span class="cn">ОАЭ</span></a>
+      <a href="coverage.html"><span class="cc">VASP в</span><span class="cn">Казахстане</span></a>
+      <a href="coverage.html"><span class="cc">VASP в</span><span class="cn">Турции</span></a>
+      <a href="coverage.html"><span class="cc">VASP в</span><span class="cn">Нигерии</span></a>
+      <a href="coverage.html"><span class="cc">VASP в</span><span class="cn">ЮАР</span></a>
+      <a href="coverage.html"><span class="cc">VASP в</span><span class="cn">Бахрейне</span></a>
+      <a href="coverage.html"><span class="cc">VASP в</span><span class="cn">Грузии</span></a>
+      <a href="coverage.html"><span class="cc">VASP в</span><span class="cn">Пакистане</span></a>
+    </div>
+    <div style="margin-top:var(--bs-s6)"><a class="bs-btn bs-btn--ghost" href="coverage.html">Смотреть все рынки и секторы &rarr;</a></div>
+  </div>
+</section>
+
+<!-- 08 proof -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">08</span><span class="t">Доказательства</span><span class="line"></span></div>
+    <div class="proof-fresh">
+      <div class="proof-cell"><span class="k">Партнёрство</span><span class="h">Локальные партнёры</span><span class="p">Лицензированные локальные юридические фирмы и комплаенс-партнёры на наших рынках.</span><a class="go" href="partners.html">Партнёры &rarr;</a></div>
+      <div class="proof-cell"><span class="k">Публикуемая работа</span><span class="h">Серия брифингов</span><span class="p">Постоянная серия по регулированию финансовых преступлений на фронтирных рынках и в Персидском заливе, включая надзор за виртуальными активами.</span><a class="go" href="insights.html">Аналитика &rarr;</a></div>
+      <div class="proof-cell"><span class="k">Квалификации</span><span class="h">CAMS / ICA</span><span class="p">Специалисты с сертификатами, с практическим опытом KYC и финансовой разведки на передовой в команде.</span><a class="go" href="firm.html">О фирме &rarr;</a></div>
+      <div class="proof-cell"><span class="k">Свежие доказательства</span><span class="h">Проверяемо сегодня</span><span class="p">Актуальные датированные свидетельства вместо клиентских рекомендаций. Серия брифингов выходит непрерывно, отслеживая надзор за виртуальными активами по всему региону, и получила упоминания в казахстанской прессе. Без публикуемых имён клиентов и без выдуманных кейсов.</span><a class="go" href="insights.html">Хроника &rarr;</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 engage -->
+<section class="band" style="--band-img:url('img/outro.jpg'); min-height:60vh">
+  <div class="band-photo" data-parallax="7"></div>
+  <div class="band-scrim" style="background:linear-gradient(0deg, rgba(10,12,15,.95) 4%, rgba(10,12,15,.4) 52%, rgba(10,12,15,.7) 100%)"></div>
+  <div class="ov"><span class="ct a"></span><span class="ct b"></span><span class="ct c"></span><span class="ct d"></span></div>
+  <div class="band-in">
+    <div class="wrap" style="text-align:center">
+      <h2 class="display d-big" style="max-width:24ch; margin:0 auto">Лицензия VASP — это простая часть. Мы строим то, что стоит за ней.</h2>
+      <p class="lede" style="max-width:62ch;margin:var(--bs-s5) auto 0">Начните со звонка по определению объёма работ под NDA. Мы картируем программу, которая у вас есть, программу, которую ожидает ваш регулятор, и расстояние между ними, включая вашу позицию по Travel Rule и доказательную базу вашего санкционного скрининга. Вы получаете план с фиксированным объёмом и фиксированной стоимостью в течение 48 часов. Без почасовой оплаты, без счётчика, без обязательств.</p>
+      <div style="font-family:var(--bs-font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--bs-text-lo);margin-top:var(--bs-s5)">Скоуп под NDA. План с фиксированным объёмом в течение 48 часов. Без почасовой оплаты.</div>
+      <div style="display:flex;gap:var(--bs-s3);flex-wrap:wrap;justify-content:center;margin-top:var(--bs-s6)"><a class="bs-btn bs-btn--primary" href="https://cal.com/black-sea/30min" target="_blank" rel="noopener">Записаться на звонок по объёму работ &rarr;</a>
+          <a class="bs-btn bs-btn--ghost" href="contact.html">Получить план со стоимостью &rarr;</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div id="bs-footer"></div>
+<script src="../coverage.js"></script>
+<script src="../site.js"></script>
+</body>
+</html>
