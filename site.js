@@ -38,7 +38,9 @@
     tag: "Лицензия, это простая часть. Мы строим то, что стоит за ней.",
     posture: "Конфиденциально &nbsp;·&nbsp; Операционно &nbsp;·&nbsp; Независимо, без конфликтов, только старшие специалисты",
     disc: "&copy; Black Sea. Без указания местоположения, имён и цен. Это независимая консалтинговая практика.",
-    briefings: "Брифинги", booking: "Запись"
+    briefings: "Брифинги", booking: "Запись",
+    matCorner: "19 рынков / 9 секторов", matMarket: "Рынок", matSector: "Сектор", matOpen: "Открыть комбинацию &rarr;",
+    metaCoverage: "Покрытие 19 / 9", metaTheatre: "Регион: фронтир и Gulf"
   } : {
     whatWeDo: "What we do", method: "Method", coverage: "Coverage", radar: "Radar",
     insights: "Insights", firm: "Firm", partners: "Partners", engagement: "Engagement",
@@ -52,8 +54,20 @@
     tag: "The licence is the easy part. We build what sits behind it.",
     posture: "Confidential &nbsp;·&nbsp; Operational &nbsp;·&nbsp; Independent, conflict-free, senior-only",
     disc: "&copy; Black Sea. No location, no named individuals, no prices. Independent advisory.",
-    briefings: "Briefings", booking: "Booking"
+    briefings: "Briefings", booking: "Booking",
+    matCorner: "19 mkt / 9 sct", matMarket: "Market", matSector: "Sector", matOpen: "Open combination &rarr;",
+    metaCoverage: "Coverage 19 / 9", metaTheatre: "Theatre Frontier &amp; Gulf"
   };
+
+  /* ---- locale name pickers (fall back to English if no RU string) -------- */
+  function nm(x){ return (isRU && x && x.nameRu) ? x.nameRu : (x ? x.name : ""); }
+  function cap(t){ return (isRU && t && t.captionRu) ? t.captionRu : (t ? t.caption : ""); }
+  function mono(x){ return (isRU && x && x.monoRu) ? x.monoRu : (x ? x.mono : ""); }
+  // section-00 ticker labels come from the hero data-name (English on every page)
+  var SECRU = { MARKET:"РЫНОК", SCOPE:"ОХВАТ", SECTOR:"СЕКТОР", SERVICES:"УСЛУГИ", RADAR:"RADAR",
+    PARTNERS:"ПАРТНЁРЫ", OVERVIEW:"ОБЗОР", METHOD:"МЕТОД", LEGAL:"ПРАВОВОЕ", INSIGHTS:"АНАЛИТИКА",
+    FIRM:"ФИРМА", ENGAGE:"ФОРМАТ", COVERAGE:"ПОКРЫТИЕ", CONTACT:"КОНТАКТЫ", TOP:"ОБЗОР" };
+  function secName(v){ if (!v) return ""; return isRU ? (SECRU[v.toUpperCase()] || v) : v; }
 
   /* ---- route <-> local flat file map ------------------------------------ */
   var FILE = {
@@ -164,13 +178,13 @@
   function buildMega(){
     var s = BS.sectors.map(function (x){
       return '<a class="mega-item" href="' + localHref(sectorFile(x.slug)) + '" data-route="/sectors/' + x.slug + '/">'
-        + '<span class="nm">' + x.name + '</span><span class="ds">' + x.mono + "</span></a>";
+        + '<span class="nm">' + nm(x) + '</span><span class="ds">' + mono(x) + "</span></a>";
     }).join("");
     var theatres = BS.theatres.map(function (t){
       var links = t.markets.map(function (m){
-        return '<a href="' + localHref(marketFile(m.slug)) + '" data-route="/markets/' + m.slug + '/">' + m.name + "</a>";
+        return '<a href="' + localHref(marketFile(m.slug)) + '" data-route="/markets/' + m.slug + '/">' + nm(m) + "</a>";
       }).join("");
-      return '<div class="mega-theatre"><div class="cap">' + t.caption + "</div>" + links + "</div>";
+      return '<div class="mega-theatre"><div class="cap">' + cap(t) + "</div>" + links + "</div>";
     }).join("");
     return '<div class="nav-mega" id="mega"><div class="nav-mega-inner">'
       + '<div class="mega-col"><div class="mega-col-h"><span class="lab">' + T.sectors + ' / ' + BS.counts.sectors + '</span><span class="line"></span></div>'
@@ -182,8 +196,8 @@
   }
 
   function buildDrawer(){
-    var secAcc = BS.sectors.map(function (x){ return '<a href="' + localHref(sectorFile(x.slug)) + '">' + x.name + "</a>"; }).join("");
-    var mktAcc = BS.markets.map(function (m){ return '<a href="' + localHref(marketFile(m.slug)) + '">' + m.name + "</a>"; }).join("");
+    var secAcc = BS.sectors.map(function (x){ return '<a href="' + localHref(sectorFile(x.slug)) + '">' + nm(x) + "</a>"; }).join("");
+    var mktAcc = BS.markets.map(function (m){ return '<a href="' + localHref(marketFile(m.slug)) + '">' + nm(m) + "</a>"; }).join("");
     return '<div class="nav-drawer" id="drawer">'
       + A("what-we-do.html", T.whatWeDo) + A("method.html", T.method)
       + '<div class="drawer-acc"><button aria-expanded="false">' + T.coverage + ' <span class="caret"></span></button><div class="body">'
@@ -197,13 +211,13 @@
   /* ---- FOOTER ------------------------------------------------------------ */
   function buildFooter(){
     var svc = BS.services.map(function (x){
-      return '<a href="' + localHref("what-we-do.html") + '#' + x.anchor + '" data-route="/what-we-do/#' + x.anchor + '">' + x.name + "</a>";
+      return '<a href="' + localHref("what-we-do.html") + '#' + x.anchor + '" data-route="/what-we-do/#' + x.anchor + '">' + nm(x) + "</a>";
     }).join("");
     var grid =
       '<div class="footer-grid">'
       + '<div class="footer-col footer-brand"><div class="bs-lockup">' + MARK + WORD + "</div>"
       + '<div class="tag">' + T.tag + '</div>'
-      + '<div class="meta"><span class="m">Coverage 19 / 9</span><span class="m">Theatre Frontier &amp; Gulf</span><span class="m">43.41N 34.33E</span></div></div>'
+      + '<div class="meta"><span class="m">' + T.metaCoverage + '</span><span class="m">' + T.metaTheatre + '</span></div></div>'
       + '<div class="footer-col"><div class="fh">' + T.fhWhatWeDo + '</div>' + svc + "</div>"
       + '<div class="footer-col"><div class="fh">' + T.fhCoverage + '</div>'
       + A("coverage.html", T.coverageHub) + A("coverage.html", T.allSectors) + A("coverage.html", T.allMarkets)
@@ -250,7 +264,7 @@
     // collect sections: hero first, then each .section-tag's parent section
     var secs = [];
     var hero = document.querySelector(".cine, header.hero");
-    if (hero){ if (!hero.id) hero.id = "sec-top"; secs.push({ id: hero.id, n: "00", t: hero.getAttribute("data-name") || "Top" }); }
+    if (hero){ if (!hero.id) hero.id = "sec-top"; secs.push({ id: hero.id, n: "00", t: secName(hero.getAttribute("data-name") || "Top") }); }
     [].forEach.call(document.querySelectorAll(".section-tag"), function (tag){
       var sec = tag.closest(".section") || tag.closest("section"); if (!sec) return;
       var nEl = tag.querySelector(".n"), tEl = tag.querySelector(".t");
@@ -519,27 +533,28 @@
   function buildMatrix(){
     var host = document.getElementById("coverageMatrix");
     if (!host) return;
-    var head = '<thead><tr><th class="cm-corner"><span class="k">19 mkt / 9 sct</span></th>';
-    BS.sectors.forEach(function (s){ head += '<th class="cm-sector-h">' + s.name + "</th>"; });
+    var head = '<thead><tr><th class="cm-corner"><span class="k">' + T.matCorner + '</span></th>';
+    BS.sectors.forEach(function (s){ head += '<th class="cm-sector-h">' + nm(s) + "</th>"; });
     head += "</tr></thead>";
+    var inWord = isRU ? " · " : " in ";
     var rows = BS.markets.map(function (m){
       var tds = BS.sectors.map(function (s){
         var pri = PRIORITY[m.slug + "|" + s.slug] ? " is-priority" : "";
-        return '<td class="cm-cell' + pri + '"><a href="' + localHref(comboFile(m.slug, s.slug)) + '" data-route="/markets/' + m.slug + "/" + s.slug + '/" aria-label="' + s.name + " in " + m.name + '"></a></td>';
+        return '<td class="cm-cell' + pri + '"><a href="' + localHref(comboFile(m.slug, s.slug)) + '" data-route="/markets/' + m.slug + "/" + s.slug + '/" aria-label="' + nm(s) + inWord + nm(m) + '"></a></td>';
       }).join("");
-      return '<tr><th class="cm-market-h"><a href="' + localHref(marketFile(m.slug)) + '" data-route="/markets/' + m.slug + '/">' + m.name + "</a></th>" + tds + "</tr>";
+      return '<tr><th class="cm-market-h"><a href="' + localHref(marketFile(m.slug)) + '" data-route="/markets/' + m.slug + '/">' + nm(m) + "</a></th>" + tds + "</tr>";
     }).join("");
     host.innerHTML = '<table class="cm-table">' + head + "<tbody>" + rows + "</tbody></table>";
 
     // mobile 2-step selector
     var mob = document.getElementById("coverageMatrixMobile");
     if (mob){
-      var mo = BS.markets.map(function (m){ return '<option value="' + m.slug + '">' + m.name + "</option>"; }).join("");
-      var so = BS.sectors.map(function (s){ return '<option value="' + s.slug + '">' + s.name + "</option>"; }).join("");
+      var mo = BS.markets.map(function (m){ return '<option value="' + m.slug + '">' + nm(m) + "</option>"; }).join("");
+      var so = BS.sectors.map(function (s){ return '<option value="' + s.slug + '">' + nm(s) + "</option>"; }).join("");
       mob.innerHTML =
-        '<div class="scope-field"><label>Market</label><select id="cmM">' + mo + "</select></div>"
-        + '<div class="scope-field" style="margin-top:12px"><label>Sector</label><select id="cmS">' + so + "</select></div>"
-        + '<a class="bs-btn bs-btn--primary" id="cmGo" style="margin-top:16px" href="#">Open combination &rarr;</a>';
+        '<div class="scope-field"><label>' + T.matMarket + '</label><select id="cmM">' + mo + "</select></div>"
+        + '<div class="scope-field" style="margin-top:12px"><label>' + T.matSector + '</label><select id="cmS">' + so + "</select></div>"
+        + '<a class="bs-btn bs-btn--primary" id="cmGo" style="margin-top:16px" href="#">' + T.matOpen + '</a>';
       var go = function (){
         var mm = document.getElementById("cmM").value, svv = document.getElementById("cmS").value;
         document.getElementById("cmGo").setAttribute("href", localHref(comboFile(mm, svv)));
