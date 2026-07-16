@@ -9,6 +9,18 @@
 (function () {
   "use strict";
   document.documentElement.classList.add("js");
+
+  /* Cloudflare Web Analytics beacon. The domain is DNS-only to GitHub Pages (Cloudflare does
+     not proxy it), so edge auto-injection cannot fire; install the beacon snippet here so it
+     loads on every page. Cookieless, no consent banner. */
+  (function () {
+    var b = document.createElement("script");
+    b.defer = true;
+    b.src = "https://static.cloudflareinsights.com/beacon.min.js";
+    b.setAttribute("data-cf-beacon", '{"token": "302388cdb807420591a613f27c543bb9"}');
+    (document.head || document.documentElement).appendChild(b);
+  })();
+
   var BS = window.BS;
 
   /* ---- locale-aware chrome labels (EN root, RU under /ru/) --------------- */
