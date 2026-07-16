@@ -424,7 +424,7 @@
 .nav-drawer .drawer-acc .body a { font-family: var(--bs-font-text); font-weight: 400; font-size: 15px; color: var(--bs-text-sub); border-bottom: 0; padding: 7px 0 7px var(--bs-s4); }
 .nav-drawer .drawer-cta { margin-top: var(--bs-s6); }
 @media (max-width: 940px){
-  .nav-links, .nav-lang { display: none; }
+  .nav-links, .nav-lang, .nav-cta { display: none; }
   .nav-burger { display: flex; }
   .nav-mega { display: none; }
 }
