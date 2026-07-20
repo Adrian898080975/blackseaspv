@@ -1,0 +1,17 @@
+{
+  "0": "radar.js",
+  "1": "gen-radar-data.mjs",
+  "2": "gen-sitemap.mjs",
+  "3": "lint-hardrules.mjs",
+  "4": "site.js",
+  "5": "localHref",
+  "6": "gen-canonicals.mjs",
+  "7": "buildMega",
+  "8": "fix-unbuilt-links.mjs",
+  "9": "gen-ru-shell.mjs",
+  "10": "buildMatrix",
+  "11": "gen-built-map.mjs",
+  "12": "coverage.js",
+  "13": "serve.py",
+  "14": "unhold-ru.mjs"
+}

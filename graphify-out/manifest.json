@@ -1,0 +1,632 @@
+{
+  ".claude/launch.json": {
+    "mtime": 1783852984.1471512,
+    "ast_hash": "7faed22866cd208b8abce1f0ed76e664",
+    "semantic_hash": ""
+  },
+  "coverage.js": {
+    "mtime": 1784216912.405168,
+    "ast_hash": "d41fc8456151c581586810052204aa68",
+    "semantic_hash": ""
+  },
+  "radar.js": {
+    "mtime": 1784111102.5518203,
+    "ast_hash": "cfef87b8f2b17110310ab23cf2847250",
+    "semantic_hash": ""
+  },
+  "scripts/fix-unbuilt-links.mjs": {
+    "mtime": 1783870670.7090569,
+    "ast_hash": "9f51f18d111c43f68b6eaa108675d76a",
+    "semantic_hash": ""
+  },
+  "scripts/gen-built-map.mjs": {
+    "mtime": 1783875772.5286503,
+    "ast_hash": "9001ecd289699a6bc7e90eaf349410e2",
+    "semantic_hash": ""
+  },
+  "scripts/gen-canonicals.mjs": {
+    "mtime": 1784131277.520777,
+    "ast_hash": "ff263338b65875f55611ec1436eb285e",
+    "semantic_hash": ""
+  },
+  "scripts/gen-radar-data.mjs": {
+    "mtime": 1784111066.9734259,
+    "ast_hash": "4703c561ead20fccb5971c054da0f3ae",
+    "semantic_hash": ""
+  },
+  "scripts/gen-ru-shell.mjs": {
+    "mtime": 1784092612.7198646,
+    "ast_hash": "17b786ae842e158d45200c2438a1e1c8",
+    "semantic_hash": ""
+  },
+  "scripts/gen-sitemap.mjs": {
+    "mtime": 1784180815.8066282,
+    "ast_hash": "9a28ecb1253f65a0de5674da03a89bcb",
+    "semantic_hash": ""
+  },
+  "scripts/lint-hardrules.mjs": {
+    "mtime": 1784111179.39263,
+    "ast_hash": "df397892519ef331b91b9e8140a96447",
+    "semantic_hash": ""
+  },
+  "scripts/serve.py": {
+    "mtime": 1784045420.007631,
+    "ast_hash": "caffa8eb47f31b3e88a84873161bfaad",
+    "semantic_hash": ""
+  },
+  "scripts/unhold-ru.mjs": {
+    "mtime": 1784180793.261152,
+    "ast_hash": "2b5ef4813cd84803be04f19e275c0cb0",
+    "semantic_hash": ""
+  },
+  "site.js": {
+    "mtime": 1784217000.4016833,
+    "ast_hash": "c1027dc2929d4e6ae396d5b1f4cf06ab",
+    "semantic_hash": ""
+  },
+  "contact.html": {
+    "mtime": 1784146315.017022,
+    "ast_hash": "6185db28433d21ca4c45210d01f0ddb1",
+    "semantic_hash": ""
+  },
+  "coverage.html": {
+    "mtime": 1784131894.7068985,
+    "ast_hash": "c6127917e93d56385f79a517edfc389a",
+    "semantic_hash": ""
+  },
+  "design-index.html": {
+    "mtime": 1784131307.4952877,
+    "ast_hash": "9348f5c7ffa915dc4436dc180fbdea9a",
+    "semantic_hash": ""
+  },
+  "engagement.html": {
+    "mtime": 1784146470.0657103,
+    "ast_hash": "6ddcb2ff800603903722f259120991a1",
+    "semantic_hash": ""
+  },
+  "firm.html": {
+    "mtime": 1784148666.7593942,
+    "ast_hash": "c77e63d94d74a6fc01c2cdba4e87403e",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1784147078.313907,
+    "ast_hash": "a380f0552832a5f9ac785e18425dd7b3",
+    "semantic_hash": ""
+  },
+  "insights.html": {
+    "mtime": 1784148722.388565,
+    "ast_hash": "2b35e96bfcb3cb80423fe8ba3b0e9116",
+    "semantic_hash": ""
+  },
+  "legal.html": {
+    "mtime": 1784131307.563626,
+    "ast_hash": "f2e08625e8f4f6b22cdaa2535753628d",
+    "semantic_hash": ""
+  },
+  "market-azerbaijan.html": {
+    "mtime": 1784148516.1410363,
+    "ast_hash": "c98a5132f684f2c0a4f6e3b29d4353dc",
+    "semantic_hash": ""
+  },
+  "market-bahrain-banks-fis.html": {
+    "mtime": 1784146797.3218944,
+    "ast_hash": "5a7cbb82230e3117a0a90fe1dd179a33",
+    "semantic_hash": ""
+  },
+  "market-bahrain.html": {
+    "mtime": 1784146284.9581733,
+    "ast_hash": "2108fccefb080c5032e4952b1f5b1e14",
+    "semantic_hash": ""
+  },
+  "market-egypt.html": {
+    "mtime": 1784148516.1421123,
+    "ast_hash": "99589304e30635e119bbe604398dd1da",
+    "semantic_hash": ""
+  },
+  "market-georgia.html": {
+    "mtime": 1784146449.7595992,
+    "ast_hash": "510c65a02b5f5574080bdf833e0f4ba1",
+    "semantic_hash": ""
+  },
+  "market-ghana.html": {
+    "mtime": 1784148516.1427448,
+    "ast_hash": "abef52e879242bcc3ea6819969a167af",
+    "semantic_hash": ""
+  },
+  "market-jordan.html": {
+    "mtime": 1784148516.143128,
+    "ast_hash": "2dcd76f8548c04c798e7dd5b7ac6ceb7",
+    "semantic_hash": ""
+  },
+  "market-kazakhstan-banks-fis.html": {
+    "mtime": 1784146940.8229032,
+    "ast_hash": "23920e06de083e9a3e4fb2166f4f9d75",
+    "semantic_hash": ""
+  },
+  "market-kazakhstan-vasp-crypto.html": {
+    "mtime": 1784146912.3862486,
+    "ast_hash": "6eaf20e568ab3cc1fc5abb1ed0c430c3",
+    "semantic_hash": ""
+  },
+  "market-kazakhstan.html": {
+    "mtime": 1784146639.5344121,
+    "ast_hash": "28da72881ed6538bdf210bbcf079636c",
+    "semantic_hash": ""
+  },
+  "market-kenya.html": {
+    "mtime": 1784146624.1070106,
+    "ast_hash": "511d45770b785967913997a471ab0239",
+    "semantic_hash": ""
+  },
+  "market-kuwait-vasp-crypto.html": {
+    "mtime": 1784146924.381608,
+    "ast_hash": "94ed5de6a9b254989cb39451e7919f9d",
+    "semantic_hash": ""
+  },
+  "market-kuwait.html": {
+    "mtime": 1784148516.1450462,
+    "ast_hash": "f8247a1d8e6db8f37ce4d34d4afeff24",
+    "semantic_hash": ""
+  },
+  "market-kyrgyzstan.html": {
+    "mtime": 1784146569.7325745,
+    "ast_hash": "754b00a54309c900e9081b50429b3312",
+    "semantic_hash": ""
+  },
+  "market-nigeria-payments-msb.html": {
+    "mtime": 1784146932.5433311,
+    "ast_hash": "957db69f08c6eec4ab09b780990f40a6",
+    "semantic_hash": ""
+  },
+  "market-nigeria-vasp-crypto.html": {
+    "mtime": 1784146995.5812647,
+    "ast_hash": "6e5da6f8f520b2e4e405967b3be6a3c8",
+    "semantic_hash": ""
+  },
+  "market-nigeria.html": {
+    "mtime": 1784146656.3827207,
+    "ast_hash": "126c9ef4fbceb8ece3f337e1363efd59",
+    "semantic_hash": ""
+  },
+  "market-oman.html": {
+    "mtime": 1784148516.1461964,
+    "ast_hash": "bdad99967326522cbaac2dfd8c2aedf5",
+    "semantic_hash": ""
+  },
+  "market-pakistan.html": {
+    "mtime": 1784146676.0579553,
+    "ast_hash": "f8b5766404f706544dd224a3b8441bae",
+    "semantic_hash": ""
+  },
+  "market-qatar-funds-csp.html": {
+    "mtime": 1784146973.7410793,
+    "ast_hash": "df65ff39b298ccb544bdf083311f04ce",
+    "semantic_hash": ""
+  },
+  "market-qatar.html": {
+    "mtime": 1784148516.1471589,
+    "ast_hash": "e24bce0d7153aacb3a8569ce29a939da",
+    "semantic_hash": ""
+  },
+  "market-saudi-arabia-payments-msb.html": {
+    "mtime": 1784146995.6212418,
+    "ast_hash": "2bdd78fb4f0a37533c021e8992b84a00",
+    "semantic_hash": ""
+  },
+  "market-saudi-arabia.html": {
+    "mtime": 1784146799.4536161,
+    "ast_hash": "5db597594037ec6ac4f72ed9f54184b1",
+    "semantic_hash": ""
+  },
+  "market-south-africa-vasp-crypto.html": {
+    "mtime": 1784146996.6962311,
+    "ast_hash": "d2cc446972f39931da26bc12f4873f56",
+    "semantic_hash": ""
+  },
+  "market-south-africa.html": {
+    "mtime": 1784148516.1479568,
+    "ast_hash": "4a2e894d4e284aadd35526e2ffeb9e70",
+    "semantic_hash": ""
+  },
+  "market-turkey-vasp-crypto.html": {
+    "mtime": 1784147046.2828703,
+    "ast_hash": "69b61553f707f591dd08300408102aa7",
+    "semantic_hash": ""
+  },
+  "market-turkey.html": {
+    "mtime": 1784146934.878122,
+    "ast_hash": "2e33b8e9ed03ff800331393dbcc2bf99",
+    "semantic_hash": ""
+  },
+  "market-uae-funds-csp.html": {
+    "mtime": 1784147044.9243686,
+    "ast_hash": "ae91f64115429d9ed7b998072066a3c4",
+    "semantic_hash": ""
+  },
+  "market-uae-payments-msb.html": {
+    "mtime": 1784147089.6179643,
+    "ast_hash": "6864b4e501962252a6d72a3d831e7224",
+    "semantic_hash": ""
+  },
+  "market-uae-vasp-crypto.html": {
+    "mtime": 1784147035.972101,
+    "ast_hash": "14a2e9e79b35ee871cc54d224327aeaf",
+    "semantic_hash": ""
+  },
+  "market-uae.html": {
+    "mtime": 1784148516.1493387,
+    "ast_hash": "e7d64e435239b0cd7fc5130d32178a7c",
+    "semantic_hash": ""
+  },
+  "market-uzbekistan.html": {
+    "mtime": 1784146856.4375865,
+    "ast_hash": "4ae50a12a83b28dd8b2158c0e20f933b",
+    "semantic_hash": ""
+  },
+  "method.html": {
+    "mtime": 1784146671.1155846,
+    "ast_hash": "e50da7f82dcfd0607b7302fa2bf10067",
+    "semantic_hash": ""
+  },
+  "partners.html": {
+    "mtime": 1784178874.2934155,
+    "ast_hash": "3e5797e82c59445c47dba642c8183265",
+    "semantic_hash": ""
+  },
+  "radar.html": {
+    "mtime": 1784131723.5380814,
+    "ast_hash": "5076c8047651cf7b0a76da2662d11b0f",
+    "semantic_hash": ""
+  },
+  "robots.txt": {
+    "mtime": 1784131293.9194689,
+    "ast_hash": "d48d847f7419bc398d8f1be53cb1d99d",
+    "semantic_hash": ""
+  },
+  "ru/contact.html": {
+    "mtime": 1784181653.2385256,
+    "ast_hash": "d2ad5114d604df7a05fc32a472229602",
+    "semantic_hash": ""
+  },
+  "ru/coverage.html": {
+    "mtime": 1784181653.2401695,
+    "ast_hash": "db6b83fdf6af8525686617e848d91348",
+    "semantic_hash": ""
+  },
+  "ru/engagement.html": {
+    "mtime": 1784181653.2420015,
+    "ast_hash": "917ceedde32037334852c76e6780611b",
+    "semantic_hash": ""
+  },
+  "ru/firm.html": {
+    "mtime": 1784181653.2428348,
+    "ast_hash": "731ef47e1937cb19efd4c89044a40b4b",
+    "semantic_hash": ""
+  },
+  "ru/index.html": {
+    "mtime": 1784181653.2441647,
+    "ast_hash": "ce09a13186fc9cac791503480d595ec4",
+    "semantic_hash": ""
+  },
+  "ru/insights.html": {
+    "mtime": 1784181653.244956,
+    "ast_hash": "1a2e00d485ae83689dd478d8e01a8c5e",
+    "semantic_hash": ""
+  },
+  "ru/legal.html": {
+    "mtime": 1784181653.2456903,
+    "ast_hash": "d8baf69c929708df2759000849dd1910",
+    "semantic_hash": ""
+  },
+  "ru/market-azerbaijan.html": {
+    "mtime": 1784181653.2465951,
+    "ast_hash": "52c45a208d9e73c119f12ba26c1e40fc",
+    "semantic_hash": ""
+  },
+  "ru/market-bahrain-banks-fis.html": {
+    "mtime": 1784181653.247508,
+    "ast_hash": "5fd301e1cd550a0c0dfd3c8e26c92595",
+    "semantic_hash": ""
+  },
+  "ru/market-bahrain.html": {
+    "mtime": 1784181653.2484386,
+    "ast_hash": "106e25a6f337c5d6f836d92d849de05a",
+    "semantic_hash": ""
+  },
+  "ru/market-egypt.html": {
+    "mtime": 1784181653.2502048,
+    "ast_hash": "2340dc5bcff66158afa48b8ba07423b9",
+    "semantic_hash": ""
+  },
+  "ru/market-georgia.html": {
+    "mtime": 1784181653.2512612,
+    "ast_hash": "9c2c84d9ae0cdda075fe66acce5b4106",
+    "semantic_hash": ""
+  },
+  "ru/market-ghana.html": {
+    "mtime": 1784181653.2520697,
+    "ast_hash": "47fc015bc751afca9b3a16a3402bdf7e",
+    "semantic_hash": ""
+  },
+  "ru/market-jordan.html": {
+    "mtime": 1784181653.2527733,
+    "ast_hash": "3ac76f84d2d054f4266042175ce30c28",
+    "semantic_hash": ""
+  },
+  "ru/market-kazakhstan-banks-fis.html": {
+    "mtime": 1784181653.253351,
+    "ast_hash": "f79b2037b6b850d37b7c327d3e74a774",
+    "semantic_hash": ""
+  },
+  "ru/market-kazakhstan-vasp-crypto.html": {
+    "mtime": 1784181653.253844,
+    "ast_hash": "4968fca1cd8e2994a324b82c1b68ac90",
+    "semantic_hash": ""
+  },
+  "ru/market-kazakhstan.html": {
+    "mtime": 1784181653.2543573,
+    "ast_hash": "fdd1a2473fbd3f41422e38351cc9ad20",
+    "semantic_hash": ""
+  },
+  "ru/market-kenya.html": {
+    "mtime": 1784181653.2551672,
+    "ast_hash": "2082f40eefd3c16eb4d1aa4ca03ebaee",
+    "semantic_hash": ""
+  },
+  "ru/market-kuwait-vasp-crypto.html": {
+    "mtime": 1784181653.255685,
+    "ast_hash": "8791da05122dc478345fec897e0f8fb2",
+    "semantic_hash": ""
+  },
+  "ru/market-kuwait.html": {
+    "mtime": 1784181653.2568648,
+    "ast_hash": "cfc4bd01aab681a0b24737daab2babd8",
+    "semantic_hash": ""
+  },
+  "ru/market-kyrgyzstan.html": {
+    "mtime": 1784181653.2579596,
+    "ast_hash": "32f1d96c2ca93eb96158af1348665031",
+    "semantic_hash": ""
+  },
+  "ru/market-nigeria-payments-msb.html": {
+    "mtime": 1784181653.2586024,
+    "ast_hash": "95dcf4d090856f6a75c76869a3fad939",
+    "semantic_hash": ""
+  },
+  "ru/market-nigeria-vasp-crypto.html": {
+    "mtime": 1784181653.2591324,
+    "ast_hash": "777266ed49bc475895e38eadc7d62b33",
+    "semantic_hash": ""
+  },
+  "ru/market-nigeria.html": {
+    "mtime": 1784181653.2599502,
+    "ast_hash": "b02c57177f320b716a49703a15aeabbe",
+    "semantic_hash": ""
+  },
+  "ru/market-oman.html": {
+    "mtime": 1784181653.2607307,
+    "ast_hash": "f0721a283bb5a2b52a948119494fccc4",
+    "semantic_hash": ""
+  },
+  "ru/market-pakistan.html": {
+    "mtime": 1784181653.2613616,
+    "ast_hash": "fb29028de262027aefdfbdb32d9e93c8",
+    "semantic_hash": ""
+  },
+  "ru/market-qatar-funds-csp.html": {
+    "mtime": 1784181653.261904,
+    "ast_hash": "10b575516822de5058bfb032e471210d",
+    "semantic_hash": ""
+  },
+  "ru/market-qatar.html": {
+    "mtime": 1784181653.2625978,
+    "ast_hash": "28783416c17a13574771c3c280445b33",
+    "semantic_hash": ""
+  },
+  "ru/market-saudi-arabia-payments-msb.html": {
+    "mtime": 1784181653.2631388,
+    "ast_hash": "aeafc94f9be96a21c5496f043feb152d",
+    "semantic_hash": ""
+  },
+  "ru/market-saudi-arabia.html": {
+    "mtime": 1784181653.2637947,
+    "ast_hash": "de287c3781e866901a014b3fa49f0e60",
+    "semantic_hash": ""
+  },
+  "ru/market-south-africa-vasp-crypto.html": {
+    "mtime": 1784181653.2642322,
+    "ast_hash": "1acb2e6cb246f10d2bce1ab77b1112ba",
+    "semantic_hash": ""
+  },
+  "ru/market-south-africa.html": {
+    "mtime": 1784181653.2652147,
+    "ast_hash": "23868e5eeae7f8e53916528de6737d8b",
+    "semantic_hash": ""
+  },
+  "ru/market-turkey-vasp-crypto.html": {
+    "mtime": 1784181653.265801,
+    "ast_hash": "86174516185e9b67e0d3fc700c8128f1",
+    "semantic_hash": ""
+  },
+  "ru/market-turkey.html": {
+    "mtime": 1784181653.2668717,
+    "ast_hash": "8d6f8f196798336ad6824dc5f554c427",
+    "semantic_hash": ""
+  },
+  "ru/market-uae-funds-csp.html": {
+    "mtime": 1784181653.2674978,
+    "ast_hash": "954b4e31a42b5b2cbf9a29fc31a844c3",
+    "semantic_hash": ""
+  },
+  "ru/market-uae-payments-msb.html": {
+    "mtime": 1784181653.2683957,
+    "ast_hash": "19bd099dbbe48258d23d425710fca934",
+    "semantic_hash": ""
+  },
+  "ru/market-uae-vasp-crypto.html": {
+    "mtime": 1784181653.268937,
+    "ast_hash": "fa0dc021054b5d242473bc9f0ddedf1b",
+    "semantic_hash": ""
+  },
+  "ru/market-uae.html": {
+    "mtime": 1784181653.2694001,
+    "ast_hash": "1a22a56cabae86a852725681d33664d1",
+    "semantic_hash": ""
+  },
+  "ru/market-uzbekistan.html": {
+    "mtime": 1784181653.2699955,
+    "ast_hash": "ef15973658d5873ed6dcce48774bdd63",
+    "semantic_hash": ""
+  },
+  "ru/method.html": {
+    "mtime": 1784181653.270489,
+    "ast_hash": "be2e803a20122b293e710069c2d4eb6a",
+    "semantic_hash": ""
+  },
+  "ru/partners.html": {
+    "mtime": 1784181653.2710268,
+    "ast_hash": "54ab054b48e72abe2a4878138d06ab28",
+    "semantic_hash": ""
+  },
+  "ru/radar.html": {
+    "mtime": 1784181653.2722104,
+    "ast_hash": "1f36c8683927751358734878d7228404",
+    "semantic_hash": ""
+  },
+  "ru/sector-art-high-value.html": {
+    "mtime": 1784181653.27276,
+    "ast_hash": "d743cffec0ff820f89dc1fc62db43048",
+    "semantic_hash": ""
+  },
+  "ru/sector-banks-fis.html": {
+    "mtime": 1784181653.2737029,
+    "ast_hash": "f6ff205d72f62f3ccd3c3fe2e3f64126",
+    "semantic_hash": ""
+  },
+  "ru/sector-defense-dual-use.html": {
+    "mtime": 1784181653.2745159,
+    "ast_hash": "b8adf7d9f63c6bfd5a95aff1cebdf5e4",
+    "semantic_hash": ""
+  },
+  "ru/sector-funds-csp.html": {
+    "mtime": 1784181653.2754338,
+    "ast_hash": "eb85a7041568919db9b55b5505b6bab6",
+    "semantic_hash": ""
+  },
+  "ru/sector-gaming.html": {
+    "mtime": 1784181653.2763357,
+    "ast_hash": "fa318a604fef7ea5928f531f3dcdae79",
+    "semantic_hash": ""
+  },
+  "ru/sector-gold-dpms.html": {
+    "mtime": 1784181653.2771084,
+    "ast_hash": "eebf0a9fee5e393a78622e56fcd36086",
+    "semantic_hash": ""
+  },
+  "ru/sector-payments-msb.html": {
+    "mtime": 1784181653.2778814,
+    "ast_hash": "1f7fb4b08a655401f677e888519103b0",
+    "semantic_hash": ""
+  },
+  "ru/sector-real-estate-dnfbp.html": {
+    "mtime": 1784181653.2794304,
+    "ast_hash": "8579652dbb40511405e707f9fa1585f5",
+    "semantic_hash": ""
+  },
+  "ru/sector-vasp-crypto.html": {
+    "mtime": 1784181653.2801416,
+    "ast_hash": "9dc2b6b2dcc6481a7967a9cf2aa5ec2c",
+    "semantic_hash": ""
+  },
+  "ru/what-we-do.html": {
+    "mtime": 1784181653.2808192,
+    "ast_hash": "19b174fdf5ae8f950db3c54bafca5a7b",
+    "semantic_hash": ""
+  },
+  "sector-art-high-value.html": {
+    "mtime": 1784147209.3240354,
+    "ast_hash": "972c49e40359cbdd4ea09b3c0f9a632a",
+    "semantic_hash": ""
+  },
+  "sector-banks-fis.html": {
+    "mtime": 1784147125.36035,
+    "ast_hash": "97d7ffdbd6efa9b0d302c096a94567bb",
+    "semantic_hash": ""
+  },
+  "sector-defense-dual-use.html": {
+    "mtime": 1784147122.2499774,
+    "ast_hash": "b292470057b58f315a4b51aab5b2bc4f",
+    "semantic_hash": ""
+  },
+  "sector-funds-csp.html": {
+    "mtime": 1784147144.9927402,
+    "ast_hash": "1ff78aadda3b8b32b4ea79b65be03f2e",
+    "semantic_hash": ""
+  },
+  "sector-gaming.html": {
+    "mtime": 1784147157.766399,
+    "ast_hash": "6a7c14d6c2b6f05166ae061346d24389",
+    "semantic_hash": ""
+  },
+  "sector-gold-dpms.html": {
+    "mtime": 1784147226.0380638,
+    "ast_hash": "1020329f4ea9ce7d896b0b54b01a9228",
+    "semantic_hash": ""
+  },
+  "sector-payments-msb.html": {
+    "mtime": 1784147280.1675818,
+    "ast_hash": "c3453423ec6e49d193a7e0547c27caa5",
+    "semantic_hash": ""
+  },
+  "sector-real-estate-dnfbp.html": {
+    "mtime": 1784147296.7291033,
+    "ast_hash": "dfb5407cedfb5ee99cd4291bde439480",
+    "semantic_hash": ""
+  },
+  "sector-vasp-crypto.html": {
+    "mtime": 1784147329.0252135,
+    "ast_hash": "c15704af7fac7b34f282f9a64f346041",
+    "semantic_hash": ""
+  },
+  "what-we-do.html": {
+    "mtime": 1784178663.984975,
+    "ast_hash": "d03b1b5d0d46f9c1ace52346bb489184",
+    "semantic_hash": ""
+  },
+  "img/band.jpg": {
+    "mtime": 1783852478.4627147,
+    "ast_hash": "6c67cf39bb501d618ce559fa272dddc7",
+    "semantic_hash": ""
+  },
+  "img/frame-corridor.jpg": {
+    "mtime": 1783852478.4646015,
+    "ast_hash": "38a6b65eb303d12f9b176937efe1510f",
+    "semantic_hash": ""
+  },
+  "img/frame-data.jpg": {
+    "mtime": 1783852478.4652328,
+    "ast_hash": "d0f26f0abebf5a9f0e691a6061486f60",
+    "semantic_hash": ""
+  },
+  "img/frame-sea.jpg": {
+    "mtime": 1783852478.466294,
+    "ast_hash": "f34a6a68f78076dc8946314c83382d80",
+    "semantic_hash": ""
+  },
+  "img/hero.jpg": {
+    "mtime": 1783852478.463726,
+    "ast_hash": "e7ab6b5e4fdbb5e828cd948626a39fd4",
+    "semantic_hash": ""
+  },
+  "img/outro.jpg": {
+    "mtime": 1783852478.465777,
+    "ast_hash": "3324873c0e201338f0f3ff7fd0e1508b",
+    "semantic_hash": ""
+  },
+  "img/practice.jpg": {
+    "mtime": 1783852478.4622197,
+    "ast_hash": "4147f786e542b84b1ffcca8d485cdfba",
+    "semantic_hash": ""
+  }
+}

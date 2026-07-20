@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIFC AML Readiness Check | Black Sea</title>
+<meta name="description" content="A two-minute, honest self-check for AIFC-regulated firms against eight core obligations of the AIFC AML/CFT and Sanctions Rules. See where your programme has gaps. No sign-up.">
+<link rel="canonical" href="https://blackseaspv.com/aifc-readiness.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Black Sea">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="AIFC AML Readiness Check | Black Sea">
+<meta property="og:description" content="A two-minute, honest self-check for AIFC-regulated firms against eight core obligations of the AIFC AML/CFT and Sanctions Rules. See where your programme has gaps. No sign-up.">
+<meta property="og:url" content="https://blackseaspv.com/aifc-readiness.html">
+<meta property="og:image" content="https://blackseaspv.com/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AIFC AML Readiness Check | Black Sea">
+<meta name="twitter:description" content="A two-minute, honest self-check for AIFC-regulated firms against eight core obligations of the AIFC AML/CFT and Sanctions Rules. See where your programme has gaps. No sign-up.">
+<meta name="twitter:image" content="https://blackseaspv.com/img/og.jpg">
+<link rel="alternate" hreflang="en" href="https://blackseaspv.com/aifc-readiness.html">
+<link rel="alternate" hreflang="ru" href="https://blackseaspv.com/ru/aifc-readiness.html">
+<link rel="alternate" hreflang="x-default" href="https://blackseaspv.com/aifc-readiness.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://blackseaspv.com/" },
+    { "@type": "ListItem", "position": 2, "name": "AIFC AML Readiness Check", "item": "https://blackseaspv.com/aifc-readiness.html" }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="brand.css" rel="stylesheet">
+<link href="site.css" rel="stylesheet">
+<style>
+  .rc-wrap { max-width: 820px; }
+  .rc-meta { display: flex; flex-wrap: wrap; gap: var(--bs-s3); margin-bottom: var(--bs-s7); }
+  .rc-meta .chip { font-family: var(--bs-font-mono); font-size: 11px; letter-spacing: .04em; color: var(--bs-text-sub); border: 1px solid var(--bs-hairline); padding: 6px 10px; }
+  .rc-progress { position: sticky; top: 66px; z-index: 5; background: var(--bs-bg); border: 1px solid var(--bs-hairline); padding: var(--bs-s4) var(--bs-s5); margin-bottom: var(--bs-s6); display: flex; align-items: center; justify-content: space-between; gap: var(--bs-s4); }
+  .rc-progress .lab { font-family: var(--bs-font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--bs-text-lo); }
+  .rc-progress .bar { flex: 1; height: 4px; background: var(--bs-hairline); position: relative; }
+  .rc-progress .bar i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--bs-accent); transition: width var(--bs-motion) var(--bs-ease); }
+  .rc-progress .ct { font-family: var(--bs-font-mono); font-size: 12px; color: var(--bs-text-hi); min-width: 42px; text-align: right; }
+  .rc-q { border: 1px solid var(--bs-hairline); border-left: 2px solid var(--bs-hairline); padding: var(--bs-s6); margin-bottom: var(--bs-s5); transition: border-color var(--bs-motion) var(--bs-ease); }
+  .rc-q.answered { border-left-color: var(--bs-accent); }
+  .rc-q .qn { font-family: var(--bs-font-mono); font-size: 11px; letter-spacing: .1em; color: var(--bs-accent); }
+  .rc-q .rule { font-family: var(--bs-font-mono); font-size: 10.5px; color: var(--bs-text-lo); margin-top: 4px; }
+  .rc-q .qt { font-family: var(--bs-font-display); font-weight: 700; font-size: 17px; line-height: 1.4; letter-spacing: -.01em; color: var(--bs-text-hi); margin: var(--bs-s3) 0 var(--bs-s5); }
+  .rc-opt { display: block; border: 1px solid var(--bs-hairline); padding: var(--bs-s4) var(--bs-s5); margin-bottom: var(--bs-s3); cursor: pointer; transition: border-color var(--bs-motion) var(--bs-ease), background var(--bs-motion) var(--bs-ease); font-family: var(--bs-font-text); font-size: 13.5px; line-height: 1.55; color: var(--bs-text-sub); }
+  .rc-opt:hover { border-color: var(--bs-hairline-2); }
+  .rc-opt.sel { border-color: var(--bs-accent); background: var(--bs-surface); color: var(--bs-text-hi); }
+  .rc-opt input { position: absolute; opacity: 0; pointer-events: none; }
+  .rc-opt .lv { font-family: var(--bs-font-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--bs-text-lo); display: block; margin-bottom: 3px; }
+  .rc-actions { display: flex; gap: var(--bs-s4); align-items: center; flex-wrap: wrap; margin-top: var(--bs-s6); }
+  .rc-note { font-family: var(--bs-font-text); font-size: 12px; color: var(--bs-text-lo); }
+  .rc-result { border: 1px solid var(--bs-accent); padding: var(--bs-s7); margin-top: var(--bs-s7); scroll-margin-top: 120px; }
+  .rc-result .rh { font-family: var(--bs-font-display); font-weight: 800; font-size: 22px; letter-spacing: -.02em; color: var(--bs-text-hi); margin: 0 0 var(--bs-s2); }
+  .rc-result .rs { font-family: var(--bs-font-text); font-size: 14px; line-height: 1.6; color: var(--bs-text-sub); margin: 0 0 var(--bs-s5); }
+  .rc-tally { display: flex; gap: 1px; background: var(--bs-hairline); border: 1px solid var(--bs-hairline); margin-bottom: var(--bs-s6); }
+  .rc-tally .c { flex: 1; background: var(--bs-surface); padding: var(--bs-s5); text-align: center; }
+  .rc-tally .c .n { font-family: var(--bs-font-display); font-weight: 800; font-size: 28px; color: var(--bs-text-hi); }
+  .rc-tally .c .l { font-family: var(--bs-font-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--bs-text-lo); margin-top: 4px; }
+  .rc-gap { border-top: 1px solid var(--bs-hairline); padding: var(--bs-s5) 0; }
+  .rc-gap .gt { font-family: var(--bs-font-display); font-weight: 700; font-size: 15px; color: var(--bs-text-hi); display: flex; justify-content: space-between; gap: var(--bs-s4); }
+  .rc-gap .gt .tag { font-family: var(--bs-font-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; padding: 2px 7px; border: 1px solid var(--bs-hairline); color: var(--bs-text-sub); white-space: nowrap; }
+  .rc-gap .grule { font-family: var(--bs-font-mono); font-size: 10.5px; color: var(--bs-text-lo); margin: 4px 0 var(--bs-s3); }
+  .rc-gap p { font-family: var(--bs-font-text); font-size: 13px; line-height: 1.65; color: var(--bs-text-sub); margin: 0 0 var(--bs-s3); }
+  .rc-disc { font-family: var(--bs-font-text); font-size: 12px; line-height: 1.6; color: var(--bs-text-lo); border: 1px solid var(--bs-hairline); padding: var(--bs-s5); }
+  .rc-disc a { color: var(--bs-text-sub); }
+</style>
+</head>
+<body data-page="aifc-readiness" data-path="/aifc-readiness/">
+<div id="bs-nav"></div>
+
+<header class="hero hero--compact cine" data-name="AIFC" style="--cine-img:url('img/frame-sea.jpg')">
+  <div class="hero-grid-bg"></div>
+  <div class="wrap">
+    <div class="hero-eyebrow"><span class="dot"></span><span class="txt">Astana International Financial Centre / AFSA</span></div>
+    <h1 class="hero-h1">AIFC AML readiness check.</h1>
+    <p class="hero-sub">Eight questions, two minutes, no sign-up. An honest self-read of your AML programme against the core obligations of the AIFC AML, CFT and Sanctions Rules. You see exactly where the gaps are, and the rule behind each one.</p>
+    <div class="trust-strip">
+      <span class="item">8 core obligations</span>
+      <span class="item">Cited to the Rules</span>
+      <span class="item">No data stored</span>
+      <span class="item">Answers stay in your browser</span>
+    </div>
+  </div>
+  <div class="hero-coords">SELF-ASSESSMENT</div>
+</header>
+
+<main>
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">01</span><span class="t">The check</span><span class="line"></span></div>
+    <div class="rc-wrap">
+      <div class="rc-meta">
+        <span class="chip">Framework in force since 1 January 2025</span>
+        <span class="chip">For AIFC Relevant Persons</span>
+        <span class="chip">Honest scoring, no scare figures</span>
+      </div>
+
+      <div class="rc-progress">
+        <span class="lab">Progress</span>
+        <span class="bar"><i id="rcBar"></i></span>
+        <span class="ct" id="rcCount">0 / 8</span>
+      </div>
+
+      <form id="rcForm"></form>
+
+      <div class="rc-actions">
+        <button type="button" id="rcSubmit" class="bs-btn bs-btn--primary">See my read &rarr;</button>
+        <span class="rc-note">Nothing is sent anywhere. The read is built in your browser from your own answers.</span>
+      </div>
+
+      <div id="rcResult" class="rc-result" hidden></div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-tag"><span class="n">02</span><span class="t">How to read it</span><span class="line"></span></div>
+    <div class="rc-wrap">
+      <div class="rc-disc">
+        <p style="margin-top:0"><b>What this is.</b> A structured self-assessment against eight obligations that sit at the centre of the AIFC AML, CFT and Sanctions Rules: the MLRO, the business-wide risk assessment, customer due diligence and beneficial ownership, ongoing monitoring, sanctions screening, suspicious-transaction reporting, the virtual-asset Travel Rule, and independent audit with training and record-keeping. Each question names the rule it maps to.</p>
+        <p><b>How it scores.</b> It counts how many of the eight you can honestly place as fully in place, and shows the specific gap and the rule behind each area you cannot. It does not produce a risk percentage, and it does not predict a fine, a licence action or forced measures. Those do not follow automatically from a control gap, and any number claiming otherwise would be invented.</p>
+        <p><b>On the citations.</b> References are to the AIFC AML, CFT and Sanctions Rules as amended, effective 1 January 2025. AFSA renumbers on amendment, so treat rule numbers as pointers to the current rulebook, not a substitute for reading it. The primary framework is published by AFSA: <a href="https://afsa.aifc.kz/supervision/anti-money-laundering/aifc-aml-ctf-legal-regime/" target="_blank" rel="noopener">afsa.aifc.kz, AIFC AML/CTF legal regime</a>.</p>
+        <p style="margin-bottom:0"><b>What Black Sea is.</b> Black Sea is an independent financial-crime compliance advisory that builds and runs the AML programme behind a regulated operator's licence. It is not a law firm, not a software vendor, and holds no licence itself. This tool is general information, not legal advice, and it is not an AFSA or AIFC product, nor endorsed by either.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap">
+    <div class="cta-band">
+      <div class="inner">
+        <div>
+          <h2 class="ct-h">A gap you would rather close before AFSA finds it?</h2>
+          <div class="ct-sub">Independent, conflict-free, senior only. Under NDA. We build what sits behind the licence.</div>
+        </div>
+        <div class="ct-actions">
+          <a class="bs-btn bs-btn--primary" href="contact.html">Send us the situation &rarr;</a>
+          <a class="bs-btn bs-btn--ghost" href="https://cal.com/black-sea/30min" target="_blank" rel="noopener">Book 30 minutes &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div id="bs-footer"></div>
+<script src="coverage.js"></script>
+<script>
+/* AIFC AML readiness check. All content mapped to the AIFC AML/CFT and Sanctions Rules,
+   two-source verified against AFSA primary sources (orderly.myafsa.com, afsa.aifc.kz,
+   the AIFC-hosted consolidated rules) before publication. No fabricated dates, thresholds
+   or consequences. Runs entirely client-side, stores nothing. */
+(function(){
+  var LEAD = "operations@blackseaspv.com";
+  var AREAS = [
+    {
+      id: "mlro",
+      title: "MLRO appointment and independence",
+      rule: "AML 13.1.2, 13.1.3, 13.4, 13.5.1; GEN 2.2",
+      q: "Is your MLRO an AFSA-approved individual, resident in Kazakhstan, and independent of the owner and CEO (the role is not combined with either), with a fit-and-proper deputy MLRO appointed to cover absences?",
+      opts: [
+        { lv: "In place", t: "A named MLRO holds current AFSA approval for the MLRO Controlled Function, is resident in Kazakhstan, is not the owner or CEO, acts on their own authority, and a deputy MLRO is appointed.", level: "full" },
+        { lv: "Partial", t: "An MLRO is appointed, but at least one gap exists: the role is still combined with an owner or senior-executive function, there is no deputy, residency is not established, or AFSA approval and independence are not documented.", level: "partial" },
+        { lv: "Not in place", t: "No AFSA-approved MLRO, or the role effectively sits with the CEO or owner with no independence and no deputy.", level: "none" }
+      ],
+      why: "The MLRO owns suspicious-transaction reporting and day-to-day AML compliance, which is why AFSA makes it a Controlled Function requiring approval (GEN 2.2) and requires genuine seniority, independence, Kazakhstan residency, and a deputy (AML 13.1.2, 13.1.3, 13.5.1).",
+      gap: "The framework has been in force since 1 January 2025, and the six-month transition AFSA allowed for separating an MLRO from executive-management roles has already passed. Common gaps: the MLRO is not an AFSA-approved individual for the function, the same person is both CEO or owner and MLRO so the required independence does not exist, there is no deputy leaving reporting uncovered during absences, or the MLRO is not Kazakhstan-resident. These are supervisable governance and systems-and-controls deficiencies, to remediate, not a prediction of any penalty."
+    },
+    {
+      id: "bra",
+      title: "Business-wide risk assessment",
+      rule: "AML 4.1.1, 4.2.1, 4.2.2, 4.3.1; AML 2.2",
+      q: "Do you hold a current, documented business-wide ML and TF risk assessment that covers all the required risk factors, is approved by senior management, and can be shown to have shaped your policies and controls, not just filed alongside them?",
+      opts: [
+        { lv: "In place", t: "A documented business-wide assessment covering customers, geographies, products, transactions, delivery channels and partners, and new products or technologies, approved by senior management, kept current, with a traceable line from its findings to specific controls.", level: "full" },
+        { lv: "Partial", t: "An assessment exists but is out of date, missing one or more required risk factors, not formally approved by senior management, or not demonstrably linked to your policies and controls.", level: "partial" },
+        { lv: "Not in place", t: "No standalone documented business-wide assessment: only customer-level checks or generic policies that assert risk is low without a structured, evidenced enterprise view.", level: "none" }
+      ],
+      why: "The Rules require you to identify and assess the ML and TF risks the business faces (AML 4.1.1) and to use that assessment to build and maintain proportionate, senior-management-approved, regularly reviewed controls (AML 4.2.2, 4.3.1). Without it, the risk-based approach senior management is responsible for under AML 2.2 cannot be shown.",
+      gap: "The business-wide risk assessment is the foundation the Rules require your whole programme to sit on. A missing, stale, incomplete or unapproved assessment means your controls cannot be shown to be calibrated to your actual risk, and your customer risk assessments lose their Chapter 4 anchor. This is the kind of finding AFSA raises in supervision or thematic reviews, a documentation and control gap to close, not automatic enforcement."
+    },
+    {
+      id: "cdd",
+      title: "CDD and beneficial ownership",
+      rule: "AML 6.3.1, 6.6, Guidance to AML 6.3; EDD 7.1.1",
+      q: "For each legal-person customer, do you identify and independently verify every beneficial owner by running a separate control test alongside the ownership test, capturing people who control the customer even below any shareholding figure, and do you decline or exit where the structure prevents identifying all beneficial owners?",
+      opts: [
+        { lv: "In place", t: "You map the full ownership-and-control structure, identify each ultimate beneficial owner through both an ownership test and a control test, verify each one, treat any percentage only as a documented risk-based reference, and decline or exit where the structure blocks full identification.", level: "full" },
+        { lv: "Partial", t: "You screen shareholders against a fixed percentage and usually verify those you find, but control-based owners, nominees and layered structures are handled inconsistently, and you have no firm rule to decline or exit where beneficial owners cannot be fully identified.", level: "partial" },
+        { lv: "Not in place", t: "You record self-declared owners without independent verification, apply no separate control test, and have opened or continued relationships where beneficial ownership could not be established.", level: "none" }
+      ],
+      why: "AML 6.3.1 requires identifying and verifying every beneficial owner, not just the customer. The Guidance to AML 6.3 warns against fixed thresholds, and AML 6.6 requires not establishing or continuing a relationship where beneficial owners cannot be fully identified.",
+      gap: "Every downstream control, sanctions and PEP screening, transaction monitoring, EDD triggers, depends on knowing who actually owns and controls the customer. Control-based owners sitting below a shareholding cut-off are the most common blind spot, and an unidentified beneficial owner quietly defeats those controls too. On review AFSA can treat this as a failure to conduct or complete CDD and require remediation and file look-backs. It is a core deficiency, not a technicality, and not by itself any specific penalty."
+    },
+    {
+      id: "monitoring",
+      title: "Ongoing and transaction monitoring",
+      rule: "AML 6.4.1; AML 9.1; Chapter 13",
+      q: "Can you show that transactions are actively scrutinised against each customer's expected activity, risk rating and source of funds, that alerts and unusual transactions are logged, investigated and dispositioned with an MLRO escalation path, and that risk ratings and CDD are refreshed on a defined risk-based cadence?",
+      opts: [
+        { lv: "In place", t: "Monitoring is calibrated to risk, a documented system, manual process or hybrid justified by your size and risk; transactions are reviewed against expected activity; alerts and complex transactions are worked to a documented outcome and escalated to the MLRO; risk ratings and CDD are periodically refreshed; records are retained at least six years.", level: "full" },
+        { lv: "Partial", t: "Some monitoring happens, but it is ad hoc or largely manual, with no documented alert-disposition process, no defined refresh cadence, or gaps in the records that would evidence it to AFSA.", level: "partial" },
+        { lv: "Not in place", t: "Due diligence is essentially a one-off at onboarding: no systematic ongoing scrutiny of transactions, no alert log, no periodic review of risk ratings or CDD.", level: "none" }
+      ],
+      why: "AML 6.4.1 requires monitoring transactions throughout the relationship to ensure consistency with what you know of the customer, paying particular attention to complex or unusual transactions, and keeping CDD and risk ratings current on a risk-based basis. Monitoring that stops at onboarding, or that cannot be evidenced, fails that continuing duty.",
+      gap: "Onboarding CDD without continuous scrutiny does not satisfy the ongoing-monitoring duty, and an inability to evidence how alerts were reviewed means you cannot show the control is effective. That weakens your ability to detect and report suspicious activity through the MLRO. Note that ongoing monitoring cannot be outsourced under AML 9.1: reliance on third parties covers only initial identification. Gaps here are the kind AFSA raises through returns, thematic reviews and inspections."
+    },
+    {
+      id: "sanctions",
+      title: "Targeted sanctions screening",
+      rule: "AML 12.1.1, 12.1.2, 12.1.3",
+      q: "Do you screen every customer, beneficial owner and counterparty against both the UN Security Council lists and the Republic of Kazakhstan lists, on a continuous basis, re-screening whenever a list changes, with a tested procedure that on a confirmed match freezes without delay, reports to the FIU, and notifies AFSA?",
+      opts: [
+        { lv: "In place", t: "You screen against both the UNSC and the Kazakhstan lists, automatically re-screen the whole book on every list update, and have a documented, tested workflow that freezes a confirmed match without delay and without prior notice, files the FIU report including attempted transactions, and notifies AFSA.", level: "full" },
+        { lv: "Partial", t: "You screen, but with gaps: UNSC only with Kazakhstan lists not covered, onboarding-only with no systematic re-screening on list changes, beneficial owners or counterparties not fully covered, or the freeze-report-notify steps are manual, undocumented or never tested.", level: "partial" },
+        { lv: "Not in place", t: "No systematic screening against these lists, or no defined freeze-and-report procedure on a match.", level: "none" }
+      ],
+      why: "AML 12.1.1 requires effective, on-going systems and controls to comply with both UNSC and Republic of Kazakhstan resolutions and to freeze designated persons' assets without delay and without prior notice, and AML 12.1.2 and 12.1.3 require reporting frozen assets and attempted transactions to the FIU and notifying AFSA.",
+      gap: "The two most common real gaps are screening only against the UN list while omitting the Kazakhstan national lists, which the rule puts on an equal footing, and treating screening as a one-off onboarding check rather than an on-going obligation, so newly designated parties are not caught. A missing or untested freeze-and-report workflow means even a detected match may not be actioned as the rule requires. This is a systems-and-controls deficiency AFSA reviews, to be closed on that basis, not because a penalty is predetermined."
+    },
+    {
+      id: "str",
+      title: "Suspicious-transaction reporting",
+      rule: "AML 13.7.5, 13.8.1, 13.8.2, 13.8.3",
+      q: "When a staff member escalates a suspicion internally, can you evidence the full chain for that case: prompt notification to the MLRO, the MLRO's documented enquiry and file-or-no-file determination, the FIU filing with the follow-on AFSA notification, and a recorded rationale where no report was filed, all on the MLRO's independent authority?",
+      opts: [
+        { lv: "In place", t: "Every internal escalation is logged, the MLRO records a reasoned file-or-no-file determination for each, filed reports are matched to an AFSA notification, no-file decisions carry a documented rationale, and the MLRO decides independently with no business or management sign-off.", level: "full" },
+        { lv: "Partial", t: "A process exists and reports get filed, but the audit trail is incomplete: no-file decisions are not documented, the AFSA notification is not evidenced against each filing, escalations are not consistently logged, or the MLRO's decision is in practice run past a manager.", level: "partial" },
+        { lv: "Not in place", t: "No documented internal escalation route to the MLRO, no records of file-or-no-file determinations, or reporting decisions are not made independently by the MLRO.", level: "none" }
+      ],
+      why: "AML 13.8.1 requires the MLRO, without delay, to enquire into and document the circumstances, document the determination, file any required report to the FIU and notify AFSA; AML 13.8.2 requires recording the reasons where no report is made; AML 13.8.3 requires the decision to be taken independently. The documented, independent decision trail is exactly what AFSA inspects.",
+      gap: "Without a per-case record of the MLRO's enquiry and reasoned determination, and without documenting why a report was not made, you cannot demonstrate that suspicions were assessed rather than quietly dropped, and you cannot reconstruct decisions during a review. If the MLRO's decision is in practice subject to management approval, the independence requirement is breached regardless of the outcome of any one case. This typically surfaces as an AML finding and remediation of reporting governance."
+    },
+    {
+      id: "travelrule",
+      title: "Virtual assets and the Travel Rule",
+      rule: "AML Chapter 11-1 (11-1.1); Chapter 11-2",
+      q: "For the virtual-asset transfers you originate, does your Travel Rule solution transmit the full required originator and beneficiary data to the beneficiary provider immediately and securely, apply the correct differentiated fields above versus at or below the rule threshold, and handle self-hosted-wallet and missing-information transfers under a tested procedure? (Skip if you do not handle virtual assets.)",
+      opts: [
+        { lv: "In place", t: "Every originated transfer triggers Travel Rule transmission to the counterparty provider; data fields are correctly differentiated at the threshold; self-hosted-wallet and missing-information handling is documented, tested and evidenced, with six-year record retention.", level: "full" },
+        { lv: "Partial", t: "Originator and beneficiary data is collected, but transmission is manual or inconsistent, or the above-versus-below threshold logic, self-hosted-wallet measures, or missing-information procedures are not fully documented or tested end to end.", level: "partial" },
+        { lv: "Not in place / not applicable", t: "No functioning mechanism to obtain, hold and transmit required originator and beneficiary information on transfers, no defined procedure for transfers that lack it, or your firm does not carry on virtual-asset activities.", level: "none" }
+      ],
+      why: "AML 11-1.1 requires an originating Digital Asset Service Provider to obtain, hold and transmit accurate required originator and beneficiary information immediately and securely, with the data set differing above versus at or below the rule threshold, and to refuse and return non-compliant transfers. AFSA assesses Travel Rule implementation directly, including at sandbox exit.",
+      gap: "If transmission is not working, not immediate and secure, or not carrying the correct fields for the transfer value, and non-compliant transfers are executed rather than returned, the firm is not meeting AML 11-1.1. Under the AFSA model each provider has a case officer who assesses Travel Rule implementation, and embedded controls are part of what a firm must satisfy to hold a full licence. A gap here surfaces as an adverse finding and a remediation expectation, not a predicted licence loss."
+    },
+    {
+      id: "audit",
+      title: "Independent audit, training, records",
+      rule: "AML 4.3.1; Ch. 14; 13.6.1(h); AML 14.5",
+      q: "When was your AML programme last tested end-to-end by a party independent of your compliance function, not your own MLRO reviewing their own programme, and are staff trained at least annually with records kept for six years?",
+      opts: [
+        { lv: "In place", t: "An independent AML audit was completed within the last two years by internal audit or an external competent firm separate from the compliance function, reporting to the board, covering CDD, monitoring, sanctions, training and record-keeping, with findings tracked to closure; staff are trained at least annually and on hire; records are kept six years.", level: "full" },
+        { lv: "Partial", t: "Some review exists, but it was performed by the MLRO or compliance officer who owns the programme, or it is older than two years, or the training cadence, record retention or finding-closure evidence is incomplete.", level: "partial" },
+        { lv: "Not in place", t: "No independent audit of the AML programme has been carried out, or one cannot be evidenced on request.", level: "none" }
+      ],
+      why: "The Rules require an independent audit function to test the AML systems and controls (AML 4.3.1); AFSA guidance expects that audit to be independent of the compliance function and performed at least once every two years, alongside training at least annually and six-year record retention. It is the mechanism that evidences your programme works rather than merely exists.",
+      gap: "Without a recent independent test, or where it was effectively run by the same people who own the programme, which AFSA guidance specifically warns against, you have no independent evidence that CDD, monitoring, sanctions screening, training and record-keeping operate as designed. On a review AFSA can request the audit report and evidence that findings were closed; being unable to produce one is a documentable control weakness that typically leads to a finding and remediation."
+    }
+  ];
+
+  var form = document.getElementById("rcForm");
+  form.innerHTML = AREAS.map(function(a, i){
+    var opts = a.opts.map(function(o, j){
+      return '<label class="rc-opt" data-a="'+a.id+'" data-level="'+o.level+'">'
+        + '<input type="radio" name="q_'+a.id+'" value="'+o.level+'">'
+        + '<span class="lv">'+o.lv+'</span>'+o.t+'</label>';
+    }).join("");
+    return '<div class="rc-q" id="q_'+a.id+'">'
+      + '<div class="qn">Q'+(i+1)+' / 8 &nbsp; '+a.title+'</div>'
+      + '<div class="rule">'+a.rule+'</div>'
+      + '<div class="qt">'+a.q+'</div>'+opts+'</div>';
+  }).join("");
+
+  function answered(){ var n=0; AREAS.forEach(function(a){ if(form.querySelector('input[name="q_'+a.id+'"]:checked')) n++; }); return n; }
+  function refresh(){
+    var n = answered();
+    document.getElementById("rcCount").textContent = n + " / 8";
+    document.getElementById("rcBar").style.width = (n/8*100) + "%";
+  }
+
+  form.addEventListener("change", function(e){
+    if(e.target && e.target.type === "radio"){
+      var q = e.target.closest(".rc-q");
+      q.classList.add("answered");
+      q.querySelectorAll(".rc-opt").forEach(function(l){ l.classList.toggle("sel", l.contains(e.target)); });
+      refresh();
+    }
+  });
+
+  document.getElementById("rcSubmit").addEventListener("click", function(){
+    var levels = {}, missing = [];
+    AREAS.forEach(function(a){
+      var c = form.querySelector('input[name="q_'+a.id+'"]:checked');
+      if(!c){ missing.push(a); return; }
+      levels[a.id] = c.value;
+    });
+    if(missing.length){
+      var first = document.getElementById("q_"+missing[0].id);
+      first.classList.add("answered");
+      first.scrollIntoView({behavior:"smooth", block:"center"});
+      first.style.borderLeftColor = "var(--bs-warn, #d08a3a)";
+      return;
+    }
+    var full=0, partial=0, none=0, gaps=[];
+    AREAS.forEach(function(a){
+      var lv = levels[a.id];
+      if(lv==="full") full++;
+      else { if(lv==="partial") partial++; else none++; gaps.push(a); }
+    });
+
+    var head, sub;
+    if(gaps.length===0){ head = "All eight areas marked in place."; sub = "On your own read, the core AIFC AML obligations are covered. The next honest step is to have that verified independently, which is itself one of the eight, an independent audit tests whether the programme works rather than merely exists."; }
+    else if(gaps.length<=2){ head = gaps.length===1 ? "One area to close." : "Two areas to close."; sub = "Most of the core obligations look covered. The areas below are where your programme is not yet fully in place, each shown with the rule behind it. Close these and you are on solid ground for a supervisory review."; }
+    else if(gaps.length<=4){ head = gaps.length+" areas need attention."; sub = "A meaningful part of the core AIFC AML framework is not yet fully in place. The areas below are where the gaps are, each mapped to the rule. None of this predicts a penalty, it is the work to do."; }
+    else { head = gaps.length+" of the 8 core areas are not yet in place."; sub = "This points to a programme that is early or thin against the AIFC AML Rules. The areas below are where to start, ordered as they appear in the check. This is a build, not a patch."; }
+
+    var gapHtml = gaps.map(function(a){
+      var lv = levels[a.id];
+      return '<div class="rc-gap">'
+        + '<div class="gt">'+a.title+'<span class="tag">'+(lv==="partial"?"Partial":"Not in place")+'</span></div>'
+        + '<div class="grule">'+a.rule+'</div>'
+        + '<p><b>Why it matters.</b> '+a.why+'</p>'
+        + '<p><b>The gap.</b> '+a.gap+'</p></div>';
+    }).join("");
+
+    var lines = ["AIFC AML readiness check, my result.", "", "In place: "+full+" of 8. Partial: "+partial+". Not in place: "+none+"."];
+    if(gaps.length){ lines.push("", "Areas I flagged:"); gaps.forEach(function(a){ lines.push("- "+a.title+" ("+(levels[a.id]==="partial"?"partial":"not in place")+")"); }); }
+    lines.push("", "I would like a senior read on where to start. Here is a bit of context on the firm:", "");
+    var subject = "AIFC AML readiness check: " + full + "/8 in place";
+    var mailto = "mailto:"+LEAD+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(lines.join("\n"));
+
+    var cta = '<div style="margin-top:var(--bs-s6);display:flex;gap:var(--bs-s4);flex-wrap:wrap;align-items:center">'
+      + '<a class="bs-btn bs-btn--primary" href="'+mailto+'">Send this read for a senior look &rarr;</a>'
+      + '<a class="bs-btn bs-btn--ghost" href="https://cal.com/black-sea/30min" target="_blank" rel="noopener">Book 30 minutes &rarr;</a></div>'
+      + '<div class="rc-note" style="margin-top:var(--bs-s4)">Opens your own mail client with your result filled in. Nothing is sent until you press send, and nothing is stored here.</div>';
+
+    var el = document.getElementById("rcResult");
+    el.innerHTML = '<div class="rh">'+head+'</div><div class="rs">'+sub+'</div>'
+      + '<div class="rc-tally"><div class="c"><div class="n">'+full+'</div><div class="l">In place</div></div>'
+      + '<div class="c"><div class="n">'+partial+'</div><div class="l">Partial</div></div>'
+      + '<div class="c"><div class="n">'+none+'</div><div class="l">Not in place</div></div></div>'
+      + gapHtml + cta;
+    el.hidden = false;
+    el.scrollIntoView({behavior:"smooth", block:"start"});
+  });
+
+  refresh();
+})();
+</script>
+<script src="site.js"></script>
+</body>
+</html>
