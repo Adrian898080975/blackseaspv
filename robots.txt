@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /design-index.html
 
 Sitemap: https://blackseaspv.com/sitemap.xml

@@ -1,261 +1,50 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>What We Do | Black Sea Compliance</title>
-<meta name="description" content="Five operator-side service lines: licensing programme build, remediation, outsourced MLRO and managed FIU, independent AML audit, sanctions and integrity due diligence.">
+<title>AML/CFT, MLRO and sanctions services | Black Sea</title>
+<meta name="description" content="Seven services for regulated firms: licensing build, remediation, MLRO cover, AML audit, sanctions DD, bank onboarding and perimeter review.">
 <link rel="canonical" href="https://blackseaspv.com/what-we-do.html">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Black Sea">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="What We Do | Black Sea Compliance">
-<meta property="og:description" content="Five operator-side service lines: licensing programme build, remediation, outsourced MLRO and managed FIU, independent AML audit, sanctions and integrity due diligence.">
+<meta property="og:title" content="AML/CFT, MLRO and sanctions services | Black Sea">
+<meta property="og:description" content="Seven services for regulated firms: licensing build, remediation, MLRO cover, AML audit, sanctions DD, bank onboarding and perimeter review.">
 <meta property="og:url" content="https://blackseaspv.com/what-we-do.html">
-<meta property="og:image" content="https://blackseaspv.com/img/og.jpg">
+<meta property="og:image" content="https://blackseaspv.com/assets/og-card.png">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AML/CFT and sanctions advisory for regulated firms worldwide">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="What We Do | Black Sea Compliance">
-<meta name="twitter:description" content="Five operator-side service lines: licensing programme build, remediation, outsourced MLRO and managed FIU, independent AML audit, sanctions and integrity due diligence.">
-<meta name="twitter:image" content="https://blackseaspv.com/img/og.jpg">
-<link rel="alternate" hreflang="en" href="https://blackseaspv.com/what-we-do.html">
-<link rel="alternate" hreflang="ru" href="https://blackseaspv.com/ru/what-we-do.html">
-<link rel="alternate" hreflang="x-default" href="https://blackseaspv.com/what-we-do.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta name="twitter:image" content="https://blackseaspv.com/assets/og-card.png">
+<meta name="twitter:image:alt" content="AML/CFT and sanctions advisory for regulated firms worldwide">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link href="brand.css" rel="stylesheet">
-<link href="site.css" rel="stylesheet">
-<style>
-  .svc-index { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--bs-hairline); border: 1px solid var(--bs-hairline); }
-  .svc-index a { background: var(--bs-surface); padding: var(--bs-s6) var(--bs-s5); text-decoration: none; display: flex; flex-direction: column; min-height: 150px; transition: background var(--bs-motion) var(--bs-ease); }
-  .svc-index a:hover { background: var(--bs-surface-2); }
-  .svc-index .i { font-family: var(--bs-font-mono); font-size: 12px; letter-spacing: .1em; color: var(--bs-accent); }
-  .svc-index .n { font-family: var(--bs-font-display); font-weight: 700; font-size: 15px; line-height: 1.2; letter-spacing: -.015em; color: var(--bs-text-hi); margin-top: var(--bs-s4); }
-  .svc-index .d { font-family: var(--bs-font-text); font-size: 12px; line-height: 1.45; color: var(--bs-text-sub); margin-top: var(--bs-s3); }
-  @media (max-width: 980px){ .svc-index { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 560px){ .svc-index { grid-template-columns: 1fr; } }
-
-  .svc-block { border: 1px solid var(--bs-hairline); margin-top: var(--bs-s6); scroll-margin-top: 90px; }
-  .svc-head { display: flex; align-items: baseline; gap: var(--bs-s5); padding: var(--bs-s7); border-bottom: 1px solid var(--bs-hairline); background: var(--bs-surface); }
-  .svc-head .big { font-family: var(--bs-font-display); font-weight: 800; font-size: 44px; letter-spacing: -.04em; color: var(--bs-text-lo); line-height: .9; font-variant-numeric: tabular-nums; }
-  .svc-head .ht { flex: 1; }
-  .svc-head .ht .nm { font-family: var(--bs-font-display); font-weight: 800; font-size: clamp(20px, 2.4vw, 27px); letter-spacing: -.025em; color: var(--bs-text-hi); line-height: 1.05; }
-  .svc-head .ht .le { font-family: var(--bs-font-text); font-size: 14.5px; line-height: 1.6; color: var(--bs-text-sub); margin-top: var(--bs-s4); max-width: 78ch; }
-  .svc-rows { display: grid; grid-template-columns: 1fr 1fr; }
-  .svc-r { padding: var(--bs-s6) var(--bs-s7); border-bottom: 1px solid var(--bs-hairline); border-right: 1px solid var(--bs-hairline); }
-  .svc-r:nth-child(2n) { border-right: 0; }
-  .svc-r.full { grid-column: 1 / -1; }
-  .svc-r .k { font-family: var(--bs-font-mono); font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--bs-accent); }
-  .svc-r .v { font-family: var(--bs-font-text); font-size: 13.5px; line-height: 1.6; color: var(--bs-text); margin-top: var(--bs-s3); }
-  .svc-foot { display: flex; flex-wrap: wrap; gap: var(--bs-s5); align-items: center; justify-content: space-between; padding: var(--bs-s5) var(--bs-s7); background: var(--bs-surface); }
-  .svc-links { display: flex; flex-wrap: wrap; gap: var(--bs-s4); }
-  .svc-links a { font-family: var(--bs-font-mono); font-size: 10.5px; letter-spacing: .06em; color: var(--bs-text-lo); text-decoration: none; }
-  .svc-links a:hover { color: var(--bs-accent); }
-  @media (max-width: 720px){ .svc-rows { grid-template-columns: 1fr; } .svc-r { border-right: 0; } }
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Black Sea",
-  "url": "https://blackseaspv.com/",
-  "email": "operations@blackseaspv.com",
-  "description": "Operator-side AML/CFT and sanctions compliance for regulated operators in frontier and Gulf markets. We build, remediate and run the programme behind your licence.",
-  "sameAs": ["https://blackseabriefings.substack.com"]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "What We Do",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "item": { "@type": "Service", "name": "Licensing and new-regime programme build", "serviceType": "AML/CFT and sanctions programme build", "provider": { "@type": "Organization", "name": "Black Sea", "url": "https://blackseaspv.com/" } } },
-    { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "name": "Remediation", "serviceType": "AML remediation", "provider": { "@type": "Organization", "name": "Black Sea", "url": "https://blackseaspv.com/" } } },
-    { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "Outsourced MLRO and managed FIU", "serviceType": "Outsourced MLRO and managed financial-intelligence function", "provider": { "@type": "Organization", "name": "Black Sea", "url": "https://blackseaspv.com/" } } },
-    { "@type": "ListItem", "position": 4, "item": { "@type": "Service", "name": "Independent AML audit", "serviceType": "Independent AML audit", "provider": { "@type": "Organization", "name": "Black Sea", "url": "https://blackseaspv.com/" } } },
-    { "@type": "ListItem", "position": 5, "item": { "@type": "Service", "name": "Sanctions and integrity due diligence", "serviceType": "Sanctions, export-control and integrity due diligence", "provider": { "@type": "Organization", "name": "Black Sea", "url": "https://blackseaspv.com/" } } }
-  ]
-}
-</script>
+<link rel="preload" href="https://fonts.gstatic.com/s/golostext/v7/q5uCsoe9Lv5t7Meb31EcExN8hK5SAMo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script>document.documentElement.className+=' js'</script>
+<script src="/assets/site.js" defer></script>
 </head>
-<body data-page="what-we-do" data-path="/what-we-do/">
-<div id="bs-nav"></div>
-
-<header class="hero cine" data-name="SERVICES" style="--cine-img:url('img/frame-corridor.jpg')">
-  <div class="hero-grid-bg"></div>
-  <div class="wrap">
-    <div class="hero-eyebrow"><span class="dot"></span><span class="txt">01 / Position</span></div>
-    <h1 class="hero-h1">The licence is the <span class="d-outline">easy</span> part.</h1>
-    <h1 class="hero-h1 d-dim" style="margin-top:.06em">We build what sits behind it.</h1>
-    <p class="hero-sub">Lawyers file. We build, remediate and run the AML/CFT and sanctions programme behind the licence. Senior practitioners, one fixed scope.</p>
-    <div class="hero-actions">
-      <a class="bs-btn bs-btn--primary" href="method.html">See how we work &rarr;</a>
-      <a class="bs-btn bs-btn--ghost" href="https://cal.com/black-sea/30min" target="_blank" rel="noopener">Book a scoping call &rarr;</a>
-    </div>
-    <div class="hero-foot">
-      <div><div class="k">Lines</div><div class="v">5 / equal weight</div></div>
-      <div><div class="k">Model</div><div class="v">Fixed scope, fixed fee</div></div>
-      <div><div class="k">Staffing</div><div class="v">Senior only</div></div>
-      <div><div class="k">Conflict</div><div class="v">None, operator-side</div></div>
-      <div><div class="k">Turnaround</div><div class="v">Costed plan 48h</div></div>
-    </div>
-  </div>
-  <div class="scroll-cue"><i></i> Scroll</div>
-  <div class="hero-coords">19 / 9 &#183; FRONTIER &amp; GULF</div>
-</header>
-
-<main>
-<!-- 02 the five lines index -->
-<section class="section reveal">
-  <div class="wrap">
-    <div class="section-tag"><span class="n">02</span><span class="t">The five lines</span><span class="line"></span></div>
-    <div class="section-head">
-      <p class="lede" style="margin-top:0">Five equal lines. Operators reach us before the application, after a finding, or when the seat is empty. Same discipline every time.</p>
-    </div>
-    <div class="svc-index">
-      <a href="#licensing"><span class="i">01</span><span class="n">Licensing &amp; new-regime build</span><span class="d">Stand up the programme a new licence or regime requires.</span></a>
-      <a href="#remediation"><span class="i">02</span><span class="n">Remediation</span><span class="d">Rebuild controls after an action, finding or failed inspection.</span></a>
-      <a href="#mlro-fiu"><span class="i">03</span><span class="n">Outsourced &amp; bridge MLRO + FIU</span><span class="d">Hold the MLRO seat and run the intelligence function.</span></a>
-      <a href="#audit"><span class="i">04</span><span class="n">Independent AML audit</span><span class="d">Test the programme against the framework, report to the board.</span></a>
-      <a href="#sanctions-dd"><span class="i">05</span><span class="n">Sanctions &amp; integrity DD</span><span class="d">Screen counterparties, corridors and cargo, plus Travel Rule.</span></a>
-    </div>
-    <div class="cm-hint">Equal weight. No flagship line.</div>
-  </div>
-</section>
-
-<!-- 03-07 service blocks -->
-<section class="section reveal">
-  <div class="wrap">
-    <div class="section-tag"><span class="n">03</span><span class="t">In detail</span><span class="line"></span></div>
-
-    <div class="svc-block" id="licensing">
-      <div class="svc-head"><span class="big">01</span><div class="ht"><div class="nm">Licensing and new-regime programme build</div><div class="le">The programme behind the filing is ours, working on day one.</div></div></div>
-      <details class="bs-more"><summary>What we test, build and deliver</summary><div class="svc-rows" style="border:0">
-        <div class="svc-r"><div class="k">Trigger</div><div class="v">A new licence, market or regime brings an activity into scope.</div></div>
-        <div class="svc-r"><div class="k">What the examiner tests</div><div class="v">A real risk assessment, policies mapped to the local framework, working controls.</div></div>
-        <div class="svc-r"><div class="k">What we build</div><div class="v">Risk assessment, regulator-mapped policies, CDD and EDD, screening and monitoring logic, MLRO framework.</div></div>
-        <div class="svc-r"><div class="k">Deliverable</div><div class="v">An examination-ready programme file.</div></div>
-        <div class="svc-r full"><div class="k">For</div><div class="v">A first licence, new market, or new activity.</div></div>
-      </div></details>
-      <div class="svc-foot"><div class="svc-links"><a href="coverage.html">Where this applies</a><a href="sector-vasp-crypto.html">VASP and crypto</a><a href="sector-payments-msb.html">Payments and MSB</a></div><a class="bs-btn bs-btn--mono" href="contact.html">Scope a programme build &rarr;</a></div>
-    </div>
-
-    <div class="svc-block" id="remediation">
-      <div class="svc-head"><span class="big">02</span><div class="ht"><div class="nm">Remediation</div><div class="le">Not a policy rewrite. An evidenced rebuild that closes the regulator's file.</div></div></div>
-      <details class="bs-more"><summary>What we test, build and deliver</summary><div class="svc-rows" style="border:0">
-        <div class="svc-r"><div class="k">Trigger</div><div class="v">A deficiency flagged by a regulator, auditor or correspondent, with a deadline.</div></div>
-        <div class="svc-r"><div class="k">What the examiner tests</div><div class="v">Every finding fixed at root cause, holding at the next inspection.</div></div>
-        <div class="svc-r"><div class="k">What we build</div><div class="v">Gap analysis, prioritised plan, rebuilt controls, look-back reviews, evidence pack per finding.</div></div>
-        <div class="svc-r"><div class="k">Deliverable</div><div class="v">A closed-out file with the evidence to lift the measure.</div></div>
-        <div class="svc-r full"><div class="k">For</div><div class="v">Operators under enforcement, supervisory direction, de-risking, or a qualified finding.</div></div>
-      </div></details>
-      <div class="svc-foot"><div class="svc-links"><a href="method.html">Our method</a><a href="sector-banks-fis.html">Banks and FIs</a><a href="sector-gold-dpms.html">Gold and DPMS</a></div><a class="bs-btn bs-btn--mono" href="contact.html">Scope a remediation &rarr;</a></div>
-    </div>
-
-    <div class="svc-block" id="mlro-fiu">
-      <div class="svc-head"><span class="big">03</span><div class="ht"><div class="nm">Outsourced and bridge MLRO plus managed FIU</div><div class="le">The MLRO seat cannot hold a name that never works the file. We take it and run the function behind it.</div></div></div>
-      <details class="bs-more"><summary>What we test, build and deliver</summary><div class="svc-rows" style="border:0">
-        <div class="svc-r"><div class="k">Trigger</div><div class="v">The officer has gone, or a new licence needs one at launch.</div></div>
-        <div class="svc-r"><div class="k">What the examiner tests</div><div class="v">A competent, independent officer with authority to act.</div></div>
-        <div class="svc-r"><div class="k">What we build and run</div><div class="v">A named MLRO or bridge officer plus the managed FIU: triage, investigation, STR and SAR decisioning, escalation, reporting.</div></div>
-        <div class="svc-r"><div class="k">Deliverable</div><div class="v">A staffed MLRO and FIU function with a documented trail and clean handover.</div></div>
-        <div class="svc-r full"><div class="k">For</div><div class="v">A vacant or overloaded seat, a new licensee at launch, or a group needing surge capacity.</div></div>
-      </div></details>
-      <div class="svc-foot"><div class="svc-links"><a href="method.html">Our method</a><a href="sector-funds-csp.html">Funds and CSP</a><a href="sector-payments-msb.html">Payments and MSB</a></div><a class="bs-btn bs-btn--mono" href="contact.html">Discuss cover &rarr;</a></div>
-    </div>
-
-    <div class="svc-block" id="audit">
-      <div class="svc-head"><span class="big">04</span><div class="ht"><div class="nm">Independent AML audit</div><div class="le">Testing must be independent of those who run the programme. We are that reviewer, and only that.</div></div></div>
-      <details class="bs-more"><summary>What we test, build and deliver</summary><div class="svc-rows" style="border:0">
-        <div class="svc-r"><div class="k">Trigger</div><div class="v">A periodic independent-review obligation, or a board wanting assurance before an examination.</div></div>
-        <div class="svc-r"><div class="k">What the examiner tests</div><div class="v">A genuinely independent review that tested controls in operation, not policy on the page.</div></div>
-        <div class="svc-r"><div class="k">What we build</div><div class="v">A scoped audit: design and operating-effectiveness testing, file sampling, screening validation, governance review.</div></div>
-        <div class="svc-r"><div class="k">Deliverable</div><div class="v">A board-ready report: tested findings, ratings and a prioritised action list.</div></div>
-        <div class="svc-r full"><div class="k">For</div><div class="v">Boards, audit committees, operators meeting a periodic-review obligation, and investors assessing a target.</div></div>
-      </div></details>
-      <div class="svc-foot"><div class="svc-links"><a href="method.html">Our method</a><a href="sector-real-estate-dnfbp.html">Real estate and DNFBP</a><a href="sector-gaming.html">Gaming</a></div><a class="bs-btn bs-btn--mono" href="contact.html">Scope an audit &rarr;</a></div>
-    </div>
-
-    <div class="svc-block" id="sanctions-dd">
-      <div class="svc-head"><span class="big">05</span><div class="ht"><div class="nm">Sanctions, export-control and integrity due diligence</div><div class="le">Screening a name against a list is not due diligence. We resolve ownership, clear the corridor, check cargo, and build the FATF Travel Rule into transfers.</div></div></div>
-      <details class="bs-more"><summary>What we test, build and deliver</summary><div class="svc-rows" style="border:0">
-        <div class="svc-r"><div class="k">Trigger</div><div class="v">A counterparty or corridor to clear, a shipment to check, or a transfer needing Travel Rule data.</div></div>
-        <div class="svc-r"><div class="k">What the examiner tests</div><div class="v">Ownership resolved through opaque structures, exposure assessed against the relevant regimes, data travelling with each transfer.</div></div>
-        <div class="svc-r"><div class="k">What we build</div><div class="v">Enhanced sanctions and integrity diligence, beneficial-ownership resolution, export-control and dual-use screening, Travel Rule implementation.</div></div>
-        <div class="svc-r"><div class="k">Deliverable</div><div class="v">A sourced diligence file with a clear risk conclusion, plus a live Travel Rule control where relevant.</div></div>
-        <div class="svc-r full"><div class="k">For</div><div class="v">Operators onboarding high-risk counterparties, VASPs implementing the Travel Rule, and firms with export-control exposure.</div></div>
-      </div></details>
-      <div class="svc-foot"><div class="svc-links"><a href="sector-vasp-crypto.html">VASP and crypto</a><a href="sector-defense-dual-use.html">Defence and dual-use</a><a href="sector-art-high-value.html">Art and high-value</a></div><a class="bs-btn bs-btn--mono" href="contact.html">Scope diligence &rarr;</a></div>
-    </div>
-  </div>
-</section>
-
-<!-- 08 what we do not do -->
-<section class="section reveal">
-  <div class="wrap">
-    <div class="section-tag"><span class="n">08</span><span class="t">What we do not do</span><span class="line"></span></div>
-    <div class="section-head"><p class="lede" style="margin-top:0">Independence is the product. Here is what we decline.</p></div>
-    <div class="stance-list">
-      <div class="stance-item"><span class="mk">/</span><span class="tx">We do not file your application. <b>Lawyers file.</b> We build what sits behind it.</span></div>
-      <div class="stance-item"><span class="mk">/</span><span class="tx">We sell no software and resell no platform. <b>We are the reviewer, not the vendor.</b></span></div>
-      <div class="stance-item"><span class="mk">/</span><span class="tx">We take no commissions and no referral fees. <b>Nothing we recommend earns us a margin.</b></span></div>
-      <div class="stance-item"><span class="mk">/</span><span class="tx">We do not staff the work with juniors. <b>Senior practitioners only.</b></span></div>
-    </div>
-    <div class="cm-hint">Conflict-free. Operator-side only.</div>
-  </div>
-</section>
-
-<!-- 09 across every market and sector -->
-<section class="section reveal">
-  <div class="wrap wrap--narrow">
-    <div class="section-tag"><span class="n">09</span><span class="t">Across every market and sector</span><span class="line"></span></div>
-    <p class="lede" style="margin-top:0">Every line runs evenly across 19 markets and 9 sectors. No flagship, no dominant market.</p>
-    <div class="hero-actions" style="margin-top:var(--bs-s6)">
-      <a class="bs-btn bs-btn--primary" href="coverage.html">Coverage hub &rarr;</a>
-      <a class="bs-btn bs-btn--ghost" href="radar.html">Am I in scope? &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<!-- 10 proof -->
-<section class="section reveal">
-  <div class="wrap">
-    <div class="section-tag"><span class="n">10</span><span class="t">On the record</span><span class="line"></span></div>
-    <div class="proof-fresh">
-      <div class="proof-cell"><span class="k">Practitioner-led</span><span class="h">CAMS / ICA</span><span class="p">Programmes built by qualified practitioners, senior only.</span><a class="go" href="firm.html">The firm &rarr;</a></div>
-      <div class="proof-cell"><span class="k">Local partners</span><span class="h">Local legal standing</span><span class="p">Licensed local law-firm and compliance partners in our markets.</span><a class="go" href="partners.html">Partners &rarr;</a></div>
-      <div class="proof-cell"><span class="k">Published thinking</span><span class="h">A current feed</span><span class="p">Independent pickup in the Kazakh business press.</span><a class="go" href="insights.html">Insights &rarr;</a></div>
-      <div class="proof-cell"><span class="k">Fresh proof</span><span class="h">Not case studies</span><span class="p">Live, checkable evidence. No borrowed logos, no ghost testimonials.</span><a class="go" href="insights.html">The record &rarr;</a></div>
-    </div>
-  </div>
-</section>
-
-<!-- 11 start -->
-<section class="band" style="--band-img:url('img/outro.jpg'); min-height:64vh">
-  <div class="band-photo" data-parallax="7"></div>
-  <div class="band-scrim" style="background:linear-gradient(0deg, rgba(10,12,15,.95) 4%, rgba(10,12,15,.35) 50%, rgba(10,12,15,.7) 100%)"></div>
-  <div class="ov"><span class="ct a"></span><span class="ct b"></span><span class="ct c"></span><span class="ct d"></span>
-    <div class="readout" style="left:clamp(24px,6vw,64px); bottom:22px;">SCOPE AN ENGAGEMENT &#183; 48H</div>
-  </div>
-  <div class="band-in">
-    <div class="wrap" style="text-align:center">
-      <h2 class="display d-big" style="max-width:22ch; margin:0 auto">Tell us where you are. <span class="d-dim">We scope the work.</span></h2>
-      <div style="font-family:var(--bs-font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--bs-text-lo);margin-top:var(--bs-s5)">One fixed scope &#183; One fixed fee &#183; No hourly billing &#183; Costed plan within 48 hours</div>
-      <div style="display:flex;gap:var(--bs-s3);flex-wrap:wrap;justify-content:center;margin-top:var(--bs-s6)">
-        <a class="bs-btn bs-btn--primary" href="contact.html">Scope an engagement &rarr;</a>
-        <a class="bs-btn bs-btn--ghost" href="https://cal.com/black-sea/30min" target="_blank" rel="noopener">Book a call &rarr;</a>
-      </div>
-    </div>
-  </div>
-</section>
+<body class="pg-what-we-do">
+<a class="skip" href="#main">Skip to content</a>
+<header class="hd" data-hd><div class="bs-wrap hd-in"><a class="bs-lockup" href="/"><svg class="bs-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2"/><line x1="2" y1="24" x2="46" y2="24" stroke="currentColor" stroke-width="2"/><rect x="20" y="20" width="8" height="8" fill="#2F8F6E"/></svg><span class="bs-wordmark">Black<span class="dot"> </span>Sea</span></a><button class="menu" type="button" aria-expanded="false" aria-controls="hd-panel" data-menu><span class="menu-i" aria-hidden="true"></span>Menu</button><div class="hd-panel" id="hd-panel"><nav class="hd-nav" aria-label="Main"><ul><li><a href="/what-we-do.html" aria-current="page">What we do</a></li><li><a href="/coverage.html">Coverage</a></li><li><a href="/firm.html">Firm</a></li><li><a href="/contact.html">Contact</a></li></ul></nav><a class="cta" href="/contact.html">Get a costed plan</a></div></div></header>
+<main id="main">
+<section class="hero"><div class="bs-wrap"><h1 class="bs-display">Services for firms that answer to a supervisor</h1><p class="bs-lead">Each of the seven services starts from a defined moment and ends in a written deliverable, at one fixed fee per stage. Each block below is a scope you can forward to your team.</p><nav class="toc"><ul><li><a href="#licensing">Licensing &amp; new-regime build</a></li><li><a href="#remediation">Remediation</a></li><li><a href="#mlro-cover">MLRO cover &amp; ongoing support</a></li><li><a href="#audit">Independent AML audit</a></li><li><a href="#sanctions-dd">Sanctions &amp; integrity DD</a></li><li><a href="#onboarding">Bank &amp; partner onboarding</a></li><li><a href="#perimeter">Product &amp; perimeter review</a></li><li><a href="#how-we-work">How we work</a></li></ul></nav></div></section>
+<section class="blk sp" id="licensing" aria-labelledby="licensing-h"><div class="bs-wrap sp-in"><h2 class="bs-h2" id="licensing-h">Licensing &amp; new-regime build</h2><div class="sp-b"><p class="lede">The AML/CFT and sanctions programme your application needs, in place before the supervisor asks for it.</p><ul class="facts"><li><strong>For:</strong> firms applying for a licence or a registration, entering a new market, or brought into scope by a new law.</li><li><strong>When:</strong> before the application is filed, or when a new regime sets its start date.</li><li><strong>You receive:</strong> the business risk assessment; AML/CFT and sanctions policies and procedures mapped to your rulebook; customer risk scoring and due diligence procedures; screening and transaction monitoring rules; for virtual asset firms, the travel rule procedure; the MLRO framework and reporting lines; record keeping; staff and board training; registration with the FIU&#x27;s reporting system, on goAML where the FIU uses it.</li><li><strong>Time:</strong> about eight weeks from the start of the assessment. The costed plan sets the dates.</li><li><strong>How it starts:</strong> an assessment of what you hold against what your rulebook asks for.</li><li><strong>Stays with your law firm:</strong> the application itself, legal opinions and representation before the regulator.</li></ul><p class="go"><a class="bs-link" href="/contact.html?service=licensing">Get a costed plan</a></p></div></div></section>
+<section class="blk sp" id="remediation" aria-labelledby="remediation-h"><div class="bs-wrap sp-in"><h2 class="bs-h2" id="remediation-h">Remediation</h2><div class="sp-b"><p class="lede">The repair a finding requires, closed with evidence the supervisor can test.</p><ul class="facts"><li><strong>For:</strong> firms with a finding from a supervisor, an external auditor or a correspondent bank.</li><li><strong>When:</strong> after an inspection report, a supervisory letter, a qualified audit or a bank&#x27;s remediation request, usually with a deadline.</li><li><strong>You receive:</strong> a gap analysis against each finding; a remediation plan with owners and dates; rebuilt controls, policies and procedures; look-back reviews where the finding calls for one; an evidence pack for each finding, ready for the supervisor&#x27;s follow-up.</li><li><strong>Time:</strong> worked back from the deadline in the finding. The costed plan shows each date against it.</li><li><strong>How it starts:</strong> you send the finding under NDA, and we reply with a costed plan.</li><li><strong>Stays with you and your counsel:</strong> correspondence and representation before the supervisor. We prepare the evidence you submit.</li></ul><p class="go"><a class="bs-link" href="/contact.html?service=remediation">Get a costed plan</a></p></div></div></section>
+<span id="mlro-fiu"></span><section class="blk sp" id="mlro-cover" aria-labelledby="mlro-cover-h"><div class="bs-wrap sp-in"><h2 class="bs-h2" id="mlro-cover-h">MLRO cover &amp; ongoing support</h2><div class="sp-b"><p class="lede">An officer in the seat, or a senior practitioner behind the officer you appoint.</p><ul class="facts"><li><strong>For:</strong> firms whose MLRO is leaving or has left, new licensees that need an officer at launch, and officers who need a second senior reviewer.</li><li><strong>When:</strong> a resignation, a licence about to be granted, or a supervisor questioning the capacity of the function.</li></ul><div class="tbl tbl--2"><table><thead><tr><th scope="col">Route</th><th scope="col">What it means</th></tr></thead><tbody><tr><th scope="row">Interim officer</th><td>A practitioner from us holds the MLRO post for an agreed period, where the rules of your market allow an outside officer.</td></tr><tr><th scope="row">Bridge</th><td>Your own appointee holds the post and we stand behind that person on cases, reports and decisions, until the function runs without us.</td></tr><tr><th scope="row">Officer search</th><td>We write the role against your rulebook, find and vet candidates, and prepare the appointment file for the one you choose.</td></tr><tr><th scope="row">Ongoing support</th><td>After go-live, monthly: alert and case review, suspicious transaction reports drafted for the officer&#x27;s decision, rule changes, training and the MLRO&#x27;s reports to the board.</td></tr></tbody></table></div><ul class="facts"><li><strong>You receive:</strong> a documented trail of every case and decision, the MLRO&#x27;s reports to senior management and the board, and a handover file when the engagement ends.</li><li><strong>Time:</strong> interim and bridge cover run month by month, for as long as the gap lasts. A search runs up to the approval of the appointment, where your market requires one.</li><li><strong>How it starts:</strong> tell us the date the seat becomes empty, or the launch date.</li><li><strong>Stays with you:</strong> responsibility for the programme stays with your board. The officer reports to senior management and has direct access to your records.</li></ul><p>Where the rules of your market reserve the post for a citizen, a resident or your own employee, your appointee holds it and we stand behind that person.</p><p class="go"><a class="bs-link" href="/contact.html?service=mlro">Get a costed plan</a></p></div></div></section>
+<section class="blk sp" id="audit" aria-labelledby="audit-h"><div class="bs-wrap sp-in"><h2 class="bs-h2" id="audit-h">Independent AML audit</h2><div class="sp-b"><p class="lede">A test of whether your programme works in practice, reported to your board.</p><ul class="facts"><li><strong>For:</strong> boards and audit committees, firms whose rulebook calls for a periodic independent review, and investors assessing a target.</li><li><strong>When:</strong> the review falls due under your rulebook, a supervisor or a bank asks for one, an inspection is coming, or a transaction needs it.</li><li><strong>You receive:</strong> testing of the programme&#x27;s design and of how it operates on a sample of real files; screening and monitoring tests; a governance review; a board report with rated findings and a dated action list.</li><li><strong>Time:</strong> set by the size of the file sample and the date your report is due. The costed plan fixes the report date.</li><li><strong>How it starts:</strong> send the rule or the request that calls for the review, and the last report if there is one.</li><li><strong>Independence:</strong> we do not audit a programme we built or run, and we sell none of the systems we test.</li></ul><p class="go"><a class="bs-link" href="/contact.html?service=audit">Get a costed plan</a></p></div></div></section>
+<section class="blk sp" id="sanctions-dd" aria-labelledby="sanctions-dd-h"><div class="bs-wrap sp-in"><h2 class="bs-h2" id="sanctions-dd-h">Sanctions &amp; integrity DD</h2><div class="sp-b"><p class="lede">A sourced view of who you are dealing with, before you commit.</p><ul class="facts"><li><strong>For:</strong> firms onboarding a high-risk counterparty, clearing a payment corridor or a shipment, and investors or acquirers.</li><li><strong>When:</strong> before onboarding, a transaction or a shipment, or when your first line cannot resolve a screening match.</li><li><strong>You receive:</strong> ownership traced to the natural persons behind it; sanctions and export control exposure; adverse media and integrity findings; a written risk conclusion with its sources.</li><li><strong>Time:</strong> per file, stated in the costed plan.</li><li><strong>How it starts:</strong> the name of the counterparty and the decision you need to make, under NDA.</li><li><strong>Stays with your counsel:</strong> legal opinions on sanctions law.</li></ul><p class="go"><a class="bs-link" href="/contact.html?service=sanctions-dd">Get a costed plan</a></p></div></div></section>
+<section class="blk sp" id="onboarding" aria-labelledby="onboarding-h"><div class="bs-wrap sp-in"><h2 class="bs-h2" id="onboarding-h">Bank &amp; partner onboarding</h2><div class="sp-b"><p class="lede">A programme file ready for the due diligence of a bank or payment partner.</p><ul class="facts"><li><strong>For:</strong> firms opening a bank account, a payment rail, a correspondent relationship or a partnership with a regulated provider.</li><li><strong>When:</strong> the bank or partner sends a due diligence questionnaire, asks for your programme documents, or pauses onboarding until it has answers.</li><li><strong>You receive:</strong> the questionnaire answered with evidence; the documents the partner asks for, brought to the standard it applies; a review pack with your policy, risk assessment, procedures, screening and monitoring set-up, officer details and latest audit; preparation for the partner&#x27;s calls.</li><li><strong>Time:</strong> set by the partner&#x27;s deadline. The costed plan works back from it.</li><li><strong>How it starts:</strong> send the questionnaire or the partner&#x27;s request.</li><li><strong>Stays with the partner:</strong> the decision. We make sure the file it decides on is complete and accurate.</li></ul><p class="go"><a class="bs-link" href="/contact.html?service=onboarding">Get a costed plan</a></p></div></div></section>
+<section class="blk sp" id="perimeter" aria-labelledby="perimeter-h"><div class="bs-wrap sp-in"><h2 class="bs-h2" id="perimeter-h">Product &amp; perimeter review</h2><div class="sp-b"><p class="lede">A written answer on which rules a product or activity brings you under, before you launch it.</p><ul class="facts"><li><strong>For:</strong> firms launching a product, adding an activity or entering a market, and firms unsure whether an activity is in scope at all.</li><li><strong>When:</strong> before launch, before a new market, or when a partner or supervisor asks whether an activity is covered.</li><li><strong>You receive:</strong> a perimeter analysis by market, naming the rules and the supervisor that apply; the product&#x27;s financial crime risk assessment; the controls it needs before launch; the questions to put to counsel where the answer needs a legal opinion.</li><li><strong>Time:</strong> per product, stated in the costed plan.</li><li><strong>How it starts:</strong> a description of the product and the markets where you will offer it.</li><li><strong>Stays with a law firm:</strong> a formal legal opinion on the perimeter.</li></ul><p class="go"><a class="bs-link" href="/contact.html?service=perimeter">Get a costed plan</a></p></div></div></section>
+<div class="band band--grid" data-photo><img src="/assets/img/s-grid-960.webp" srcset="/assets/img/s-grid-960.webp 960w, /assets/img/s-grid-1920.webp 1920w" sizes="100vw" width="1920" height="1440" alt="" decoding="async" loading="lazy"></div>
+<section class="blk wide" id="how-we-work" aria-labelledby="how-we-work-h"><div class="bs-wrap"><h2 class="bs-h2" id="how-we-work-h">How we work</h2><p>A build or a remediation runs in three stages, and you commit to one stage at a time. An audit, a diligence file or a perimeter review runs as one stage, at one fixed fee.</p><div class="tbl tbl--3"><table><thead><tr><th scope="col">Stage</th><th scope="col">When</th><th scope="col">What you hold at the end</th></tr></thead><tbody><tr><th scope="row">Assess</th><td>Weeks 1 and 2</td><td>A written gap report against your rulebook, and a fixed fee for the build</td></tr><tr><th scope="row">Build</th><td>Weeks 3 to 8</td><td>The documents, rules and training the report found missing, in place and approved by your management</td></tr><tr><th scope="row">Operate</th><td>From go-live</td><td>Officer cover, ongoing support and periodic testing, monthly</td></tr></tbody></table></div><p>The costed plan sets the actual weeks. If you go ahead with the build, the assessment fee is credited against it, on the terms the plan states.</p><div class="cols cols--6"><div class="col"><h3 class="bs-h3">How the fee is set</h3><p>One fixed fee for each stage, stated in the costed plan with what it includes and what it leaves out. We do not bill by the hour, and any change of scope is agreed in writing before work on it starts.</p></div><div class="col"><h3 class="bs-h3">Why an outside firm</h3><p>Your team runs the programme every day, and a review of that work is independent only when someone else carries it out. A build, or cover for an empty seat, also takes hours your team needs for its own work. We take that work off the team and hand it back finished.</p></div><div class="col"><h3 class="bs-h3">Ways to engage</h3><ul class="facts"><li><strong>A project with a fixed end:</strong> a build, a remediation, an audit or a diligence file.</li><li>A practitioner beside your team on a defined gap, while your officer keeps the function.</li><li><strong>A standing function under your board:</strong> officer cover or ongoing support, monthly.</li></ul></div><div class="col"><h3 class="bs-h3">What we need from you</h3><p>An NDA, a clear account of your licence stage and of any finding or deadline, access to your documents and people once the NDA is signed, and one person who can approve the scope.</p></div><div class="col"><h3 class="bs-h3">Who does the work</h3><p>The practitioners who scope your work deliver it, from the assessment to the handover.</p></div><div class="col"><h3 class="bs-h3">Confidentiality</h3><p>We sign an NDA before you send detail. We never publish client names, and one client&#x27;s file is never another client&#x27;s reference.</p></div></div></div></section>
+<section class="close"><div class="bs-wrap"><h2>Get a costed plan</h2><p class="lede">Tell us the service, the market and what has happened. The costed plan sets out the stages, the weeks and one fixed fee for each.</p><p class="acts"><a class="bs-btn" href="/contact.html">Get a costed plan</a></p></div></section>
 </main>
-
-<div id="bs-footer"></div>
-<script src="coverage.js"></script>
-<script src="site.js"></script>
+<footer class="ft"><div class="bs-wrap ft-in"><div class="ft-brand"><a class="bs-lockup" href="/"><svg class="bs-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2"/><line x1="2" y1="24" x2="46" y2="24" stroke="currentColor" stroke-width="2"/><rect x="20" y="20" width="8" height="8" fill="#2F8F6E"/></svg><span class="bs-wordmark">Black<span class="dot"> </span>Sea</span></a><p>Black Sea, independent AML/CFT and sanctions advisory</p></div><p class="ft-mail"><a href="mailto:operations@blackseaspv.com">operations@blackseaspv.com</a></p><ul class="ft-links"><li><a href="/partners.html">Partners</a></li><li><a href="/legal.html">Legal</a></li></ul><div class="ft-bot"><p>Black Sea Group LLC, Limited Liability Company, State of Wyoming, United States of America, <a href="mailto:operations@blackseaspv.com">operations@blackseaspv.com</a></p></div></div></footer>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "302388cdb807420591a613f27c543bb9"}'></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://blackseaspv.com/#organization","name":"Black Sea","url":"https://blackseaspv.com/","email":"operations@blackseaspv.com","description":"Black Sea builds, repairs, staffs and tests the AML/CFT and sanctions programmes of regulated firms worldwide, deepest in frontier markets and the Gulf."},{"@type":"WebSite","@id":"https://blackseaspv.com/#website","name":"Black Sea","url":"https://blackseaspv.com/","inLanguage":["en"],"publisher":{"@id":"https://blackseaspv.com/#organization"}},{"@type":"WebPage","@id":"https://blackseaspv.com/what-we-do.html#webpage","url":"https://blackseaspv.com/what-we-do.html","name":"AML/CFT, MLRO and sanctions services | Black Sea","description":"Seven services for regulated firms: licensing build, remediation, MLRO cover, AML audit, sanctions DD, bank onboarding and perimeter review.","inLanguage":"en","isPartOf":{"@id":"https://blackseaspv.com/#website"},"breadcrumb":{"@id":"https://blackseaspv.com/what-we-do.html#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://blackseaspv.com/what-we-do.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blackseaspv.com/"},{"@type":"ListItem","position":2,"name":"What we do","item":"https://blackseaspv.com/what-we-do.html"}]}]}</script>
 </body>
 </html>
