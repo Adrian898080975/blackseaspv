@@ -134,7 +134,7 @@ p{max-width:var(--bs-measure);text-wrap:pretty}
 .band{position:relative;height:min(84vh,860px);overflow:hidden;background:var(--bs-surface-2)}
 .band img{width:100%;height:100%;object-fit:cover}
 .band--short{height:min(70vh,720px)}
-.band--ammo img{object-position:40% 55%}
+.band--launcher img{object-position:50% 50%}
 .band--hall img{object-position:50% 60%}
 .band--grid img{object-position:50% 50%}
 .band--naval img{object-position:50% 55%}
@@ -250,6 +250,13 @@ p{max-width:var(--bs-measure);text-wrap:pretty}
 .state h2{font-size:var(--bs-t-h2);line-height:1.15;letter-spacing:var(--bs-track-h);max-width:20ch}
 .state p{margin-top:var(--bs-s4);color:var(--bs-text-sub)}
 .state:focus{outline:0}
+/* a send the browser stopped: the fields to fix in the danger colour until they are fixed. One rule per
+   selector, so a browser without :user-invalid or :has() drops only that rule */
+.f input:user-invalid:not(:focus),.f select:user-invalid:not(:focus),.f textarea:user-invalid:not(:focus){border-bottom-color:var(--bs-danger);box-shadow:0 1px 0 0 var(--bs-danger)}
+.tried .f input:invalid:not(:focus),.tried .f select:invalid:not(:focus),.tried .f textarea:invalid:not(:focus){border-bottom-color:var(--bs-danger);box-shadow:0 1px 0 0 var(--bs-danger)}
+.f:has(:user-invalid)>label,.f:has(:user-invalid)>legend{color:var(--bs-danger)}
+.tried .f:has(:invalid)>label,.tried .f:has(:invalid)>legend{color:var(--bs-danger)}
+.tried .chips:has(input:invalid) label{border-color:var(--bs-danger)}
 .ct-side h2{font-size:var(--bs-t-h3);line-height:1.3;letter-spacing:var(--bs-track-h3);font-weight:500;margin-bottom:var(--bs-s4)}
 .ct-side .steps{font-size:16px;color:var(--bs-text-sub)}
 .ct-side .steps+h2{margin-top:var(--bs-s7)}
@@ -275,6 +282,9 @@ p{max-width:var(--bs-measure);text-wrap:pretty}
 .ft-bot p{font-size:13px;color:var(--bs-text-lo);max-width:none}
 .ft-bot a{color:inherit;text-underline-offset:3px}
 
+/* ---------------------------------------------------------------- phones: the costed-plan bar */
+.mcta{display:none}
+
 /* ---------------------------------------------------------------- narrower screens */
 @media (max-width:1000px){
 .cols--4,.cols--3,.cols--6{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -298,6 +308,11 @@ html:not(.js) .hd{position:static}
 .ct-form,.ct-side{grid-column:1/-1}
 .pair{grid-template-columns:minmax(0,1fr)}
 .ft-brand,.ft-mail,.ft-links{grid-column:1/-1}
+.js .mcta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:18;background:var(--bs-bg);border-top:1px solid var(--bs-hairline);padding:12px var(--bs-margin) calc(12px + env(safe-area-inset-bottom,0px));transform:translateY(100%);visibility:hidden;transition:transform .25s var(--bs-ease),visibility 0s linear .25s}
+.js.mcta-on .mcta{transform:none;visibility:visible;transition:transform .25s var(--bs-ease)}
+.js.menu-open .mcta{visibility:hidden}
+.mcta .bs-btn{display:flex;justify-content:center;width:100%;background:var(--bs-text-hi);color:var(--bs-bg)}
+.js.mcta-on{scroll-padding-bottom:88px}
 }
 @media (max-width:700px){
 .hero{padding:var(--bs-s8) 0 var(--bs-s7)}
@@ -327,7 +342,7 @@ h1,h2,h3,.tbl th,.tbl td{hyphens:auto;-webkit-hyphens:auto;hyphenate-limit-chars
 .is-ink .w{color:var(--bs-text-hi)}
 }
 @media print{
-.hd,.ft,.band,.menu,.skip{display:none}
+.hd,.ft,.band,.menu,.skip,.mcta{display:none}
 .js .band img{opacity:1}
 .is-ink .w{color:var(--bs-text-hi)!important}
 }

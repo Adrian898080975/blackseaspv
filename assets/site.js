@@ -1,6 +1,7 @@
 /* Black Sea 3.0: behaviour only. Every word is already in the HTML the server sends.
-   Header shadow, mobile menu, photo fade-in, the ink-in statement, contact form presets,
-   the "Other market" field and the form's sent and error states. */
+   Header shadow, mobile menu, photo fade-in, the ink-in statement, the costed-plan bar on phones,
+   contact form presets, the "Other market" field, the marked fields of a stopped send, and the
+   form's sending, sent and error states. */
 (function () {
   'use strict';
   var d = document;
@@ -82,6 +83,25 @@
     ink();
   }
 
+  /* phones: the costed-plan bar at the foot of the screen, out of the way while another button to the
+     form or the footer is in view (CSS shows it below 860 px only) */
+  var bar = d.querySelector('[data-mcta]');
+  if (bar && window.IntersectionObserver) {
+    var to = bar.querySelector('a');
+    var watch = Array.prototype.filter.call(d.querySelectorAll('main a.bs-btn'), function (a) {
+      return a.pathname === to.pathname;
+    });
+    var ft = d.querySelector('.ft');
+    if (ft) watch.push(ft);
+    var inView = watch.map(function () { return false; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { inView[watch.indexOf(en.target)] = en.isIntersecting; });
+      root.classList.toggle('mcta-on', inView.indexOf(true) < 0);
+    });
+    watch.forEach(function (el) { io.observe(el); });
+    if (!watch.length) root.classList.add('mcta-on');
+  }
+
   /* contact form */
   var form = d.querySelector('form[data-form]');
   if (!form) return;
@@ -113,7 +133,10 @@
     var input = other.querySelector('input');
     if (input) {
       input.required = on;
-      if (!on) input.value = '';
+      if (!on) {
+        input.value = '';
+        input.removeAttribute('aria-invalid');
+      }
     }
   }
   if (market) {
@@ -121,31 +144,79 @@
     syncOther();
   }
 
+  /* a send the browser stops: the fields it names are marked until they are fixed */
+  form.addEventListener('invalid', function (e) {
+    form.classList.add('tried');
+    e.target.setAttribute('aria-invalid', 'true');
+  }, true);
+  function recheck(e) {
+    var el = e.target;
+    if (!el.name || !el.validity) return;
+    /* one chosen radio makes its whole group valid */
+    var group = el.type === 'radio' ? form.querySelectorAll('input[name="' + el.name + '"]') : [el];
+    Array.prototype.forEach.call(group, function (x) {
+      if (x.validity.valid) x.removeAttribute('aria-invalid');
+    });
+  }
+  form.addEventListener('input', recheck);
+  form.addEventListener('change', recheck);
+  function unmark() {
+    form.classList.remove('tried');
+    Array.prototype.forEach.call(form.querySelectorAll('[aria-invalid]'), function (x) {
+      x.removeAttribute('aria-invalid');
+    });
+  }
+
   var wrap = form.closest('[data-form-wrap]');
   var done = wrap && wrap.querySelector('[data-form-done]');
   var fail = wrap && wrap.querySelector('[data-form-error]');
+  var submit = form.querySelector('[type="submit"]');
+  var idle = submit && submit.querySelector('[data-idle]');
+  var busy = submit && submit.querySelector('[data-busy]');
+  var thanks = form.getAttribute('data-thanks');
+
+  /* while the form sends, the button says so and cannot be pressed again */
+  function sending(on) {
+    if (submit) submit.disabled = on;
+    if (idle && busy) {
+      idle.hidden = on;
+      busy.hidden = !on;
+    }
+    if (on) form.setAttribute('aria-busy', 'true');
+    else form.removeAttribute('aria-busy');
+  }
 
   form.addEventListener('submit', function (e) {
     var trap = form.querySelector('[name="_gotcha"]');
     if (trap && trap.value) { e.preventDefault(); return; }
     if (!window.fetch || !window.FormData || !done || !fail) return; /* plain POST */
     e.preventDefault();
-    var submit = form.querySelector('[type="submit"]');
-    if (submit) submit.disabled = true;
+    sending(true);
     fail.hidden = true;
     fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
       .then(function (r) {
         if (!r.ok) throw new Error('status ' + r.status);
+        unmark();
+        form.reset();
+        syncOther();
+        if (thanks) {
+          window.location.assign(thanks);
+          return;
+        }
+        sending(false);
         form.hidden = true;
         done.hidden = false;
         done.focus();
       })
       .catch(function () {
+        sending(false);
         fail.hidden = false;
         fail.focus();
-      })
-      .then(function () {
-        if (submit) submit.disabled = false;
       });
+  });
+
+  /* back from the thank-you page: an empty form with its usual button */
+  window.addEventListener('pageshow', function (e) {
+    if (e.persisted) sending(false);
   });
 })();
