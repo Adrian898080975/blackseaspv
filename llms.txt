@@ -4,7 +4,7 @@
 
 - [Home](https://blackseaspv.com/): Black Sea builds, repairs, staffs and tests the AML/CFT and sanctions programmes of regulated firms worldwide, deepest in frontier markets and the Gulf.
 - [What we do](https://blackseaspv.com/what-we-do.html): Seven services for regulated firms: licensing build, remediation, MLRO cover, AML audit, sanctions DD, bank onboarding and perimeter review.
-- [Coverage](https://blackseaspv.com/coverage.html): AML/CFT and sanctions advisory worldwide. For nineteen markets: who supervises which licence, where reports go and who may hold the MLRO seat.
+- [Coverage](https://blackseaspv.com/coverage.html): AML/CFT and sanctions advisory worldwide. For twenty-seven markets: who supervises which licence, where reports go and who may hold the MLRO seat.
 - [Firm](https://blackseaspv.com/firm.html): Black Sea is an independent AML/CFT and sanctions advisory firm. What we do, for whom, how fees are set, and how we work with law firms.
 - [Contact](https://blackseaspv.com/contact.html): Tell us the market, the licence and what has happened. A senior practitioner replies with a costed plan: the stages, the weeks and a fixed fee for each.
 - [Partners](https://blackseaspv.com/partners.html): Your firm keeps the application and the legal advice. Black Sea builds the AML/CFT and sanctions programme behind it, under NDA.
@@ -31,6 +31,14 @@
 - [Uzbekistan](https://blackseaspv.com/coverage.html#uzbekistan)
 - [Turkey](https://blackseaspv.com/coverage.html#turkey)
 - [Pakistan](https://blackseaspv.com/coverage.html#pakistan)
+- [United States](https://blackseaspv.com/coverage.html#usa)
+- [Canada](https://blackseaspv.com/coverage.html#canada)
+- [Cayman Islands](https://blackseaspv.com/coverage.html#cayman-islands)
+- [United Kingdom](https://blackseaspv.com/coverage.html#uk)
+- [Switzerland](https://blackseaspv.com/coverage.html#switzerland)
+- [Singapore](https://blackseaspv.com/coverage.html#singapore)
+- [Hong Kong](https://blackseaspv.com/coverage.html#hong-kong)
+- [Australia](https://blackseaspv.com/coverage.html#australia)
 - [Virtual assets and crypto](https://blackseaspv.com/coverage.html#vasp-crypto)
 - [Payments and MSBs](https://blackseaspv.com/coverage.html#payments-msb)
 - [Banks and financial institutions](https://blackseaspv.com/coverage.html#banks-fis)
