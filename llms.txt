@@ -10,41 +10,41 @@
 - [Partners](https://blackseaops.com/partners.html): Your firm keeps the application and the legal advice. Black Sea builds the AML/CFT and sanctions programme behind it, under NDA.
 - [Legal](https://blackseaops.com/legal.html): Terms of use and privacy notice for blackseaops.com: what the site collects, why, how long it is kept, and how to ask for deletion.
 
-## Coverage sections
+## Markets and sectors
 
-- [Bahrain](https://blackseaops.com/coverage.html#bahrain)
-- [Kuwait](https://blackseaops.com/coverage.html#kuwait)
-- [Oman](https://blackseaops.com/coverage.html#oman)
-- [Qatar](https://blackseaops.com/coverage.html#qatar)
-- [Saudi Arabia](https://blackseaops.com/coverage.html#saudi-arabia)
-- [United Arab Emirates](https://blackseaops.com/coverage.html#uae)
-- [Egypt](https://blackseaops.com/coverage.html#egypt)
-- [Jordan](https://blackseaops.com/coverage.html#jordan)
-- [Ghana](https://blackseaops.com/coverage.html#ghana)
-- [Kenya](https://blackseaops.com/coverage.html#kenya)
-- [Nigeria](https://blackseaops.com/coverage.html#nigeria)
-- [South Africa](https://blackseaops.com/coverage.html#south-africa)
-- [Azerbaijan](https://blackseaops.com/coverage.html#azerbaijan)
-- [Georgia](https://blackseaops.com/coverage.html#georgia)
-- [Kazakhstan](https://blackseaops.com/coverage.html#kazakhstan)
-- [Kyrgyzstan](https://blackseaops.com/coverage.html#kyrgyzstan)
-- [Uzbekistan](https://blackseaops.com/coverage.html#uzbekistan)
-- [Turkey](https://blackseaops.com/coverage.html#turkey)
-- [Pakistan](https://blackseaops.com/coverage.html#pakistan)
-- [United States](https://blackseaops.com/coverage.html#usa)
-- [Canada](https://blackseaops.com/coverage.html#canada)
-- [Cayman Islands](https://blackseaops.com/coverage.html#cayman-islands)
-- [United Kingdom](https://blackseaops.com/coverage.html#uk)
-- [Switzerland](https://blackseaops.com/coverage.html#switzerland)
-- [Singapore](https://blackseaops.com/coverage.html#singapore)
-- [Hong Kong](https://blackseaops.com/coverage.html#hong-kong)
-- [Australia](https://blackseaops.com/coverage.html#australia)
-- [Virtual assets and crypto](https://blackseaops.com/coverage.html#vasp-crypto)
-- [Payments and MSBs](https://blackseaops.com/coverage.html#payments-msb)
-- [Banks and financial institutions](https://blackseaops.com/coverage.html#banks-fis)
-- [Funds and corporate service providers](https://blackseaops.com/coverage.html#funds-csp)
-- [Gold, precious metals and stones](https://blackseaops.com/coverage.html#gold-dpms)
-- [Gaming](https://blackseaops.com/coverage.html#gaming)
-- [Real estate and DNFBPs](https://blackseaops.com/coverage.html#real-estate-dnfbp)
-- [Defence and dual-use](https://blackseaops.com/coverage.html#defense-dual-use)
-- [Art and high-value assets](https://blackseaops.com/coverage.html#art-high-value)
+- [Bahrain](https://blackseaops.com/market-bahrain.html): Who supervises AML/CFT in Bahrain, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Kuwait](https://blackseaops.com/market-kuwait.html): Who supervises AML/CFT in Kuwait, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Oman](https://blackseaops.com/market-oman.html): Who supervises AML/CFT in Oman, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Qatar](https://blackseaops.com/market-qatar.html): Who supervises AML/CFT in Qatar, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Saudi Arabia](https://blackseaops.com/market-saudi-arabia.html): Who supervises AML/CFT in Saudi Arabia, where suspicious transaction reports go and who may hold the MLRO seat.
+- [United Arab Emirates](https://blackseaops.com/market-uae.html): Who supervises AML/CFT in United Arab Emirates, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Egypt](https://blackseaops.com/market-egypt.html): Who supervises AML/CFT in Egypt, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Jordan](https://blackseaops.com/market-jordan.html): Who supervises AML/CFT in Jordan, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Ghana](https://blackseaops.com/market-ghana.html): Who supervises AML/CFT in Ghana, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Kenya](https://blackseaops.com/market-kenya.html): Who supervises AML/CFT in Kenya, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Nigeria](https://blackseaops.com/market-nigeria.html): Who supervises AML/CFT in Nigeria, where suspicious transaction reports go and who may hold the MLRO seat.
+- [South Africa](https://blackseaops.com/market-south-africa.html): Who supervises AML/CFT in South Africa, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Azerbaijan](https://blackseaops.com/market-azerbaijan.html): Who supervises AML/CFT in Azerbaijan, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Georgia](https://blackseaops.com/market-georgia.html): Who supervises AML/CFT in Georgia, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Kazakhstan](https://blackseaops.com/market-kazakhstan.html): Who supervises AML/CFT in Kazakhstan, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Kyrgyzstan](https://blackseaops.com/market-kyrgyzstan.html): Who supervises AML/CFT in Kyrgyzstan, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Uzbekistan](https://blackseaops.com/market-uzbekistan.html): Who supervises AML/CFT in Uzbekistan, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Turkey](https://blackseaops.com/market-turkey.html): Who supervises AML/CFT in Turkey, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Pakistan](https://blackseaops.com/market-pakistan.html): Who supervises AML/CFT in Pakistan, where suspicious transaction reports go and who may hold the MLRO seat.
+- [United States](https://blackseaops.com/market-usa.html): Who supervises AML/CFT in United States, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Canada](https://blackseaops.com/market-canada.html): Who supervises AML/CFT in Canada, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Cayman Islands](https://blackseaops.com/market-cayman-islands.html): Who supervises AML/CFT in Cayman Islands, where suspicious transaction reports go and who may hold the MLRO seat.
+- [United Kingdom](https://blackseaops.com/market-uk.html): Who supervises AML/CFT in United Kingdom, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Switzerland](https://blackseaops.com/market-switzerland.html): Who supervises AML/CFT in Switzerland, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Singapore](https://blackseaops.com/market-singapore.html): Who supervises AML/CFT in Singapore, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Hong Kong](https://blackseaops.com/market-hong-kong.html): Who supervises AML/CFT in Hong Kong, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Australia](https://blackseaops.com/market-australia.html): Who supervises AML/CFT in Australia, where suspicious transaction reports go and who may hold the MLRO seat.
+- [Virtual assets and crypto](https://blackseaops.com/sector-vasp-crypto.html): Virtual assets and crypto: the international standard, the supervisors in our markets and what we build.
+- [Payments and MSBs](https://blackseaops.com/sector-payments-msb.html): Payments and MSBs: the international standard, the supervisors in our markets and what we build.
+- [Banks and financial institutions](https://blackseaops.com/sector-banks-fis.html): Banks and financial institutions: the international standard, the supervisors in our markets and what we build.
+- [Funds and corporate service providers](https://blackseaops.com/sector-funds-csp.html): Funds and corporate service providers: the international standard, the supervisors in our markets and what we build.
+- [Gold, precious metals and stones](https://blackseaops.com/sector-gold-dpms.html): Gold, precious metals and stones: the international standard, the supervisors in our markets and what we build.
+- [Gaming](https://blackseaops.com/sector-gaming.html): Gaming: the international standard, the supervisors in our markets and what we build.
+- [Real estate and DNFBPs](https://blackseaops.com/sector-real-estate-dnfbp.html): Real estate and DNFBPs: the international standard, the supervisors in our markets and what we build.
+- [Defence and dual-use](https://blackseaops.com/sector-defense-dual-use.html): Defence and dual-use: the international standard, the supervisors in our markets and what we build.
+- [Art and high-value assets](https://blackseaops.com/sector-art-high-value.html): Art and high-value assets: the international standard, the supervisors in our markets and what we build.

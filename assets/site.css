@@ -350,3 +350,24 @@ h1,h2,h3,.tbl th,.tbl td{hyphens:auto;-webkit-hyphens:auto;hyphenate-limit-chars
 .js .band img{opacity:1}
 .is-ink .w{color:var(--bs-text-hi)!important}
 }
+/* Coverage hub and the market and sector pages (22 Nov 2026) */
+.mk--hub>h3{position:static;grid-row:auto}
+.mk--hub>h3 a{color:inherit;text-decoration:none}
+.mk--hub>h3 a:hover{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.crumbs ol{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 var(--bs-s6);font-size:var(--bs-t-small);color:var(--bs-text-lo)}
+.crumbs li+li::before{content:"";display:inline-block;width:5px;height:5px;margin-right:8px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg);vertical-align:2px}
+.crumbs a{color:inherit;text-decoration:none;border-bottom:1px solid var(--bs-hairline)}
+.crumbs a:hover{color:var(--bs-text-hi)}
+.hero--brief{padding-bottom:var(--bs-s7)}
+.hero--brief h1{max-width:20ch}
+.hero--brief .bs-lead{max-width:62ch}
+.blk.brief{padding-top:var(--bs-s8)}
+.brief-b{max-width:860px}
+.brief-b>*+*{margin-top:var(--bs-s4)}
+.brief-b>.tbl{margin:var(--bs-s6) 0}
+.chg{margin-top:var(--bs-s8);padding-top:var(--bs-s6);border-top:1px solid var(--bs-hairline-strong)}
+.chg-l{list-style:none;padding:0;margin:var(--bs-s4) 0 0}
+.chg-l li{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:var(--bs-s4);padding:var(--bs-s3) 0;border-bottom:1px solid var(--bs-hairline)}
+.chg-l time{font-variant-numeric:tabular-nums;color:var(--bs-text-lo)}
+.brief-b>.back{margin-top:var(--bs-s7)}
+@media (max-width:700px){.chg-l li{grid-template-columns:1fr;gap:4px}}
