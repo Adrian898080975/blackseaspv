@@ -281,6 +281,10 @@ p{max-width:var(--bs-measure);text-wrap:pretty}
 .ft-bot{grid-column:1/-1;margin-top:var(--bs-s7);padding-top:var(--bs-s4);border-top:1px solid var(--bs-hairline)}
 .ft-bot p{font-size:13px;color:var(--bs-text-lo);max-width:none}
 .ft-bot a{color:inherit;text-underline-offset:3px}
+.ft-social{display:flex;gap:var(--bs-s4);margin-top:var(--bs-s5)}
+.ft-social a{display:inline-flex;padding:2px;color:var(--bs-text-sub);transition:color var(--bs-fade) var(--bs-ease)}
+.ft-social a:hover,.ft-social a:focus-visible{color:var(--bs-accent)}
+.ft-social svg{display:block;width:18px;height:18px;fill:currentColor}
 
 /* ---------------------------------------------------------------- phones: the costed-plan bar */
 .mcta{display:none}
