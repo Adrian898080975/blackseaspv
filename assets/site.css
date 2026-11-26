@@ -371,3 +371,163 @@ h1,h2,h3,.tbl th,.tbl td{hyphens:auto;-webkit-hyphens:auto;hyphenate-limit-chars
 .chg-l time{font-variant-numeric:tabular-nums;color:var(--bs-text-lo)}
 .brief-b>.back{margin-top:var(--bs-s7)}
 @media (max-width:700px){.chg-l li{grid-template-columns:1fr;gap:4px}}
+
+/* ---------------------------------------------------------------- the regulation map (Coverage, 26 Nov 2026)
+   One table of markets by sectors, a square per pair. Without JavaScript it is the whole map; site.js adds the
+   search and the graph of one market, from the words already in the table. */
+.rmap-intro{margin-top:var(--bs-s5);color:var(--bs-text-sub)}
+.rmap-tools{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:var(--bs-gutter);row-gap:var(--bs-s4);align-items:end;margin-top:var(--bs-s6)}
+.rmap-find label{display:block;font-size:var(--bs-t-label);color:var(--bs-text-lo)}
+.rmap-find input{display:block;width:100%;border:0;border-bottom:1px solid var(--bs-field-line);background:transparent;border-radius:0;font:400 19px/1.4 var(--bs-font);color:var(--bs-text-hi);padding:10px 0;min-height:48px;appearance:none;-webkit-appearance:none}
+.rmap-find input::placeholder{color:var(--bs-text-lo);opacity:1}
+.rmap-find input:focus{outline:0;border-bottom-color:var(--bs-text-hi);box-shadow:0 1px 0 0 var(--bs-text-hi)}
+.rmap-find input:focus-visible{box-shadow:0 2px 0 0 var(--bs-accent)}
+.rmap-key{display:flex;flex-wrap:wrap;justify-content:flex-end;column-gap:var(--bs-s4);row-gap:var(--bs-s2);font-size:var(--bs-t-small);color:var(--bs-text-sub);padding-bottom:12px}
+.rmap-key li{display:inline-flex;align-items:center;gap:var(--bs-s2)}
+.rmap-key .rc{width:14px;height:14px}
+.rc{display:inline-block;width:20px;height:20px;vertical-align:middle}
+.rc--named{background:var(--bs-accent)}
+.rc--none{background:var(--bs-ink)}
+.rc--open{border:1px solid var(--bs-hairline-strong)}
+.rc--def{border:1px dashed var(--bs-text-lo)}
+a.rc{transition:transform 150ms var(--bs-ease),opacity 200ms var(--bs-ease)}
+a.rc:hover{transform:scale(1.25)}
+.rmap-scroll{margin-top:var(--bs-s6);overflow-x:auto;-webkit-overflow-scrolling:touch}
+.rmap-t{width:100%;min-width:760px;font-size:var(--bs-t-small);line-height:1.35}
+.rmap-t th,.rmap-t td{border-bottom:1px solid var(--bs-hairline);padding:7px 4px;text-align:center;vertical-align:middle}
+.rmap-t thead th{font-size:var(--bs-t-label);font-weight:400;color:var(--bs-text-lo);padding-bottom:10px;border-bottom-color:var(--bs-hairline-strong);vertical-align:bottom}
+.rmap-t thead a{color:inherit;text-decoration:none}
+.rmap-t thead a:hover{color:var(--bs-text-hi)}
+.rmap-t thead th:first-child,.rmap-t tbody th[scope=row]{text-align:left;position:sticky;left:0;z-index:1;background:var(--bs-bg);padding-right:var(--bs-s3);white-space:nowrap}
+.rmap-t tbody th[scope=row]{font-weight:400}
+.rmap-t tbody th[scope=row] a{color:var(--bs-text-hi);text-decoration:none}
+.rmap-t tbody th[scope=row] a:hover{text-decoration:underline;text-decoration-color:var(--bs-text-hi)}
+.rmap-rg th{text-align:left;font-size:var(--bs-t-label);font-weight:400;color:var(--bs-text-lo);padding-top:var(--bs-s4);border-bottom-color:var(--bs-hairline-strong)}
+.rmap .is-dim{opacity:.16}
+.rmap>.bs-wrap>.go{margin-top:var(--bs-s5)}
+.rmap-out{margin-top:var(--bs-s5);padding-top:var(--bs-s4);border-top:1px solid var(--bs-hairline-strong)}
+.rmap-out>p{color:var(--bs-text-sub)}
+.rmap-g{overflow-x:auto;margin-bottom:var(--bs-s5)}
+.rmap-g svg{display:block;margin-top:var(--bs-s4);font-family:var(--bs-font);font-size:14px}
+.g-ln{fill:none;stroke:var(--bs-hairline-strong);stroke-width:1}
+.g-ln--none{stroke-dasharray:3 3}
+.g-b rect{fill:var(--bs-surface);stroke:var(--bs-hairline-strong);stroke-width:1}
+.g-b text{fill:var(--bs-text-hi)}
+.g-b--m rect{fill:var(--bs-ink);stroke:var(--bs-ink)}
+.g-b--m text{fill:var(--bs-on-dark-hi);font-weight:500}
+.g-b--p rect{fill:var(--bs-bg);stroke:var(--bs-accent)}
+.g-b--x rect{fill:var(--bs-bg);stroke:var(--bs-text-lo);stroke-dasharray:3 3}
+a.g-b{text-decoration:none}
+a.g-b:hover rect{stroke:var(--bs-text-hi)}
+a.g-b--m:hover rect{fill:var(--bs-ink-2)}
+.rmap-hits{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));column-gap:var(--bs-gutter)}
+.rmap-hits li{padding:12px 0;border-bottom:1px solid var(--bs-hairline);min-width:0}
+.rmap-hits p{margin-top:4px;font-size:var(--bs-t-small);color:var(--bs-text-sub)}
+
+/* a market and sector pair: the question, then its answer */
+.hero--pair h1{max-width:22ch}
+.pq{margin-top:var(--bs-s6);color:var(--bs-text-sub);max-width:62ch}
+.hero--pair .bs-lead{margin-top:var(--bs-s3);color:var(--bs-text-hi)}
+.hero--pair .pa--none{color:var(--bs-text-sub)}
+.hero--pair .pa-t{margin:var(--bs-s5) 0 0;max-width:860px}
+.pr-rel{display:flex;flex-wrap:wrap;column-gap:var(--bs-s5);row-gap:var(--bs-s3)}
+.brief-b>.pr-rel{margin-top:var(--bs-s7)}
+.ll--pairs ul{column-gap:var(--bs-s4)}
+@media (max-width:860px){
+.rmap-tools{grid-template-columns:1fr}
+.rmap-key{justify-content:flex-start;padding-bottom:0}
+}
+
+/* ---------------------------------------------------------------- the regulation graph as HTML (26 Nov 2026)
+   Home and Coverage: every name is text in the page, site.js draws only the lines between the nodes. */
+.gx-h{margin-bottom:var(--bs-s5)}
+.gx-b{position:relative;display:grid;grid-template-columns:max-content max-content minmax(0,1fr);column-gap:clamp(40px,6vw,104px);align-items:center}
+.gx-l{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.gx-c{position:relative;z-index:1;display:flex;flex-direction:column;gap:10px;min-width:0}
+.gx-c--s li{display:flex}
+.gx-c--s .gx-n{flex:1}
+.gx-c--p{align-items:flex-start}
+.gx-n{display:inline-block;max-width:100%;font-size:var(--bs-t-small);line-height:1.3;padding:9px 14px;border:1px solid var(--bs-hairline-strong);background:var(--bs-surface);color:var(--bs-text-hi);text-decoration:none;overflow-wrap:break-word}
+a.gx-n:hover{border-color:var(--bs-text-hi)}
+.gx-n--m{background:var(--bs-ink);border-color:var(--bs-ink);color:var(--bs-on-dark-hi);font-weight:500}
+a.gx-n--m:hover{background:var(--bs-ink-2);border-color:var(--bs-ink-2)}
+.gx-n--p{background:var(--bs-bg);border-color:var(--bs-accent)}
+.gx-n--x{background:var(--bs-bg);border:1px dashed var(--bs-text-lo)}
+.gx-ln{fill:none;stroke:var(--bs-hairline-strong);stroke-width:1}
+.gx-ln--none{stroke-dasharray:3 3}
+.rmap-out .gx{margin-bottom:var(--bs-s6)}
+@media (max-width:640px){
+.gx-b{grid-template-columns:minmax(0,max-content) minmax(0,1fr);column-gap:28px}
+.gx-c--m{display:none}
+.gx-n{padding:8px 10px}
+}
+
+/* ---------------------------------------------------------------- Home, screen 6: the map on the home page */
+.hm-p{margin-top:var(--bs-s7);background:var(--bs-surface);border:1px solid var(--bs-hairline);padding:clamp(20px,3.2vw,48px)}
+.hm-find{max-width:560px}
+.hm-out,.hm-def{margin-top:var(--bs-s6);padding-top:var(--bs-s5);border-top:1px solid var(--bs-hairline)}
+.hm-out>p{color:var(--bs-text-sub)}
+.hm-p>.go{margin-top:var(--bs-s6)}
+.hm-more{margin-top:var(--bs-s6)}
+.hm-more>*+*{margin-top:var(--bs-s3)}
+.hm .gx-n--p,.hm .gx-n--x{background:var(--bs-surface)}
+
+/* ---------------------------------------------------------------- What we do as modules (26 Nov 2026)
+   The service and its promise, the deliverables as a file, the terms in one row. */
+.pg-what-we-do .toc ul{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--bs-gutter)}
+.pg-what-we-do .toc li{border-top:1px solid var(--bs-hairline-strong)}
+.pg-what-we-do .toc{border-top:0;padding-top:0}
+.pg-what-we-do .toc a{display:block;padding:14px 0 22px;font-size:19px;line-height:1.3;letter-spacing:-0.01em;color:var(--bs-text-hi)}
+.pg-what-we-do .toc a:hover{color:var(--bs-accent)}
+.svc{padding:var(--bs-s9) 0}
+.svc-in{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--bs-gutter);row-gap:var(--bs-s7)}
+.svc-h{grid-column:1/span 5;grid-row:1;align-self:start}
+.svc-h h2{font-size:var(--bs-t-h1);line-height:1.06;letter-spacing:var(--bs-track-display);text-wrap:balance}
+.svc-lede{margin-top:var(--bs-s5);font-size:var(--bs-t-lead);line-height:1.4;letter-spacing:-0.01em;color:var(--bs-text-hi);max-width:24em}
+.svc-h .go{margin-top:var(--bs-s5)}
+.svc-p{grid-column:7/span 6;grid-row:1;display:flex;flex-direction:column;gap:var(--bs-s4)}
+.svc--r .svc-h{grid-column:8/span 5}
+.svc--r .svc-p{grid-column:1/span 6}
+.svc-f{background:var(--bs-surface);border:1px solid var(--bs-hairline)}
+.svc-fl{max-width:none;padding:14px 20px;border-bottom:1px solid var(--bs-hairline);font-size:var(--bs-t-label);letter-spacing:.02em;color:var(--bs-text-lo)}
+.svc-f li{display:flex;align-items:baseline;gap:14px;padding:13px 20px;border-bottom:1px solid var(--bs-hairline);font-size:16px;line-height:1.45;color:var(--bs-text-hi)}
+.svc-f li:last-child{border-bottom:0}
+.svc-f li::before{content:"";flex:none;width:7px;height:7px;background:var(--bs-accent);transform:translateY(-2px)}
+.svc-rt{margin:0}
+.svc-rt table{background:var(--bs-surface);border:1px solid var(--bs-hairline)}
+.svc-rt th,.svc-rt td{padding-left:20px;padding-right:20px}
+.svc-note{font-size:15px;color:var(--bs-text-sub)}
+.svc-spec{grid-column:1/-1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));column-gap:var(--bs-gutter);row-gap:var(--bs-s5);border-top:1px solid var(--bs-text-hi)}
+.svc-spec li{padding-top:var(--bs-s3);min-width:0}
+.svc-k{font-size:var(--bs-t-label);letter-spacing:.02em;color:var(--bs-text-lo)}
+.svc-v{margin-top:6px;font-size:15px;line-height:1.5;color:var(--bs-text)}
+.svc-v::first-letter{text-transform:uppercase}
+
+/* the stages: a bar under each "When", to the scale of the weeks (Assess 2, Build 6, Operate open) */
+.gt{display:block;position:relative;height:4px;margin-top:10px;background:var(--bs-surface-2);min-width:120px}
+.gt::before{content:"";position:absolute;top:0;bottom:0;background:var(--bs-ink)}
+.gt--0::before{left:0;width:22.2%}
+.gt--1::before{left:22.2%;width:66.7%}
+.gt--2::before{left:88.9%;right:0;background:var(--bs-accent)}
+
+@media (max-width:1100px){
+.svc-spec{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:860px){
+.pg-what-we-do .toc ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+.svc-h,.svc--r .svc-h,.svc-p,.svc--r .svc-p{grid-column:1/-1;grid-row:auto}
+.svc-in{row-gap:var(--bs-s6)}
+.svc-spec{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:700px){
+.svc{padding:var(--bs-s8) 0}
+.svc-f li,.svc-fl{padding-left:16px;padding-right:16px}
+.svc-rt th,.svc-rt td{padding-left:14px;padding-right:14px}
+}
+@media (max-width:520px){
+.pg-what-we-do .toc ul{grid-template-columns:minmax(0,1fr)}
+.pg-what-we-do .toc a{padding:12px 0 14px;font-size:17px}
+.svc-spec{grid-template-columns:minmax(0,1fr);row-gap:0}
+.svc-spec li{padding-block:var(--bs-s3);border-bottom:1px solid var(--bs-hairline)}
+.svc-spec li + li{margin-top:0}
+}

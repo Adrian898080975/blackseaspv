@@ -1,0 +1,2269 @@
+{
+ "name": "Who supervises what, market by sector",
+ "description": "Each cell is one market and one sector. A green cell opens the page that names the AML/CFT supervisor, where suspicious transaction reports go and who may hold the MLRO seat.",
+ "url": "https://blackseaops.com/coverage.html#map",
+ "publisher": "Black Sea",
+ "dateModified": "2026-11-26",
+ "markets": [
+  {
+   "id": "bahrain",
+   "name": "Bahrain",
+   "region": "Gulf",
+   "url": "https://blackseaops.com/market-bahrain.html"
+  },
+  {
+   "id": "kuwait",
+   "name": "Kuwait",
+   "region": "Gulf",
+   "url": "https://blackseaops.com/market-kuwait.html"
+  },
+  {
+   "id": "oman",
+   "name": "Oman",
+   "region": "Gulf",
+   "url": "https://blackseaops.com/market-oman.html"
+  },
+  {
+   "id": "qatar",
+   "name": "Qatar",
+   "region": "Gulf",
+   "url": "https://blackseaops.com/market-qatar.html"
+  },
+  {
+   "id": "saudi-arabia",
+   "name": "Saudi Arabia",
+   "region": "Gulf",
+   "url": "https://blackseaops.com/market-saudi-arabia.html"
+  },
+  {
+   "id": "uae",
+   "name": "United Arab Emirates",
+   "region": "Gulf",
+   "url": "https://blackseaops.com/market-uae.html"
+  },
+  {
+   "id": "egypt",
+   "name": "Egypt",
+   "region": "Levant & MENA",
+   "url": "https://blackseaops.com/market-egypt.html"
+  },
+  {
+   "id": "jordan",
+   "name": "Jordan",
+   "region": "Levant & MENA",
+   "url": "https://blackseaops.com/market-jordan.html"
+  },
+  {
+   "id": "ghana",
+   "name": "Ghana",
+   "region": "Africa",
+   "url": "https://blackseaops.com/market-ghana.html"
+  },
+  {
+   "id": "kenya",
+   "name": "Kenya",
+   "region": "Africa",
+   "url": "https://blackseaops.com/market-kenya.html"
+  },
+  {
+   "id": "nigeria",
+   "name": "Nigeria",
+   "region": "Africa",
+   "url": "https://blackseaops.com/market-nigeria.html"
+  },
+  {
+   "id": "south-africa",
+   "name": "South Africa",
+   "region": "Africa",
+   "url": "https://blackseaops.com/market-south-africa.html"
+  },
+  {
+   "id": "azerbaijan",
+   "name": "Azerbaijan",
+   "region": "Central Asia & Caucasus",
+   "url": "https://blackseaops.com/market-azerbaijan.html"
+  },
+  {
+   "id": "georgia",
+   "name": "Georgia",
+   "region": "Central Asia & Caucasus",
+   "url": "https://blackseaops.com/market-georgia.html"
+  },
+  {
+   "id": "kazakhstan",
+   "name": "Kazakhstan",
+   "region": "Central Asia & Caucasus",
+   "url": "https://blackseaops.com/market-kazakhstan.html"
+  },
+  {
+   "id": "kyrgyzstan",
+   "name": "Kyrgyzstan",
+   "region": "Central Asia & Caucasus",
+   "url": "https://blackseaops.com/market-kyrgyzstan.html"
+  },
+  {
+   "id": "uzbekistan",
+   "name": "Uzbekistan",
+   "region": "Central Asia & Caucasus",
+   "url": "https://blackseaops.com/market-uzbekistan.html"
+  },
+  {
+   "id": "turkey",
+   "name": "Turkey",
+   "region": "Anatolia & South Asia",
+   "url": "https://blackseaops.com/market-turkey.html"
+  },
+  {
+   "id": "pakistan",
+   "name": "Pakistan",
+   "region": "Anatolia & South Asia",
+   "url": "https://blackseaops.com/market-pakistan.html"
+  },
+  {
+   "id": "usa",
+   "name": "United States",
+   "region": "Americas",
+   "url": "https://blackseaops.com/market-usa.html"
+  },
+  {
+   "id": "canada",
+   "name": "Canada",
+   "region": "Americas",
+   "url": "https://blackseaops.com/market-canada.html"
+  },
+  {
+   "id": "cayman-islands",
+   "name": "Cayman Islands",
+   "region": "Americas",
+   "url": "https://blackseaops.com/market-cayman-islands.html"
+  },
+  {
+   "id": "uk",
+   "name": "United Kingdom",
+   "region": "Europe",
+   "url": "https://blackseaops.com/market-uk.html"
+  },
+  {
+   "id": "switzerland",
+   "name": "Switzerland",
+   "region": "Europe",
+   "url": "https://blackseaops.com/market-switzerland.html"
+  },
+  {
+   "id": "singapore",
+   "name": "Singapore",
+   "region": "Asia-Pacific",
+   "url": "https://blackseaops.com/market-singapore.html"
+  },
+  {
+   "id": "hong-kong",
+   "name": "Hong Kong",
+   "region": "Asia-Pacific",
+   "url": "https://blackseaops.com/market-hong-kong.html"
+  },
+  {
+   "id": "australia",
+   "name": "Australia",
+   "region": "Asia-Pacific",
+   "url": "https://blackseaops.com/market-australia.html"
+  }
+ ],
+ "sectors": [
+  {
+   "id": "vasp-crypto",
+   "name": "Virtual assets and crypto",
+   "short": "Crypto",
+   "url": "https://blackseaops.com/sector-vasp-crypto.html"
+  },
+  {
+   "id": "payments-msb",
+   "name": "Payments and MSBs",
+   "short": "Payments",
+   "url": "https://blackseaops.com/sector-payments-msb.html"
+  },
+  {
+   "id": "banks-fis",
+   "name": "Banks and financial institutions",
+   "short": "Banks",
+   "url": "https://blackseaops.com/sector-banks-fis.html"
+  },
+  {
+   "id": "funds-csp",
+   "name": "Funds and corporate service providers",
+   "short": "Funds and CSPs",
+   "url": "https://blackseaops.com/sector-funds-csp.html"
+  },
+  {
+   "id": "gold-dpms",
+   "name": "Gold, precious metals and stones",
+   "short": "Gold",
+   "url": "https://blackseaops.com/sector-gold-dpms.html"
+  },
+  {
+   "id": "gaming",
+   "name": "Gaming",
+   "short": "Gaming",
+   "url": "https://blackseaops.com/sector-gaming.html"
+  },
+  {
+   "id": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs",
+   "short": "Real estate",
+   "url": "https://blackseaops.com/sector-real-estate-dnfbp.html"
+  },
+  {
+   "id": "defense-dual-use",
+   "name": "Defence and dual-use",
+   "short": "Defence",
+   "url": "https://blackseaops.com/sector-defense-dual-use.html"
+  },
+  {
+   "id": "art-high-value",
+   "name": "Art and high-value assets",
+   "short": "Art",
+   "url": "https://blackseaops.com/sector-art-high-value.html"
+  }
+ ],
+ "pairs": [
+  {
+   "market": "bahrain",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in Bahrain",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in Bahrain?",
+   "url": "https://blackseaops.com/market-bahrain-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of Bahrain, by licence"
+    }
+   ]
+  },
+  {
+   "market": "bahrain",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Bahrain",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Bahrain?",
+   "url": "https://blackseaops.com/market-bahrain-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of Bahrain, for money changers"
+    }
+   ]
+  },
+  {
+   "market": "bahrain",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Bahrain",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Bahrain?",
+   "url": "https://blackseaops.com/market-bahrain-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of Bahrain"
+    }
+   ]
+  },
+  {
+   "market": "bahrain",
+   "sector": "funds-csp",
+   "name": "Funds and corporate service providers in Bahrain",
+   "question": "Who is the AML/CFT supervisor for funds and corporate service providers in Bahrain?",
+   "url": "https://blackseaops.com/market-bahrain-funds-csp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of Bahrain, for trust service providers"
+    }
+   ]
+  },
+  {
+   "market": "bahrain",
+   "sector": "gold-dpms",
+   "name": "Gold, precious metals and stones in Bahrain",
+   "question": "Who is the AML/CFT supervisor for gold, precious metals and stones in Bahrain?",
+   "url": "https://blackseaops.com/market-bahrain-gold-dpms.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Ministry of Industry and Commerce, for dealers in gold and jewellery"
+    }
+   ]
+  },
+  {
+   "market": "bahrain",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in Bahrain",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in Bahrain?",
+   "url": "https://blackseaops.com/market-bahrain-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Real Estate Regulatory Authority, for real estate brokers; the Ministry of Industry and Commerce, for auditors"
+    }
+   ]
+  },
+  {
+   "market": "kuwait",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in Kuwait",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in Kuwait?",
+   "url": "https://blackseaops.com/market-kuwait-vasp-crypto.html",
+   "answer": "No licence issued",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "No licence is issued for virtual asset services, under circulars of the Central Bank of Kuwait and the Capital Markets Authority of 17 July 2023"
+    }
+   ]
+  },
+  {
+   "market": "kuwait",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Kuwait",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Kuwait?",
+   "url": "https://blackseaops.com/market-kuwait-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of Kuwait, for exchange companies and e-payment companies; the Ministry of Commerce and Industry, for currency exchange organisations"
+    }
+   ]
+  },
+  {
+   "market": "kuwait",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Kuwait",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Kuwait?",
+   "url": "https://blackseaops.com/market-kuwait-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of Kuwait"
+    }
+   ]
+  },
+  {
+   "market": "kuwait",
+   "sector": "funds-csp",
+   "name": "Funds and corporate service providers in Kuwait",
+   "question": "Who is the AML/CFT supervisor for funds and corporate service providers in Kuwait?",
+   "url": "https://blackseaops.com/market-kuwait-funds-csp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Capital Markets Authority, for asset managers and mutual funds"
+    }
+   ]
+  },
+  {
+   "market": "kuwait",
+   "sector": "gold-dpms",
+   "name": "Gold, precious metals and stones in Kuwait",
+   "question": "Who is the AML/CFT supervisor for gold, precious metals and stones in Kuwait?",
+   "url": "https://blackseaops.com/market-kuwait-gold-dpms.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Ministry of Commerce and Industry, for dealers in precious metals and stones"
+    }
+   ]
+  },
+  {
+   "market": "kuwait",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in Kuwait",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in Kuwait?",
+   "url": "https://blackseaops.com/market-kuwait-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Ministry of Commerce and Industry, for real estate brokers and agents"
+    }
+   ]
+  },
+  {
+   "market": "oman",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in Oman",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in Oman?",
+   "url": "https://blackseaops.com/market-oman-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Financial Services Authority, by registration"
+    }
+   ]
+  },
+  {
+   "market": "oman",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Oman",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Oman?",
+   "url": "https://blackseaops.com/market-oman-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of Oman, for money exchange establishments and payment service providers"
+    }
+   ]
+  },
+  {
+   "market": "oman",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Oman",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Oman?",
+   "url": "https://blackseaops.com/market-oman-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of Oman"
+    }
+   ]
+  },
+  {
+   "market": "qatar",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in Qatar",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in Qatar?",
+   "url": "https://blackseaops.com/market-qatar-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": "the Qatar Financial Centre",
+     "text": "The AML/CFT rules of the Qatar Financial Centre Regulatory Authority, for token service providers"
+    }
+   ]
+  },
+  {
+   "market": "qatar",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Qatar",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Qatar?",
+   "url": "https://blackseaops.com/market-qatar-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": "onshore",
+     "text": "The Qatar Central Bank, for exchange houses and money or value transfer service providers"
+    },
+    {
+     "where": "the Qatar Financial Centre",
+     "text": "The Qatar Financial Centre Regulatory Authority"
+    }
+   ]
+  },
+  {
+   "market": "qatar",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Qatar",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Qatar?",
+   "url": "https://blackseaops.com/market-qatar-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": "onshore",
+     "text": "The Qatar Central Bank"
+    },
+    {
+     "where": "the Qatar Financial Centre",
+     "text": "The Qatar Financial Centre Regulatory Authority"
+    }
+   ]
+  },
+  {
+   "market": "qatar",
+   "sector": "funds-csp",
+   "name": "Funds and corporate service providers in Qatar",
+   "question": "Who is the AML/CFT supervisor for funds and corporate service providers in Qatar?",
+   "url": "https://blackseaops.com/market-qatar-funds-csp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": "the Qatar Financial Centre",
+     "text": "The Qatar Financial Centre Regulatory Authority, for firms that manage portfolios or funds for others and for trust and company service providers"
+    },
+    {
+     "where": "onshore",
+     "text": "The Ministry of Commerce and Industry, for trust and company service providers"
+    }
+   ]
+  },
+  {
+   "market": "qatar",
+   "sector": "gold-dpms",
+   "name": "Gold, precious metals and stones in Qatar",
+   "question": "Who is the AML/CFT supervisor for gold, precious metals and stones in Qatar?",
+   "url": "https://blackseaops.com/market-qatar-gold-dpms.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": "onshore",
+     "text": "The Ministry of Commerce and Industry"
+    },
+    {
+     "where": "the Qatar Financial Centre",
+     "text": "The Qatar Financial Centre Regulatory Authority"
+    }
+   ]
+  },
+  {
+   "market": "qatar",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in Qatar",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in Qatar?",
+   "url": "https://blackseaops.com/market-qatar-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": "onshore",
+     "text": "The Ministry of Commerce and Industry, for auditors and trust and company service providers; the Ministry of Justice, for lawyers"
+    },
+    {
+     "where": "the Qatar Financial Centre",
+     "text": "The Qatar Financial Centre Regulatory Authority"
+    }
+   ]
+  },
+  {
+   "market": "saudi-arabia",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Saudi Arabia",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Saudi Arabia?",
+   "url": "https://blackseaops.com/market-saudi-arabia-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Saudi Central Bank, for payment service providers and money changers"
+    }
+   ]
+  },
+  {
+   "market": "saudi-arabia",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Saudi Arabia",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Saudi Arabia?",
+   "url": "https://blackseaops.com/market-saudi-arabia-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Saudi Central Bank"
+    }
+   ]
+  },
+  {
+   "market": "saudi-arabia",
+   "sector": "gold-dpms",
+   "name": "Gold, precious metals and stones in Saudi Arabia",
+   "question": "Who is the AML/CFT supervisor for gold, precious metals and stones in Saudi Arabia?",
+   "url": "https://blackseaops.com/market-saudi-arabia-gold-dpms.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Ministry of Commerce, for dealers in precious metals and precious stones"
+    }
+   ]
+  },
+  {
+   "market": "saudi-arabia",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in Saudi Arabia",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in Saudi Arabia?",
+   "url": "https://blackseaops.com/market-saudi-arabia-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Ministry of Justice, for lawyers and law firms"
+    }
+   ]
+  },
+  {
+   "market": "uae",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in the United Arab Emirates",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in the United Arab Emirates?",
+   "url": "https://blackseaops.com/market-uae-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": "Dubai, free zones included, outside the Dubai International Financial Centre",
+     "text": "The Virtual Assets Regulatory Authority"
+    },
+    {
+     "where": "the Dubai International Financial Centre",
+     "text": "The Dubai Financial Services Authority"
+    },
+    {
+     "where": "Abu Dhabi Global Market",
+     "text": "The Financial Services Regulatory Authority"
+    }
+   ]
+  },
+  {
+   "market": "uae",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in the United Arab Emirates",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in the United Arab Emirates?",
+   "url": "https://blackseaops.com/market-uae-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": "outside the Dubai International Financial Centre and Abu Dhabi Global Market",
+     "text": "The Central Bank of the UAE, for currency exchange, money transfer, stored value and retail payment services"
+    },
+    {
+     "where": "the Dubai International Financial Centre",
+     "text": "The Dubai Financial Services Authority"
+    },
+    {
+     "where": "Abu Dhabi Global Market",
+     "text": "The Financial Services Regulatory Authority"
+    }
+   ]
+  },
+  {
+   "market": "uae",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in the United Arab Emirates",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in the United Arab Emirates?",
+   "url": "https://blackseaops.com/market-uae-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": "outside the Dubai International Financial Centre and Abu Dhabi Global Market",
+     "text": "The Central Bank of the UAE"
+    },
+    {
+     "where": "the Dubai International Financial Centre",
+     "text": "The Dubai Financial Services Authority"
+    },
+    {
+     "where": "Abu Dhabi Global Market",
+     "text": "The Financial Services Regulatory Authority"
+    }
+   ]
+  },
+  {
+   "market": "uae",
+   "sector": "funds-csp",
+   "name": "Funds and corporate service providers in the United Arab Emirates",
+   "question": "Who is the AML/CFT supervisor for funds and corporate service providers in the United Arab Emirates?",
+   "url": "https://blackseaops.com/market-uae-funds-csp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": "the Dubai International Financial Centre",
+     "text": "The Dubai Financial Services Authority"
+    },
+    {
+     "where": "Abu Dhabi Global Market",
+     "text": "The Financial Services Regulatory Authority"
+    }
+   ]
+  },
+  {
+   "market": "uae",
+   "sector": "gold-dpms",
+   "name": "Gold, precious metals and stones in the United Arab Emirates",
+   "question": "Who is the AML/CFT supervisor for gold, precious metals and stones in the United Arab Emirates?",
+   "url": "https://blackseaops.com/market-uae-gold-dpms.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": "onshore and the commercial free zones",
+     "text": "The Ministry of Economy and Tourism"
+    }
+   ]
+  },
+  {
+   "market": "egypt",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Egypt",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Egypt?",
+   "url": "https://blackseaops.com/market-egypt-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of Egypt, for exchange and money transfer companies, payment system operators and payment service providers"
+    }
+   ]
+  },
+  {
+   "market": "egypt",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Egypt",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Egypt?",
+   "url": "https://blackseaops.com/market-egypt-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of Egypt"
+    }
+   ]
+  },
+  {
+   "market": "egypt",
+   "sector": "gold-dpms",
+   "name": "Gold, precious metals and stones in Egypt",
+   "question": "Who is the AML/CFT supervisor for gold, precious metals and stones in Egypt?",
+   "url": "https://blackseaops.com/market-egypt-gold-dpms.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Ministry of Supply and Internal Trade"
+    }
+   ]
+  },
+  {
+   "market": "egypt",
+   "sector": "gaming",
+   "name": "Gaming in Egypt",
+   "question": "Who is the AML/CFT supervisor for gaming in Egypt?",
+   "url": "https://blackseaops.com/market-egypt-gaming.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Ministry of Tourism, for gambling clubs"
+    }
+   ]
+  },
+  {
+   "market": "egypt",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in Egypt",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in Egypt?",
+   "url": "https://blackseaops.com/market-egypt-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Egyptian Syndicate of Lawyers, for lawyers; the Syndicate of Commercial Professions, for accountants"
+    }
+   ]
+  },
+  {
+   "market": "jordan",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in Jordan",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in Jordan?",
+   "url": "https://blackseaops.com/market-jordan-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Jordan Securities Commission, by licence; the Central Bank of Jordan, for companies it supervises that it approves to exchange virtual assets for currency or hold them in custody"
+    }
+   ]
+  },
+  {
+   "market": "jordan",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Jordan",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Jordan?",
+   "url": "https://blackseaops.com/market-jordan-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of Jordan, for exchange companies and electronic payment and money transfer companies"
+    }
+   ]
+  },
+  {
+   "market": "jordan",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Jordan",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Jordan?",
+   "url": "https://blackseaops.com/market-jordan-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of Jordan"
+    }
+   ]
+  },
+  {
+   "market": "jordan",
+   "sector": "gold-dpms",
+   "name": "Gold, precious metals and stones in Jordan",
+   "question": "Who is the AML/CFT supervisor for gold, precious metals and stones in Jordan?",
+   "url": "https://blackseaops.com/market-jordan-gold-dpms.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Ministry of Interior"
+    }
+   ]
+  },
+  {
+   "market": "jordan",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in Jordan",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in Jordan?",
+   "url": "https://blackseaops.com/market-jordan-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Department of Lands and Survey, for real estate offices and agents; the Jordanian Bar Association, for lawyers; the Jordanian Association of Certified Public Accountants, for certified public accountants"
+    }
+   ]
+  },
+  {
+   "market": "ghana",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in Ghana",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in Ghana?",
+   "url": "https://blackseaops.com/market-ghana-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Bank of Ghana or the Securities and Exchange Commission, depending on the activity, by licence or registration under the Virtual Asset Service Providers Act, 2025"
+    }
+   ]
+  },
+  {
+   "market": "ghana",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Ghana",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Ghana?",
+   "url": "https://blackseaops.com/market-ghana-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Bank of Ghana, for foreign exchange bureaus, payment service providers and dedicated electronic money issuers"
+    }
+   ]
+  },
+  {
+   "market": "ghana",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Ghana",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Ghana?",
+   "url": "https://blackseaops.com/market-ghana-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Bank of Ghana"
+    }
+   ]
+  },
+  {
+   "market": "ghana",
+   "sector": "gaming",
+   "name": "Gaming in Ghana",
+   "question": "Who is the AML/CFT supervisor for gaming in Ghana?",
+   "url": "https://blackseaops.com/market-ghana-gaming.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Gaming Commission of Ghana, for operators of games of chance"
+    }
+   ]
+  },
+  {
+   "market": "kenya",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in Kenya",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in Kenya?",
+   "url": "https://blackseaops.com/market-kenya-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Capital Markets Authority or the Central Bank of Kenya, by activity, by licence under the Virtual Asset Service Providers Act, 2025"
+    }
+   ]
+  },
+  {
+   "market": "kenya",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Kenya",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Kenya?",
+   "url": "https://blackseaops.com/market-kenya-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of Kenya, for money remittance providers, payment service providers and foreign exchange bureaus"
+    }
+   ]
+  },
+  {
+   "market": "kenya",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Kenya",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Kenya?",
+   "url": "https://blackseaops.com/market-kenya-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of Kenya"
+    }
+   ]
+  },
+  {
+   "market": "kenya",
+   "sector": "funds-csp",
+   "name": "Funds and corporate service providers in Kenya",
+   "question": "Who is the AML/CFT supervisor for funds and corporate service providers in Kenya?",
+   "url": "https://blackseaops.com/market-kenya-funds-csp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Capital Markets Authority, for fund managers and collective investment schemes"
+    }
+   ]
+  },
+  {
+   "market": "kenya",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in Kenya",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in Kenya?",
+   "url": "https://blackseaops.com/market-kenya-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Estate Agents Registration Board, for real estate agents; the Institute of Certified Public Accountants of Kenya, for accountants; the Law Society of Kenya, for advocates, notaries and other independent legal professionals"
+    }
+   ]
+  },
+  {
+   "market": "nigeria",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Nigeria",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Nigeria?",
+   "url": "https://blackseaops.com/market-nigeria-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of Nigeria"
+    }
+   ]
+  },
+  {
+   "market": "nigeria",
+   "sector": "funds-csp",
+   "name": "Funds and corporate service providers in Nigeria",
+   "question": "Who is the AML/CFT supervisor for funds and corporate service providers in Nigeria?",
+   "url": "https://blackseaops.com/market-nigeria-funds-csp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Securities and Exchange Commission, for fund managers and other capital market operators"
+    }
+   ]
+  },
+  {
+   "market": "nigeria",
+   "sector": "gold-dpms",
+   "name": "Gold, precious metals and stones in Nigeria",
+   "question": "Who is the AML/CFT supervisor for gold, precious metals and stones in Nigeria?",
+   "url": "https://blackseaops.com/market-nigeria-gold-dpms.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Special Control Unit against Money Laundering, for dealers in precious metals and precious stones"
+    }
+   ]
+  },
+  {
+   "market": "nigeria",
+   "sector": "gaming",
+   "name": "Gaming in Nigeria",
+   "question": "Who is the AML/CFT supervisor for gaming in Nigeria?",
+   "url": "https://blackseaops.com/market-nigeria-gaming.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Special Control Unit against Money Laundering, for casinos, online casinos included"
+    }
+   ]
+  },
+  {
+   "market": "nigeria",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in Nigeria",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in Nigeria?",
+   "url": "https://blackseaops.com/market-nigeria-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Special Control Unit against Money Laundering, for real estate agents, brokers and developers, legal practitioners and notaries, and licensed accountants"
+    }
+   ]
+  },
+  {
+   "market": "south-africa",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in South Africa",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in South Africa?",
+   "url": "https://blackseaops.com/market-south-africa-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Financial Intelligence Centre, and the Financial Sector Conduct Authority where the provider is also a financial services provider"
+    }
+   ]
+  },
+  {
+   "market": "south-africa",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in South Africa",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in South Africa?",
+   "url": "https://blackseaops.com/market-south-africa-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The South African Reserve Bank: with regard to the Financial Surveillance Department, for foreign exchange dealers and firms that issue, sell or redeem travellers' cheques or money orders; with regard to the Prudential Authority and that department, for money or value transfer providers"
+    }
+   ]
+  },
+  {
+   "market": "south-africa",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in South Africa",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in South Africa?",
+   "url": "https://blackseaops.com/market-south-africa-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The South African Reserve Bank, with regard to the Prudential Authority"
+    }
+   ]
+  },
+  {
+   "market": "south-africa",
+   "sector": "funds-csp",
+   "name": "Funds and corporate service providers in South Africa",
+   "question": "Who is the AML/CFT supervisor for funds and corporate service providers in South Africa?",
+   "url": "https://blackseaops.com/market-south-africa-funds-csp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Financial Sector Conduct Authority, for managers of collective investment schemes and for financial services providers that advise or act as intermediaries on investments; the Financial Intelligence Centre, for trust and company service providers"
+    }
+   ]
+  },
+  {
+   "market": "south-africa",
+   "sector": "gaming",
+   "name": "Gaming in South Africa",
+   "question": "Who is the AML/CFT supervisor for gaming in South Africa?",
+   "url": "https://blackseaops.com/market-south-africa-gaming.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Financial Intelligence Centre, for gambling businesses"
+    }
+   ]
+  },
+  {
+   "market": "south-africa",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in South Africa",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in South Africa?",
+   "url": "https://blackseaops.com/market-south-africa-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Financial Intelligence Centre, for estate agents, the legal practitioners listed in Schedule 1 of the Financial Intelligence Centre Act, and trust and company service providers"
+    }
+   ]
+  },
+  {
+   "market": "south-africa",
+   "sector": "art-high-value",
+   "name": "Art and high-value assets in South Africa",
+   "question": "Who is the AML/CFT supervisor for art and high-value assets in South Africa?",
+   "url": "https://blackseaops.com/market-south-africa-art-high-value.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Financial Intelligence Centre, for dealers in high-value goods"
+    }
+   ]
+  },
+  {
+   "market": "azerbaijan",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Azerbaijan",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Azerbaijan?",
+   "url": "https://blackseaops.com/market-azerbaijan-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of the Republic of Azerbaijan, for electronic money organisations, payment organisations other than those that only provide intermediary services for payment transactions or account information services, and firms licensed for currency exchange"
+    }
+   ]
+  },
+  {
+   "market": "azerbaijan",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Azerbaijan",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Azerbaijan?",
+   "url": "https://blackseaops.com/market-azerbaijan-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of the Republic of Azerbaijan"
+    }
+   ]
+  },
+  {
+   "market": "azerbaijan",
+   "sector": "funds-csp",
+   "name": "Funds and corporate service providers in Azerbaijan",
+   "question": "Who is the AML/CFT supervisor for funds and corporate service providers in Azerbaijan?",
+   "url": "https://blackseaops.com/market-azerbaijan-funds-csp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of the Republic of Azerbaijan, for investment companies, investment funds and fund managers"
+    }
+   ]
+  },
+  {
+   "market": "azerbaijan",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in Azerbaijan",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in Azerbaijan?",
+   "url": "https://blackseaops.com/market-azerbaijan-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The State Tax Service under the Ministry of Economy, for real estate agents and independent providers of legal, accounting and tax advice; the Ministry of Justice of the Republic of Azerbaijan, for notaries; the Bar Association of the Republic of Azerbaijan, for advocates; the Chamber of Auditors of the Republic of Azerbaijan, for providers of audit services"
+    }
+   ]
+  },
+  {
+   "market": "georgia",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in Georgia",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in Georgia?",
+   "url": "https://blackseaops.com/market-georgia-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The National Bank of Georgia, by registration"
+    }
+   ]
+  },
+  {
+   "market": "georgia",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Georgia",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Georgia?",
+   "url": "https://blackseaops.com/market-georgia-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The National Bank of Georgia, for payment service providers and currency exchange bureaus"
+    }
+   ]
+  },
+  {
+   "market": "georgia",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Georgia",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Georgia?",
+   "url": "https://blackseaops.com/market-georgia-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The National Bank of Georgia"
+    }
+   ]
+  },
+  {
+   "market": "georgia",
+   "sector": "funds-csp",
+   "name": "Funds and corporate service providers in Georgia",
+   "question": "Who is the AML/CFT supervisor for funds and corporate service providers in Georgia?",
+   "url": "https://blackseaops.com/market-georgia-funds-csp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The National Bank of Georgia, for asset management companies and for investment funds that have none"
+    }
+   ]
+  },
+  {
+   "market": "georgia",
+   "sector": "gold-dpms",
+   "name": "Gold, precious metals and stones in Georgia",
+   "question": "Who is the AML/CFT supervisor for gold, precious metals and stones in Georgia?",
+   "url": "https://blackseaops.com/market-georgia-gold-dpms.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Ministry of Finance of Georgia"
+    }
+   ]
+  },
+  {
+   "market": "georgia",
+   "sector": "gaming",
+   "name": "Gaming in Georgia",
+   "question": "Who is the AML/CFT supervisor for gaming in Georgia?",
+   "url": "https://blackseaops.com/market-georgia-gaming.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Ministry of Finance of Georgia, for organisers of lotteries, gambling and other commercial games"
+    }
+   ]
+  },
+  {
+   "market": "georgia",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in Georgia",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in Georgia?",
+   "url": "https://blackseaops.com/market-georgia-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Ministry of Justice of Georgia, for notaries; the Georgian Bar Association, for lawyers and law firms; the Service for Accounting, Reporting and Auditing Supervision, for accountants and auditors"
+    }
+   ]
+  },
+  {
+   "market": "kazakhstan",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in Kazakhstan",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in Kazakhstan?",
+   "url": "https://blackseaops.com/market-kazakhstan-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": "the Astana International Financial Centre",
+     "text": "The Astana Financial Services Authority"
+    },
+    {
+     "where": "onshore",
+     "text": "The National Bank of Kazakhstan, by licence for an exchange for unsecured digital assets and by entry in its register for a digital asset trading platform"
+    }
+   ]
+  },
+  {
+   "market": "kazakhstan",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Kazakhstan",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Kazakhstan?",
+   "url": "https://blackseaops.com/market-kazakhstan-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": "the Astana International Financial Centre",
+     "text": "The Astana Financial Services Authority"
+    }
+   ]
+  },
+  {
+   "market": "kazakhstan",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Kazakhstan",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Kazakhstan?",
+   "url": "https://blackseaops.com/market-kazakhstan-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": "the Astana International Financial Centre",
+     "text": "The Astana Financial Services Authority"
+    }
+   ]
+  },
+  {
+   "market": "kazakhstan",
+   "sector": "funds-csp",
+   "name": "Funds and corporate service providers in Kazakhstan",
+   "question": "Who is the AML/CFT supervisor for funds and corporate service providers in Kazakhstan?",
+   "url": "https://blackseaops.com/market-kazakhstan-funds-csp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": "the Astana International Financial Centre",
+     "text": "The Astana Financial Services Authority"
+    }
+   ]
+  },
+  {
+   "market": "kyrgyzstan",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in Kyrgyzstan",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in Kyrgyzstan?",
+   "url": "https://blackseaops.com/market-kyrgyzstan-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "Finnadzor, the Financial Market Regulation and Supervision Service"
+    }
+   ]
+  },
+  {
+   "market": "kyrgyzstan",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Kyrgyzstan",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Kyrgyzstan?",
+   "url": "https://blackseaops.com/market-kyrgyzstan-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The National Bank of the Kyrgyz Republic, for exchange offices, payment organisations and electronic money issuers"
+    }
+   ]
+  },
+  {
+   "market": "kyrgyzstan",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Kyrgyzstan",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Kyrgyzstan?",
+   "url": "https://blackseaops.com/market-kyrgyzstan-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The National Bank of the Kyrgyz Republic"
+    }
+   ]
+  },
+  {
+   "market": "kyrgyzstan",
+   "sector": "gaming",
+   "name": "Gaming in Kyrgyzstan",
+   "question": "Who is the AML/CFT supervisor for gaming in Kyrgyzstan?",
+   "url": "https://blackseaops.com/market-kyrgyzstan-gaming.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "Finnadzor, the Financial Market Regulation and Supervision Service, for companies in the gaming business"
+    }
+   ]
+  },
+  {
+   "market": "uzbekistan",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in Uzbekistan",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in Uzbekistan?",
+   "url": "https://blackseaops.com/market-uzbekistan-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The National Agency for Prospective Projects, by licence"
+    }
+   ]
+  },
+  {
+   "market": "uzbekistan",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Uzbekistan",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Uzbekistan?",
+   "url": "https://blackseaops.com/market-uzbekistan-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of the Republic of Uzbekistan, for payment organisations"
+    }
+   ]
+  },
+  {
+   "market": "uzbekistan",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Uzbekistan",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Uzbekistan?",
+   "url": "https://blackseaops.com/market-uzbekistan-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of the Republic of Uzbekistan"
+    }
+   ]
+  },
+  {
+   "market": "uzbekistan",
+   "sector": "gaming",
+   "name": "Gaming in Uzbekistan",
+   "question": "Who is the AML/CFT supervisor for gaming in Uzbekistan?",
+   "url": "https://blackseaops.com/market-uzbekistan-gaming.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The National Agency for Prospective Projects, for organisers of lotteries, online gambling and betting"
+    }
+   ]
+  },
+  {
+   "market": "turkey",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in Turkey",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in Turkey?",
+   "url": "https://blackseaops.com/market-turkey-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Capital Markets Board, by permission"
+    }
+   ]
+  },
+  {
+   "market": "turkey",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Turkey",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Turkey?",
+   "url": "https://blackseaops.com/market-turkey-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Central Bank of the Republic of Türkiye, for payment institutions and electronic money institutions"
+    }
+   ]
+  },
+  {
+   "market": "turkey",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Turkey",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Turkey?",
+   "url": "https://blackseaops.com/market-turkey-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Banking Regulation and Supervision Agency"
+    }
+   ]
+  },
+  {
+   "market": "turkey",
+   "sector": "funds-csp",
+   "name": "Funds and corporate service providers in Turkey",
+   "question": "Who is the AML/CFT supervisor for funds and corporate service providers in Turkey?",
+   "url": "https://blackseaops.com/market-turkey-funds-csp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Capital Markets Board, for portfolio management companies"
+    }
+   ]
+  },
+  {
+   "market": "pakistan",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in Pakistan",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in Pakistan?",
+   "url": "https://blackseaops.com/market-pakistan-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Pakistan Virtual Assets Regulatory Authority, under the Virtual Assets Act, 2026"
+    }
+   ]
+  },
+  {
+   "market": "pakistan",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Pakistan",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Pakistan?",
+   "url": "https://blackseaops.com/market-pakistan-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The State Bank of Pakistan, for exchange companies"
+    }
+   ]
+  },
+  {
+   "market": "pakistan",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Pakistan",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Pakistan?",
+   "url": "https://blackseaops.com/market-pakistan-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The State Bank of Pakistan"
+    }
+   ]
+  },
+  {
+   "market": "pakistan",
+   "sector": "gold-dpms",
+   "name": "Gold, precious metals and stones in Pakistan",
+   "question": "Who is the AML/CFT supervisor for gold, precious metals and stones in Pakistan?",
+   "url": "https://blackseaops.com/market-pakistan-gold-dpms.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Federal Board of Revenue, through its Directorate General of DNFBPs"
+    }
+   ]
+  },
+  {
+   "market": "pakistan",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in Pakistan",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in Pakistan?",
+   "url": "https://blackseaops.com/market-pakistan-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Institute of Chartered Accountants of Pakistan and the Institute of Cost and Management Accountants of Pakistan, for their members; the Federal Board of Revenue, for real estate agents and other accountants; the Pakistan Bar Council, the Provincial Bar Councils and the Islamabad Bar Council, for advocates and law firms"
+    }
+   ]
+  },
+  {
+   "market": "usa",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in the United States",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in the United States?",
+   "url": "https://blackseaops.com/market-usa-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Internal Revenue Service, for administrators and exchangers of convertible virtual currency that are money services businesses under FinCEN's guidance"
+    }
+   ]
+  },
+  {
+   "market": "usa",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in the United States",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in the United States?",
+   "url": "https://blackseaops.com/market-usa-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Internal Revenue Service, for money services businesses, which register with FinCEN"
+    }
+   ]
+  },
+  {
+   "market": "usa",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in the United States",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in the United States?",
+   "url": "https://blackseaops.com/market-usa-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The federal banking agency that examines the bank or credit union: the Office of the Comptroller of the Currency, the Board of Governors of the Federal Reserve System, the Federal Deposit Insurance Corporation or the National Credit Union Administration"
+    }
+   ]
+  },
+  {
+   "market": "usa",
+   "sector": "gold-dpms",
+   "name": "Gold, precious metals and stones in the United States",
+   "question": "Who is the AML/CFT supervisor for gold, precious metals and stones in the United States?",
+   "url": "https://blackseaops.com/market-usa-gold-dpms.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Internal Revenue Service, for dealers in precious metals, precious stones or jewels to which the AML programme rules apply"
+    }
+   ]
+  },
+  {
+   "market": "usa",
+   "sector": "gaming",
+   "name": "Gaming in the United States",
+   "question": "Who is the AML/CFT supervisor for gaming in the United States?",
+   "url": "https://blackseaops.com/market-usa-gaming.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Internal Revenue Service, for casinos and card clubs"
+    }
+   ]
+  },
+  {
+   "market": "canada",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in Canada",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in Canada?",
+   "url": "https://blackseaops.com/market-canada-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "FINTRAC, the Financial Transactions and Reports Analysis Centre of Canada, by registration as a money services business"
+    }
+   ]
+  },
+  {
+   "market": "canada",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Canada",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Canada?",
+   "url": "https://blackseaops.com/market-canada-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "FINTRAC, the Financial Transactions and Reports Analysis Centre of Canada, for money services businesses and foreign money services businesses, which register with it"
+    }
+   ]
+  },
+  {
+   "market": "canada",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Canada",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Canada?",
+   "url": "https://blackseaops.com/market-canada-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "FINTRAC, the Financial Transactions and Reports Analysis Centre of Canada"
+    }
+   ]
+  },
+  {
+   "market": "canada",
+   "sector": "funds-csp",
+   "name": "Funds and corporate service providers in Canada",
+   "question": "Who is the AML/CFT supervisor for funds and corporate service providers in Canada?",
+   "url": "https://blackseaops.com/market-canada-funds-csp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "FINTRAC, the Financial Transactions and Reports Analysis Centre of Canada, for firms authorised to provide portfolio management or investment advising services, and for trust companies"
+    }
+   ]
+  },
+  {
+   "market": "canada",
+   "sector": "gold-dpms",
+   "name": "Gold, precious metals and stones in Canada",
+   "question": "Who is the AML/CFT supervisor for gold, precious metals and stones in Canada?",
+   "url": "https://blackseaops.com/market-canada-gold-dpms.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "FINTRAC, the Financial Transactions and Reports Analysis Centre of Canada, for dealers in precious metals and precious stones, for the activities the rules list"
+    }
+   ]
+  },
+  {
+   "market": "canada",
+   "sector": "gaming",
+   "name": "Gaming in Canada",
+   "question": "Who is the AML/CFT supervisor for gaming in Canada?",
+   "url": "https://blackseaops.com/market-canada-gaming.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "FINTRAC, the Financial Transactions and Reports Analysis Centre of Canada, for casinos"
+    }
+   ]
+  },
+  {
+   "market": "canada",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in Canada",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in Canada?",
+   "url": "https://blackseaops.com/market-canada-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "FINTRAC, the Financial Transactions and Reports Analysis Centre of Canada, for real estate brokers, sales representatives and developers, accountants and British Columbia notaries, for the activities the rules list"
+    }
+   ]
+  },
+  {
+   "market": "cayman-islands",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in the Cayman Islands",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in the Cayman Islands?",
+   "url": "https://blackseaops.com/market-cayman-islands-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Cayman Islands Monetary Authority; custody services and trading platforms need its licence"
+    }
+   ]
+  },
+  {
+   "market": "cayman-islands",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in the Cayman Islands",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in the Cayman Islands?",
+   "url": "https://blackseaops.com/market-cayman-islands-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Cayman Islands Monetary Authority"
+    }
+   ]
+  },
+  {
+   "market": "cayman-islands",
+   "sector": "funds-csp",
+   "name": "Funds and corporate service providers in the Cayman Islands",
+   "question": "Who is the AML/CFT supervisor for funds and corporate service providers in the Cayman Islands?",
+   "url": "https://blackseaops.com/market-cayman-islands-funds-csp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Cayman Islands Monetary Authority, for investment funds"
+    }
+   ]
+  },
+  {
+   "market": "cayman-islands",
+   "sector": "gold-dpms",
+   "name": "Gold, precious metals and stones in the Cayman Islands",
+   "question": "Who is the AML/CFT supervisor for gold, precious metals and stones in the Cayman Islands?",
+   "url": "https://blackseaops.com/market-cayman-islands-gold-dpms.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Department of Commerce and Investment, for dealers in precious metals and precious stones"
+    }
+   ]
+  },
+  {
+   "market": "cayman-islands",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in the Cayman Islands",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in the Cayman Islands?",
+   "url": "https://blackseaops.com/market-cayman-islands-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Department of Commerce and Investment, for real estate agents and brokers; the Cayman Islands Institute of Professional Accountants, for accounting firms; the Legal Services Supervisory Authority, for law firms and sole practitioners"
+    }
+   ]
+  },
+  {
+   "market": "uk",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in the United Kingdom",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in the United Kingdom?",
+   "url": "https://blackseaops.com/market-uk-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Financial Conduct Authority, by registration, for cryptoasset exchange providers and custodian wallet providers"
+    }
+   ]
+  },
+  {
+   "market": "uk",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in the United Kingdom",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in the United Kingdom?",
+   "url": "https://blackseaops.com/market-uk-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Financial Conduct Authority, for e-money institutions and other authorised firms; HM Revenue and Customs, for money service businesses and bill payment and telecommunication, digital and IT payment service providers that the Financial Conduct Authority does not supervise"
+    }
+   ]
+  },
+  {
+   "market": "uk",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in the United Kingdom",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in the United Kingdom?",
+   "url": "https://blackseaops.com/market-uk-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Financial Conduct Authority"
+    }
+   ]
+  },
+  {
+   "market": "uk",
+   "sector": "funds-csp",
+   "name": "Funds and corporate service providers in the United Kingdom",
+   "question": "Who is the AML/CFT supervisor for funds and corporate service providers in the United Kingdom?",
+   "url": "https://blackseaops.com/market-uk-funds-csp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "HM Revenue and Customs, for trust or company service providers that neither the Financial Conduct Authority nor a professional body supervises"
+    }
+   ]
+  },
+  {
+   "market": "uk",
+   "sector": "gold-dpms",
+   "name": "Gold, precious metals and stones in the United Kingdom",
+   "question": "Who is the AML/CFT supervisor for gold, precious metals and stones in the United Kingdom?",
+   "url": "https://blackseaops.com/market-uk-gold-dpms.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "HM Revenue and Customs, for high value dealers, which register with it"
+    }
+   ]
+  },
+  {
+   "market": "uk",
+   "sector": "gaming",
+   "name": "Gaming in the United Kingdom",
+   "question": "Who is the AML/CFT supervisor for gaming in the United Kingdom?",
+   "url": "https://blackseaops.com/market-uk-gaming.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Gambling Commission, for casinos"
+    }
+   ]
+  },
+  {
+   "market": "uk",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in the United Kingdom",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in the United Kingdom?",
+   "url": "https://blackseaops.com/market-uk-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "HM Revenue and Customs, for estate agents and letting agents, and for auditors, external accountants and tax advisers that no professional body supervises; the professional body listed in the Regulations, for its legal and accountancy members"
+    }
+   ]
+  },
+  {
+   "market": "uk",
+   "sector": "art-high-value",
+   "name": "Art and high-value assets in the United Kingdom",
+   "question": "Who is the AML/CFT supervisor for art and high-value assets in the United Kingdom?",
+   "url": "https://blackseaops.com/market-uk-art-high-value.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "HM Revenue and Customs, for art market participants and high value dealers"
+    }
+   ]
+  },
+  {
+   "market": "switzerland",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Switzerland",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Switzerland?",
+   "url": "https://blackseaops.com/market-switzerland-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "A self-regulatory organisation recognised by the Swiss Financial Market Supervisory Authority, which the business must join, for businesses that provide payment services or issue or manage means of payment"
+    }
+   ]
+  },
+  {
+   "market": "switzerland",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Switzerland",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Switzerland?",
+   "url": "https://blackseaops.com/market-switzerland-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Swiss Financial Market Supervisory Authority"
+    }
+   ]
+  },
+  {
+   "market": "switzerland",
+   "sector": "funds-csp",
+   "name": "Funds and corporate service providers in Switzerland",
+   "question": "Who is the AML/CFT supervisor for funds and corporate service providers in Switzerland?",
+   "url": "https://blackseaops.com/market-switzerland-funds-csp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Swiss Financial Market Supervisory Authority, for institutions under the Collective Investment Schemes Act, and indirectly, through a supervisory organisation, for portfolio managers and trustees"
+    }
+   ]
+  },
+  {
+   "market": "switzerland",
+   "sector": "gaming",
+   "name": "Gaming in Switzerland",
+   "question": "Who is the AML/CFT supervisor for gaming in Switzerland?",
+   "url": "https://blackseaops.com/market-switzerland-gaming.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Federal Gaming Board, for casinos"
+    }
+   ]
+  },
+  {
+   "market": "switzerland",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in Switzerland",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in Switzerland?",
+   "url": "https://blackseaops.com/market-switzerland-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "A self-regulatory organisation recognised by the Swiss Financial Market Supervisory Authority, for advisers who assist with transactions such as buying or selling real estate or forming or managing non-operating legal entities"
+    }
+   ]
+  },
+  {
+   "market": "singapore",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in Singapore",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in Singapore?",
+   "url": "https://blackseaops.com/market-singapore-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Monetary Authority of Singapore, by licence, for digital payment token service providers"
+    }
+   ]
+  },
+  {
+   "market": "singapore",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Singapore",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Singapore?",
+   "url": "https://blackseaops.com/market-singapore-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Monetary Authority of Singapore, for payment service providers, money-changers included"
+    }
+   ]
+  },
+  {
+   "market": "singapore",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Singapore",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Singapore?",
+   "url": "https://blackseaops.com/market-singapore-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Monetary Authority of Singapore"
+    }
+   ]
+  },
+  {
+   "market": "singapore",
+   "sector": "funds-csp",
+   "name": "Funds and corporate service providers in Singapore",
+   "question": "Who is the AML/CFT supervisor for funds and corporate service providers in Singapore?",
+   "url": "https://blackseaops.com/market-singapore-funds-csp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Monetary Authority of Singapore, for capital markets intermediaries and licensed trust companies; the Accounting and Corporate Regulatory Authority, for corporate service providers, which register with it"
+    }
+   ]
+  },
+  {
+   "market": "singapore",
+   "sector": "gold-dpms",
+   "name": "Gold, precious metals and stones in Singapore",
+   "question": "Who is the AML/CFT supervisor for gold, precious metals and stones in Singapore?",
+   "url": "https://blackseaops.com/market-singapore-gold-dpms.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Ministry of Law, for dealers in precious stones, precious metals or precious products, which register with its Registrar of Regulated Dealers"
+    }
+   ]
+  },
+  {
+   "market": "singapore",
+   "sector": "gaming",
+   "name": "Gaming in Singapore",
+   "question": "Who is the AML/CFT supervisor for gaming in Singapore?",
+   "url": "https://blackseaops.com/market-singapore-gaming.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Gambling Regulatory Authority, for casinos"
+    }
+   ]
+  },
+  {
+   "market": "singapore",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in Singapore",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in Singapore?",
+   "url": "https://blackseaops.com/market-singapore-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Council for Estate Agencies, for estate agents and real estate salespersons; the Urban Redevelopment Authority, for real estate developers; the Accounting and Corporate Regulatory Authority, for corporate service providers"
+    }
+   ]
+  },
+  {
+   "market": "hong-kong",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in Hong Kong",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in Hong Kong?",
+   "url": "https://blackseaops.com/market-hong-kong-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Securities and Futures Commission, by licence"
+    }
+   ]
+  },
+  {
+   "market": "hong-kong",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Hong Kong",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Hong Kong?",
+   "url": "https://blackseaops.com/market-hong-kong-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Commissioner of Customs and Excise, for remittance agents and money changers"
+    }
+   ]
+  },
+  {
+   "market": "hong-kong",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Hong Kong",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Hong Kong?",
+   "url": "https://blackseaops.com/market-hong-kong-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Hong Kong Monetary Authority"
+    }
+   ]
+  },
+  {
+   "market": "hong-kong",
+   "sector": "funds-csp",
+   "name": "Funds and corporate service providers in Hong Kong",
+   "question": "Who is the AML/CFT supervisor for funds and corporate service providers in Hong Kong?",
+   "url": "https://blackseaops.com/market-hong-kong-funds-csp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Securities and Futures Commission, for licensed corporations; the Companies Registry, for trust or company service providers"
+    }
+   ]
+  },
+  {
+   "market": "hong-kong",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in Hong Kong",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in Hong Kong?",
+   "url": "https://blackseaops.com/market-hong-kong-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "The Estate Agents Authority, for estate agents; the Law Society of Hong Kong, for legal professionals; the Companies Registry, for trust or company service providers"
+    }
+   ]
+  },
+  {
+   "market": "australia",
+   "sector": "vasp-crypto",
+   "name": "Virtual assets and crypto in Australia",
+   "question": "Who is the AML/CFT supervisor for virtual assets and crypto in Australia?",
+   "url": "https://blackseaops.com/market-australia-vasp-crypto.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "AUSTRAC, the Australian Transaction Reports and Analysis Centre, for digital currency exchanges and other virtual asset service providers"
+    }
+   ]
+  },
+  {
+   "market": "australia",
+   "sector": "payments-msb",
+   "name": "Payments and MSBs in Australia",
+   "question": "Who is the AML/CFT supervisor for payments and MSBs in Australia?",
+   "url": "https://blackseaops.com/market-australia-payments-msb.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "AUSTRAC, the Australian Transaction Reports and Analysis Centre, for remittance service providers"
+    }
+   ]
+  },
+  {
+   "market": "australia",
+   "sector": "banks-fis",
+   "name": "Banks and financial institutions in Australia",
+   "question": "Who is the AML/CFT supervisor for banks and financial institutions in Australia?",
+   "url": "https://blackseaops.com/market-australia-banks-fis.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "AUSTRAC, the Australian Transaction Reports and Analysis Centre"
+    }
+   ]
+  },
+  {
+   "market": "australia",
+   "sector": "funds-csp",
+   "name": "Funds and corporate service providers in Australia",
+   "question": "Who is the AML/CFT supervisor for funds and corporate service providers in Australia?",
+   "url": "https://blackseaops.com/market-australia-funds-csp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "AUSTRAC, the Australian Transaction Reports and Analysis Centre, for trust and company service providers, for the services the Act lists, since 1 July 2026"
+    }
+   ]
+  },
+  {
+   "market": "australia",
+   "sector": "gold-dpms",
+   "name": "Gold, precious metals and stones in Australia",
+   "question": "Who is the AML/CFT supervisor for gold, precious metals and stones in Australia?",
+   "url": "https://blackseaops.com/market-australia-gold-dpms.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "AUSTRAC, the Australian Transaction Reports and Analysis Centre, for bullion dealers, and since 1 July 2026 for dealers in precious metals, stones and products, for the services the Act lists"
+    }
+   ]
+  },
+  {
+   "market": "australia",
+   "sector": "gaming",
+   "name": "Gaming in Australia",
+   "question": "Who is the AML/CFT supervisor for gaming in Australia?",
+   "url": "https://blackseaops.com/market-australia-gaming.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "AUSTRAC, the Australian Transaction Reports and Analysis Centre, for casinos, bookmakers and betting agencies, and pubs and clubs with gaming machines"
+    }
+   ]
+  },
+  {
+   "market": "australia",
+   "sector": "real-estate-dnfbp",
+   "name": "Real estate and DNFBPs in Australia",
+   "question": "Who is the AML/CFT supervisor for real estate and DNFBPs in Australia?",
+   "url": "https://blackseaops.com/market-australia-real-estate-dnfbp.html",
+   "answer": "Supervisor named",
+   "supervisors": [
+    {
+     "where": null,
+     "text": "AUSTRAC, the Australian Transaction Reports and Analysis Centre, since 1 July 2026, for real estate professionals, lawyers, conveyancers, accountants and trust and company service providers, for the services the Act lists"
+    }
+   ]
+  }
+ ]
+}

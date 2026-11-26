@@ -1,7 +1,8 @@
 /* Black Sea 3.0: behaviour only. Every word is already in the HTML the server sends.
    Header shadow, mobile menu, photo fade-in, the ink-in statement, the costed-plan bar on phones,
    contact form presets, the "Other market" field, the marked fields of a stopped send, and the
-   form's sending, sent and error states. */
+   form's sending, sent and error states, the search and graph of the regulation map on Coverage,
+   and its search and graph on Home. */
 (function () {
   'use strict';
   var d = document;
@@ -100,6 +101,291 @@
     });
     watch.forEach(function (el) { io.observe(el); });
     if (!watch.length) root.classList.add('mcta-on');
+  }
+
+  /* the regulation graph (26 Nov 2026), on Home and on Coverage: the nodes are HTML text, these functions only
+     draw the lines between them and, after a search, build new nodes from the names the page or its data hold. */
+  var each = function (list, fn) { Array.prototype.forEach.call(list, fn); };
+  function clear(el) { while (el.firstChild) el.removeChild(el.firstChild); }
+  function make(tag, cls, txt, parent) {
+    var el = d.createElement(tag);
+    if (cls) el.className = cls;
+    if (txt) el.textContent = txt;
+    if (parent) parent.appendChild(el);
+    return el;
+  }
+  function fold(s) {
+    s = (s || '').toLowerCase();
+    return s.normalize ? s.normalize('NFD').replace(/[̀-ͯ]/g, '') : s;
+  }
+  /* the supervisor as a node: the body's name, without "The" and without the qualifier after it */
+  function bodies(text) {
+    var parts = text.split('; ');
+    var list = parts.length > 1 && parts.every(function (p) { return /^[Tt]he [A-Z]/.test(p); }) ? parts : [text];
+    return list.map(function (p) {
+      p = p.replace(/^[Tt]he (?=[A-Z])/, '');
+      p = p.split(/, (?:for|by|which|when|under|if|as|where|depending|unless|including|once|with regard|in respect)\b|: /)[0];
+      return p.charAt(0).toUpperCase() + p.slice(1);
+    });
+  }
+  function gxDraw(b) {
+    var s = b.querySelector('.gx-l');
+    if (!s || !b.offsetWidth) return;
+    clear(s);
+    var R = b.getBoundingClientRect();
+    s.setAttribute('viewBox', '0 0 ' + Math.round(R.width) + ' ' + Math.round(R.height));
+    function box(el) {
+      var r = el.getBoundingClientRect();
+      return { l: r.left - R.left, r: r.right - R.left, y: r.top - R.top + r.height / 2, on: r.width > 0 };
+    }
+    function line(a, c, cls) {
+      if (!a.on || !c.on) return;
+      var k = (c.l - a.r) / 2;
+      var p = d.createElementNS(s.namespaceURI, 'path');
+      p.setAttribute('d', 'M' + a.r + ' ' + a.y + 'C' + (a.r + k) + ' ' + a.y + ' ' + (c.l - k) + ' ' + c.y + ' ' + c.l + ' ' + c.y);
+      p.setAttribute('class', 'gx-ln' + (cls || ''));
+      s.appendChild(p);
+    }
+    var m = b.querySelector('.gx-n--m');
+    var sups = b.querySelectorAll('.gx-c--p .gx-n');
+    each(b.querySelectorAll('.gx-c--s .gx-n'), function (n) {
+      var a = box(n);
+      if (m) line(box(m), a);
+      (n.getAttribute('data-to') || '').split(' ').forEach(function (j) {
+        var t = j === '' ? null : sups[+j];
+        if (t) line(a, box(t), t.classList.contains('gx-n--x') ? ' gx-ln--none' : '');
+      });
+    });
+  }
+  function gxAll() { each(d.querySelectorAll('[data-gx]'), gxDraw); }
+  /* a new graph: the heading, the market, its sectors and the supervisors each one points to */
+  function gxBuild(parent, heading, market, sectors) {
+    var box = make('div', 'gx', null, parent);
+    make('h3', 'bs-h3 gx-h', heading, box);
+    var b = make('div', 'gx-b', null, box);
+    b.setAttribute('data-gx', '');
+    /* the lines' SVG, in the namespace of the logo mark so no address sits in this file */
+    var mark = d.querySelector('svg');
+    if (mark) {
+      var sv = d.createElementNS(mark.namespaceURI, 'svg');
+      sv.setAttribute('class', 'gx-l');
+      sv.setAttribute('aria-hidden', 'true');
+      sv.setAttribute('focusable', 'false');
+      b.appendChild(sv);
+    }
+    var cm = make('div', 'gx-c gx-c--m', null, b);
+    var am = make('a', 'gx-n gx-n--m', market.name, cm);
+    am.href = market.href;
+    var cs = make('ul', 'gx-c gx-c--s', null, b);
+    var cp = make('ul', 'gx-c gx-c--p', null, b);
+    var byName = {};
+    var count = 0;
+    sectors.forEach(function (c) {
+      var to = [];
+      c.sup.forEach(function (txt) {
+        bodies(txt).forEach(function (nm) {
+          if (!(nm in byName)) {
+            byName[nm] = count++;
+            make('span', 'gx-n gx-n--' + (c.none ? 'x' : 'p'), nm, make('li', null, null, cp));
+          }
+          if (to.indexOf(byName[nm]) < 0) to.push(byName[nm]);
+        });
+      });
+      var a = make('a', 'gx-n', c.short, make('li', null, null, cs));
+      a.href = c.href;
+      a.setAttribute('data-to', to.join(' '));
+    });
+    gxDraw(b);
+    return box;
+  }
+  var gxTimer = 0;
+  window.addEventListener('resize', function () {
+    window.clearTimeout(gxTimer);
+    gxTimer = window.setTimeout(gxAll, 150);
+  });
+  if (d.fonts && d.fonts.ready) d.fonts.ready.then(gxAll);
+  window.addEventListener('load', gxAll);
+  gxAll();
+
+  /* the regulation map on Coverage (26 Nov 2026): a search across markets, sectors and supervisors, and a
+     graph of one market. Every word comes from the table and its data attributes; nothing shows before a search.
+     A search sent from Home arrives as ?q= and runs at once. */
+  var rmap = d.querySelector('[data-rmap]');
+  if (rmap) regMap(rmap);
+
+  function regMap(rm) {
+    var input = rm.querySelector('[data-rmap-q]');
+    var out = rm.querySelector('[data-rmap-out]');
+    var table = rm.querySelector('table');
+    if (!input || !out || !table) return;
+    function slugWords(h) {
+      return (h || '').replace(/^.*\/(market|sector)-/, '').replace(/\.html$/, '').replace(/-/g, ' ');
+    }
+    var heads = [];
+    each(table.querySelectorAll('thead th[data-s]'), function (th) {
+      var a = th.querySelector('a');
+      heads.push({ name: th.getAttribute('data-s'), short: th.textContent.trim(), href: a && a.getAttribute('href') });
+    });
+    var rows = [];
+    var cells = [];
+    each(table.tBodies, function (tb) {
+      each(tb.rows, function (tr) {
+        var th = tr.querySelector('th[scope="row"]');
+        if (!th) return;
+        var a = th.querySelector('a');
+        var row = { tr: tr, body: tb, market: th.textContent.trim(), href: a && a.getAttribute('href'), cells: [] };
+        rows.push(row);
+        each(tr.querySelectorAll('td'), function (td, i) {
+          var el = td.firstElementChild;
+          var h = heads[i] || {};
+          var c = { td: td, el: el, row: row, sector: h.name || '', short: h.short || '', sectorHref: h.href,
+                    href: el && el.tagName === 'A' ? el.getAttribute('href') : null,
+                    name: (el && el.getAttribute('aria-label')) || '', sup: (el && el.getAttribute('data-sup')) || '',
+                    none: !!el && el.classList.contains('rc--none') };
+          c.hay = fold([row.market, slugWords(row.href), c.sector, c.short, slugWords(c.href), c.sup].join(' '));
+          if (c.href) el.setAttribute('title', c.name + '\n' + c.sup.split(' || ').join('\n').split(' :: ').join(': '));
+          row.cells.push(c);
+          cells.push(c);
+        });
+      });
+    });
+
+    function search() {
+      var q = fold(input.value).trim();
+      var tokens = q ? q.split(/\s+/) : [];
+      clear(out);
+      if (!tokens.length) {
+        out.hidden = true;
+        cells.forEach(function (c) { c.td.classList.remove('is-dim'); });
+        rows.forEach(function (r) { r.tr.hidden = false; });
+        each(table.tBodies, function (tb) { tb.hidden = false; });
+        return;
+      }
+      var hits = [];
+      cells.forEach(function (c) {
+        var on = !!c.href && tokens.every(function (t) { return c.hay.indexOf(t) >= 0; });
+        c.td.classList.toggle('is-dim', !on);
+        if (on) hits.push(c);
+      });
+      rows.forEach(function (r) {
+        r.tr.hidden = !r.cells.some(function (c) { return hits.indexOf(c) >= 0; });
+      });
+      each(table.tBodies, function (tb) {
+        tb.hidden = !rows.some(function (r) { return r.body === tb && !r.tr.hidden; });
+      });
+      out.hidden = false;
+      if (!hits.length) {
+        make('p', null, rm.getAttribute('data-nomatch'), out);
+        return;
+      }
+      var one = hits.every(function (c) { return c.row === hits[0].row; });
+      if (one) {
+        gxBuild(out, rm.getAttribute('data-graph-h').replace('<market>', hits[0].row.market),
+                { name: hits[0].row.market, href: hits[0].row.href },
+                hits.map(function (c) {
+                  return { short: c.short, href: c.href, none: c.none,
+                           sup: c.sup.split(' || ').map(function (r) { return r.split(' :: ').pop(); }) };
+                }));
+      }
+      var ul = make('ul', 'rmap-hits', null, out);
+      hits.forEach(function (c) {
+        var li = make('li', null, null, ul);
+        var a = make('a', 'bs-link', c.name, li);
+        a.href = c.href;
+        c.sup.split(' || ').forEach(function (r) {
+          make('p', null, r.split(' :: ').join(': '), li);
+        });
+      });
+    }
+    var timer = 0;
+    input.addEventListener('input', function () {
+      window.clearTimeout(timer);
+      timer = window.setTimeout(search, 120);
+    });
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && input.value) { input.value = ''; search(); }
+    });
+    var sent = new URLSearchParams(window.location.search).get('q');
+    if (sent && !input.value) input.value = sent;
+    if (input.value) search();
+  }
+
+  /* the map on Home (26 Nov 2026): the graph of one market is in the page; a search loads regulators.json, the
+     map as data, and draws the market it finds, or lists the pairs it finds. Without JavaScript the search opens
+     the map on Coverage. */
+  var hmap = d.querySelector('[data-hmap]');
+  if (hmap) homeMap(hmap);
+
+  function homeMap(hm) {
+    var input = hm.querySelector('[data-hmap-q]');
+    var out = hm.querySelector('[data-hmap-out]');
+    var def = hm.querySelector('[data-hmap-def]');
+    var more = hm.querySelector('[data-hmap-more]');
+    if (!input || !out || !def || !window.fetch) return;
+    var base = more ? more.getAttribute('href').split('#')[0] : '';
+    var cells = null;
+    var asked = false;
+    function path(u) {
+      try { return new URL(u, window.location.href).pathname; } catch (e) { return u; }
+    }
+    function load(then) {
+      if (cells) { then(); return; }
+      if (asked) return;
+      asked = true;
+      window.fetch(hm.getAttribute('data-src')).then(function (r) { return r.json(); }).then(function (j) {
+        var mk = {};
+        var sc = {};
+        j.markets.forEach(function (m) { mk[m.id] = m; });
+        j.sectors.forEach(function (s) { sc[s.id] = s; });
+        cells = j.pairs.map(function (p) {
+          var m = mk[p.market] || {};
+          var s = sc[p.sector] || {};
+          var sup = p.supervisors.map(function (x) { return x.text; });
+          var none = p.supervisors.length === 1 && /^No licence/.test(sup[0]);
+          var said = p.supervisors.map(function (x) { return (x.where ? x.where + ': ' : '') + x.text; });
+          return { market: m.name, mhref: path(m.url), mid: p.market, short: s.short, href: path(p.url), name: p.name,
+                   sup: sup, said: said, none: none,
+                   hay: fold([m.name, p.market.replace(/-/g, ' '), s.name, s.short, p.sector.replace(/-/g, ' ')]
+                     .concat(said).join(' ')) };
+        });
+        then();
+      }).catch(function () { asked = false; });
+    }
+    function search() {
+      var raw = input.value.trim();
+      var tokens = fold(raw) ? fold(raw).split(/\s+/) : [];
+      if (more) more.setAttribute('href', base + (raw ? '?q=' + encodeURIComponent(raw) : '') + '#map');
+      clear(out);
+      if (!tokens.length) { out.hidden = true; def.hidden = false; gxAll(); return; }
+      var hits = cells.filter(function (c) {
+        return tokens.every(function (t) { return c.hay.indexOf(t) >= 0; });
+      });
+      def.hidden = true;
+      out.hidden = false;
+      if (!hits.length) { make('p', null, hm.getAttribute('data-nomatch'), out); return; }
+      var one = hits.every(function (c) { return c.mid === hits[0].mid; });
+      if (one) {
+        gxBuild(out, hm.getAttribute('data-graph-h').replace('<market>', hits[0].market),
+                { name: hits[0].market, href: hits[0].mhref }, hits);
+        return;
+      }
+      var ul = make('ul', 'rmap-hits', null, out);
+      hits.slice(0, 6).forEach(function (c) {
+        var li = make('li', null, null, ul);
+        var a = make('a', 'bs-link', c.name, li);
+        a.href = c.href;
+        c.said.forEach(function (r) { make('p', null, r, li); });
+      });
+    }
+    var timer = 0;
+    input.addEventListener('focus', function () { load(function () {}); });
+    input.addEventListener('input', function () {
+      window.clearTimeout(timer);
+      timer = window.setTimeout(function () { load(search); }, 120);
+    });
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && input.value) { input.value = ''; load(search); }
+    });
   }
 
   /* contact form */
