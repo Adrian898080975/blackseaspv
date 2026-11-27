@@ -131,6 +131,7 @@
   function gxDraw(b) {
     var s = b.querySelector('.gx-l');
     if (!s || !b.offsetWidth) return;
+    gxWire(b);
     clear(s);
     var R = b.getBoundingClientRect();
     s.setAttribute('viewBox', '0 0 ' + Math.round(R.width) + ' ' + Math.round(R.height));
@@ -138,24 +139,107 @@
       var r = el.getBoundingClientRect();
       return { l: r.left - R.left, r: r.right - R.left, y: r.top - R.top + r.height / 2, on: r.width > 0 };
     }
-    function line(a, c, cls) {
+    function svg(tag, cls, si, pi) {
+      var e = d.createElementNS(s.namespaceURI, tag);
+      e.setAttribute('class', cls);
+      if (si !== null) e.setAttribute('data-s', si);
+      if (pi !== null) e.setAttribute('data-p', pi);
+      s.appendChild(e);
+      return e;
+    }
+    function line(a, c, cls, si, pi) {
       if (!a.on || !c.on) return;
       var k = (c.l - a.r) / 2;
-      var p = d.createElementNS(s.namespaceURI, 'path');
-      p.setAttribute('d', 'M' + a.r + ' ' + a.y + 'C' + (a.r + k) + ' ' + a.y + ' ' + (c.l - k) + ' ' + c.y + ' ' + c.l + ' ' + c.y);
-      p.setAttribute('class', 'gx-ln' + (cls || ''));
-      s.appendChild(p);
+      var dd = 'M' + a.r + ' ' + a.y + 'C' + (a.r + k) + ' ' + a.y + ' ' + (c.l - k) + ' ' + c.y + ' ' + c.l + ' ' + c.y;
+      var p = svg('path', 'gx-ln ' + cls, si, pi);
+      p.setAttribute('d', dd);
+      if (cls.indexOf('none') >= 0) return;
+      p.setAttribute('pathLength', '1');
+      /* the signal's track: the same route, one short dash that runs along it */
+      var t = svg('path', 'gx-tr ' + (cls.indexOf('gx-ln--a') >= 0 ? 'gx-tr--a' : 'gx-tr--b'), si, pi);
+      t.setAttribute('d', dd);
+      t.setAttribute('pathLength', '1');
+    }
+    function dot(x, y, cls, si, pi) {
+      var c = svg('circle', 'gx-dot ' + cls, si, pi);
+      c.setAttribute('cx', x);
+      c.setAttribute('cy', y);
+      c.setAttribute('r', cls.indexOf('gx-dot--p') < 0 && cls.indexOf('gx-dot--x') < 0 ? 2.5 : 3.5);
     }
     var m = b.querySelector('.gx-n--m');
+    var mb = m ? box(m) : { on: false };
+    /* the horizon: one line from the market across the graph, drawn before the map branches from it */
+    if (mb.on) {
+      var hz = svg('path', 'gx-hz', null, null);
+      hz.setAttribute('d', 'M' + mb.r + ' ' + mb.y + 'H' + Math.round(R.width));
+      hz.setAttribute('pathLength', '1');
+    }
     var sups = b.querySelectorAll('.gx-c--p .gx-n');
-    each(b.querySelectorAll('.gx-c--s .gx-n'), function (n) {
+    var used = {};
+    each(b.querySelectorAll('.gx-c--s .gx-n'), function (n, i) {
       var a = box(n);
-      if (m) line(box(m), a);
-      (n.getAttribute('data-to') || '').split(' ').forEach(function (j) {
-        var t = j === '' ? null : sups[+j];
-        if (t) line(a, box(t), t.classList.contains('gx-n--x') ? ' gx-ln--none' : '');
+      if (mb.on) {
+        line(mb, a, 'gx-ln--a gx-ln--s', i, null);
+        dot(a.l, a.y, 'gx-dot--a', i, null);
+      }
+      var to = (n.getAttribute('data-to') || '').split(' ').filter(function (j) { return j !== '' && sups[+j]; });
+      to.forEach(function (j) {
+        var x = sups[+j].classList.contains('gx-n--x');
+        line(a, box(sups[+j]), 'gx-ln--b' + (x ? ' gx-ln--none' : ' gx-ln--s'), i, +j);
+        used[j] = x ? 'x' : 'p';
       });
+      if (to.length) dot(a.r, a.y, 'gx-dot--b', i, null);
     });
+    if (mb.on) dot(mb.r, mb.y, 'gx-dot--m', null, null);
+    each(sups, function (n, j) {
+      var t = box(n);
+      if (t.on) dot(t.l, t.y, 'gx-dot--c gx-dot--' + (used[j] || 'p'), null, j);
+    });
+  }
+  /* one sector or supervisor in focus: its own lines and nodes stay, the rest of the graph fades */
+  function gxFocus(b, n) {
+    each(b.querySelectorAll('.on'), function (e) { e.classList.remove('on'); });
+    var sec = b.querySelectorAll('.gx-c--s .gx-n');
+    var sup = b.querySelectorAll('.gx-c--p .gx-n');
+    var si = n ? Array.prototype.indexOf.call(sec, n) : -1;
+    var pi = n ? Array.prototype.indexOf.call(sup, n) : -1;
+    if (si < 0 && pi < 0) { b.classList.remove('gx-hl'); return; }
+    var S = {}, P = {};
+    each(sec, function (e, i) {
+      var to = (e.getAttribute('data-to') || '').split(' ');
+      if (i === si) { S[i] = 1; to.forEach(function (j) { if (j !== '') P[j] = 1; }); }
+      else if (pi >= 0 && to.indexOf(String(pi)) >= 0) S[i] = 1;
+    });
+    if (pi >= 0) P[pi] = 1;
+    each(sec, function (e, i) { if (S[i]) e.classList.add('on'); });
+    each(sup, function (e, j) { if (P[j]) e.classList.add('on'); });
+    each(b.querySelectorAll('.gx-l [data-s], .gx-l [data-p], .gx-dot--m'), function (e) {
+      var s1 = e.getAttribute('data-s'), p1 = e.getAttribute('data-p');
+      var hit = (s1 === null || S[s1]) && (p1 === null || P[p1]);
+      if (hit) e.classList.add('on');
+    });
+    b.classList.add('gx-hl');
+  }
+  /* the lines draw in once, when the graph first comes into view or right after a search builds it */
+  var gxStill = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function gxPlay(b) {
+    if (b.gxSeen || gxStill) return;
+    b.gxSeen = 1;
+    b.classList.add('gx-in');
+    window.setTimeout(function () { b.classList.remove('gx-in'); }, 4000);
+  }
+  var gxSee = window.IntersectionObserver ? new IntersectionObserver(function (list) {
+    list.forEach(function (en) { if (en.isIntersecting) { gxPlay(en.target); gxSee.unobserve(en.target); } });
+  }, { threshold: 0.35 }) : null;
+  function gxWire(b) {
+    if (b.gxOn) return;
+    b.gxOn = 1;
+    function pick(e) { var n = e.target.closest ? e.target.closest('.gx-n') : null; gxFocus(b, n); }
+    b.addEventListener('mouseover', pick);
+    b.addEventListener('focusin', pick);
+    b.addEventListener('mouseleave', function () { gxFocus(b, null); });
+    b.addEventListener('focusout', function (e) { if (!b.contains(e.relatedTarget)) gxFocus(b, null); });
+    if (gxSee) gxSee.observe(b);
   }
   function gxAll() { each(d.querySelectorAll('[data-gx]'), gxDraw); }
   /* a new graph: the heading, the market, its sectors and the supervisors each one points to */
@@ -196,6 +280,7 @@
       a.setAttribute('data-to', to.join(' '));
     });
     gxDraw(b);
+    gxPlay(b);
     return box;
   }
   var gxTimer = 0;

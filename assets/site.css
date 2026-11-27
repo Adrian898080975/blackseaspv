@@ -13,7 +13,7 @@
 /* ---------------------------------------------------------------- tokens (bs3) */
 :root{
 --bs-bg:#F6F5F2;--bs-surface:#FFFFFF;--bs-surface-2:#EFEEE9;
---bs-ink:#0A0C0F;--bs-ink-2:#111418;
+--bs-ink:#0A0C0F;--bs-ink-2:#111418;--bs-grade:#1F2C35;
 --bs-text-hi:#0A0C0F;--bs-text:#22272D;--bs-text-sub:#4E5862;--bs-text-lo:#646E78;
 --bs-ink-start:#7D8790; /* ink-in start state: 3.4:1, used only on text of 28px and up */
 --bs-on-dark-hi:#F2F4F5;--bs-on-dark:#D6DCE1;--bs-on-dark-sub:#A9B4BD;--bs-on-dark-lo:#8893A0;
@@ -440,37 +440,101 @@ a.g-b--m:hover rect{fill:var(--bs-ink-2)}
 
 /* ---------------------------------------------------------------- the regulation graph as HTML (26 Nov 2026)
    Home and Coverage: every name is text in the page, site.js draws only the lines between the nodes. */
-.gx-h{margin-bottom:var(--bs-s5)}
-.gx-b{position:relative;display:grid;grid-template-columns:max-content max-content minmax(0,1fr);column-gap:clamp(40px,6vw,104px);align-items:center}
+.gx-h{margin-bottom:var(--bs-s6)}
+.gx-b{position:relative;display:grid;grid-template-columns:minmax(0,max-content) max-content minmax(0,max-content);justify-content:space-between;column-gap:clamp(40px,6vw,140px);align-items:center;padding-block:var(--bs-s2)}
 .gx-l{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;pointer-events:none}
-.gx-c{position:relative;z-index:1;display:flex;flex-direction:column;gap:10px;min-width:0}
+.gx-c{position:relative;z-index:1;display:flex;flex-direction:column;gap:2px;min-width:0}
 .gx-c--s li{display:flex}
 .gx-c--s .gx-n{flex:1}
 .gx-c--p{align-items:flex-start}
-.gx-n{display:inline-block;max-width:100%;font-size:var(--bs-t-small);line-height:1.3;padding:9px 14px;border:1px solid var(--bs-hairline-strong);background:var(--bs-surface);color:var(--bs-text-hi);text-decoration:none;overflow-wrap:break-word}
-a.gx-n:hover{border-color:var(--bs-text-hi)}
-.gx-n--m{background:var(--bs-ink);border-color:var(--bs-ink);color:var(--bs-on-dark-hi);font-weight:500}
-a.gx-n--m:hover{background:var(--bs-ink-2);border-color:var(--bs-ink-2)}
-.gx-n--p{background:var(--bs-bg);border-color:var(--bs-accent)}
-.gx-n--x{background:var(--bs-bg);border:1px dashed var(--bs-text-lo)}
-.gx-ln{fill:none;stroke:var(--bs-hairline-strong);stroke-width:1}
+.gx-n{display:inline-block;max-width:100%;font-size:17px;line-height:1.3;padding:12px 18px;color:var(--bs-text-hi);text-decoration:none;overflow-wrap:break-word;transition:opacity .2s,color .2s}
+a.gx-n:hover,a.gx-n:focus-visible{color:var(--gx-sig,var(--bs-accent))}
+.gx-n--m{padding-left:0;max-width:10em;font-size:clamp(20px,2vw,26px);line-height:1.15;font-weight:500;letter-spacing:-0.01em}
+.gx-c--p .gx-n{padding-right:0;max-width:22em}
+.gx-n--x{color:var(--bs-text-lo)}
+.gx-ln{fill:none;stroke:var(--bs-field-line);stroke-width:1;transition:opacity .2s,stroke .2s}
 .gx-ln--none{stroke-dasharray:3 3}
+.gx-dot{fill:var(--bs-text-hi);transition:opacity .2s}
+.gx-dot--p{fill:var(--gx-sig,var(--bs-accent))}
+.gx-dot--x{fill:var(--bs-bg);stroke:var(--bs-text-lo)}
+/* the horizon the map opens from, and the signal that runs a route */
+.gx-hz{fill:none;stroke:var(--bs-text-hi);stroke-width:1;opacity:0}
+.gx-tr{fill:none;stroke:var(--gx-sig,var(--bs-accent));stroke-width:2.5;stroke-dasharray:.12 2;stroke-dashoffset:.13}
+/* one sector or supervisor in focus: its route stays and carries the signal, the rest fades */
+.gx-hl .gx-ln,.gx-hl .gx-dot,.gx-hl .gx-c--s .gx-n,.gx-hl .gx-c--p .gx-n{opacity:.2}
+.gx-hl .gx-ln.on{opacity:1;stroke:var(--bs-text-hi);stroke-width:1.5}
+.gx-hl .gx-dot.on,.gx-hl .gx-n.on{opacity:1}
+.gx-hl .gx-tr--a.on{animation:gx-run-a 1.8s linear infinite}
+.gx-hl .gx-tr--b.on{animation:gx-run-b 1.8s linear infinite}
+/* the opening, once: a horizon draws, the map branches from it, the market rises, one signal runs every route */
+@keyframes gx-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes gx-fade{from{opacity:0}to{opacity:1}}
+@keyframes gx-hz{0%{opacity:1;stroke-dashoffset:1}45%{opacity:1;stroke-dashoffset:0}100%{opacity:0;stroke-dashoffset:0}}
+@keyframes gx-rise{from{transform:translateY(110%)}to{transform:none}}
+@keyframes gx-run-a{0%{stroke-dashoffset:.13}50%,100%{stroke-dashoffset:-1}}
+@keyframes gx-run-b{0%,50%{stroke-dashoffset:.13}100%{stroke-dashoffset:-1}}
+.gx-in .gx-hz{stroke-dasharray:1;animation:gx-hz 1.5s cubic-bezier(.3,.6,.2,1) both}
+.gx-in .gx-c--m{overflow:hidden}
+.gx-in .gx-n--m{animation:gx-rise 1.1s .3s cubic-bezier(.2,.7,.1,1) both}
+.gx-in .gx-ln--s{stroke-dasharray:1;animation:gx-draw .8s .7s cubic-bezier(.3,.6,.2,1) both}
+.gx-in .gx-ln--b{animation-delay:1.1s}
+.gx-in .gx-ln--none{animation:gx-fade .5s 1.3s both}
+.gx-in .gx-dot{animation:gx-fade .3s .7s both}
+.gx-in .gx-dot--b,.gx-in .gx-dot--c{animation-delay:1.6s}
+.gx-in .gx-tr--a{animation:gx-run-a 1.8s 2s linear both}
+.gx-in .gx-tr--b{animation:gx-run-b 1.8s 2s linear both}
+@media (prefers-reduced-motion:reduce){.gx-in .gx-hz,.gx-in .gx-n--m,.gx-in .gx-ln,.gx-in .gx-dot,.gx-in .gx-tr,.gx-hl .gx-tr.on{animation:none}}
 .rmap-out .gx{margin-bottom:var(--bs-s6)}
 @media (max-width:640px){
-.gx-b{grid-template-columns:minmax(0,max-content) minmax(0,1fr);column-gap:28px}
+.gx-b{grid-template-columns:minmax(0,max-content) minmax(0,1fr);column-gap:36px}
 .gx-c--m{display:none}
-.gx-n{padding:8px 10px}
+.gx-n{font-size:15px;padding:8px 12px}
+.gx-c--s .gx-n{padding-left:0}
+/* no market column here, so no horizon to wait for: the routes draw at once */
+.gx-in .gx-dot{animation-delay:.1s}
+.gx-in .gx-ln--b{animation-delay:.1s}
+.gx-in .gx-ln--none{animation-delay:.3s}
+.gx-in .gx-dot--b,.gx-in .gx-dot--c{animation-delay:.6s}
+.gx-in .gx-tr--a,.gx-in .gx-tr--b{animation-delay:.9s}
 }
 
-/* ---------------------------------------------------------------- Home, screen 6: the map on the home page */
-.hm-p{margin-top:var(--bs-s7);background:var(--bs-surface);border:1px solid var(--bs-hairline);padding:clamp(20px,3.2vw,48px)}
-.hm-find{max-width:560px}
-.hm-out,.hm-def{margin-top:var(--bs-s6);padding-top:var(--bs-s5);border-top:1px solid var(--bs-hairline)}
+/* ---------------------------------------------------------------- Home, screen 6: the map on a night band */
+/* the band takes the post visuals' grade: the photo in grey, then one slate hue over it */
+.hm{--bs-text-hi:var(--bs-on-dark-hi);--bs-text:var(--bs-on-dark);--bs-text-sub:var(--bs-on-dark-sub);--bs-text-lo:var(--bs-on-dark-lo);--bs-hairline:rgba(242,244,245,.16);--bs-hairline-strong:rgba(242,244,245,.5);--bs-field-line:rgba(242,244,245,.62);--bs-bg:var(--bs-ink);--gx-sig:#46B58C;position:relative;overflow:hidden;background:var(--bs-ink);color:var(--bs-text);border-top:0;padding:var(--bs-s10) 0}
+.hm-bg{position:absolute;inset:0;background:var(--bs-ink)}
+.hm-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 70%;filter:grayscale(1) contrast(1.18) brightness(.4)}
+.hm-bg::after{content:"";position:absolute;inset:0;background:var(--bs-grade);mix-blend-mode:color;opacity:.55}
+.js .hm-bg img{opacity:0;transition:opacity 900ms var(--bs-ease)}
+.js .hm-bg img.is-in{opacity:.55}
+.hm>.bs-wrap{position:relative}
+.hm :focus-visible{outline-color:var(--bs-on-dark-hi)}
+.hm+.close{border-top:0}
+.hm .gx-c{gap:8px}
+.hm .gx-ln{stroke-width:1.4}
+.hm .gx-hl .gx-ln.on{stroke-width:2}
+.hm .gx-dot{r:3.5}
+.hm .gx-dot--p,.hm .gx-dot--x{r:4.5}
+/* the search reads as a field on the night ground: a full rule, larger type, brighter label and hint */
+.hm .rmap-find label{font-size:var(--bs-t-small);color:var(--bs-text-sub)}
+.hm-find{position:relative;max-width:640px}
+.hm .rmap-find label{margin-bottom:10px}
+.hm .rmap-find input{height:62px;padding:0 20px 0 56px;border:1px solid rgba(242,244,245,.72);background:rgba(10,12,15,.5);font-size:20px;transition:border-color .2s,box-shadow .2s}
+.hm .rmap-find input:hover{border-color:var(--bs-text-hi)}
+.hm .rmap-find input::placeholder{color:var(--bs-text-sub)}
+.hm .rmap-find input:focus{border-color:var(--bs-text-hi);box-shadow:0 0 0 1px var(--bs-text-hi)}
+.hm .rmap-find input:focus-visible{box-shadow:0 0 0 1px var(--bs-text-hi),0 0 0 4px var(--gx-sig)}
+/* a magnifier drawn in CSS: a ring and its handle, centred on the field */
+.hm-find::before,.hm-find::after{content:"";position:absolute;pointer-events:none}
+.hm-find::before{left:21px;bottom:24px;width:13px;height:13px;border:2px solid var(--bs-text-hi);border-radius:50%}
+.hm-find::after{left:34px;bottom:18px;width:2px;height:8px;background:var(--bs-text-hi);transform:rotate(-45deg)}
+.hm .gx-n--m{max-width:8em;font-size:clamp(30px,3.6vw,54px);line-height:1.02;letter-spacing:-0.022em}
+.hm-p{margin-top:var(--bs-s7);border-top:1px solid var(--bs-text-hi);padding-top:var(--bs-s5)}
+.hm-out,.hm-def{margin-top:var(--bs-s7)}
 .hm-out>p{color:var(--bs-text-sub)}
 .hm-p>.go{margin-top:var(--bs-s6)}
 .hm-more{margin-top:var(--bs-s6)}
 .hm-more>*+*{margin-top:var(--bs-s3)}
-.hm .gx-n--p,.hm .gx-n--x{background:var(--bs-surface)}
+@media (max-width:640px){.hm{padding:var(--bs-s9) 0}}
 
 /* ---------------------------------------------------------------- What we do as modules (26 Nov 2026)
    The service and its promise, the deliverables as a file, the terms in one row. */
